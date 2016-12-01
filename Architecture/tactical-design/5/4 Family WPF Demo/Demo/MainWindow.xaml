@@ -1,0 +1,44 @@
+﻿<Window x:Class="Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Family" Height="350" Width="525">
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.RowSpan="10" Grid.Row="0" Grid.Column="0">
+            <Border.Background>
+                <SolidColorBrush Color="WhiteSmoke"></SolidColorBrush>
+            </Border.Background>
+        </Border>
+        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Define member</Label>
+        <RadioButton Name="Option1" Content="Male" GroupName="PersonType" Margin="5" IsChecked="True" Click="BodyTypeClick" Grid.Row="1" Grid.Column="0"></RadioButton>
+        <RadioButton Name="Option2" Content="Female" GroupName="PersonType" Margin="5" Click="BodyTypeClick" Grid.Row="2" Grid.Column="0"></RadioButton>
+        <RadioButton Name="Option3" Content="Boy" GroupName="PersonType" Margin="5" Click="BodyTypeClick" Grid.Row="3" Grid.Column="0"></RadioButton>
+        <RadioButton Name="Option4" Content="Dog" GroupName="PersonType" Margin="5" Click="BodyTypeClick" Grid.Row="4" Grid.Column="0"></RadioButton>
+        <CheckBox Name="SupportIHairy" Content="Grows hair" Grid.Row="5" Margin="5" Click="CheckBoxClick" Grid.Column="0"></CheckBox>
+        <CheckBox Name="SupportIEmotional" Content="Shows emotions" Margin="5" Click="CheckBoxClick" Grid.Row="6" Grid.Column="0"></CheckBox>
+        <CheckBox Name="SupportIBearded" Content="Grows beard" Margin="5" Click="CheckBoxClick" Grid.Row="7" Grid.Column="0"></CheckBox>
+        <Button Content="Add" Margin="5,0,0,5.2" Padding="30 0 30 0" Click="AddFamilyMember" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Left" Height="20" VerticalAlignment="Bottom"></Button>
+        <CheckBox Name="IsHairLong" Content="Grow hair" Grid.Row="0" Margin="5" Unchecked="CutHair" Checked="GrowHair" Grid.Column="1"></CheckBox>
+        <CheckBox Name="IsBeardPresent" Content="Grow beard" Grid.Row="0" Margin="5" Unchecked="Shave" Checked="GrowBeard" Grid.Column="2"></CheckBox>
+        <CheckBox Name="IsHappy" Content="Be happy" Grid.Row="0" Margin="5" Unchecked="BeContent" Checked="BeHappy" Grid.Column="3"></CheckBox>
+        <Image Name="FamilyImage" Grid.Row="1" Grid.Column="1" Grid.RowSpan="9" Grid.ColumnSpan="4" Width="300" Height="250" Margin="20"></Image>
+    </Grid>
+</Window>

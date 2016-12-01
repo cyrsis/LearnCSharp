@@ -1,0 +1,6 @@
+C:\Pluralsight\ObserverDemo\ObserverDemo\bin\Debug\ObserverDemo.exe.config
+C:\Pluralsight\ObserverDemo\ObserverDemo\bin\Debug\ObserverDemo.exe
+C:\Pluralsight\ObserverDemo\ObserverDemo\bin\Debug\ObserverDemo.pdb
+C:\Pluralsight\ObserverDemo\ObserverDemo\obj\Debug\ObserverDemo.csprojResolveAssemblyReference.cache
+C:\Pluralsight\ObserverDemo\ObserverDemo\obj\Debug\ObserverDemo.exe
+C:\Pluralsight\ObserverDemo\ObserverDemo\obj\Debug\ObserverDemo.pdb
