@@ -1,0 +1,10 @@
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\obj\Debug\计算器.exe
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\obj\Debug\计算器.pdb
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\bin\Debug\计算器.exe
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\bin\Debug\计算器.pdb
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\bin\Debug\OperationLibrary.dll
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\bin\Debug\OperationLibrary.pdb
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\obj\Debug\计算器.csprojResolveAssemblyReference.cache
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\obj\Debug\计算器.Form1.resources
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\obj\Debug\计算器.Properties.Resources.resources
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器\obj\Debug\计算器.csproj.GenerateResource.Cache

@@ -1,0 +1,9 @@
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器控制台\obj\Debug\计算器控制台.exe
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器控制台\obj\Debug\计算器控制台.pdb
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器控制台\bin\Debug\计算器控制台.exe
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器控制台\bin\Debug\计算器控制台.pdb
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器控制台\bin\Debug\OperationLibrary.dll
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器控制台\bin\Debug\OperationLibrary.pdb
+C:\dev\_C_Sharp\大话设计模式源代码(非常全)\大话设计模式源代码\01简单工厂模式\计算器\计算器控制台\obj\Debug\计算器控制台.csprojResolveAssemblyReference.cache
+C:\dev\_C_Sharp\大话设计模式源代码\大话设计模式源代码\01简单工厂模式\计算器\计算器控制台\obj\Debug\计算器控制台.exe
+C:\dev\_C_Sharp\大话设计模式源代码\大话设计模式源代码\01简单工厂模式\计算器\计算器控制台\obj\Debug\计算器控制台.pdb
