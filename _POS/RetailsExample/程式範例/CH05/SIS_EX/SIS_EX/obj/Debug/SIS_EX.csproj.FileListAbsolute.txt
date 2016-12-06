@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\SIS_EX\SIS_EX\bin\Debug\SIS_EX.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\SIS_EX\SIS_EX\bin\Debug\SIS_EX.exe
+c:\users\ryu\documents\visual studio 2013\Projects\SIS_EX\SIS_EX\bin\Debug\SIS_EX.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\SIS_EX\SIS_EX\obj\Debug\SIS_EX.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\SIS_EX\SIS_EX\obj\Debug\SIS_EX.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\SIS_EX\SIS_EX\obj\Debug\SIS_EX.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\SIS_EX\SIS_EX\obj\Debug\SIS_EX.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\SIS_EX\SIS_EX\obj\Debug\SIS_EX.exe
+c:\users\ryu\documents\visual studio 2013\Projects\SIS_EX\SIS_EX\obj\Debug\SIS_EX.pdb

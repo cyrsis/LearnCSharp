@@ -1,0 +1,8 @@
+c:\users\benny\documents\visual studio 2012\Projects\09-11-09\09-11-09\bin\Debug\09-11-09.exe.config
+c:\users\benny\documents\visual studio 2012\Projects\09-11-09\09-11-09\bin\Debug\09-11-09.exe
+c:\users\benny\documents\visual studio 2012\Projects\09-11-09\09-11-09\bin\Debug\09-11-09.pdb
+c:\users\benny\documents\visual studio 2012\Projects\09-11-09\09-11-09\obj\Debug\_09_11_09.Form1.resources
+c:\users\benny\documents\visual studio 2012\Projects\09-11-09\09-11-09\obj\Debug\_09_11_09.Properties.Resources.resources
+c:\users\benny\documents\visual studio 2012\Projects\09-11-09\09-11-09\obj\Debug\09-11-09.csproj.GenerateResource.Cache
+c:\users\benny\documents\visual studio 2012\Projects\09-11-09\09-11-09\obj\Debug\09-11-09.exe
+c:\users\benny\documents\visual studio 2012\Projects\09-11-09\09-11-09\obj\Debug\09-11-09.pdb

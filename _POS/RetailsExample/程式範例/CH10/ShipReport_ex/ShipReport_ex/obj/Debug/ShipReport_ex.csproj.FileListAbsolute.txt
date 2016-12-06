@@ -1,0 +1,13 @@
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\bin\Debug\ShipReport_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\bin\Debug\rptShipDetails.rdlc
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\bin\Debug\rptShipMaster.rdlc
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\bin\Debug\ShipReport_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\bin\Debug\ShipReport_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\obj\Debug\ShipReport_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\obj\Debug\ShipReport_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\obj\Debug\ShipReport_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\obj\Debug\ShipReport_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\obj\Debug\RdlCompile.cache
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\obj\Debug\RdlCompile.compiled
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\obj\Debug\ShipReport_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\ShipReport_ex\ShipReport_ex\obj\Debug\ShipReport_ex.pdb

@@ -1,0 +1,21 @@
+c:\users\benny\documents\visual studio 2012\Projects\01-02-01\01-02-01\bin\Debug\01-02-01.exe.config
+c:\users\benny\documents\visual studio 2012\Projects\01-02-01\01-02-01\bin\Debug\01-02-01.exe
+c:\users\benny\documents\visual studio 2012\Projects\01-02-01\01-02-01\bin\Debug\01-02-01.pdb
+c:\users\benny\documents\visual studio 2012\Projects\01-02-01\01-02-01\obj\Debug\01-02-01.csprojResolveAssemblyReference.cache
+c:\users\benny\documents\visual studio 2012\Projects\01-02-01\01-02-01\obj\Debug\_01_02_01.Form1.resources
+c:\users\benny\documents\visual studio 2012\Projects\01-02-01\01-02-01\obj\Debug\_01_02_01.Properties.Resources.resources
+c:\users\benny\documents\visual studio 2012\Projects\01-02-01\01-02-01\obj\Debug\01-02-01.csproj.GenerateResource.Cache
+c:\users\benny\documents\visual studio 2012\Projects\01-02-01\01-02-01\obj\Debug\01-02-01.exe
+c:\users\benny\documents\visual studio 2012\Projects\01-02-01\01-02-01\obj\Debug\01-02-01.pdb
+D:\寫作\15-C#進銷存程式設計\書附光碟\範例程式\01-02-01\01-02-01\bin\Debug\01-02-01.exe.config
+D:\寫作\15-C#進銷存程式設計\書附光碟\範例程式\01-02-01\01-02-01\obj\Debug\01-02-01.exe
+D:\寫作\15-C#進銷存程式設計\書附光碟\範例程式\01-02-01\01-02-01\obj\Debug\01-02-01.pdb
+C:\dev\_C_Sharp\_POS\範例程式\01-02-01\01-02-01\bin\Debug\01-02-01.exe.config
+C:\dev\_C_Sharp\_POS\範例程式\01-02-01\01-02-01\obj\Debug\01-02-01.exe
+C:\dev\_C_Sharp\_POS\範例程式\01-02-01\01-02-01\obj\Debug\01-02-01.pdb
+C:\dev\_C_Sharp\_POS\範例程式\01-02-01\01-02-01\bin\Debug\01-02-01.exe
+C:\dev\_C_Sharp\_POS\範例程式\01-02-01\01-02-01\bin\Debug\01-02-01.pdb
+C:\dev\_C_Sharp\_POS\範例程式\01-02-01\01-02-01\obj\Debug\01-02-01.csprojResolveAssemblyReference.cache
+C:\dev\_C_Sharp\_POS\範例程式\01-02-01\01-02-01\obj\Debug\_01_02_01.Form1.resources
+C:\dev\_C_Sharp\_POS\範例程式\01-02-01\01-02-01\obj\Debug\_01_02_01.Properties.Resources.resources
+C:\dev\_C_Sharp\_POS\範例程式\01-02-01\01-02-01\obj\Debug\01-02-01.csproj.GenerateResource.Cache

@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\CheckID_ex\CheckID_ex\bin\Debug\CheckID_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\CheckID_ex\CheckID_ex\bin\Debug\CheckID_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\CheckID_ex\CheckID_ex\bin\Debug\CheckID_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\CheckID_ex\CheckID_ex\obj\Debug\CheckID_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\CheckID_ex\CheckID_ex\obj\Debug\CheckID_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\CheckID_ex\CheckID_ex\obj\Debug\CheckID_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\CheckID_ex\CheckID_ex\obj\Debug\CheckID_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\CheckID_ex\CheckID_ex\obj\Debug\CheckID_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\CheckID_ex\CheckID_ex\obj\Debug\CheckID_ex.pdb

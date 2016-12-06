@@ -1,0 +1,10 @@
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\bin\Debug\Registry_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\bin\Debug\Registry_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\bin\Debug\Registry_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\bin\Debug\My.dll
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\obj\Debug\Registry_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\obj\Debug\Registry_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\obj\Debug\Registry_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\obj\Debug\Registry_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\obj\Debug\Registry_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\Registry_ex\Registry_ex\obj\Debug\Registry_ex.pdb

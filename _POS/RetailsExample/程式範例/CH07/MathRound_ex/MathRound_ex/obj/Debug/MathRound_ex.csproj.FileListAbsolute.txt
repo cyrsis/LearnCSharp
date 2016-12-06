@@ -1,0 +1,8 @@
+c:\users\ryu\documents\visual studio 2013\Projects\MathRound_ex\MathRound_ex\bin\Debug\MathRound_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\MathRound_ex\MathRound_ex\bin\Debug\MathRound_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MathRound_ex\MathRound_ex\bin\Debug\MathRound_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\MathRound_ex\MathRound_ex\obj\Debug\MathRound_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MathRound_ex\MathRound_ex\obj\Debug\MathRound_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MathRound_ex\MathRound_ex\obj\Debug\MathRound_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\MathRound_ex\MathRound_ex\obj\Debug\MathRound_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MathRound_ex\MathRound_ex\obj\Debug\MathRound_ex.pdb

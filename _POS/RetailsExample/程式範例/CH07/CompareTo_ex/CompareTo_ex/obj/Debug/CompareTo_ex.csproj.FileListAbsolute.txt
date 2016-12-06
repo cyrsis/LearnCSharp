@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\CompareTo_ex\CompareTo_ex\bin\Debug\CompareTo_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\CompareTo_ex\CompareTo_ex\bin\Debug\CompareTo_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\CompareTo_ex\CompareTo_ex\bin\Debug\CompareTo_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\CompareTo_ex\CompareTo_ex\obj\Debug\CompareTo_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\CompareTo_ex\CompareTo_ex\obj\Debug\CompareTo_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\CompareTo_ex\CompareTo_ex\obj\Debug\CompareTo_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\CompareTo_ex\CompareTo_ex\obj\Debug\CompareTo_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\CompareTo_ex\CompareTo_ex\obj\Debug\CompareTo_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\CompareTo_ex\CompareTo_ex\obj\Debug\CompareTo_ex.pdb

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XINModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="XINEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Customer" EntityType="XINModel.Customer" />
+    <EntitySet Name="Delivery" EntityType="XINModel.Delivery" />
+    <EntitySet Name="DeliveryDetails" EntityType="XINModel.DeliveryDetails" />
+    <AssociationSet Name="FK_Delivery_Customer" Association="XINModel.FK_Delivery_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Delivery" EntitySet="Delivery" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeliveryDetails_Delivery" Association="XINModel.FK_DeliveryDetails_Delivery">
+      <End Role="Delivery" EntitySet="Delivery" />
+      <End Role="DeliveryDetails" EntitySet="DeliveryDetails" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="AttribName" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EarNo" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="JoinMan" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Tel1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Tel2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastDeliveryDate" Type="DateTime" Precision="0" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Delivery" Relationship="XINModel.FK_Delivery_Customer" FromRole="Customer" ToRole="Delivery" />
+  </EntityType>
+  <EntityType Name="Delivery">
+    <Key>
+      <PropertyRef Name="DeliveryID" />
+    </Key>
+    <Property Name="DeliveryID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="JoinMan" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="DeliveryType" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="SubTotal" Type="Int32" Nullable="false" />
+    <Property Name="ValueAddTax" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="ShipAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Customer" Relationship="XINModel.FK_Delivery_Customer" FromRole="Delivery" ToRole="Customer" />
+    <NavigationProperty Name="DeliveryDetails" Relationship="XINModel.FK_DeliveryDetails_Delivery" FromRole="Delivery" ToRole="DeliveryDetails" />
+  </EntityType>
+  <EntityType Name="DeliveryDetails">
+    <Key>
+      <PropertyRef Name="DeliveryID" />
+      <PropertyRef Name="DeliverySeq" />
+    </Key>
+    <Property Name="DeliveryID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeliverySeq" Type="Byte" Nullable="false" />
+    <Property Name="ProductID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Delivery" Relationship="XINModel.FK_DeliveryDetails_Delivery" FromRole="DeliveryDetails" ToRole="Delivery" />
+  </EntityType>
+  <Association Name="FK_Delivery_Customer">
+    <End Role="Customer" Type="XINModel.Customer" Multiplicity="1" />
+    <End Role="Delivery" Type="XINModel.Delivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Delivery">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeliveryDetails_Delivery">
+    <End Role="Delivery" Type="XINModel.Delivery" Multiplicity="1" />
+    <End Role="DeliveryDetails" Type="XINModel.DeliveryDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Delivery">
+        <PropertyRef Name="DeliveryID" />
+      </Principal>
+      <Dependent Role="DeliveryDetails">
+        <PropertyRef Name="DeliveryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

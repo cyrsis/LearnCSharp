@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\MathTruncate_ex\MathTruncate_ex\bin\Debug\MathTruncate_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\MathTruncate_ex\MathTruncate_ex\bin\Debug\MathTruncate_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MathTruncate_ex\MathTruncate_ex\bin\Debug\MathTruncate_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\MathTruncate_ex\MathTruncate_ex\obj\Debug\MathTruncate_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\MathTruncate_ex\MathTruncate_ex\obj\Debug\MathTruncate_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MathTruncate_ex\MathTruncate_ex\obj\Debug\MathTruncate_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MathTruncate_ex\MathTruncate_ex\obj\Debug\MathTruncate_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\MathTruncate_ex\MathTruncate_ex\obj\Debug\MathTruncate_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MathTruncate_ex\MathTruncate_ex\obj\Debug\MathTruncate_ex.pdb

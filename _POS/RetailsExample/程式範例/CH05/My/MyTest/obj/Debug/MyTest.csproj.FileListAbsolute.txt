@@ -1,0 +1,11 @@
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\bin\Debug\MyTest.exe.config
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\bin\Debug\MyTest.exe
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\bin\Debug\MyTest.pdb
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\bin\Debug\My.dll
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\bin\Debug\My.pdb
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\obj\Debug\MyTest.csprojResolveAssemblyReference.cache
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\obj\Debug\MyTest.Form1.resources
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\obj\Debug\MyTest.Properties.Resources.resources
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\obj\Debug\MyTest.csproj.GenerateResource.Cache
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\obj\Debug\MyTest.exe
+c:\Users\Ryu\documents\visual studio 2013\Projects\My\MyTest\obj\Debug\MyTest.pdb

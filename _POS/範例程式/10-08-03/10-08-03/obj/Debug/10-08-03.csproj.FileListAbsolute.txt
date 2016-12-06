@@ -1,0 +1,9 @@
+c:\users\benny\documents\visual studio 2012\Projects\10-08-03\10-08-03\bin\Debug\10-08-03.exe.config
+c:\users\benny\documents\visual studio 2012\Projects\10-08-03\10-08-03\bin\Debug\10-08-03.exe
+c:\users\benny\documents\visual studio 2012\Projects\10-08-03\10-08-03\bin\Debug\10-08-03.pdb
+c:\users\benny\documents\visual studio 2012\Projects\10-08-03\10-08-03\obj\Debug\10-08-03.csprojResolveAssemblyReference.cache
+c:\users\benny\documents\visual studio 2012\Projects\10-08-03\10-08-03\obj\Debug\_10_08_03.Form1.resources
+c:\users\benny\documents\visual studio 2012\Projects\10-08-03\10-08-03\obj\Debug\_10_08_03.Properties.Resources.resources
+c:\users\benny\documents\visual studio 2012\Projects\10-08-03\10-08-03\obj\Debug\10-08-03.csproj.GenerateResource.Cache
+c:\users\benny\documents\visual studio 2012\Projects\10-08-03\10-08-03\obj\Debug\10-08-03.exe
+c:\users\benny\documents\visual studio 2012\Projects\10-08-03\10-08-03\obj\Debug\10-08-03.pdb

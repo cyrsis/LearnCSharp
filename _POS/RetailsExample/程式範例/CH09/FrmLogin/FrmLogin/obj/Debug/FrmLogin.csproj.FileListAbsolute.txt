@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\FrmLogin\FrmLogin\bin\Debug\FrmLogin.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\FrmLogin\FrmLogin\bin\Debug\FrmLogin.exe
+c:\users\ryu\documents\visual studio 2013\Projects\FrmLogin\FrmLogin\bin\Debug\FrmLogin.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\FrmLogin\FrmLogin\obj\Debug\FrmLogin.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\FrmLogin\FrmLogin\obj\Debug\FrmLogin.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\FrmLogin\FrmLogin\obj\Debug\FrmLogin.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\FrmLogin\FrmLogin\obj\Debug\FrmLogin.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\FrmLogin\FrmLogin\obj\Debug\FrmLogin.exe
+c:\users\ryu\documents\visual studio 2013\Projects\FrmLogin\FrmLogin\obj\Debug\FrmLogin.pdb

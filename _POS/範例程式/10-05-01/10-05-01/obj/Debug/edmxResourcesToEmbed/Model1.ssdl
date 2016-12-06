@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XINModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="XINModelStoreContainer">
+    <EntitySet Name="Programs" EntityType="XINModel.Store.Programs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserAuthority" EntityType="XINModel.Store.UserAuthority" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="XINUsers" EntityType="XINModel.Store.XINUsers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_UserAuthority_Programs" Association="XINModel.Store.FK_UserAuthority_Programs">
+      <End Role="Programs" EntitySet="Programs" />
+      <End Role="UserAuthority" EntitySet="UserAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAuthority_XINUsers" Association="XINModel.Store.FK_UserAuthority_XINUsers">
+      <End Role="XINUsers" EntitySet="XINUsers" />
+      <End Role="UserAuthority" EntitySet="UserAuthority" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Programs">
+    <Key>
+      <PropertyRef Name="ProgramID" />
+    </Key>
+    <Property Name="ProgramID" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProgramName" Type="nvarchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="UserAuthority">
+    <Key>
+      <PropertyRef Name="EmployeeNo" />
+      <PropertyRef Name="ProgramID" />
+    </Key>
+    <Property Name="EmployeeNo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="ProgramID" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Run" Type="bit" Nullable="false" />
+    <Property Name="Append" Type="bit" Nullable="false" />
+    <Property Name="Edit" Type="bit" Nullable="false" />
+    <Property Name="Report" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="XINUsers">
+    <Key>
+      <PropertyRef Name="EmployeeNo" />
+    </Key>
+    <Property Name="EmployeeNo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="EmployeeName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="PasswordCode" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_UserAuthority_Programs">
+    <End Role="Programs" Type="XINModel.Store.Programs" Multiplicity="1" />
+    <End Role="UserAuthority" Type="XINModel.Store.UserAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Programs">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="UserAuthority">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAuthority_XINUsers">
+    <End Role="XINUsers" Type="XINModel.Store.XINUsers" Multiplicity="1" />
+    <End Role="UserAuthority" Type="XINModel.Store.UserAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XINUsers">
+        <PropertyRef Name="EmployeeNo" />
+      </Principal>
+      <Dependent Role="UserAuthority">
+        <PropertyRef Name="EmployeeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

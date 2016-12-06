@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XINModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="XINEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="DeliveryDetails" EntityType="XINModel.DeliveryDetails" />
+  </EntityContainer>
+  <EntityType Name="DeliveryDetails">
+    <Key>
+      <PropertyRef Name="DeliveryID" />
+      <PropertyRef Name="DeliverySeq" />
+    </Key>
+    <Property Name="DeliveryID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DeliverySeq" Type="Byte" Nullable="false" />
+    <Property Name="ProductID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

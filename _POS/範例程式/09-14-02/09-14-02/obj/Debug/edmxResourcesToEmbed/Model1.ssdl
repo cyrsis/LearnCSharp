@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XINModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="XINModelStoreContainer">
+    <EntitySet Name="Programs" EntityType="XINModel.Store.Programs" store:Type="Tables" store:Schema="dbo" store:Name="Programs">
+      <DefiningQuery>SELECT 
+      [Programs].[ProgramID] AS [ProgramID], 
+      [Programs].[ProgramName] AS [ProgramName]
+      FROM [dbo].[Programs] AS [Programs]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--產生期間發現錯誤:
+      警告 6002: 資料表/檢視 'XIN.dbo.Programs' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。
+      -->
+  <EntityType Name="Programs">
+    <Key>
+      <PropertyRef Name="ProgramID" />
+      <PropertyRef Name="ProgramName" />
+    </Key>
+    <Property Name="ProgramID" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProgramName" Type="nvarchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,12 @@
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\bin\Debug\MenuStrip_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\bin\Debug\MenuStrip_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\bin\Debug\MenuStrip_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\obj\Debug\MenuStrip_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\obj\Debug\MenuStrip_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\obj\Debug\MenuStrip_ex.FrmRMA.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\obj\Debug\MenuStrip_ex.FrmShip.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\obj\Debug\MenuStrip_ex.FrmStock.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\obj\Debug\MenuStrip_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\obj\Debug\MenuStrip_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\obj\Debug\MenuStrip_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MenuStrip_ex\MenuStrip_ex\obj\Debug\MenuStrip_ex.pdb

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="GradeClass集合" EntityType="Model1.Store.GradeClass集合" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Student集合" EntityType="Model1.Store.Student集合" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="GradeClassStudent" Association="Model1.Store.GradeClassStudent">
+      <End Role="GradeClass" EntitySet="GradeClass集合" />
+      <End Role="Student" EntitySet="Student集合" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="GradeClass集合">
+    <Key>
+      <PropertyRef Name="GradeID" />
+    </Key>
+    <Property Name="GradeID" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="Grade" Type="tinyint" Nullable="false" />
+    <Property Name="ClassID" Type="tinyint" Nullable="false" />
+    <Property Name="Graduate" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student集合">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Sex" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="BirthDate" Type="datetime" Nullable="true" />
+    <Property Name="Address" Type="nvarchar" Nullable="true" MaxLength="40" />
+    <Property Name="Phone" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="Parent" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="Relationship" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="GradeID" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="ExitDate" Type="datetime" Nullable="true" />
+  </EntityType>
+  <Association Name="GradeClassStudent">
+    <End Role="GradeClass" Type="Model1.Store.GradeClass集合" Multiplicity="1" />
+    <End Role="Student" Type="Model1.Store.Student集合" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GradeClass">
+        <PropertyRef Name="GradeID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="GradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\CustomException\CustomException\bin\Debug\CustomException.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\CustomException\CustomException\bin\Debug\CustomException.exe
+c:\users\ryu\documents\visual studio 2013\Projects\CustomException\CustomException\bin\Debug\CustomException.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\CustomException\CustomException\obj\Debug\CustomException.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\CustomException\CustomException\obj\Debug\CustomException.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\CustomException\CustomException\obj\Debug\CustomException.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\CustomException\CustomException\obj\Debug\CustomException.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\CustomException\CustomException\obj\Debug\CustomException.exe
+c:\users\ryu\documents\visual studio 2013\Projects\CustomException\CustomException\obj\Debug\CustomException.pdb

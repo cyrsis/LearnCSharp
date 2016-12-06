@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\Replace_ex\Replace_ex\bin\Debug\Replace_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\Replace_ex\Replace_ex\bin\Debug\Replace_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\Replace_ex\Replace_ex\bin\Debug\Replace_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\Replace_ex\Replace_ex\obj\Debug\Replace_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\Replace_ex\Replace_ex\obj\Debug\Replace_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\Replace_ex\Replace_ex\obj\Debug\Replace_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\Replace_ex\Replace_ex\obj\Debug\Replace_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\Replace_ex\Replace_ex\obj\Debug\Replace_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\Replace_ex\Replace_ex\obj\Debug\Replace_ex.pdb

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XINModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="XINModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="XINModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Delivery" EntityType="XINModel.Store.Delivery" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Delivery_Customer" Association="XINModel.Store.FK_Delivery_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Delivery" EntitySet="Delivery" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="AttribName" Type="nvarchar" MaxLength="10" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EarNo" Type="varchar" MaxLength="8" />
+    <Property Name="JoinMan" Type="nvarchar" MaxLength="20" />
+    <Property Name="Tel1" Type="varchar" MaxLength="20" />
+    <Property Name="Tel2" Type="varchar" MaxLength="20" />
+    <Property Name="Fax" Type="varchar" MaxLength="20" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="10" />
+    <Property Name="CompanyAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeliveryAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastDeliveryDate" Type="date" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Delivery">
+    <Key>
+      <PropertyRef Name="DeliveryID" />
+    </Key>
+    <Property Name="DeliveryID" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="DeliveryDate" Type="date" Nullable="false" />
+    <Property Name="CustomerID" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="JoinMan" Type="nvarchar" MaxLength="20" />
+    <Property Name="DeliveryType" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="10" />
+    <Property Name="SubTotal" Type="int" Nullable="false" />
+    <Property Name="ValueAddTax" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="ShipAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <Association Name="FK_Delivery_Customer">
+    <End Role="Customer" Type="XINModel.Store.Customer" Multiplicity="1" />
+    <End Role="Delivery" Type="XINModel.Store.Delivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Delivery">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

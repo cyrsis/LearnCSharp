@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="XINModelStoreContainer" CdmEntityContainer="XINEntities">
+    <EntitySetMapping Name="XINUsers">
+      <EntityTypeMapping TypeName="XINModel.XINUsers">
+        <MappingFragment StoreEntitySet="XINUsers">
+          <ScalarProperty Name="EmployeeNo" ColumnName="EmployeeNo" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="PasswordCode" ColumnName="PasswordCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

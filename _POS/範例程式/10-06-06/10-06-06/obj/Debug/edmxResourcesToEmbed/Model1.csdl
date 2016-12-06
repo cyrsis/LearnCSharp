@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XINModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="XINEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="XINUsers" EntityType="XINModel.XINUsers" />
+  </EntityContainer>
+  <EntityType Name="XINUsers">
+    <Key>
+      <PropertyRef Name="EmployeeNo" />
+    </Key>
+    <Property Name="EmployeeNo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" DefaultValue="111" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\Overriding_EX\Overriding_EX\bin\Debug\Overriding_EX.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\Overriding_EX\Overriding_EX\obj\Debug\Overriding_EX.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\Overriding_EX\Overriding_EX\obj\Debug\Overriding_EX.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\Overriding_EX\Overriding_EX\obj\Debug\Overriding_EX.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\Overriding_EX\Overriding_EX\obj\Debug\Overriding_EX.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\Overriding_EX\Overriding_EX\bin\Debug\Overriding_EX.exe
+c:\users\ryu\documents\visual studio 2013\Projects\Overriding_EX\Overriding_EX\bin\Debug\Overriding_EX.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\Overriding_EX\Overriding_EX\obj\Debug\Overriding_EX.exe
+c:\users\ryu\documents\visual studio 2013\Projects\Overriding_EX\Overriding_EX\obj\Debug\Overriding_EX.pdb

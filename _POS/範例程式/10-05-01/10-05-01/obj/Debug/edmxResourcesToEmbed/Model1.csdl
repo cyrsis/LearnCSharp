@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XINModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="XINEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Programs" EntityType="XINModel.Programs" />
+    <EntitySet Name="UserAuthority" EntityType="XINModel.UserAuthority" />
+    <EntitySet Name="XINUsers" EntityType="XINModel.XINUsers" />
+    <AssociationSet Name="FK_UserAuthority_Programs" Association="XINModel.FK_UserAuthority_Programs">
+      <End Role="Programs" EntitySet="Programs" />
+      <End Role="UserAuthority" EntitySet="UserAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAuthority_XINUsers" Association="XINModel.FK_UserAuthority_XINUsers">
+      <End Role="XINUsers" EntitySet="XINUsers" />
+      <End Role="UserAuthority" EntitySet="UserAuthority" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Programs">
+    <Key>
+      <PropertyRef Name="ProgramID" />
+    </Key>
+    <Property Name="ProgramID" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ProgramName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="UserAuthority" Relationship="XINModel.FK_UserAuthority_Programs" FromRole="Programs" ToRole="UserAuthority" />
+  </EntityType>
+  <EntityType Name="UserAuthority">
+    <Key>
+      <PropertyRef Name="EmployeeNo" />
+      <PropertyRef Name="ProgramID" />
+    </Key>
+    <Property Name="EmployeeNo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ProgramID" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Run" Type="Boolean" Nullable="false" />
+    <Property Name="Append" Type="Boolean" Nullable="false" />
+    <Property Name="Edit" Type="Boolean" Nullable="false" />
+    <Property Name="Report" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Programs" Relationship="XINModel.FK_UserAuthority_Programs" FromRole="UserAuthority" ToRole="Programs" />
+    <NavigationProperty Name="XINUsers" Relationship="XINModel.FK_UserAuthority_XINUsers" FromRole="UserAuthority" ToRole="XINUsers" />
+  </EntityType>
+  <EntityType Name="XINUsers">
+    <Key>
+      <PropertyRef Name="EmployeeNo" />
+    </Key>
+    <Property Name="EmployeeNo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="UserAuthority" Relationship="XINModel.FK_UserAuthority_XINUsers" FromRole="XINUsers" ToRole="UserAuthority" />
+  </EntityType>
+  <Association Name="FK_UserAuthority_Programs">
+    <End Role="Programs" Type="XINModel.Programs" Multiplicity="1" />
+    <End Role="UserAuthority" Type="XINModel.UserAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Programs">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="UserAuthority">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAuthority_XINUsers">
+    <End Role="XINUsers" Type="XINModel.XINUsers" Multiplicity="1" />
+    <End Role="UserAuthority" Type="XINModel.UserAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XINUsers">
+        <PropertyRef Name="EmployeeNo" />
+      </Principal>
+      <Dependent Role="UserAuthority">
+        <PropertyRef Name="EmployeeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

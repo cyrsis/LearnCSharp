@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14C344C3-26BD-480E-A988-9579FCDCD688}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XIN2012</RootNamespace>
+    <AssemblyName>XIN2012</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>發行\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base.Designer.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseDialog.Designer.cs">
+      <DependentUpon>BaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasePreviewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasePreviewReport.Designer.cs">
+      <DependentUpon>BasePreviewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DtnCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DtnCustomer.Designer.cs">
+      <DependentUpon>DtnCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DtnPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DtnPassword.Designer.cs">
+      <DependentUpon>DtnPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DtnProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DtnProduct.Designer.cs">
+      <DependentUpon>DtnProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DtnProgramAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DtnProgramAuthority.Designer.cs">
+      <DependentUpon>DtnProgramAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DtnSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DtnSupplier.Designer.cs">
+      <DependentUpon>DtnSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DtnUserAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DtnUserAuthority.Designer.cs">
+      <DependentUpon>DtnUserAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DtnXINUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DtnXINUsers.Designer.cs">
+      <DependentUpon>DtnXINUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QryCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QryCustomer.Designer.cs">
+      <DependentUpon>QryCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QryDeliveryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QryDeliveryList.Designer.cs">
+      <DependentUpon>QryDeliveryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QryProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QryProduct.Designer.cs">
+      <DependentUpon>QryProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QryReceiptList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QryReceiptList.Designer.cs">
+      <DependentUpon>QryReceiptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QrySupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QrySupplier.Designer.cs">
+      <DependentUpon>QrySupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QryTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QryTransfer.Designer.cs">
+      <DependentUpon>QryTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptCustomer.Designer.cs">
+      <DependentUpon>RptCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDelivery.Designer.cs">
+      <DependentUpon>RptDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDeliveryGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDeliveryGroup.Designer.cs">
+      <DependentUpon>RptDeliveryGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDeliveryGroupCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDeliveryGroupCondi.Designer.cs">
+      <DependentUpon>RptDeliveryGroupCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDeliveryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDeliveryList.Designer.cs">
+      <DependentUpon>RptDeliveryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDeliveryListCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDeliveryListCondi.Designer.cs">
+      <DependentUpon>RptDeliveryListCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDeliveryRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDeliveryRank.Designer.cs">
+      <DependentUpon>RptDeliveryRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDeliveryRankCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDeliveryRankCondi.Designer.cs">
+      <DependentUpon>RptDeliveryRankCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDeliveryYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDeliveryYear.Designer.cs">
+      <DependentUpon>RptDeliveryYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDeliveryYearCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDeliveryYearCondi.Designer.cs">
+      <DependentUpon>RptDeliveryYearCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDullSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDullSales.Designer.cs">
+      <DependentUpon>RptDullSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptDullSalesCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDullSalesCondi.Designer.cs">
+      <DependentUpon>RptDullSalesCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptProduct.Designer.cs">
+      <DependentUpon>RptProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptReceipt.Designer.cs">
+      <DependentUpon>RptReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptReceiptGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptReceiptGroup.Designer.cs">
+      <DependentUpon>RptReceiptGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptReceiptGroupCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptReceiptGroupCondi.Designer.cs">
+      <DependentUpon>RptReceiptGroupCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptReceiptList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptReceiptList.Designer.cs">
+      <DependentUpon>RptReceiptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptReceiptListCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptReceiptListCondi.Designer.cs">
+      <DependentUpon>RptReceiptListCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptReceiptRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptReceiptRank.Designer.cs">
+      <DependentUpon>RptReceiptRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptReceiptRankCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptReceiptRankCondi.Designer.cs">
+      <DependentUpon>RptReceiptRankCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptReceiptYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptReceiptYear.Designer.cs">
+      <DependentUpon>RptReceiptYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptReceiptYearCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptReceiptYearCondi.Designer.cs">
+      <DependentUpon>RptReceiptYearCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStockList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptStockList.Designer.cs">
+      <DependentUpon>RptStockList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStockPostGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptStockPostGroup.Designer.cs">
+      <DependentUpon>RptStockPostGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStockPostGroupCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptStockPostGroupCondi.Designer.cs">
+      <DependentUpon>RptStockPostGroupCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStockPostList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptStockPostList.Designer.cs">
+      <DependentUpon>RptStockPostList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStockPostListCondi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptStockPostListCondi.Designer.cs">
+      <DependentUpon>RptStockPostListCondi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptSupplier.Designer.cs">
+      <DependentUpon>RptSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptTransfer.Designer.cs">
+      <DependentUpon>RptTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TxnDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TxnDelivery.Designer.cs">
+      <DependentUpon>TxnDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TxnReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TxnReceipt.Designer.cs">
+      <DependentUpon>TxnReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TxnTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TxnTransfer.Designer.cs">
+      <DependentUpon>TxnTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XINDataSet.cs">
+      <DependentUpon>XINDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XINDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XINDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="XINFunction.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base.resx">
+      <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialog.resx">
+      <DependentUpon>BaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasePreviewReport.resx">
+      <DependentUpon>BasePreviewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DtnCustomer.resx">
+      <DependentUpon>DtnCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DtnPassword.resx">
+      <DependentUpon>DtnPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DtnProduct.resx">
+      <DependentUpon>DtnProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DtnProgramAuthority.resx">
+      <DependentUpon>DtnProgramAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DtnSupplier.resx">
+      <DependentUpon>DtnSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DtnUserAuthority.resx">
+      <DependentUpon>DtnUserAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DtnXINUsers.resx">
+      <DependentUpon>DtnXINUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QryCustomer.resx">
+      <DependentUpon>QryCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QryDeliveryList.resx">
+      <DependentUpon>QryDeliveryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QryProduct.resx">
+      <DependentUpon>QryProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QryReceiptList.resx">
+      <DependentUpon>QryReceiptList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QrySupplier.resx">
+      <DependentUpon>QrySupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QryTransfer.resx">
+      <DependentUpon>QryTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptCustomer.rdlc" />
+    <EmbeddedResource Include="RptCustomer.resx">
+      <DependentUpon>RptCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDelivery.rdlc" />
+    <EmbeddedResource Include="RptDelivery.resx">
+      <DependentUpon>RptDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDeliveryGroup.rdlc" />
+    <EmbeddedResource Include="RptDeliveryGroup.resx">
+      <DependentUpon>RptDeliveryGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDeliveryGroupCondi.resx">
+      <DependentUpon>RptDeliveryGroupCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDeliveryList.rdlc" />
+    <EmbeddedResource Include="RptDeliveryList.resx">
+      <DependentUpon>RptDeliveryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDeliveryListCondi.resx">
+      <DependentUpon>RptDeliveryListCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDeliveryRank.rdlc" />
+    <EmbeddedResource Include="RptDeliveryRank.resx">
+      <DependentUpon>RptDeliveryRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDeliveryRankCondi.resx">
+      <DependentUpon>RptDeliveryRankCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDeliveryYear.rdlc" />
+    <EmbeddedResource Include="RptDeliveryYear.resx">
+      <DependentUpon>RptDeliveryYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDeliveryYearCondi.resx">
+      <DependentUpon>RptDeliveryYearCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDullSales.rdlc" />
+    <EmbeddedResource Include="RptDullSales.resx">
+      <DependentUpon>RptDullSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDullSalesCondi.resx">
+      <DependentUpon>RptDullSalesCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptProduct.rdlc" />
+    <EmbeddedResource Include="RptProduct.resx">
+      <DependentUpon>RptProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceipt.resx">
+      <DependentUpon>RptReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceiptGroup.resx">
+      <DependentUpon>RptReceiptGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceiptGroupCondi.resx">
+      <DependentUpon>RptReceiptGroupCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceiptList.rdlc" />
+    <EmbeddedResource Include="RptReceiptList.resx">
+      <DependentUpon>RptReceiptList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceiptListCondi.resx">
+      <DependentUpon>RptReceiptListCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceiptRank.rdlc" />
+    <EmbeddedResource Include="RptReceiptRank.resx">
+      <DependentUpon>RptReceiptRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceiptRankCondi.resx">
+      <DependentUpon>RptReceiptRankCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceiptYear.rdlc" />
+    <EmbeddedResource Include="RptReceiptYear.resx">
+      <DependentUpon>RptReceiptYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceiptYearCondi.resx">
+      <DependentUpon>RptReceiptYearCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptReceive.rdlc" />
+    <EmbeddedResource Include="RptStockList.rdlc" />
+    <EmbeddedResource Include="RptStockList.resx">
+      <DependentUpon>RptStockList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptStockPostGroup.rdlc" />
+    <EmbeddedResource Include="RptStockPostGroup.resx">
+      <DependentUpon>RptStockPostGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptStockPostGroupCondi.resx">
+      <DependentUpon>RptStockPostGroupCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptStockPostList.rdlc" />
+    <EmbeddedResource Include="RptStockPostList.resx">
+      <DependentUpon>RptStockPostList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptStockPostListCondi.resx">
+      <DependentUpon>RptStockPostListCondi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptSupplier.rdlc" />
+    <EmbeddedResource Include="RptSupplier.resx">
+      <DependentUpon>RptSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptTransfer.rdlc" />
+    <EmbeddedResource Include="RptTransfer.resx">
+      <DependentUpon>RptTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TxnDelivery.resx">
+      <DependentUpon>TxnDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TxnReceipt.resx">
+      <DependentUpon>TxnReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TxnTransfer.resx">
+      <DependentUpon>TxnTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Customer.datasource" />
+    <None Include="Properties\DataSources\Delivery.datasource" />
+    <None Include="Properties\DataSources\DeliveryDetails.datasource" />
+    <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\Programs.datasource" />
+    <None Include="Properties\DataSources\Receipt.datasource" />
+    <None Include="Properties\DataSources\ReceiptDetails.datasource" />
+    <None Include="Properties\DataSources\Supplier.datasource" />
+    <None Include="Properties\DataSources\Transfer.datasource" />
+    <None Include="Properties\DataSources\TransferDetails.datasource" />
+    <None Include="Properties\DataSources\UserAuthority.datasource" />
+    <None Include="Properties\DataSources\XINEntities.datasource" />
+    <None Include="Properties\DataSources\XINUsers.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="XINDataSet.xsc">
+      <DependentUpon>XINDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="XINDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>XINDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XINDataSet.xss">
+      <DependentUpon>XINDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\DialogResult_ex\DialogResult_ex\bin\Debug\DialogResult_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\DialogResult_ex\DialogResult_ex\bin\Debug\DialogResult_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\DialogResult_ex\DialogResult_ex\bin\Debug\DialogResult_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\DialogResult_ex\DialogResult_ex\obj\Debug\DialogResult_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\DialogResult_ex\DialogResult_ex\obj\Debug\DialogResult_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\DialogResult_ex\DialogResult_ex\obj\Debug\DialogResult_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\DialogResult_ex\DialogResult_ex\obj\Debug\DialogResult_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\DialogResult_ex\DialogResult_ex\obj\Debug\DialogResult_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\DialogResult_ex\DialogResult_ex\obj\Debug\DialogResult_ex.pdb

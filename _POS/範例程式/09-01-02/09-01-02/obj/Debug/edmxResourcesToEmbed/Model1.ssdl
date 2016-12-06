@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XINModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="XINModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="XINModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="AttribName" Type="nvarchar" MaxLength="10" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EarNo" Type="varchar" MaxLength="8" />
+    <Property Name="JoinMan" Type="nvarchar" MaxLength="20" />
+    <Property Name="Tel1" Type="varchar" MaxLength="20" />
+    <Property Name="Tel2" Type="varchar" MaxLength="20" />
+    <Property Name="Fax" Type="varchar" MaxLength="20" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="10" />
+    <Property Name="CompanyAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeliveryAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastDeliveryDate" Type="date" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+</Schema>

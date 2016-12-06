@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\MathMin_ex\MathMin_ex\bin\Debug\MathMin_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\MathMin_ex\MathMin_ex\bin\Debug\MathMin_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MathMin_ex\MathMin_ex\bin\Debug\MathMin_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\MathMin_ex\MathMin_ex\obj\Debug\MathMin_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MathMin_ex\MathMin_ex\obj\Debug\MathMin_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MathMin_ex\MathMin_ex\obj\Debug\MathMin_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\MathMin_ex\MathMin_ex\obj\Debug\MathMin_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MathMin_ex\MathMin_ex\obj\Debug\MathMin_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\MathMin_ex\MathMin_ex\obj\Debug\MathMin_ex.csprojResolveAssemblyReference.cache

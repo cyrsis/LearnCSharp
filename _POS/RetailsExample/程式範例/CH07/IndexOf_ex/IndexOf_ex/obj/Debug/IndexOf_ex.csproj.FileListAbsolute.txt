@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\IndexOf_ex\IndexOf_ex\bin\Debug\IndexOf_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\IndexOf_ex\IndexOf_ex\bin\Debug\IndexOf_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\IndexOf_ex\IndexOf_ex\bin\Debug\IndexOf_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\IndexOf_ex\IndexOf_ex\obj\Debug\IndexOf_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\IndexOf_ex\IndexOf_ex\obj\Debug\IndexOf_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\IndexOf_ex\IndexOf_ex\obj\Debug\IndexOf_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\IndexOf_ex\IndexOf_ex\obj\Debug\IndexOf_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\IndexOf_ex\IndexOf_ex\obj\Debug\IndexOf_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\IndexOf_ex\IndexOf_ex\obj\Debug\IndexOf_ex.pdb

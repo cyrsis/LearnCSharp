@@ -1,0 +1,5 @@
+C:\Users\Ryu\Documents\Visual Studio 2013\Projects\SIS\My\bin\Debug\My.dll
+C:\Users\Ryu\Documents\Visual Studio 2013\Projects\SIS\My\bin\Debug\My.pdb
+C:\Users\Ryu\Documents\Visual Studio 2013\Projects\SIS\My\obj\Debug\My.dll
+C:\Users\Ryu\Documents\Visual Studio 2013\Projects\SIS\My\obj\Debug\My.pdb
+C:\Users\Ryu\Documents\Visual Studio 2013\Projects\SIS\My\obj\Debug\My.csprojResolveAssemblyReference.cache

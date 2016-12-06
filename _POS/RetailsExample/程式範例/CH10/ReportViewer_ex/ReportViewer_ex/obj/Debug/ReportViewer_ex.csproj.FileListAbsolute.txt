@@ -1,0 +1,11 @@
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\bin\Debug\ReportViewer_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\bin\Debug\ReportViewer_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\bin\Debug\ReportViewer_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\obj\Debug\ReportViewer_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\obj\Debug\ReportViewer_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\obj\Debug\ReportViewer_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\obj\Debug\ReportViewer_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\obj\Debug\RdlCompile.cache
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\obj\Debug\RdlCompile.compiled
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\obj\Debug\ReportViewer_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\ReportViewer_ex\ReportViewer_ex\obj\Debug\ReportViewer_ex.pdb

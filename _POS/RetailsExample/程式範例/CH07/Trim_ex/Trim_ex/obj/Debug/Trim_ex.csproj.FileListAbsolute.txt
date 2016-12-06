@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\Trim_ex\Trim_ex\bin\Debug\Trim_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\Trim_ex\Trim_ex\bin\Debug\Trim_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\Trim_ex\Trim_ex\bin\Debug\Trim_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\Trim_ex\Trim_ex\obj\Debug\Trim_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\Trim_ex\Trim_ex\obj\Debug\Trim_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\Trim_ex\Trim_ex\obj\Debug\Trim_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\Trim_ex\Trim_ex\obj\Debug\Trim_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\Trim_ex\Trim_ex\obj\Debug\Trim_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\Trim_ex\Trim_ex\obj\Debug\Trim_ex.pdb

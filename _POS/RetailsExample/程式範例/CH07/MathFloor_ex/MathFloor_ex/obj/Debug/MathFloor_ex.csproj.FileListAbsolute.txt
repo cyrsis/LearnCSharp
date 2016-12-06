@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\MathFloor_ex\MathFloor_ex\bin\Debug\MathFloor_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\MathFloor_ex\MathFloor_ex\bin\Debug\MathFloor_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MathFloor_ex\MathFloor_ex\bin\Debug\MathFloor_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\MathFloor_ex\MathFloor_ex\obj\Debug\MathFloor_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\MathFloor_ex\MathFloor_ex\obj\Debug\MathFloor_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MathFloor_ex\MathFloor_ex\obj\Debug\MathFloor_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\MathFloor_ex\MathFloor_ex\obj\Debug\MathFloor_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\MathFloor_ex\MathFloor_ex\obj\Debug\MathFloor_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\MathFloor_ex\MathFloor_ex\obj\Debug\MathFloor_ex.pdb

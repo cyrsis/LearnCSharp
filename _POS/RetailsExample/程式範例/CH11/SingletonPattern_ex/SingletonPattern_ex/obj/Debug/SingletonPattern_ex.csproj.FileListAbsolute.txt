@@ -1,0 +1,11 @@
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\bin\Debug\SingletonPattern_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\bin\Debug\SingletonPattern_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\bin\Debug\SingletonPattern_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\obj\Debug\SingletonPattern_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\obj\Debug\SingletonPattern_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\obj\Debug\SingletonPattern_ex.FrmRMA.resources
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\obj\Debug\SingletonPattern_ex.FrmStock.resources
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\obj\Debug\SingletonPattern_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\obj\Debug\SingletonPattern_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\obj\Debug\SingletonPattern_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\SingletonPattern_ex\SingletonPattern_ex\obj\Debug\SingletonPattern_ex.pdb

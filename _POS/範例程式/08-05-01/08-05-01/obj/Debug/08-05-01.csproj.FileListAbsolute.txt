@@ -1,0 +1,8 @@
+c:\users\benny\documents\visual studio 2012\Projects\08-05-01\08-05-01\bin\Debug\08-05-01.exe.config
+c:\users\benny\documents\visual studio 2012\Projects\08-05-01\08-05-01\bin\Debug\08-05-01.exe
+c:\users\benny\documents\visual studio 2012\Projects\08-05-01\08-05-01\bin\Debug\08-05-01.pdb
+c:\users\benny\documents\visual studio 2012\Projects\08-05-01\08-05-01\obj\Debug\08-05-01.csprojResolveAssemblyReference.cache
+c:\users\benny\documents\visual studio 2012\Projects\08-05-01\08-05-01\obj\Debug\_08_05_01.Properties.Resources.resources
+c:\users\benny\documents\visual studio 2012\Projects\08-05-01\08-05-01\obj\Debug\08-05-01.csproj.GenerateResource.Cache
+c:\users\benny\documents\visual studio 2012\Projects\08-05-01\08-05-01\obj\Debug\08-05-01.exe
+c:\users\benny\documents\visual studio 2012\Projects\08-05-01\08-05-01\obj\Debug\08-05-01.pdb

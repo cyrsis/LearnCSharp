@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="XINModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="XINModelStoreContainer">
+          <EntitySet Name="Customer" EntityType="XINModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Delivery" EntityType="XINModel.Store.Delivery" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeliveryDetails" EntityType="XINModel.Store.DeliveryDetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product" EntityType="XINModel.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Programs" EntityType="XINModel.Store.Programs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Receipt" EntityType="XINModel.Store.Receipt" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ReceiptDetails" EntityType="XINModel.Store.ReceiptDetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Supplier" EntityType="XINModel.Store.Supplier" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Transfer" EntityType="XINModel.Store.Transfer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TransferDetails" EntityType="XINModel.Store.TransferDetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserAuthority" EntityType="XINModel.Store.UserAuthority" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="XINUsers" EntityType="XINModel.Store.XINUsers" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Delivery_Customer" Association="XINModel.Store.FK_Delivery_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveryDetails_Delivery" Association="XINModel.Store.FK_DeliveryDetails_Delivery">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="DeliveryDetails" EntitySet="DeliveryDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveryDetails_Product" Association="XINModel.Store.FK_DeliveryDetails_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="DeliveryDetails" EntitySet="DeliveryDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Receipt_Supplier" Association="XINModel.Store.FK_Receipt_Supplier">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="Receipt" EntitySet="Receipt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReceiptDetails_Product" Association="XINModel.Store.FK_ReceiptDetails_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ReceiptDetails" EntitySet="ReceiptDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReceiptDetails_Receipt" Association="XINModel.Store.FK_ReceiptDetails_Receipt">
+            <End Role="Receipt" EntitySet="Receipt" />
+            <End Role="ReceiptDetails" EntitySet="ReceiptDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransferDetails_Product" Association="XINModel.Store.FK_TransferDetails_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="TransferDetails" EntitySet="TransferDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransferDetails_Transfer" Association="XINModel.Store.FK_TransferDetails_Transfer">
+            <End Role="Transfer" EntitySet="Transfer" />
+            <End Role="TransferDetails" EntitySet="TransferDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAuthority_Programs" Association="XINModel.Store.FK_UserAuthority_Programs">
+            <End Role="Programs" EntitySet="Programs" />
+            <End Role="UserAuthority" EntitySet="UserAuthority" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAuthority_XINUsers" Association="XINModel.Store.FK_UserAuthority_XINUsers">
+            <End Role="XINUsers" EntitySet="XINUsers" />
+            <End Role="UserAuthority" EntitySet="UserAuthority" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="AttribName" Type="nvarchar" MaxLength="10" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EarNo" Type="varchar" MaxLength="8" />
+          <Property Name="JoinMan" Type="nvarchar" MaxLength="20" />
+          <Property Name="Tel1" Type="varchar" MaxLength="20" />
+          <Property Name="Tel2" Type="varchar" MaxLength="20" />
+          <Property Name="Fax" Type="varchar" MaxLength="20" />
+          <Property Name="MobilePhone" Type="varchar" MaxLength="10" />
+          <Property Name="CompanyAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeliveryAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastDeliveryDate" Type="date" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="DeliveryID" />
+          </Key>
+          <Property Name="DeliveryID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="DeliveryDate" Type="date" Nullable="false" />
+          <Property Name="CustomerID" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="JoinMan" Type="nvarchar" MaxLength="20" />
+          <Property Name="DeliveryType" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="InvoiceNo" Type="varchar" MaxLength="10" />
+          <Property Name="SubTotal" Type="int" Nullable="false" />
+          <Property Name="ValueAddTax" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+          <Property Name="ShipAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="DeliveryDetails">
+          <Key>
+            <PropertyRef Name="DeliveryID" />
+            <PropertyRef Name="DeliverySeq" />
+          </Key>
+          <Property Name="DeliveryID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="DeliverySeq" Type="tinyint" Nullable="false" />
+          <Property Name="ProductID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="4" />
+          <Property Name="LastReceiptDate" Type="date" />
+          <Property Name="LastDeliveryDate" Type="date" />
+          <Property Name="StopSales" Type="bit" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Stock" Type="int" />
+          <Property Name="Picture" Type="image" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Programs">
+          <Key>
+            <PropertyRef Name="ProgramID" />
+          </Key>
+          <Property Name="ProgramID" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="ProgramName" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Receipt">
+          <Key>
+            <PropertyRef Name="ReceiptID" />
+          </Key>
+          <Property Name="ReceiptID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ReceiptDate" Type="date" Nullable="false" />
+          <Property Name="SupplierID" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="ReceiptType" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="InvoiceNo" Type="varchar" MaxLength="10" />
+          <Property Name="SubTotal" Type="int" Nullable="false" />
+          <Property Name="ValueAddTax" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+          <Property Name="ShipAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="ReceiptDetails">
+          <Key>
+            <PropertyRef Name="ReceiptID" />
+            <PropertyRef Name="ReceiptSeq" />
+          </Key>
+          <Property Name="ReceiptID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ReceiptSeq" Type="tinyint" Nullable="false" />
+          <Property Name="ProductID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SupplierID" />
+          </Key>
+          <Property Name="SupplierID" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="AttribName" Type="nvarchar" MaxLength="10" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EarNo" Type="varchar" MaxLength="8" />
+          <Property Name="JoinMan" Type="nvarchar" MaxLength="20" />
+          <Property Name="Tel1" Type="varchar" MaxLength="20" />
+          <Property Name="Tel2" Type="varchar" MaxLength="20" />
+          <Property Name="Fax" Type="varchar" MaxLength="20" />
+          <Property Name="MobilePhone" Type="varchar" MaxLength="10" />
+          <Property Name="CompanyAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeliveryAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastReceiptDate" Type="date" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Transfer">
+          <Key>
+            <PropertyRef Name="TransferID" />
+          </Key>
+          <Property Name="TransferID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="TransferDate" Type="date" Nullable="false" />
+          <Property Name="TransferType" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="Description" Type="nvarchar" MaxLength="20" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="TransferDetails">
+          <Key>
+            <PropertyRef Name="TransferID" />
+            <PropertyRef Name="Seq" />
+          </Key>
+          <Property Name="TransferID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Seq" Type="tinyint" Nullable="false" />
+          <Property Name="ProductID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserAuthority">
+          <Key>
+            <PropertyRef Name="EmployeeNo" />
+            <PropertyRef Name="ProgramID" />
+          </Key>
+          <Property Name="EmployeeNo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ProgramID" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Run" Type="bit" Nullable="false" />
+          <Property Name="Append" Type="bit" Nullable="false" />
+          <Property Name="Edit" Type="bit" Nullable="false" />
+          <Property Name="Report" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="XINUsers">
+          <Key>
+            <PropertyRef Name="EmployeeNo" />
+          </Key>
+          <Property Name="EmployeeNo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="EmployeeName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PasswordCode" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_Delivery_Customer">
+          <End Role="Customer" Type="XINModel.Store.Customer" Multiplicity="1" />
+          <End Role="Delivery" Type="XINModel.Store.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveryDetails_Delivery">
+          <End Role="Delivery" Type="XINModel.Store.Delivery" Multiplicity="1" />
+          <End Role="DeliveryDetails" Type="XINModel.Store.DeliveryDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="DeliveryID" />
+            </Principal>
+            <Dependent Role="DeliveryDetails">
+              <PropertyRef Name="DeliveryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveryDetails_Product">
+          <End Role="Product" Type="XINModel.Store.Product" Multiplicity="1" />
+          <End Role="DeliveryDetails" Type="XINModel.Store.DeliveryDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="DeliveryDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Receipt_Supplier">
+          <End Role="Supplier" Type="XINModel.Store.Supplier" Multiplicity="1" />
+          <End Role="Receipt" Type="XINModel.Store.Receipt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Receipt">
+              <PropertyRef Name="SupplierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReceiptDetails_Product">
+          <End Role="Product" Type="XINModel.Store.Product" Multiplicity="1" />
+          <End Role="ReceiptDetails" Type="XINModel.Store.ReceiptDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ReceiptDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReceiptDetails_Receipt">
+          <End Role="Receipt" Type="XINModel.Store.Receipt" Multiplicity="1" />
+          <End Role="ReceiptDetails" Type="XINModel.Store.ReceiptDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Receipt">
+              <PropertyRef Name="ReceiptID" />
+            </Principal>
+            <Dependent Role="ReceiptDetails">
+              <PropertyRef Name="ReceiptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransferDetails_Product">
+          <End Role="Product" Type="XINModel.Store.Product" Multiplicity="1" />
+          <End Role="TransferDetails" Type="XINModel.Store.TransferDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="TransferDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransferDetails_Transfer">
+          <End Role="Transfer" Type="XINModel.Store.Transfer" Multiplicity="1" />
+          <End Role="TransferDetails" Type="XINModel.Store.TransferDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transfer">
+              <PropertyRef Name="TransferID" />
+            </Principal>
+            <Dependent Role="TransferDetails">
+              <PropertyRef Name="TransferID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAuthority_Programs">
+          <End Role="Programs" Type="XINModel.Store.Programs" Multiplicity="1" />
+          <End Role="UserAuthority" Type="XINModel.Store.UserAuthority" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Programs">
+              <PropertyRef Name="ProgramID" />
+            </Principal>
+            <Dependent Role="UserAuthority">
+              <PropertyRef Name="ProgramID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAuthority_XINUsers">
+          <End Role="XINUsers" Type="XINModel.Store.XINUsers" Multiplicity="1" />
+          <End Role="UserAuthority" Type="XINModel.Store.UserAuthority" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="XINUsers">
+              <PropertyRef Name="EmployeeNo" />
+            </Principal>
+            <Dependent Role="UserAuthority">
+              <PropertyRef Name="EmployeeNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="XINModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="XINEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Customer" EntityType="XINModel.Customer" />
+          <EntitySet Name="Delivery" EntityType="XINModel.Delivery" />
+          <EntitySet Name="DeliveryDetails" EntityType="XINModel.DeliveryDetails" />
+          <EntitySet Name="Product" EntityType="XINModel.Product" />
+          <EntitySet Name="Programs" EntityType="XINModel.Programs" />
+          <EntitySet Name="Receipt" EntityType="XINModel.Receipt" />
+          <EntitySet Name="ReceiptDetails" EntityType="XINModel.ReceiptDetails" />
+          <EntitySet Name="Supplier" EntityType="XINModel.Supplier" />
+          <EntitySet Name="Transfer" EntityType="XINModel.Transfer" />
+          <EntitySet Name="TransferDetails" EntityType="XINModel.TransferDetails" />
+          <EntitySet Name="UserAuthority" EntityType="XINModel.UserAuthority" />
+          <EntitySet Name="XINUsers" EntityType="XINModel.XINUsers" />
+          <AssociationSet Name="FK_Delivery_Customer" Association="XINModel.FK_Delivery_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveryDetails_Delivery" Association="XINModel.FK_DeliveryDetails_Delivery">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="DeliveryDetails" EntitySet="DeliveryDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveryDetails_Product" Association="XINModel.FK_DeliveryDetails_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="DeliveryDetails" EntitySet="DeliveryDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReceiptDetails_Product" Association="XINModel.FK_ReceiptDetails_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ReceiptDetails" EntitySet="ReceiptDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransferDetails_Product" Association="XINModel.FK_TransferDetails_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="TransferDetails" EntitySet="TransferDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAuthority_Programs" Association="XINModel.FK_UserAuthority_Programs">
+            <End Role="Programs" EntitySet="Programs" />
+            <End Role="UserAuthority" EntitySet="UserAuthority" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Receipt_Supplier" Association="XINModel.FK_Receipt_Supplier">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="Receipt" EntitySet="Receipt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReceiptDetails_Receipt" Association="XINModel.FK_ReceiptDetails_Receipt">
+            <End Role="Receipt" EntitySet="Receipt" />
+            <End Role="ReceiptDetails" EntitySet="ReceiptDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransferDetails_Transfer" Association="XINModel.FK_TransferDetails_Transfer">
+            <End Role="Transfer" EntitySet="Transfer" />
+            <End Role="TransferDetails" EntitySet="TransferDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAuthority_XINUsers" Association="XINModel.FK_UserAuthority_XINUsers">
+            <End Role="XINUsers" EntitySet="XINUsers" />
+            <End Role="UserAuthority" EntitySet="UserAuthority" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="AttribName" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EarNo" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="JoinMan" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Tel1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Tel2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="MobilePhone" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastDeliveryDate" Type="DateTime" Precision="0" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Delivery" Relationship="XINModel.FK_Delivery_Customer" FromRole="Customer" ToRole="Delivery" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="DeliveryID" />
+          </Key>
+          <Property Name="DeliveryID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="JoinMan" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="DeliveryType" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="InvoiceNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="SubTotal" Type="Int32" Nullable="false" />
+          <Property Name="ValueAddTax" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <Property Name="ShipAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Customer" Relationship="XINModel.FK_Delivery_Customer" FromRole="Delivery" ToRole="Customer" />
+          <NavigationProperty Name="DeliveryDetails" Relationship="XINModel.FK_DeliveryDetails_Delivery" FromRole="Delivery" ToRole="DeliveryDetails" />
+        </EntityType>
+        <EntityType Name="DeliveryDetails">
+          <Key>
+            <PropertyRef Name="DeliveryID" />
+            <PropertyRef Name="DeliverySeq" />
+          </Key>
+          <Property Name="DeliveryID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="DeliverySeq" Type="Byte" Nullable="false" />
+          <Property Name="ProductID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Delivery" Relationship="XINModel.FK_DeliveryDetails_Delivery" FromRole="DeliveryDetails" ToRole="Delivery" />
+          <NavigationProperty Name="Product" Relationship="XINModel.FK_DeliveryDetails_Product" FromRole="DeliveryDetails" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ProductName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Unit" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="LastReceiptDate" Type="DateTime" Precision="0" />
+          <Property Name="LastDeliveryDate" Type="DateTime" Precision="0" />
+          <Property Name="StopSales" Type="Boolean" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Stock" Type="Int32" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DeliveryDetails" Relationship="XINModel.FK_DeliveryDetails_Product" FromRole="Product" ToRole="DeliveryDetails" />
+          <NavigationProperty Name="ReceiptDetails" Relationship="XINModel.FK_ReceiptDetails_Product" FromRole="Product" ToRole="ReceiptDetails" />
+          <NavigationProperty Name="TransferDetails" Relationship="XINModel.FK_TransferDetails_Product" FromRole="Product" ToRole="TransferDetails" />
+        </EntityType>
+        <EntityType Name="Programs">
+          <Key>
+            <PropertyRef Name="ProgramID" />
+          </Key>
+          <Property Name="ProgramID" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="ProgramName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="UserAuthority" Relationship="XINModel.FK_UserAuthority_Programs" FromRole="Programs" ToRole="UserAuthority" />
+        </EntityType>
+        <EntityType Name="Receipt">
+          <Key>
+            <PropertyRef Name="ReceiptID" />
+          </Key>
+          <Property Name="ReceiptID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ReceiptDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SupplierID" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="ReceiptType" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="InvoiceNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="SubTotal" Type="Int32" Nullable="false" />
+          <Property Name="ValueAddTax" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <Property Name="ShipAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Supplier" Relationship="XINModel.FK_Receipt_Supplier" FromRole="Receipt" ToRole="Supplier" />
+          <NavigationProperty Name="ReceiptDetails" Relationship="XINModel.FK_ReceiptDetails_Receipt" FromRole="Receipt" ToRole="ReceiptDetails" />
+        </EntityType>
+        <EntityType Name="ReceiptDetails">
+          <Key>
+            <PropertyRef Name="ReceiptID" />
+            <PropertyRef Name="ReceiptSeq" />
+          </Key>
+          <Property Name="ReceiptID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ReceiptSeq" Type="Byte" Nullable="false" />
+          <Property Name="ProductID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="XINModel.FK_ReceiptDetails_Product" FromRole="ReceiptDetails" ToRole="Product" />
+          <NavigationProperty Name="Receipt" Relationship="XINModel.FK_ReceiptDetails_Receipt" FromRole="ReceiptDetails" ToRole="Receipt" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SupplierID" />
+          </Key>
+          <Property Name="SupplierID" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="AttribName" Type="String" MaxLength="10" Unicode="true" FixedLength="false" ConcurrencyMode="None" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EarNo" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="JoinMan" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Tel1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Tel2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="MobilePhone" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastReceiptDate" Type="DateTime" Precision="0" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Receipt" Relationship="XINModel.FK_Receipt_Supplier" FromRole="Supplier" ToRole="Receipt" />
+        </EntityType>
+        <EntityType Name="Transfer">
+          <Key>
+            <PropertyRef Name="TransferID" />
+          </Key>
+          <Property Name="TransferID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="TransferDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TransferType" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Description" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TransferDetails" Relationship="XINModel.FK_TransferDetails_Transfer" FromRole="Transfer" ToRole="TransferDetails" />
+        </EntityType>
+        <EntityType Name="TransferDetails">
+          <Key>
+            <PropertyRef Name="TransferID" />
+            <PropertyRef Name="Seq" />
+          </Key>
+          <Property Name="TransferID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Seq" Type="Byte" Nullable="false" />
+          <Property Name="ProductID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="XINModel.FK_TransferDetails_Product" FromRole="TransferDetails" ToRole="Product" />
+          <NavigationProperty Name="Transfer" Relationship="XINModel.FK_TransferDetails_Transfer" FromRole="TransferDetails" ToRole="Transfer" />
+        </EntityType>
+        <EntityType Name="UserAuthority">
+          <Key>
+            <PropertyRef Name="EmployeeNo" />
+            <PropertyRef Name="ProgramID" />
+          </Key>
+          <Property Name="EmployeeNo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ProgramID" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Run" Type="Boolean" Nullable="false" />
+          <Property Name="Append" Type="Boolean" Nullable="false" />
+          <Property Name="Edit" Type="Boolean" Nullable="false" />
+          <Property Name="Report" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Programs" Relationship="XINModel.FK_UserAuthority_Programs" FromRole="UserAuthority" ToRole="Programs" />
+          <NavigationProperty Name="XINUsers" Relationship="XINModel.FK_UserAuthority_XINUsers" FromRole="UserAuthority" ToRole="XINUsers" />
+        </EntityType>
+        <EntityType Name="XINUsers">
+          <Key>
+            <PropertyRef Name="EmployeeNo" />
+          </Key>
+          <Property Name="EmployeeNo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="UserAuthority" Relationship="XINModel.FK_UserAuthority_XINUsers" FromRole="XINUsers" ToRole="UserAuthority" />
+        </EntityType>
+        <Association Name="FK_Delivery_Customer">
+          <End Role="Customer" Type="XINModel.Customer" Multiplicity="1" />
+          <End Role="Delivery" Type="XINModel.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveryDetails_Delivery">
+          <End Role="Delivery" Type="XINModel.Delivery" Multiplicity="1" />
+          <End Role="DeliveryDetails" Type="XINModel.DeliveryDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="DeliveryID" />
+            </Principal>
+            <Dependent Role="DeliveryDetails">
+              <PropertyRef Name="DeliveryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveryDetails_Product">
+          <End Role="Product" Type="XINModel.Product" Multiplicity="1" />
+          <End Role="DeliveryDetails" Type="XINModel.DeliveryDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="DeliveryDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReceiptDetails_Product">
+          <End Role="Product" Type="XINModel.Product" Multiplicity="1" />
+          <End Role="ReceiptDetails" Type="XINModel.ReceiptDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ReceiptDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransferDetails_Product">
+          <End Role="Product" Type="XINModel.Product" Multiplicity="1" />
+          <End Role="TransferDetails" Type="XINModel.TransferDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="TransferDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAuthority_Programs">
+          <End Role="Programs" Type="XINModel.Programs" Multiplicity="1" />
+          <End Role="UserAuthority" Type="XINModel.UserAuthority" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Programs">
+              <PropertyRef Name="ProgramID" />
+            </Principal>
+            <Dependent Role="UserAuthority">
+              <PropertyRef Name="ProgramID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Receipt_Supplier">
+          <End Role="Supplier" Type="XINModel.Supplier" Multiplicity="1" />
+          <End Role="Receipt" Type="XINModel.Receipt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Receipt">
+              <PropertyRef Name="SupplierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReceiptDetails_Receipt">
+          <End Role="Receipt" Type="XINModel.Receipt" Multiplicity="1" />
+          <End Role="ReceiptDetails" Type="XINModel.ReceiptDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Receipt">
+              <PropertyRef Name="ReceiptID" />
+            </Principal>
+            <Dependent Role="ReceiptDetails">
+              <PropertyRef Name="ReceiptID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransferDetails_Transfer">
+          <End Role="Transfer" Type="XINModel.Transfer" Multiplicity="1" />
+          <End Role="TransferDetails" Type="XINModel.TransferDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transfer">
+              <PropertyRef Name="TransferID" />
+            </Principal>
+            <Dependent Role="TransferDetails">
+              <PropertyRef Name="TransferID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAuthority_XINUsers">
+          <End Role="XINUsers" Type="XINModel.XINUsers" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UserAuthority" Type="XINModel.UserAuthority" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="XINUsers">
+              <PropertyRef Name="EmployeeNo" />
+            </Principal>
+            <Dependent Role="UserAuthority">
+              <PropertyRef Name="EmployeeNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="XINModelStoreContainer" CdmEntityContainer="XINEntities">
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="XINModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="AttribName" ColumnName="AttribName" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="EarNo" ColumnName="EarNo" />
+                <ScalarProperty Name="JoinMan" ColumnName="JoinMan" />
+                <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+                <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="LastDeliveryDate" ColumnName="LastDeliveryDate" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Delivery">
+            <EntityTypeMapping TypeName="XINModel.Delivery">
+              <MappingFragment StoreEntitySet="Delivery">
+                <ScalarProperty Name="DeliveryID" ColumnName="DeliveryID" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="JoinMan" ColumnName="JoinMan" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="ValueAddTax" ColumnName="ValueAddTax" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeliveryDetails">
+            <EntityTypeMapping TypeName="XINModel.DeliveryDetails">
+              <MappingFragment StoreEntitySet="DeliveryDetails">
+                <ScalarProperty Name="DeliveryID" ColumnName="DeliveryID" />
+                <ScalarProperty Name="DeliverySeq" ColumnName="DeliverySeq" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="XINModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="LastReceiptDate" ColumnName="LastReceiptDate" />
+                <ScalarProperty Name="LastDeliveryDate" ColumnName="LastDeliveryDate" />
+                <ScalarProperty Name="StopSales" ColumnName="StopSales" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Programs">
+            <EntityTypeMapping TypeName="XINModel.Programs">
+              <MappingFragment StoreEntitySet="Programs">
+                <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+                <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Receipt">
+            <EntityTypeMapping TypeName="XINModel.Receipt">
+              <MappingFragment StoreEntitySet="Receipt">
+                <ScalarProperty Name="ReceiptID" ColumnName="ReceiptID" />
+                <ScalarProperty Name="ReceiptDate" ColumnName="ReceiptDate" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="ReceiptType" ColumnName="ReceiptType" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="ValueAddTax" ColumnName="ValueAddTax" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReceiptDetails">
+            <EntityTypeMapping TypeName="XINModel.ReceiptDetails">
+              <MappingFragment StoreEntitySet="ReceiptDetails">
+                <ScalarProperty Name="ReceiptID" ColumnName="ReceiptID" />
+                <ScalarProperty Name="ReceiptSeq" ColumnName="ReceiptSeq" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Supplier">
+            <EntityTypeMapping TypeName="XINModel.Supplier">
+              <MappingFragment StoreEntitySet="Supplier">
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="AttribName" ColumnName="AttribName" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="EarNo" ColumnName="EarNo" />
+                <ScalarProperty Name="JoinMan" ColumnName="JoinMan" />
+                <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+                <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="LastReceiptDate" ColumnName="LastReceiptDate" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transfer">
+            <EntityTypeMapping TypeName="XINModel.Transfer">
+              <MappingFragment StoreEntitySet="Transfer">
+                <ScalarProperty Name="TransferID" ColumnName="TransferID" />
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+                <ScalarProperty Name="TransferType" ColumnName="TransferType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransferDetails">
+            <EntityTypeMapping TypeName="XINModel.TransferDetails">
+              <MappingFragment StoreEntitySet="TransferDetails">
+                <ScalarProperty Name="TransferID" ColumnName="TransferID" />
+                <ScalarProperty Name="Seq" ColumnName="Seq" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAuthority">
+            <EntityTypeMapping TypeName="XINModel.UserAuthority">
+              <MappingFragment StoreEntitySet="UserAuthority">
+                <ScalarProperty Name="EmployeeNo" ColumnName="EmployeeNo" />
+                <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+                <ScalarProperty Name="Run" ColumnName="Run" />
+                <ScalarProperty Name="Append" ColumnName="Append" />
+                <ScalarProperty Name="Edit" ColumnName="Edit" />
+                <ScalarProperty Name="Report" ColumnName="Report" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="XINUsers">
+            <EntityTypeMapping TypeName="XINModel.XINUsers">
+              <MappingFragment StoreEntitySet="XINUsers">
+                <ScalarProperty Name="EmployeeNo" ColumnName="EmployeeNo" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="PasswordCode" ColumnName="PasswordCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

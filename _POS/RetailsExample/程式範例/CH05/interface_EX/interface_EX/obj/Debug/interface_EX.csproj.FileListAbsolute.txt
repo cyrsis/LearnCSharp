@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\interface_EX\interface_EX\bin\Debug\interface_EX.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\interface_EX\interface_EX\obj\Debug\interface_EX.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\interface_EX\interface_EX\obj\Debug\interface_EX.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\interface_EX\interface_EX\obj\Debug\interface_EX.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\interface_EX\interface_EX\obj\Debug\interface_EX.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\interface_EX\interface_EX\bin\Debug\interface_EX.exe
+c:\users\ryu\documents\visual studio 2013\Projects\interface_EX\interface_EX\bin\Debug\interface_EX.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\interface_EX\interface_EX\obj\Debug\interface_EX.exe
+c:\users\ryu\documents\visual studio 2013\Projects\interface_EX\interface_EX\obj\Debug\interface_EX.pdb

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XINModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="XINEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Product" EntityType="XINModel.Product" />
+    <EntitySet Name="DeliveryDetails" EntityType="XINModel.DeliveryDetails" />
+    <AssociationSet Name="FK_DeliveryDetails_Product" Association="XINModel.FK_DeliveryDetails_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="DeliveryDetails" EntitySet="DeliveryDetails" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ProductName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Unit" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+    <Property Name="LastReceiptDate" Type="DateTime" Precision="0" />
+    <Property Name="LastDeliveryDate" Type="DateTime" Precision="0" />
+    <Property Name="StopSales" Type="Boolean" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Stock" Type="Int32" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="DeliveryDetails" Relationship="XINModel.FK_DeliveryDetails_Product" FromRole="Product" ToRole="DeliveryDetails" />
+  </EntityType>
+  <EntityType Name="DeliveryDetails">
+    <Key>
+      <PropertyRef Name="DeliveryID" />
+      <PropertyRef Name="DeliverySeq" />
+    </Key>
+    <Property Type="String" Name="DeliveryID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="DeliverySeq" Nullable="false" />
+    <Property Type="String" Name="ProductID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Quantity" Nullable="false" />
+    <Property Type="Int32" Name="UnitPrice" Nullable="false" />
+    <Property Type="Int32" Name="Amount" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="XINModel.FK_DeliveryDetails_Product" FromRole="DeliveryDetails" ToRole="Product" />
+  </EntityType>
+  <Association Name="FK_DeliveryDetails_Product">
+    <End Type="XINModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="XINModel.DeliveryDetails" Role="DeliveryDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="DeliveryDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

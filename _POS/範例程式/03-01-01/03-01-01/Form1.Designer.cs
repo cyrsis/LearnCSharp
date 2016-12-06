@@ -1,0 +1,132 @@
+﻿namespace _03_01_01
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// 設計工具所需的變數。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// 清除任何使用中的資源。
+        /// </summary>
+        /// <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form 設計工具產生的程式碼
+
+        /// <summary>
+        /// 此為設計工具支援所需的方法 - 請勿使用程式碼編輯器
+        /// 修改這個方法的內容。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnAddConstraints = new System.Windows.Forms.Button();
+            this.btnConstraintsDescription = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.bntRemove = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnAddConstraints
+            // 
+            this.btnAddConstraints.Location = new System.Drawing.Point(792, 12);
+            this.btnAddConstraints.Name = "btnAddConstraints";
+            this.btnAddConstraints.Size = new System.Drawing.Size(128, 32);
+            this.btnAddConstraints.TabIndex = 23;
+            this.btnAddConstraints.Text = "AddConstraints";
+            this.btnAddConstraints.UseVisualStyleBackColor = true;
+            this.btnAddConstraints.Click += new System.EventHandler(this.btnAddConstraints_Click);
+            // 
+            // btnConstraintsDescription
+            // 
+            this.btnConstraintsDescription.Location = new System.Drawing.Point(16, 12);
+            this.btnConstraintsDescription.Name = "btnConstraintsDescription";
+            this.btnConstraintsDescription.Size = new System.Drawing.Size(252, 32);
+            this.btnConstraintsDescription.TabIndex = 22;
+            this.btnConstraintsDescription.Text = "Constraints Description";
+            this.btnConstraintsDescription.UseVisualStyleBackColor = true;
+            this.btnConstraintsDescription.Click += new System.EventHandler(this.btnConstraintsDescription_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(492, 12);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 32);
+            this.btnClear.TabIndex = 21;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(16, 208);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(904, 260);
+            this.listBox1.TabIndex = 20;
+            // 
+            // bntRemove
+            // 
+            this.bntRemove.Location = new System.Drawing.Point(380, 12);
+            this.bntRemove.Name = "bntRemove";
+            this.bntRemove.Size = new System.Drawing.Size(104, 32);
+            this.bntRemove.TabIndex = 19;
+            this.bntRemove.Text = "Remove";
+            this.bntRemove.UseVisualStyleBackColor = true;
+            this.bntRemove.Click += new System.EventHandler(this.bntRemove_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 52);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(904, 148);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(930, 480);
+            this.Controls.Add(this.btnAddConstraints);
+            this.Controls.Add(this.btnConstraintsDescription);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.bntRemove);
+            this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Form1";
+            this.Text = "03-01-01";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        internal System.Windows.Forms.Button btnAddConstraints;
+        internal System.Windows.Forms.Button btnConstraintsDescription;
+        internal System.Windows.Forms.Button btnClear;
+        internal System.Windows.Forms.ListBox listBox1;
+        internal System.Windows.Forms.Button bntRemove;
+        internal System.Windows.Forms.DataGridView dataGridView1;
+    }
+}
+

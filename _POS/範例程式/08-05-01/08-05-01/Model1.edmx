@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="GradeClass" EntityType="Model1.Store.GradeClass" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Student" EntityType="Model1.Store.Student" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="GradeClassStudent" Association="Model1.Store.GradeClassStudent">
+      <End Role="GradeClass" EntitySet="GradeClass" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="GradeClass">
+    <Key>
+      <PropertyRef Name="GradeID" />
+    </Key>
+    <Property Name="GradeID" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="Grade" Type="tinyint" Nullable="false" />
+    <Property Name="ClassID" Type="tinyint" Nullable="false" />
+    <Property Name="Graduate" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Sex" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="BirthDate" Type="datetime" Nullable="true" />
+    <Property Name="Address" Type="nvarchar" Nullable="true" MaxLength="40" />
+    <Property Name="Phone" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="Parent" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="Relationship" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="GradeID" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="ExitDate" Type="datetime" Nullable="true" />
+  </EntityType>
+  <Association Name="GradeClassStudent">
+    <End Role="GradeClass" Type="Model1.Store.GradeClass" Multiplicity="1" />
+    <End Role="Student" Type="Model1.Store.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GradeClass">
+        <PropertyRef Name="GradeID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="GradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GradeClass" EntityType="Model1.GradeClass" />
+          <EntitySet Name="Student" EntityType="Model1.Student" />
+          <AssociationSet Name="GradeClassStudent" Association="Model1.GradeClassStudent">
+            <End Role="GradeClass" EntitySet="GradeClass" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="GradeClass">
+          <Key>
+            <PropertyRef Name="GradeID" />
+          </Key>
+          <Property Type="String" Name="GradeID" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Type="Byte" Name="Grade" Nullable="false" />
+          <Property Type="Byte" Name="ClassID" Nullable="false" />
+          <Property Type="Boolean" Name="Graduate" Nullable="false" />
+          <NavigationProperty Name="Student" Relationship="Model1.GradeClassStudent" FromRole="GradeClass" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Type="String" Name="StudentID" Nullable="false" annotation:StoreGeneratedPattern="None" FixedLength="true" MaxLength="6" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" FixedLength="false" MaxLength="10" Unicode="true" />
+          <Property Type="String" Name="Sex" Nullable="false" FixedLength="true" MaxLength="1" Unicode="false" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="true" />
+          <Property Type="String" Name="Address" Nullable="true" FixedLength="false" MaxLength="40" Unicode="true" />
+          <Property Type="String" Name="Phone" Nullable="true" Unicode="false" FixedLength="false" MaxLength="20" />
+          <Property Type="String" Name="Parent" Nullable="true" Unicode="true" FixedLength="false" MaxLength="10" />
+          <Property Type="String" Name="Relationship" Nullable="true" Unicode="true" FixedLength="false" MaxLength="10" />
+          <Property Type="String" Name="GradeID" Nullable="false" Unicode="false" FixedLength="true" MaxLength="5" />
+          <Property Type="Byte" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="ExitDate" Nullable="true" />
+          <NavigationProperty Name="GradeClass" Relationship="Model1.GradeClassStudent" FromRole="Student" ToRole="GradeClass" />
+        </EntityType>
+        <Association Name="GradeClassStudent">
+          <End Type="Model1.GradeClass" Role="GradeClass" Multiplicity="1" />
+          <End Type="Model1.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GradeClass">
+              <PropertyRef Name="GradeID" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="GradeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="GradeClass">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.GradeClass)">
+        <MappingFragment StoreEntitySet="GradeClass">
+          <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="Graduate" ColumnName="Graduate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Student)">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ExitDate" ColumnName="ExitDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

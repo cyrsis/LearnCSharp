@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="XINModelStoreContainer" CdmEntityContainer="XINEntities">
+    <EntitySetMapping Name="Programs">
+      <EntityTypeMapping TypeName="XINModel.Programs">
+        <MappingFragment StoreEntitySet="Programs">
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAuthority">
+      <EntityTypeMapping TypeName="XINModel.UserAuthority">
+        <MappingFragment StoreEntitySet="UserAuthority">
+          <ScalarProperty Name="EmployeeNo" ColumnName="EmployeeNo" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="Run" ColumnName="Run" />
+          <ScalarProperty Name="Append" ColumnName="Append" />
+          <ScalarProperty Name="Edit" ColumnName="Edit" />
+          <ScalarProperty Name="Report" ColumnName="Report" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XINUsers">
+      <EntityTypeMapping TypeName="XINModel.XINUsers">
+        <MappingFragment StoreEntitySet="XINUsers">
+          <ScalarProperty Name="EmployeeNo" ColumnName="EmployeeNo" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="PasswordCode" ColumnName="PasswordCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

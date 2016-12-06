@@ -1,0 +1,9 @@
+c:\users\ryu\documents\visual studio 2013\Projects\StrategyPattern_ex\StrategyPattern_ex\bin\Debug\StrategyPattern_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\StrategyPattern_ex\StrategyPattern_ex\bin\Debug\StrategyPattern_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\StrategyPattern_ex\StrategyPattern_ex\bin\Debug\StrategyPattern_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\StrategyPattern_ex\StrategyPattern_ex\obj\Debug\StrategyPattern_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\StrategyPattern_ex\StrategyPattern_ex\obj\Debug\StrategyPattern_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\StrategyPattern_ex\StrategyPattern_ex\obj\Debug\StrategyPattern_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\StrategyPattern_ex\StrategyPattern_ex\obj\Debug\StrategyPattern_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\StrategyPattern_ex\StrategyPattern_ex\obj\Debug\StrategyPattern_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\StrategyPattern_ex\StrategyPattern_ex\obj\Debug\StrategyPattern_ex.pdb

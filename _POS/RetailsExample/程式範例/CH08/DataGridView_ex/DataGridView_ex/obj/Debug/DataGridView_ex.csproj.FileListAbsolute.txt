@@ -1,0 +1,12 @@
+c:\users\ryu\documents\visual studio 2013\Projects\DataGridView_ex\DataGridView_ex\bin\Debug\DataGridView_ex.exe.config
+c:\users\ryu\documents\visual studio 2013\Projects\DataGridView_ex\DataGridView_ex\bin\Debug\DataGridView_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\DataGridView_ex\DataGridView_ex\bin\Debug\DataGridView_ex.pdb
+c:\users\ryu\documents\visual studio 2013\Projects\DataGridView_ex\DataGridView_ex\obj\Debug\DataGridView_ex.csprojResolveAssemblyReference.cache
+c:\users\ryu\documents\visual studio 2013\Projects\DataGridView_ex\DataGridView_ex\obj\Debug\DataGridView_ex.Form1.resources
+c:\users\ryu\documents\visual studio 2013\Projects\DataGridView_ex\DataGridView_ex\obj\Debug\DataGridView_ex.Properties.Resources.resources
+c:\users\ryu\documents\visual studio 2013\Projects\DataGridView_ex\DataGridView_ex\obj\Debug\DataGridView_ex.csproj.GenerateResource.Cache
+c:\users\ryu\documents\visual studio 2013\Projects\DataGridView_ex\DataGridView_ex\obj\Debug\DataGridView_ex.exe
+c:\users\ryu\documents\visual studio 2013\Projects\DataGridView_ex\DataGridView_ex\obj\Debug\DataGridView_ex.pdb
+D:\電腦著作作品集\19-Visual C#進銷存系統開發實務設計\Reader\程式範例\CH08\DataGridView_ex\DataGridView_ex\bin\Debug\DataGridView_ex.exe.config
+D:\電腦著作作品集\19-Visual C#進銷存系統開發實務設計\Reader\程式範例\CH08\DataGridView_ex\DataGridView_ex\obj\Debug\DataGridView_ex.exe
+D:\電腦著作作品集\19-Visual C#進銷存系統開發實務設計\Reader\程式範例\CH08\DataGridView_ex\DataGridView_ex\obj\Debug\DataGridView_ex.pdb
