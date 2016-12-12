@@ -1,0 +1,50 @@
+﻿<Window x:Class="LinqToSqlExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.Resources>
+
+        <Style TargetType="{x:Type Ellipse}" x:Key="CustomerCircle">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="-0.116,-0.03" StartPoint="1.298,1.03">
+                        <GradientStop Color="#FF94A9E0" Offset="0"/>
+                        <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <DataTemplate x:Key="ShowCustomer">
+            <StackPanel Orientation="Horizontal">
+                <Ellipse Style="{StaticResource CustomerCircle}" Width="40" Height="40" Margin="10 10 0 10"/>
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock Text="{Binding FirstName}" FontSize="28"/>
+                    <TextBlock Text="  "/>
+                    <TextBlock Text="{Binding LastName}"  FontSize="28"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <ScrollViewer>
+        <DockPanel>
+
+            <ListView x:Name="CustomerList"
+                        ItemTemplate="{StaticResource ShowCustomer}">
+
+                <ListView.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFF9F3F3" Offset="0"/>
+                        <GradientStop Color="#FFD3CFCF" Offset="1"/>
+                    </RadialGradientBrush>
+                </ListView.Background>
+
+            </ListView>
+        </DockPanel>
+    </ScrollViewer>    
+    
+    
+</Window>
