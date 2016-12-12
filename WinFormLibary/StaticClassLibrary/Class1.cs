@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StaticClassLibrary
+{
+    public static class Class1
+    {
+        public static string SelectSX(int intYear)
+        {
+            string strText = "";
+            switch (intYear % 12)
+            {
+                case 4:
+                    strText = "鼠";
+                    break;
+                case 5:
+                    strText = "牛";
+                    break;
+                case 6:
+                    strText = "虎";
+                    break;
+                case 7:
+                    strText = "兔";
+                    break;
+                case 8:
+                    strText = "龍";
+                    break;
+                case 9:
+                    strText = "蛇";
+                    break;
+                case 10:
+                    strText = "馬";
+                    break;
+                case 11:
+                    strText = "羊";
+                    break;
+                case 0:
+                    strText = "猴";
+                    break;
+                case 1:
+                    strText = "雞";
+                    break;
+                case 2:
+                    strText = "狗";
+                    break;
+                case 3:
+                    strText = "豬";
+                    break;
+            }
+            return strText;
+        }
+
+
+    }
+}

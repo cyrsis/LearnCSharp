@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2EC083B-E5AF-4AE7-9564-C5D14C6336E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsMainApplication</RootNamespace>
+    <AssemblyName>WindowsFormsMainApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\InteropOfficeWordAndExcel.1.0.0\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\InteropOfficeWordAndExcel.1.0.0\lib\Microsoft.Office.Interop.Word.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddArrayInArray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddArrayInArray.designer.cs">
+      <DependentUpon>AddArrayInArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddByVirtualMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddByVirtualMethod.designer.cs">
+      <DependentUpon>AddByVirtualMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDataToFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDataToFile.Designer.cs">
+      <DependentUpon>AddDataToFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDate.Designer.cs">
+      <DependentUpon>AddDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddElementInArray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddElementInArray.Designer.cs">
+      <DependentUpon>AddElementInArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddHyperLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddHyperLink.Designer.cs">
+      <DependentUpon>AddHyperLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentINList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentINList.Designer.cs">
+      <DependentUpon>AddStudentINList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTabePages.cs" />
+    <Compile Include="AddTabePages.designer.cs">
+      <DependentUpon>AddTabePages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTable.Designer.cs">
+      <DependentUpon>AddTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ALittlerArms.cs" />
+    <Compile Include="ALittlerArms.Designer.cs">
+      <DependentUpon>ALittlerArms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllowDropFile.cs" />
+    <Compile Include="AllowDropFile.designer.cs">
+      <DependentUpon>AllowDropFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AmendFileAttribute.cs" />
+    <Compile Include="AmendFileAttribute.designer.cs">
+      <DependentUpon>AmendFileAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyseGoodsTrend.cs" />
+    <Compile Include="AnalyseGoodsTrend.designer.cs">
+      <DependentUpon>AnalyseGoodsTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyseLottery.cs" />
+    <Compile Include="AnalyseLottery.designer.cs">
+      <DependentUpon>AnalyseLottery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyseSortData.cs" />
+    <Compile Include="AnalyseSortData.designer.cs">
+      <DependentUpon>AnalyseSortData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppInterface.cs" />
+    <Compile Include="AppInterface.designer.cs">
+      <DependentUpon>AppInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArbitarinessCombination.cs" />
+    <Compile Include="ArbitarinessCombination.Designer.cs">
+      <DependentUpon>ArbitarinessCombination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Arithmetic.cs" />
+    <Compile Include="Arithmetic.Designer.cs">
+      <DependentUpon>Arithmetic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArrayInfo.cs" />
+    <Compile Include="ArrayInfo.Designer.cs">
+      <DependentUpon>ArrayInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArrayRank.cs" />
+    <Compile Include="ArrayRank.Designer.cs">
+      <DependentUpon>ArrayRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASCII.cs" />
+    <Compile Include="ASCII.Designer.cs">
+      <DependentUpon>ASCII.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASynchronismLoadPlayVoice.cs" />
+    <Compile Include="ASynchronismLoadPlayVoice.Designer.cs">
+      <DependentUpon>ASynchronismLoadPlayVoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AtomizationImage.cs" />
+    <Compile Include="AtomizationImage.designer.cs">
+      <DependentUpon>AtomizationImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoButton.cs" />
+    <Compile Include="AutoButton.Designer.cs">
+      <DependentUpon>AutoButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoImageSizeByForm.cs" />
+    <Compile Include="AutoImageSizeByForm.designer.cs">
+      <DependentUpon>AutoImageSizeByForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoMultiExcelToOneExcel.cs" />
+    <Compile Include="AutoMultiExcelToOneExcel.designer.cs">
+      <DependentUpon>AutoMultiExcelToOneExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BadgeImage.cs" />
+    <Compile Include="BadgeImage.designer.cs">
+      <DependentUpon>BadgeImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BassRelievo.cs" />
+    <Compile Include="BassRelievo.designer.cs">
+      <DependentUpon>BassRelievo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeatifulComboBox.cs" />
+    <Compile Include="BeatifulComboBox.Designer.cs">
+      <DependentUpon>BeatifulComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BindingXML.cs" />
+    <Compile Include="BindingXML.Designer.cs">
+      <DependentUpon>BindingXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlackandWhiteImage.cs" />
+    <Compile Include="BlackandWhiteImage.designer.cs">
+      <DependentUpon>BlackandWhiteImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlockCharacter.cs" />
+    <Compile Include="BlockCharacter.designer.cs">
+      <DependentUpon>BlockCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BMPChange.cs" />
+    <Compile Include="BMPChange.designer.cs">
+      <DependentUpon>BMPChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BMPChangeWMF.cs" />
+    <Compile Include="BMPChangeWMF.designer.cs">
+      <DependentUpon>BMPChangeWMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BootStraoBeatitude.cs" />
+    <Compile Include="BootStraoBeatitude.designer.cs">
+      <DependentUpon>BootStraoBeatitude.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseImage.cs" />
+    <Compile Include="BrowseImage.designer.cs">
+      <DependentUpon>BrowseImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BubbleShowForm.cs" />
+    <Compile Include="BubbleShowForm.designer.cs">
+      <DependentUpon>BubbleShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BubbleUpSort.cs" />
+    <Compile Include="BubbleUpSort.designer.cs">
+      <DependentUpon>BubbleUpSort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingBlock.cs" />
+    <Compile Include="BuildingBlock.designer.cs">
+      <DependentUpon>BuildingBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuildNumber.cs" />
+    <Compile Include="BuildNumber.designer.cs">
+      <DependentUpon>BuildNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuntForms.cs" />
+    <Compile Include="BuntForms.designer.cs">
+      <DependentUpon>BuntForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUttonMagnifier.cs" />
+    <Compile Include="BUttonMagnifier.Designer.cs">
+      <DependentUpon>BUttonMagnifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonShortCut.cs" />
+    <Compile Include="ButtonShortCut.Designer.cs">
+      <DependentUpon>ButtonShortCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ByteConversion.cs" />
+    <Compile Include="ByteConversion.Designer.cs">
+      <DependentUpon>ByteConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cachet.cs" />
+    <Compile Include="Cachet.designer.cs">
+      <DependentUpon>Cachet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaesarArithmetic.cs" />
+    <Compile Include="CalcByClass.cs" />
+    <Compile Include="CalcByClass.designer.cs">
+      <DependentUpon>CalcByClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalcRAreaByAbstractClass.cs" />
+    <Compile Include="CalcRAreaByAbstractClass.designer.cs">
+      <DependentUpon>CalcRAreaByAbstractClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalcRMatrix.cs" />
+    <Compile Include="CalcRMatrix.Designer.cs">
+      <DependentUpon>CalcRMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculagraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculagraph.designer.cs">
+      <DependentUpon>Calculagraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculator.Designer.cs">
+      <DependentUpon>Calculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamoutflageFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamoutflageFolder.designer.cs">
+      <DependentUpon>CamoutflageFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAnalyseGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAnalyseGoods.designer.cs">
+      <DependentUpon>CAnalyseGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAnalyseSex.cs" />
+    <Compile Include="CAnalyseSex.designer.cs">
+      <DependentUpon>CAnalyseSex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CanvasImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CanvasImage.designer.cs">
+      <DependentUpon>CanvasImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeFocus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeFocus.designer.cs">
+      <DependentUpon>ChangeFocus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeFormSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeFormSize.designer.cs">
+      <DependentUpon>ChangeFormSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxinListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBoxinListView.Designer.cs">
+      <DependentUpon>CheckBoxinListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxInStatusBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBoxInStatusBar.designer.cs">
+      <DependentUpon>CheckBoxInStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxInTreeView.cs" />
+    <Compile Include="CheckBoxInTreeView.Designer.cs">
+      <DependentUpon>CheckBoxInTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checked.Designer.cs">
+      <DependentUpon>Checked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckedListBoxForSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckedListBoxForSelect.designer.cs">
+      <DependentUpon>CheckedListBoxForSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChineseCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChineseCode.Designer.cs">
+      <DependentUpon>ChineseCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClearFormBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClearFormBack.designer.cs">
+      <DependentUpon>ClearFormBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClearRecycle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClearRecycle.designer.cs">
+      <DependentUpon>ClearRecycle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColumnByControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColumnByControl.designer.cs">
+      <DependentUpon>ColumnByControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComboBoxFind.Designer.cs">
+      <DependentUpon>ComboBoxFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dedault.Designer.cs">
+      <DependentUpon>Dedault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Main.cs" />
+    <Compile Include="Main_Main.Designer.cs">
+      <DependentUpon>Main_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddArrayInArray.resx">
+      <DependentUpon>AddArrayInArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddByVirtualMethod.resx">
+      <DependentUpon>AddByVirtualMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDataToFile.resx">
+      <DependentUpon>AddDataToFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDate.resx">
+      <DependentUpon>AddDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddElementInArray.resx">
+      <DependentUpon>AddElementInArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddHyperLink.resx">
+      <DependentUpon>AddHyperLink.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentINList.resx">
+      <DependentUpon>AddStudentINList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTabePages.resx">
+      <DependentUpon>AddTabePages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTable.resx">
+      <DependentUpon>AddTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ALittlerArms.resx">
+      <DependentUpon>ALittlerArms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllowDropFile.resx">
+      <DependentUpon>AllowDropFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmendFileAttribute.resx">
+      <DependentUpon>AmendFileAttribute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalyseGoodsTrend.resx">
+      <DependentUpon>AnalyseGoodsTrend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalyseLottery.resx">
+      <DependentUpon>AnalyseLottery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalyseSortData.resx">
+      <DependentUpon>AnalyseSortData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppInterface.resx">
+      <DependentUpon>AppInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArbitarinessCombination.resx">
+      <DependentUpon>ArbitarinessCombination.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arithmetic.resx">
+      <DependentUpon>Arithmetic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArrayInfo.resx">
+      <DependentUpon>ArrayInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArrayRank.resx">
+      <DependentUpon>ArrayRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASCII.resx">
+      <DependentUpon>ASCII.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASynchronismLoadPlayVoice.resx">
+      <DependentUpon>ASynchronismLoadPlayVoice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AtomizationImage.resx">
+      <DependentUpon>AtomizationImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoButton.resx">
+      <DependentUpon>AutoButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoImageSizeByForm.resx">
+      <DependentUpon>AutoImageSizeByForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoMultiExcelToOneExcel.resx">
+      <DependentUpon>AutoMultiExcelToOneExcel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BadgeImage.resx">
+      <DependentUpon>BadgeImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BassRelievo.resx">
+      <DependentUpon>BassRelievo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeatifulComboBox.resx">
+      <DependentUpon>BeatifulComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BindingXML.resx">
+      <DependentUpon>BindingXML.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlackandWhiteImage.resx">
+      <DependentUpon>BlackandWhiteImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlockCharacter.resx">
+      <DependentUpon>BlockCharacter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BMPChange.resx">
+      <DependentUpon>BMPChange.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BMPChangeWMF.resx">
+      <DependentUpon>BMPChangeWMF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BootStraoBeatitude.resx">
+      <DependentUpon>BootStraoBeatitude.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseImage.resx">
+      <DependentUpon>BrowseImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BubbleShowForm.resx">
+      <DependentUpon>BubbleShowForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BubbleUpSort.resx">
+      <DependentUpon>BubbleUpSort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuildingBlock.resx">
+      <DependentUpon>BuildingBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuildNumber.resx">
+      <DependentUpon>BuildNumber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuntForms.resx">
+      <DependentUpon>BuntForms.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUttonMagnifier.resx">
+      <DependentUpon>BUttonMagnifier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButtonShortCut.resx">
+      <DependentUpon>ButtonShortCut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ByteConversion.resx">
+      <DependentUpon>ByteConversion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cachet.resx">
+      <DependentUpon>Cachet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalcByClass.resx">
+      <DependentUpon>CalcByClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalcRAreaByAbstractClass.resx">
+      <DependentUpon>CalcRAreaByAbstractClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalcRMatrix.resx">
+      <DependentUpon>CalcRMatrix.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculagraph.resx">
+      <DependentUpon>Calculagraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculator.resx">
+      <DependentUpon>Calculator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamoutflageFolder.resx">
+      <DependentUpon>CamoutflageFolder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAnalyseGoods.resx">
+      <DependentUpon>CAnalyseGoods.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAnalyseSex.resx">
+      <DependentUpon>CAnalyseSex.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanvasImage.resx">
+      <DependentUpon>CanvasImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeFocus.resx">
+      <DependentUpon>ChangeFocus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeFormSize.resx">
+      <DependentUpon>ChangeFormSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBoxinListView.resx">
+      <DependentUpon>CheckBoxinListView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBoxInStatusBar.resx">
+      <DependentUpon>CheckBoxInStatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBoxInTreeView.resx">
+      <DependentUpon>CheckBoxInTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checked.resx">
+      <DependentUpon>Checked.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckedListBoxForSelect.resx">
+      <DependentUpon>CheckedListBoxForSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChineseCode.resx">
+      <DependentUpon>ChineseCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClearFormBack.resx">
+      <DependentUpon>ClearFormBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClearRecycle.resx">
+      <DependentUpon>ClearRecycle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnByControl.resx">
+      <DependentUpon>ColumnByControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboBoxFind.resx">
+      <DependentUpon>ComboBoxFind.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Main.resx">
+      <DependentUpon>Main_Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
