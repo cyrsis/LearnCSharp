@@ -58,3 +58,6 @@ C:\Users\Ryu\Documents\Visual Studio 2013\Projects\SIS\SIS\bin\Debug\Reports\rpt
 C:\Users\Ryu\Documents\Visual Studio 2013\Projects\SIS\SIS\bin\Debug\Reports\rptSaleOrders.rdlc
 C:\Users\Ryu\Documents\Visual Studio 2013\Projects\SIS\SIS\obj\Debug\SIS.FrmReportForSaleOrders.resources
 C:\Users\Ryu\Documents\Visual Studio 2013\Projects\SIS\SIS\bin\Debug\System.ini
+D:\LearnCSharp\_POS\RetailsExample\程式範例\SIS\SIS\bin\Debug\SIS.exe.config
+D:\LearnCSharp\_POS\RetailsExample\程式範例\SIS\SIS\obj\Debug\SIS.exe
+D:\LearnCSharp\_POS\RetailsExample\程式範例\SIS\SIS\obj\Debug\SIS.pdb
