@@ -1,0 +1,13 @@
+﻿{
+	"customers": [{
+			"firstName": "Sarah",
+			"secondName": "Smith"
+		}, {
+			"firstName": "Gentry",
+			"secondName": "Jones"
+		}, {
+			"firstName": "Peter",
+			"secondName": "McCoy"
+		}
+	]
+}

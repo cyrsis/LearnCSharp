@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <title>Send Data</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    function send() {
+        var customer = { firstName: "Sarah", secondName: "Smith" };
+        $.ajax({
+            type: "POST",
+            data: JSON.stringify(customer),
+            url: "api/values",
+            contentType: "application/json"
+        });
+    }
+    </script>
+    <button onclick="send()">Send Customer</button>
+</body>
+</html>
