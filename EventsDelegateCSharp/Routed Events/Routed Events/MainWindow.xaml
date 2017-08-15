@@ -1,0 +1,51 @@
+﻿<Window x:Class="Routed_Events.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Routed_Events"
+        mc:Ignorable="d"
+        Title="Routed Events"
+        Height="400" Width="400"
+        FontSize="16"
+        PreviewMouseDown="Window_PreviewMouseDown"
+        MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="Pink"
+        PreviewMouseDown="Grid_PreviewMouseDown"
+        MouseDown="Grid_MouseDown">
+
+        <StackPanel Name="outerStackPanel" Orientation="Vertical"
+            Margin="10" Background="LightYellow"
+            PreviewMouseDown=
+                "outerStackPanel_PreviewMouseDown"
+            MouseDown="outerStackPanel_MouseDown">
+
+            <StackPanel Name="innerStackPanel" Orientation="Horizontal" HorizontalAlignment="Center"
+                Margin="0,5,0,5" Background="LightGreen"
+                PreviewMouseDown=
+                    "innerStackPanel_PreviewMouseDown"
+                MouseDown="innerStackPanel_MouseDown">
+
+                <Label Name="yesLabel" Content="Yes Label"
+                    PreviewMouseDown=
+                        "yesLabel_PreviewMouseDown"
+                    MouseDown="yesLabel_MouseDown"/>
+                <Label Name="noLabel" Content="No Label"
+                    PreviewMouseDown=
+                        "noLabel_PreviewMouseDown"
+                    MouseDown="noLabel_MouseDown"/>
+            </StackPanel>
+
+            <ListBox Name="resultsListBox"/>
+        </StackPanel>
+    </Grid>
+</Window>

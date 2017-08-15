@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mod05-NETNative", "Mod05-NETNative\Mod05-NETNative.csproj", "{E6898F65-D581-4579-8406-5F3410C8EA3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+		Release-Native|x64 = Release-Native|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6898F65-D581-4579-8406-5F3410C8EA3E}.Debug|x64.ActiveCfg = Debug|x64
+		{E6898F65-D581-4579-8406-5F3410C8EA3E}.Debug|x64.Build.0 = Debug|x64
+		{E6898F65-D581-4579-8406-5F3410C8EA3E}.Debug|x64.Deploy.0 = Debug|x64
+		{E6898F65-D581-4579-8406-5F3410C8EA3E}.Release|x64.ActiveCfg = Release|x64
+		{E6898F65-D581-4579-8406-5F3410C8EA3E}.Release|x64.Build.0 = Release|x64
+		{E6898F65-D581-4579-8406-5F3410C8EA3E}.Release|x64.Deploy.0 = Release|x64
+		{E6898F65-D581-4579-8406-5F3410C8EA3E}.Release-Native|x64.ActiveCfg = Release-Native|x64
+		{E6898F65-D581-4579-8406-5F3410C8EA3E}.Release-Native|x64.Build.0 = Release-Native|x64
+		{E6898F65-D581-4579-8406-5F3410C8EA3E}.Release-Native|x64.Deploy.0 = Release-Native|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

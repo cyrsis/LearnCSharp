@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mod04-CacheExploration", "Mod04-CacheExploration\Mod04-CacheExploration.csproj", "{DD37C546-C893-425A-A666-4C5C0D099A83}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mod04-StoreLoadForwarding", "Mod04-StoreLoadForwarding\Mod04-StoreLoadForwarding.vcxproj", "{D5557184-7EB9-485A-80AC-1A6A5FBD4643}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD37C546-C893-425A-A666-4C5C0D099A83}.Debug|x64.ActiveCfg = Debug|x64
+		{DD37C546-C893-425A-A666-4C5C0D099A83}.Debug|x64.Build.0 = Debug|x64
+		{DD37C546-C893-425A-A666-4C5C0D099A83}.Release|x64.ActiveCfg = Release|x64
+		{DD37C546-C893-425A-A666-4C5C0D099A83}.Release|x64.Build.0 = Release|x64
+		{D5557184-7EB9-485A-80AC-1A6A5FBD4643}.Debug|x64.ActiveCfg = Debug|x64
+		{D5557184-7EB9-485A-80AC-1A6A5FBD4643}.Debug|x64.Build.0 = Debug|x64
+		{D5557184-7EB9-485A-80AC-1A6A5FBD4643}.Release|x64.ActiveCfg = Release|x64
+		{D5557184-7EB9-485A-80AC-1A6A5FBD4643}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

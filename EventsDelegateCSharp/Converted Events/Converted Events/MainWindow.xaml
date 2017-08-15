@@ -1,0 +1,68 @@
+﻿<Window x:Class="Converted_Events.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Converted_Events"
+        mc:Ignorable="d"
+        Title="Converted Events"
+        Height="600" Width="400"
+        FontSize="16"
+        PreviewMouseDown="Window_PreviewMouseDown"
+        PreviewMouseUp="Window_PreviewMouseUp"
+        MouseDown="Window_MouseDown"
+        MouseUp="Window_MouseUp"
+        Button.Click="Window_Click">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
+    <Grid PreviewMouseDown="Grid_PreviewMouseDown"
+        PreviewMouseUp="Grid_PreviewMouseUp"
+        MouseDown="Grid_MouseDown"
+        MouseUp="Grid_MouseUp"
+        Button.Click="Grid_Click">
+
+        <StackPanel Name="outerStackPanel" Orientation="Vertical"
+            Margin="0,3,0,-3" Background="LightYellow"
+            PreviewMouseDown="outerStackPanel_PreviewMouseDown"
+            PreviewMouseUp="outerStackPanel_PreviewMouseUp"
+            MouseDown="outerStackPanel_MouseDown"
+            MouseUp="outerStackPanel_MouseUp"        
+            Button.Click="outerStackPanel_Click">
+
+            <StackPanel Name="innerStackPanel" Orientation="Horizontal" HorizontalAlignment="Center"
+                Margin="0,10,0,10" Background="LightGreen"
+                PreviewMouseDown="innerStackPanel_PreviewMouseDown"
+                PreviewMouseUp="innerStackPanel_PreviewMouseUp"
+                MouseDown="innerStackPanel_MouseDown"
+                MouseUp="innerStackPanel_MouseUp"
+                Button.Click="innerStackPanel_Click">
+
+                <Button Name="yesButton"
+                    PreviewMouseDown="yesButton_PreviewMouseDown"
+                    PreviewMouseUp="yesButton_PreviewMouseUp"
+                    MouseDown="yesButton_MouseDown"
+                    MouseUp="yesButton_MouseUp"
+                    Click="yesButton_Click">
+                    <Label Content="Yes Label" FontWeight="Bold" Background="Orange"
+                        PreviewMouseDown="Label_PreviewMouseDown"
+                        PreviewMouseUp="Label_PreviewMouseUp"
+                        MouseDown="Label_MouseDown"
+                        MouseUp="Label_MouseUp"
+                        Button.Click="Label_Click"
+                        />
+                </Button>
+                <Button Name="noButton" Content="No Button"
+                    PreviewMouseDown="noButton_PreviewMouseDown"
+                    PreviewMouseUp="noButton_PreviewMouseUp"
+                    Click="noButton_Click"/>
+            </StackPanel>
+
+            <ListBox Name="resultsListBox"/>
+        </StackPanel>
+    </Grid>
+</Window>

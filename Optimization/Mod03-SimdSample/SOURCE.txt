@@ -1,0 +1,4 @@
+MSDN Sample Gallery: SIMD Sample
+http://code.msdn.microsoft.com/SIMD-Sample-f2c8c35a
+
+Retrieved on August 27, 2014.

@@ -1,0 +1,15 @@
+﻿<Page
+    x:Class="Mod05_NETNative.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mod05_NETNative"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Margin="50"  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Click="RunClick" FontSize="36">Run!</Button>
+        <TextBlock x:Name="elapsedTimeText" FontSize="24" />
+        <Image x:Name="fractalImage" />
+    </StackPanel>
+</Page>
