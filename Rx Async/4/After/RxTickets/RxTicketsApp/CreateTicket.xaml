@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="RxTicketsApp.CreateTicket"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RxTicketsApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="854">
+    <Page.TopAppBar>
+        <CommandBar IsOpen="True" IsSticky="True" x:Name="appBar" Background="{ThemeResource ButtonBackgroundThemeBrush}" >
+            <AppBarButton Icon="Cancel" Label="Cancel" Tag="Cancel" Click="CancelAppBarButton_Click" />
+            <AppBarButton Icon="Accept" Label="Accept" Tag="Accept" Click="AcceptAppBarButton_Click"  />
+        </CommandBar>
+    </Page.TopAppBar>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Canvas>
+            <TextBox x:Name="textTitle" Canvas.Left="224" TextWrapping="Wrap" Text="" Canvas.Top="56" Width="506" PlaceholderText="(your issue title)"/>
+            <TextBlock x:Name="textBlock" Canvas.Left="90" TextWrapping="Wrap" Text="Severity:" Canvas.Top="165" RenderTransformOrigin="-2.548,-6.6" Width="78"/>
+            <ComboBox x:Name="comboCategory" Canvas.Left="224" Canvas.Top="104" Width="506" PlaceholderText="(your issue category)">
+            </ComboBox>
+            <ComboBox x:Name="comboSeverity" Canvas.Left="224" Canvas.Top="160" Width="506" PlaceholderText="(your issue severity)">
+            </ComboBox>
+            <TextBlock x:Name="textBlock_Copy" Canvas.Left="90" TextWrapping="Wrap" Text="Category:" Canvas.Top="109" RenderTransformOrigin="-2.548,-6.6" Width="86"/>
+            <TextBlock x:Name="textBlock_Copy1" Canvas.Left="90" TextWrapping="Wrap" Text="Title:" Canvas.Top="56" RenderTransformOrigin="-2.548,-6.6"/>
+            <TextBlock x:Name="textBlock1" Canvas.Left="90" TextWrapping="Wrap" Text="Description:" Canvas.Top="217"/>
+            <TextBox x:Name="textDescription" Canvas.Left="224" TextWrapping="Wrap" Text="" Canvas.Top="217" Height="189" Width="506" PlaceholderText="(your issue description)" AcceptsReturn="True"/>
+
+        </Canvas>
+    </Grid>
+</Page>

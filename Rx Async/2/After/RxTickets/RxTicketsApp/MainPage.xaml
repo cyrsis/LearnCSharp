@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="RxTicketsApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RxTicketsApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded" Width="854">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView x:Name="gridView" HorizontalAlignment="Left" 
+                  Margin="10,131,0,0" VerticalAlignment="Top" Width="834" Height="565" 
+                  IsItemClickEnabled="True" SelectionMode="None"
+                  ItemClick="gridView_ItemClick" >
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Ticket" >
+                    <StackPanel Orientation="Vertical" Width="Auto">
+                        <TextBlock Text="{x:Bind Title}" FontWeight="Bold" Foreground="{x:Bind StatusBrush}"></TextBlock>
+                        <TextBlock Text="{x:Bind CreatedDateForView}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <Rectangle HorizontalAlignment="Left" Height="106" Stroke="Transparent" VerticalAlignment="Top" Width="854" Fill="{ThemeResource AppBarBackgroundThemeBrush}"/>
+        <TextBox x:Name="searchTextBox" HorizontalAlignment="Left" 
+                 Margin="316,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="487" FontSize="24" 
+                 PlaceholderText="Type something to search" />
+    </Grid>
+</Page>

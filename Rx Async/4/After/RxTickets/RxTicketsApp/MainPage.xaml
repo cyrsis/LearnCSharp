@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="RxTicketsApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RxTicketsApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"  Width="854">
+    <Page.TopAppBar>
+        <CommandBar IsOpen="True" IsSticky="True" x:Name="appBar" Background="{ThemeResource ButtonBackgroundThemeBrush}" >
+            <AppBarButton Icon="Add" Label="New Ticket" Tag="New Ticket" Click="AppBarButton_Click" />
+        </CommandBar>
+    </Page.TopAppBar>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView x:Name="gridView" HorizontalAlignment="Left" 
+                  Margin="10,127,0,0" VerticalAlignment="Top" Width="834" Height="523" 
+                  IsItemClickEnabled="True" SelectionMode="None"
+                  ItemClick="gridView_ItemClick" >
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Ticket" >
+                    <StackPanel Orientation="Vertical" Width="Auto">
+                        <TextBlock Text="{x:Bind Title}" FontWeight="Bold" Foreground="{x:Bind StatusBrush}"></TextBlock>
+                        <TextBlock Text="{x:Bind CreatedDateForView}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <Rectangle HorizontalAlignment="Left" Height="106" Stroke="Transparent" VerticalAlignment="Top" Width="854" Fill="{ThemeResource AppBarBackgroundThemeBrush}" Margin="0,2,0,0"/>
+        <TextBox x:Name="searchTextBox" HorizontalAlignment="Left" 
+                 Margin="316,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="487" FontSize="24" 
+                 PlaceholderText="Type something to search" />
+        <ToggleButton x:Name="toggleShowClosed" Content="Show Closed" HorizontalAlignment="Left" Margin="32,35,0,0" VerticalAlignment="Top" Height="35" Width="137" IsChecked="True"/>
+    </Grid>
+</Page>
