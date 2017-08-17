@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="SalesDashboard.TimelineUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+	xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+	xmlns:local="clr-namespace:SalesDashboard">
+
+	<telerik:RadTimeBar x:Name="TimeFilter"
+                    FontFamily="{Binding Source={StaticResource paletteManager}, Path=Palette.font,Mode=TwoWay}"
+    				IsSnapToIntervalEnabled="True" Style="{StaticResource RadTimeBarStyle}"
+    				PeriodStart="07/01/2005" PeriodEnd="07/31/2008" 
+					MinSelectionRange="7.00:00:00"
+                    Selection="{Binding Selection, Mode=TwoWay}"
+    				Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" Foreground="{StaticResource text}" >
+		<telerik:RadTimeBar.Intervals>
+			<telerik:YearInterval/>
+			<telerik:QuarterInterval/>
+			<telerik:MonthInterval/>
+			<telerik:WeekInterval/>
+		</telerik:RadTimeBar.Intervals>
+		<Grid>
+
+			<telerik:RadLinearSparkline x:Name="ActualTrend" AxisStroke="{x:Null}" AutoRange="False"
+    						FirstPointBrush="{StaticResource actual}" 
+    						Foreground="{StaticResource text}" 
+    						HighPointBrush="{StaticResource over}" 
+    						LastPointBrush="{StaticResource actual}" 
+    						LineStroke="{StaticResource actual}" 
+    						LowPointBrush="{StaticResource under}" 
+    						MarkersBrush="{x:Null}" 
+    						NegativePointBrush="{StaticResource actual}" 
+    						NormalRangeFill="{x:Null}" 
+    						LineShapeStyle="{StaticResource PolylineStyle}"
+    						MaxYValue="{Binding MaxActualYValue}"
+    						MinYValue="{Binding MinActualYValue}"
+    						XValuePath="StartDate"
+    						YValuePath="ActualValue"
+    						ItemsSource="{Binding ActualTrendData}" Visibility="Visible"/>
+
+			<telerik:RadLinearSparkline x:Name="TargetTrend" AutoRange="False"
+							XValuePath="StartDate"
+    						YValuePath="TargetValue"
+							ItemsSource="{Binding TargetTrendData}"
+							MaxYValue="{Binding MaxActualYValue}"
+    						MinYValue="{Binding MinActualYValue}"
+							AxisStroke="{x:Null}"
+							FirstPointBrush="{StaticResource budgeted}"
+							Foreground="{StaticResource text}"
+							HighPointBrush="{StaticResource over}"
+							LastPointBrush="{StaticResource budgeted}"
+							LineStroke="{StaticResource budgeted}"
+							LowPointBrush="{StaticResource under}"
+							MarkersBrush="{x:Null}"
+							NegativePointBrush="{StaticResource budgeted}"
+							NormalRangeFill="{x:Null}"
+							LineShapeStyle="{StaticResource PolylineStyle}" />
+		</Grid>
+	</telerik:RadTimeBar>
+</UserControl>

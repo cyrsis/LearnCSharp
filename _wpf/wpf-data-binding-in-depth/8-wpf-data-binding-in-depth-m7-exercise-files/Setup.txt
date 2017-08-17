@@ -1,0 +1,2 @@
+To build and run the projects in this module, you need to follow the setup
+instructions from Module 1 to set up the Zza database.

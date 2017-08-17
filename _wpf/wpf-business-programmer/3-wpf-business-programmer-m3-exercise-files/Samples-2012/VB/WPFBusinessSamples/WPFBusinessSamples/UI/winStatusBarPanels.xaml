@@ -1,0 +1,54 @@
+﻿<Window x:Class="winStatusBarPanels"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Status Bar Sample (2)"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight"
+        MinWidth="400"
+        MinHeight="300">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0">
+      <TextBlock>This could be a toolbar area</TextBlock>
+    </StackPanel>
+    <Border Grid.Row="1"
+            Padding="10"
+            BorderBrush="Black"
+            BorderThickness="1">
+      <StackPanel HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch">
+        <TextBlock Text="This is the content area" />
+      </StackPanel>
+    </Border>
+    <StatusBar Grid.Row="2">
+      <StatusBar.ItemsPanel>
+        <ItemsPanelTemplate>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="4*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+          </Grid>
+        </ItemsPanelTemplate>
+      </StatusBar.ItemsPanel>
+      <StatusBarItem Grid.Column="0">
+        <TextBlock Text="This is area 1" />
+      </StatusBarItem>
+      <StatusBarItem Grid.Column="1">
+        <TextBlock Text="This is area 2" />
+      </StatusBarItem>
+      <StatusBarItem Grid.Column="2">
+        <Button Name="btnHelp"
+                Style="{StaticResource BasicButton}"
+                MinWidth="80"
+                Content="Help"
+                Click="btnHelp_Click" />
+      </StatusBarItem>
+    </StatusBar>
+  </Grid>
+</Window>

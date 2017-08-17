@@ -1,0 +1,34 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    HorizontalAlignment="Center" VerticalAlignment="Center">
+
+ <Button>
+  <StackPanel Orientation="Horizontal">
+    <TextBlock Text="Click " VerticalAlignment="Center" />
+    <Ellipse Fill="Red" Width="15" Height="15" />
+    <TextBlock FontStyle="Italic" Text=" me!" VerticalAlignment="Center" />
+    <TextBlock Text=" (" VerticalAlignment="Center" />
+    <Image Source="c:\users\ian\Pictures\Mugshot-September-2007.jpg" Height="30" />
+    <TextBlock Text=") " VerticalAlignment="Center" />
+
+    <Button VerticalAlignment="Center" >
+      <StackPanel Orientation="Horizontal">
+        <TextBlock Text="One is not enough" />
+        <Menu>
+          <MenuItem Header="_File" />
+          <MenuItem Header="_Edit">
+            <MenuItem Header="_Copy" />
+            <MenuItem Header="_Paste" />
+            <TextBox />
+            <Button Content="Will it never end?" />
+          </MenuItem>
+          <MenuItem Header="_View" />
+        </Menu>
+      </StackPanel>
+    </Button>
+
+  </StackPanel>
+ </Button>
+
+</Grid>
+

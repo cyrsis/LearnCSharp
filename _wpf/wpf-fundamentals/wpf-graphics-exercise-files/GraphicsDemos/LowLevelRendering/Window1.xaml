@@ -1,0 +1,9 @@
+﻿<Window x:Class="LowLevelRendering.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cr="clr-namespace:LowLevelRendering"
+    Title="Window1" Height="300" Width="300">
+  <Canvas x:Name="rootPanel">
+    <cr:CustomRender Width="150" Height="100" />
+  </Canvas>
+</Window>

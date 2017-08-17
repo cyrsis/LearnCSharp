@@ -1,0 +1,213 @@
+﻿<UserControl x:Class="SalesDashboard.ChartUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+	x:Name="parent"
+    mc:Ignorable="d">
+	
+	<UserControl.Resources>
+		<telerik:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+		<telerik:InvertedBooleanToVisibilityConverter x:Key="InvertedBooleanToVisibilityConverter" />
+	</UserControl.Resources>
+	
+	<Grid x:Name="root">
+		<telerik:RadChart Visibility="{Binding IsAnimating, ElementName=parent, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
+			Style="{StaticResource RadChartStyle}" Background="Transparent" x:Name="radChart" BorderBrush="{x:Null}" BorderThickness="0" 
+			Foreground="{StaticResource text}" AxisForeground="{StaticResource text}" 
+            FontFamily="{Binding Source={StaticResource paletteManager}, Path=Palette.font,Mode=TwoWay}">
+			
+			<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition Height="16"/>
+			</Grid.RowDefinitions>
+			<Grid Grid.Row="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="70"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="Bikes" Foreground="{StaticResource text}" FontSize="12" Opacity="0.6" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                           Visibility="{Binding AreChartYLabelsVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+				<telerik:ChartArea x:Name="bikesArea" Grid.Column="1" Style="{StaticResource ChartAreaStyle}" Margin="0" EnableAnimations="False" IsNoDataMessageEnabled="False">
+					<telerik:ChartArea.AxisX>
+						<telerik:AxisX MajorTicksVisibility="Collapsed" 
+                                                       AxisLabelsVisibility="Collapsed" 
+                                                       LabelStep="{Binding AxisXStep}"
+                                                       AutoRange="False"
+                                                       DefaultLabelFormat="{Binding AxisXDefaultLabelFormat}"
+                                                       MinValue="{Binding AxisXMinValue}"
+													   MaxValue="{Binding AxisXMaxValue}"
+                                                       IsDateTime="True" TicksDistance="100" >
+						</telerik:AxisX>
+					</telerik:ChartArea.AxisX>
+					<telerik:ChartArea.AxisY>
+						<telerik:AxisY ExtendDirection="None" AxisLabelsVisibility="Collapsed" MinorTicksVisibility="Collapsed" StripLinesVisibility="Collapsed" Step="0" MajorTicksVisibility="Collapsed" PlotAreaAxisVisibility="Collapsed">
+							<telerik:AxisY.AxisStyles>
+								<telerik:AxisStyles GridLineStyle="{StaticResource YGridLineStyle}" />
+							</telerik:AxisY.AxisStyles>
+						</telerik:AxisY>
+					</telerik:ChartArea.AxisY>
+				</telerik:ChartArea>
+			</Grid>
+			<Grid Grid.Row="1">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="70"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="Components" Foreground="{StaticResource text}" FontSize="12" Opacity="0.6" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                           Visibility="{Binding AreChartYLabelsVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+				<telerik:ChartArea Grid.Column="1" x:Name="componentsArea" Style="{StaticResource ChartAreaStyle}" Margin="0" EnableAnimations="False" IsNoDataMessageEnabled="False">
+					<telerik:ChartArea.AxisX>
+						<telerik:AxisX MajorTicksVisibility="Collapsed" 
+                                                       AxisLabelsVisibility="Collapsed" 
+                                                       LabelStep="{Binding AxisXStep}"
+                                                       AutoRange="False"
+                                                       DefaultLabelFormat="{Binding AxisXDefaultLabelFormat}"
+                                                       MinValue="{Binding AxisXMinValue}"
+													   MaxValue="{Binding AxisXMaxValue}"
+                                                       IsDateTime="True" TicksDistance="100">
+						</telerik:AxisX>
+					</telerik:ChartArea.AxisX>
+					<telerik:ChartArea.AxisY>
+						<telerik:AxisY ExtendDirection="None" AxisLabelsVisibility="Collapsed" MinorTicksVisibility="Collapsed" StripLinesVisibility="Collapsed" Step="0" MajorTicksVisibility="Collapsed" PlotAreaAxisVisibility="Collapsed">
+							<telerik:AxisY.AxisStyles>
+								<telerik:AxisStyles GridLineStyle="{StaticResource YGridLineStyle}" />
+							</telerik:AxisY.AxisStyles>
+						</telerik:AxisY>
+					</telerik:ChartArea.AxisY>
+				</telerik:ChartArea>
+			</Grid>
+			<Grid Grid.Row="2">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="70"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="Clothing" Foreground="{StaticResource text}" FontSize="12" Opacity="0.6" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                           Visibility="{Binding AreChartYLabelsVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+				<telerik:ChartArea x:Name="clothingArea" Grid.Column="1" Style="{StaticResource ChartAreaStyle}" Margin="0" EnableAnimations="False" IsNoDataMessageEnabled="False">
+					<telerik:ChartArea.AxisX>
+						<telerik:AxisX MajorTicksVisibility="Collapsed" 
+                                                       AxisLabelsVisibility="Collapsed" 
+                                                       LabelStep="{Binding AxisXStep}"
+                                                       AutoRange="False"
+                                                       DefaultLabelFormat="{Binding AxisXDefaultLabelFormat}"
+                                                       MinValue="{Binding AxisXMinValue}"
+													   MaxValue="{Binding AxisXMaxValue}"
+                                                       IsDateTime="True" TicksDistance="100">
+						</telerik:AxisX>
+					</telerik:ChartArea.AxisX>
+					<telerik:ChartArea.AxisY>
+						<telerik:AxisY ExtendDirection="None" AxisLabelsVisibility="Collapsed" MinorTicksVisibility="Collapsed" StripLinesVisibility="Collapsed" Step="0" MajorTicksVisibility="Collapsed" PlotAreaAxisVisibility="Collapsed">
+							<telerik:AxisY.AxisStyles>
+								<telerik:AxisStyles GridLineStyle="{StaticResource YGridLineStyle}" />
+							</telerik:AxisY.AxisStyles>
+						</telerik:AxisY>
+					</telerik:ChartArea.AxisY>
+				</telerik:ChartArea>
+			</Grid>
+			<Grid Grid.Row="3" Grid.RowSpan="2">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="70"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="Accessories" Foreground="{StaticResource text}" FontSize="12" Opacity="0.6" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                           Visibility="{Binding AreChartYLabelsVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+				<telerik:ChartArea x:Name="accessoriesArea" Grid.Column="1" Style="{StaticResource ChartAreaStyle}" Margin="0" EnableAnimations="False" IsNoDataMessageEnabled="False">
+					<telerik:ChartArea.AxisX>
+						<telerik:AxisX AutoRange="False"
+                                                       MajorTicksVisibility="Collapsed" 
+                                                       LabelStep="{Binding AxisXStep}"
+                                                       DefaultLabelFormat="{Binding AxisXDefaultLabelFormat}" 
+                                                       IsDateTime="True" 
+                                                       MinValue="{Binding AxisXMinValue}"
+													   MaxValue="{Binding AxisXMaxValue}">
+						</telerik:AxisX>
+					</telerik:ChartArea.AxisX>
+					<telerik:ChartArea.AxisY>
+						<telerik:AxisY ExtendDirection="None" AxisLabelsVisibility="Collapsed" MinorTicksVisibility="Collapsed" StripLinesVisibility="Collapsed" Step="0" MajorTicksVisibility="Collapsed" PlotAreaAxisVisibility="Collapsed">
+							<telerik:AxisY.AxisStyles>
+								<telerik:AxisStyles GridLineStyle="{StaticResource YGridLineStyle}" />
+							</telerik:AxisY.AxisStyles>
+						</telerik:AxisY>
+					</telerik:ChartArea.AxisY>
+				</telerik:ChartArea>
+			</Grid>
+		</Grid>
+
+			<telerik:RadChart.SeriesMappings>
+			<telerik:SeriesMapping ChartAreaName="bikesArea">
+				<telerik:SeriesMapping.SeriesDefinition>
+					<telerik:LineSeriesDefinition ShowPointMarks="False" ShowItemLabels="False" PointMarkItemStyle="{StaticResource PointMarkItemStyle}">
+						<telerik:LineSeriesDefinition.Appearance>
+							<telerik:SeriesAppearanceSettings StrokeThickness="2" Stroke="{StaticResource bikes}" />
+						</telerik:LineSeriesDefinition.Appearance>
+					</telerik:LineSeriesDefinition>
+				</telerik:SeriesMapping.SeriesDefinition>
+				<telerik:SeriesMapping.ItemMappings>
+					<telerik:ItemMapping FieldName="BikesValue" DataPointMember="YValue" />
+					<telerik:ItemMapping FieldName="Date" DataPointMember="XValue"/>
+				</telerik:SeriesMapping.ItemMappings>
+			</telerik:SeriesMapping>
+			<telerik:SeriesMapping ChartAreaName="componentsArea">
+				<telerik:SeriesMapping.SeriesDefinition>
+					<telerik:LineSeriesDefinition  ShowPointMarks="False" ShowItemLabels="False" PointMarkItemStyle="{StaticResource PointMarkItemStyle}">
+						<telerik:LineSeriesDefinition.Appearance>
+							<telerik:SeriesAppearanceSettings StrokeThickness="2" Stroke="{StaticResource components}" />
+						</telerik:LineSeriesDefinition.Appearance>
+					</telerik:LineSeriesDefinition>
+				</telerik:SeriesMapping.SeriesDefinition>
+				<telerik:SeriesMapping.ItemMappings>
+					<telerik:ItemMapping FieldName="ComponentsValue" DataPointMember="YValue" />
+					<telerik:ItemMapping FieldName="Date" DataPointMember="XValue"/>
+				</telerik:SeriesMapping.ItemMappings>
+			</telerik:SeriesMapping>
+			<telerik:SeriesMapping ChartAreaName="clothingArea">
+				<telerik:SeriesMapping.SeriesDefinition>
+					<telerik:LineSeriesDefinition  ShowPointMarks="False" ShowItemLabels="False" PointMarkItemStyle="{StaticResource PointMarkItemStyle}">
+						<telerik:LineSeriesDefinition.Appearance>
+							<telerik:SeriesAppearanceSettings StrokeThickness="2" Stroke="{StaticResource clothing}" />
+						</telerik:LineSeriesDefinition.Appearance>
+					</telerik:LineSeriesDefinition>
+				</telerik:SeriesMapping.SeriesDefinition>
+				<telerik:SeriesMapping.ItemMappings>
+					<telerik:ItemMapping FieldName="ClothingValue" DataPointMember="YValue" />
+					<telerik:ItemMapping FieldName="Date" DataPointMember="XValue"/>
+				</telerik:SeriesMapping.ItemMappings>
+			</telerik:SeriesMapping>
+			<telerik:SeriesMapping ChartAreaName="accessoriesArea">
+				<telerik:SeriesMapping.SeriesDefinition>
+					<telerik:LineSeriesDefinition  ShowPointMarks="False" ShowItemLabels="False" PointMarkItemStyle="{StaticResource PointMarkItemStyle}">
+						<telerik:LineSeriesDefinition.Appearance>
+							<telerik:SeriesAppearanceSettings StrokeThickness="2" Stroke="{StaticResource accessories}" />
+						</telerik:LineSeriesDefinition.Appearance>
+					</telerik:LineSeriesDefinition>
+				</telerik:SeriesMapping.SeriesDefinition>
+				<telerik:SeriesMapping.ItemMappings>
+					<telerik:ItemMapping FieldName="AccessoriesValue" DataPointMember="YValue" />
+					<telerik:ItemMapping FieldName="Date" DataPointMember="XValue"/>
+				</telerik:SeriesMapping.ItemMappings>
+			</telerik:SeriesMapping>
+		</telerik:RadChart.SeriesMappings>
+
+			<telerik:RadChart.DefaultView>
+			<telerik:ChartDefaultView>
+				<telerik:ChartDefaultView.ChartArea>
+					<telerik:ChartArea IsNoDataMessageEnabled="False" EnableAnimations="False" />
+				</telerik:ChartDefaultView.ChartArea>
+			</telerik:ChartDefaultView>
+		</telerik:RadChart.DefaultView>
+
+			<telerik:RadChart.ItemsSource>
+			<Binding Path="SelectedDailySalesByProductCategories" />
+		</telerik:RadChart.ItemsSource>
+
+		</telerik:RadChart>
+
+		<Image x:Name="chartImage" Visibility="{Binding IsAnimating, ElementName=parent, Converter={StaticResource BooleanToVisibilityConverter}}" VerticalAlignment="Stretch" Stretch="Fill" />
+	</Grid>
+</UserControl>

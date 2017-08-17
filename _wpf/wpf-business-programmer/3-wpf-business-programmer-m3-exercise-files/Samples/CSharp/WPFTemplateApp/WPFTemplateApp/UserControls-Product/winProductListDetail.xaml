@@ -1,0 +1,77 @@
+﻿<Window x:Class="WPFTemplateApp.winProductListDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterOwner"
+        MinWidth="300"
+        SizeToContent="WidthAndHeight"
+        Title="Add/Edit Product">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid Grid.Row="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="120"></ColumnDefinition>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <TextBlock Grid.Row="0"
+                 Grid.Column="0"
+                 Text="Product Id" />
+      <TextBox Grid.Row="0"
+               Grid.Column="1"
+               TextChanged="TextHasChanged"
+               x:Name="txtProductId"
+               Text="{Binding Path=DetailData.ProductId}" />
+      <TextBlock Grid.Row="1"
+                 Grid.Column="0"
+                 Text="Product Name" />
+      <TextBox Grid.Row="1"
+               Grid.Column="1"
+               TextChanged="TextHasChanged"
+               x:Name="txtProductName"
+               Text="{Binding Path=DetailData.ProductName}" />
+      <TextBlock Grid.Row="2"
+                 Grid.Column="0"
+                 Text="Price" />
+      <TextBox Grid.Row="2"
+               Grid.Column="1"
+               x:Name="txtPrice"
+               TextChanged="TextHasChanged"
+               Text="{Binding Path=DetailData.Price}" />
+      <TextBlock Grid.Row="3"
+                 Grid.Column="0"
+                 Text="Is Active" />
+      <CheckBox Grid.Row="3"
+                Grid.Column="1"
+                x:Name="chkIsActive"
+                Style="{StaticResource checkBoxStyle}"
+                Checked="CheckedHasChanged"
+                Unchecked="CheckedHasChanged"
+                IsChecked="{Binding Path=DetailData.IsActive}" />
+    </Grid>
+    <StackPanel Grid.Row="1"
+                Orientation="Horizontal">
+      <Button x:Name="btnSave"
+              Margin="5"
+              Click="btnSave_Click">
+        <Button.Content>
+          <Image Source="/Images/Save.jpg" />
+        </Button.Content>
+      </Button>
+      <Button x:Name="btnCancel"
+              Margin="5"
+              Click="btnCancel_Click">
+        <Button.Content>
+          <Image Source="/Images/Undo.jpg" />
+        </Button.Content>
+      </Button>
+    </StackPanel>
+  </Grid>
+</Window>

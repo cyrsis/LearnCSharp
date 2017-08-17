@@ -1,0 +1,36 @@
+﻿<Window x:Class="LayoutWithWrapPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        Height="350"
+        Width="525">
+   <Border HorizontalAlignment="Left"
+           VerticalAlignment="Top"
+           BorderBrush="Black"
+           BorderThickness="2">
+      <WrapPanel Width="200"
+                 Height="100">
+         <Rectangle Fill="Red" Height="50" Width="50"
+                    />
+         <Rectangle Fill="Orange" Height="50" Width="50"
+                    
+                     />
+         <Rectangle Fill="Yellow"
+                    />
+         <Rectangle Fill="Green"
+                    
+                     />
+         <Rectangle Fill="Blue"
+                     />
+         <Rectangle Fill="Indigo"
+                    
+                     />
+         <Rectangle Fill="Violet"
+                     />
+         <Rectangle Fill="Black"
+                    
+                     />
+
+      </WrapPanel>
+   </Border>
+</Window>

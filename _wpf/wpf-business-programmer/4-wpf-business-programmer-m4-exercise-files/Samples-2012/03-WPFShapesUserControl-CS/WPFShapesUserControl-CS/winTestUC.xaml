@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPFShapesUserControl_CS.winTestUC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:WPFShapesUserControl_CS"
+        WindowStartupLocation="CenterScreen"
+        Title="Test Shape User Control"
+        Height="200"
+        Width="200">
+  <Grid>
+    <StackPanel>
+      <src:ucShape Margin="5"
+                   TextToDisplay="Paul"
+                   ShapeToCreate="Circle"
+                   FillColor="LightBlue"
+                   TextColor="Black"
+                   StrokeColor="Yellow"
+                   HeightOffset="0"
+                   StrokeThickness="2"
+                   Width="50"
+                   Height="50" />
+      <src:ucShape Margin="5"
+                   TextToDisplay="Paul"
+                   ShapeToCreate="Triangle"
+                   FillColor="Red"
+                   TextColor="Black"
+                   StrokeColor="Black"
+                   HeightOffset="10"
+                   WidthOffset="-1"
+                   StrokeThickness="2"
+                   Width="50"
+                   Height="50" />
+    </StackPanel>
+  </Grid>
+</Window>

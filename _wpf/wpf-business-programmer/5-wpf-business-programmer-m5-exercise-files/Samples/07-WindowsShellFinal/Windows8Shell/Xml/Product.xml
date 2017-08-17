@@ -1,0 +1,8 @@
+<Products>
+  <Product ProductId="1" ProductName="Haystack Code Generator for .NET" IntroductionDate="07/01/2010" Price="799" />
+  <Product ProductId="3" ProductName="SQL Server 2008 - Administration eBook" IntroductionDate="08/01/2009" Price="20" />
+  <Product ProductId="4" ProductName="SQL Server 2008 - Implementing eBook" IntroductionDate="08/30/2009" Price="20" />
+  <Product ProductId="5" ProductName="Fundamentals of VB.NET eBook" IntroductionDate="02/22/2002" Price="20" />
+  <Product ProductId="6" ProductName="Fundamentals of C# eBook" IntroductionDate="03/30/2003" Price="20" />
+  <Product ProductId="7" ProductName="Fundamentals of ASP.NET eBook" IntroductionDate="10/13/2005" Price="20" />
+</Products>

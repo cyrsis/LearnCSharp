@@ -1,0 +1,107 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Data="clr-namespace:Zza.Data;assembly=Zza.Data" mc:Ignorable="d" x:Class="MasterDetails.MainWindow"
+        Title="MainWindow" Height="604" Width="603" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="customerViewSource" d:DesignSource="{d:DesignInstance {x:Type Data:Customer}, CreateList=True}"/>
+        <CollectionViewSource x:Key="customerOrdersViewSource" Source="{Binding Orders, Source={StaticResource customerViewSource}}"/>
+        <CollectionViewSource x:Key="customerOrdersOrderItemsViewSource" Source="{Binding OrderItems, Source={StaticResource customerOrdersViewSource}}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource customerViewSource}">
+
+        <DataGrid x:Name="customerDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10,10,10,454" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="cityColumn" Width="SizeToHeader" Header="City" Binding="{Binding City}"/>
+                <DataGridTextColumn x:Name="emailColumn" Width="SizeToHeader" Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn x:Name="firstNameColumn" Width="SizeToHeader" Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn x:Name="fullNameColumn" Width="SizeToHeader" IsReadOnly="True" Header="Full Name" Binding="{Binding FullName}"/>
+                <DataGridTextColumn x:Name="idColumn" Width="SizeToHeader" Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn x:Name="lastNameColumn" Width="SizeToHeader" Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn x:Name="phoneColumn" Width="SizeToHeader" Header="Phone" Binding="{Binding Phone}"/>
+                <DataGridTextColumn x:Name="stateColumn" Width="SizeToHeader" Header="State" Binding="{Binding State}"/>
+                <DataGridTextColumn x:Name="storeIdColumn" Width="SizeToHeader" Header="Store Id" Binding="{Binding StoreId}"/>
+                <DataGridTextColumn x:Name="streetColumn" Width="SizeToHeader" Header="Street" Binding="{Binding Street}"/>
+                <DataGridTextColumn x:Name="zipColumn" Width="SizeToHeader" Header="Zip" Binding="{Binding Zip}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="ordersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource customerOrdersViewSource}}" Margin="10,124,12,345" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="customerIdColumn" Binding="{Binding CustomerId}" Header="Customer Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="deliveryChargeColumn" Binding="{Binding DeliveryCharge}" Header="Delivery Charge" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="deliveryCityColumn" Binding="{Binding DeliveryCity}" Header="Delivery City" Width="SizeToHeader"/>
+                <DataGridTemplateColumn x:Name="deliveryDateColumn" Header="Delivery Date" Width="SizeToHeader">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding DeliveryDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="deliveryStateColumn" Binding="{Binding DeliveryState}" Header="Delivery State" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="deliveryStreetColumn" Binding="{Binding DeliveryStreet}" Header="Delivery Street" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="deliveryZipColumn" Binding="{Binding DeliveryZip}" Header="Delivery Zip" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="idColumn1" Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="itemsTotalColumn" Binding="{Binding ItemsTotal}" Header="Items Total" Width="SizeToHeader"/>
+                <DataGridTemplateColumn x:Name="orderDateColumn" Header="Order Date" Width="SizeToHeader">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding OrderDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="orderStatusIdColumn" Binding="{Binding OrderStatusId}" Header="Order Status Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="phoneColumn1" Binding="{Binding Phone}" Header="Phone" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="storeIdColumn1" Binding="{Binding StoreId}" Header="Store Id" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="orderItemsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource customerOrdersOrderItemsViewSource}}" Margin="10,233,14,250" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="idColumn2" Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="instructionsColumn" Binding="{Binding Instructions}" Header="Instructions" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="orderIdColumn" Binding="{Binding OrderId}" Header="Order Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="productIdColumn" Binding="{Binding ProductId}" Header="Product Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="productSizeIdColumn" Binding="{Binding ProductSizeId}" Header="Product Size Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="quantityColumn" Binding="{Binding Quantity}" Header="Quantity" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="storeIdColumn2" Binding="{Binding StoreId}" Header="Store Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="totalPriceColumn" Binding="{Binding TotalPrice}" Header="Total Price" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="unitPriceColumn" Binding="{Binding UnitPrice}" Header="Unit Price" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid x:Name="grid1" DataContext="{StaticResource customerOrdersOrderItemsViewSource}" HorizontalAlignment="Left" Margin="12,339,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Description:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="descriptionTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding Product.Description, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Has Options:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <CheckBox x:Name="hasOptionsCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding Product.HasOptions, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <Label Content="Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="idTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding Product.Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Image:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+            <TextBox x:Name="imageTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding Product.Image, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Is Vegetarian:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+            <CheckBox x:Name="isVegetarianCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding Product.IsVegetarian, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+            <Label Content="Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
+            <TextBox x:Name="nameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="5" Text="{Binding Product.Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Size Ids:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
+            <TextBox x:Name="sizeIdsTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="6" Text="{Binding Product.SizeIds, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Type:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="7" VerticalAlignment="Center"/>
+            <TextBox x:Name="typeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="7" Text="{Binding Product.Type, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="With Tomato Sauce:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="8" VerticalAlignment="Center"/>
+            <CheckBox x:Name="withTomatoSauceCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding Product.WithTomatoSauce, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="8" VerticalAlignment="Center"/>
+        </Grid>
+
+    </Grid>
+</Window>

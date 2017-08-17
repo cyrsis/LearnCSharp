@@ -1,0 +1,84 @@
+﻿<Application x:Class="WPFBusinessSamples.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="winMain.xaml">
+  <Application.Resources>
+    <!-- ****************************************** -->
+    <!--   Overall Color  -->
+    <!-- ****************************************** -->
+    <SolidColorBrush x:Key="SoftBackgroundColor"
+                     Color="AliceBlue" />
+    <!-- ****************************************** -->
+    <!--   Window  -->
+    <!-- ****************************************** -->
+    <Style x:Key="DemoWindowStyle"
+           TargetType="Window">
+      <Setter Property="FontFamily"
+              Value="Arial" />
+      <Setter Property="FontSize"
+              Value="12" />
+    </Style>
+    <!-- ****************************************** -->
+    <!--   Button   -->
+    <!-- ****************************************** -->
+    <Style TargetType="Button">
+      <Setter Property="Margin"
+              Value="8" />
+      <Setter Property="MinWidth"
+              Value="300" />
+      <Setter Property="MinHeight"
+              Value="25" />
+      <Setter Property="FontFamily"
+              Value="Arial" />
+      <Setter Property="FontSize"
+              Value="16" />
+      <Setter Property="Background"
+              Value="LightGray" />
+    </Style>
+    <Style TargetType="Button"
+           x:Key="BasicButton">
+      <Setter Property="Margin"
+              Value="4" />
+      <Setter Property="FontFamily"
+              Value="Arial" />
+      <Setter Property="FontSize"
+              Value="16" />
+      <Setter Property="Background"
+              Value="LightGray" />
+    </Style>
+    <!-- ****************************************** -->
+    <!--   StackPanel   -->
+    <!-- ****************************************** -->
+    <Style TargetType="StackPanel">
+      <Setter Property="HorizontalAlignment"
+              Value="Center" />
+    </Style>
+    <!-- ****************************************** -->
+    <!--   TextBlock   -->
+    <!-- ****************************************** -->
+    <Style TargetType="TextBlock">
+      <Setter Property="Margin"
+              Value="8" />
+    </Style>
+    <!-- ****************************************** -->
+    <!--   Grid   -->
+    <!--   Be careful of setting Background color here -->
+    <!--   as it can upset some rounded corners -->
+    <!-- ****************************************** -->
+    <Style TargetType="Grid"></Style>
+    <!-- ****************************************** -->
+    <!--   TabControl  -->
+    <!-- ****************************************** -->
+    <Style TargetType="TabControl">
+      <Setter Property="Control.Background"
+              Value="{StaticResource SoftBackgroundColor}" />
+    </Style>
+    <!-- ****************************************** -->
+    <!--   TabItem  -->
+    <!-- ****************************************** -->
+    <Style TargetType="TabItem">
+      <Setter Property="Control.Background"
+              Value="{StaticResource SoftBackgroundColor}" />
+    </Style>
+  </Application.Resources>
+</Application>

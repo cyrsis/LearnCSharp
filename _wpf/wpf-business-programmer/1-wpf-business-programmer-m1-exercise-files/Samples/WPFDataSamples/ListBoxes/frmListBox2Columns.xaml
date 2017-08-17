@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPFDataSamples.frmListBox2Columns"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:WPFComponents;assembly=WPFComponents"
+        Title="Data Bound List Box with 2 Columns"
+        WindowStartupLocation="CenterScreen"
+        Height="390"
+        Width="682">
+  <Window.Resources>
+    <ObjectDataProvider x:Key="odpCust"
+                        ObjectType="{x:Type src:AdvWorksDataContext}"
+                        MethodName="GetAllCustomers">
+    </ObjectDataProvider>
+  </Window.Resources>
+  <Grid>
+    <ListBox
+             Name="listBox1"
+             ItemsSource="{Binding Source={StaticResource odpCust}}"
+             IsSynchronizedWithCurrentItem="True">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <Label Width="200"
+                   Content="{Binding Path=LastName}"></Label>
+            <Label Width="100"
+                   Content="{Binding Path=FirstName}"></Label>
+          </StackPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+  </Grid>
+</Window>

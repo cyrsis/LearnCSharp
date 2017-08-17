@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<Products>
+  <Product>
+    <ProductId>1</ProductId>
+    <ProductName>Haystack Code Generator for .NET</ProductName>
+    <Price>799</Price>
+    <IsActive>True</IsActive>
+  </Product>
+  <Product>
+    <ProductId>2</ProductId>
+    <ProductName>PDSA .NET Productivity Framework V4.1</ProductName>
+    <Price>5000</Price>
+    <IsActive>True</IsActive>
+  </Product>
+  <Product>
+    <ProductId>3</ProductId>
+    <ProductName>Architecting ASP.NET Applications eBook</ProductName>
+    <Price>19.95</Price>
+    <IsActive>True</IsActive>
+  </Product>
+  <Product>
+    <ProductId>4</ProductId>
+    <ProductName>Fundamentals of N-Tier eBook</ProductName>
+    <Price>19.95</Price>
+    <IsActive>True</IsActive>
+  </Product>
+  <Product>
+    <ProductId>5</ProductId>
+    <ProductName>Security for ASP.NET Developers eBook</ProductName>
+    <Price>19.95</Price>
+    <IsActive>True</IsActive>
+  </Product>
+  <Product>
+    <ProductId>6</ProductId>
+    <ProductName>VB.NET Fundamentals eBook</ProductName>
+    <Price>19.95</Price>
+    <IsActive>True</IsActive>
+  </Product>
+  <Product>
+    <ProductId>7</ProductId>
+    <ProductName>Fundamentals of SQL Server 2005</ProductName>
+    <Price>19.95</Price>
+    <IsActive>False</IsActive>
+  </Product>
+</Products>

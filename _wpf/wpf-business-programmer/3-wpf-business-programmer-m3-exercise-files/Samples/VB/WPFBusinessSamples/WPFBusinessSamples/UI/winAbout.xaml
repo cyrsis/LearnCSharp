@@ -1,0 +1,43 @@
+﻿<Window x:Class="winAbout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource DemoWindowStyle}"
+        Title="About This Software"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize">
+  <!-- TIP: The ResizeMode="NoResize" gets rid of the minimize and maximize buttons on the title bar. -->
+  <Border CornerRadius="10"
+          BorderBrush="Gray"
+          BorderThickness="2"
+          Margin="4"
+          Padding="4">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <StackPanel Grid.Row="0">
+        <Image Name="imgPDSA"
+               Margin="8"
+               HorizontalAlignment="Left"
+               Source="../Images/lgoPDSA.gif"
+               Stretch="None" />
+        <TextBlock Margin="4"
+                   Text="This software is used for educational purposes." />
+        <TextBlock Margin="4"
+                   Text="Copyright 2008-10 by PDSA, Inc." />
+      </StackPanel>
+      <StackPanel Margin="8"
+                  Grid.Row="1"
+                  VerticalAlignment="Bottom"
+                  HorizontalAlignment="Right">
+        <Button Name="btnClose"
+                Style="{StaticResource BasicButton}"
+                Width="80"
+                Content="Close"
+                Click="btnClose_Click" />
+      </StackPanel>
+    </Grid>
+  </Border>
+</Window>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomBlendBehaviors", "CustomBlendBehaviors\CustomBlendBehaviors.csproj", "{99FCB573-CD3B-4B13-9342-FA91159DAF0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomBlendSDKBehaviorsDemo", "CustomBlendSDKBehaviorsDemo\CustomBlendSDKBehaviorsDemo.csproj", "{FDD4674E-9A4C-4A0C-8D1E-54F621D96CA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99FCB573-CD3B-4B13-9342-FA91159DAF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99FCB573-CD3B-4B13-9342-FA91159DAF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99FCB573-CD3B-4B13-9342-FA91159DAF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99FCB573-CD3B-4B13-9342-FA91159DAF0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD4674E-9A4C-4A0C-8D1E-54F621D96CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD4674E-9A4C-4A0C-8D1E-54F621D96CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD4674E-9A4C-4A0C-8D1E-54F621D96CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD4674E-9A4C-4A0C-8D1E-54F621D96CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

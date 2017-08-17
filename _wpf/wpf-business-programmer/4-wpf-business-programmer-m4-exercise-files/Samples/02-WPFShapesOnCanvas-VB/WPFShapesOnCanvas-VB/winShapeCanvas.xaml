@@ -1,0 +1,157 @@
+﻿<Window x:Class="winShapeCanvas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:WPFShapesOnCanvas_VB"
+        WindowStartupLocation="CenterScreen"
+        Title="Shapes and Text using Canvas"
+        Height="350"
+        Width="300">
+  <Window.Resources>    
+    <src:MidpointValueConverter x:Key="MidValue" />
+  </Window.Resources>
+  <StackPanel>
+    <Canvas Name="cnvMain"
+            Width="40"
+            Height="40">
+      <Rectangle Name="rectSize"
+                 Canvas.Top="0"
+                 Canvas.Left="0"
+                 Fill="Blue"
+                 Width="{Binding ElementName=cnvMain, Path=ActualWidth}"
+                 Height="{Binding ElementName=cnvMain, Path=ActualHeight}"
+                 Stroke="Black"
+                 StrokeThickness="2"></Rectangle>
+      <TextBlock Name="tbSize"
+                 Foreground="White"
+                 Text="Test">
+    <Canvas.Left>
+     <MultiBinding Converter="{StaticResource MidValue}">                        
+       <Binding ElementName="cnvMain"
+                Path="ActualWidth" />
+       <Binding ElementName="tbSize"
+                Path="ActualWidth" />
+     </MultiBinding>
+    </Canvas.Left>
+    <Canvas.Top>
+     <MultiBinding Converter="{StaticResource MidValue}">                        
+       <Binding ElementName="cnvMain"
+                Path="ActualHeight" />
+       <Binding ElementName="tbSize"
+                Path="ActualHeight" />
+     </MultiBinding>
+    </Canvas.Top></TextBlock>
+    </Canvas>
+    <Canvas Width="50"
+            Height="50">
+      <Polygon Points="25,0 0,40 50,40"
+               Name="cnvMain2"
+               Fill="LightBlue"
+               Stroke="Black"
+               StrokeThickness="2"></Polygon>
+      <TextBlock Name="tbSize2"
+                 Foreground="Black"
+                 Text="Ripe">
+        <Canvas.Left>
+         <MultiBinding Converter="{StaticResource MidValue}"
+                       ConverterParameter="1">
+           <Binding ElementName="cnvMain2"
+                    Path="ActualWidth" />
+           <Binding ElementName="tbSize2"
+                    Path="ActualWidth" />
+         </MultiBinding>
+        </Canvas.Left>
+        <Canvas.Top>
+         <MultiBinding Converter="{StaticResource MidValue}"
+                       ConverterParameter="8">
+           <Binding ElementName="cnvMain2"
+                    Path="ActualHeight" />
+           <Binding ElementName="tbSize2"
+                    Path="ActualHeight" />
+         </MultiBinding>
+        </Canvas.Top></TextBlock>
+    </Canvas>
+    <Canvas Name="cnvMain3"
+            Width="80"
+            Height="80">
+      <Ellipse Width="{Binding ElementName=cnvMain3, Path=ActualWidth}"
+               Height="{Binding ElementName=cnvMain3, Path=ActualHeight}"
+               Fill="Gray" />
+      <TextBlock Name="tbSize3"
+                 Foreground="Black"
+                 Text="Ripe">
+        <Canvas.Left>
+         <MultiBinding Converter="{StaticResource MidValue}"
+                       ConverterParameter="0">
+           <Binding ElementName="cnvMain3"
+                    Path="ActualWidth" />
+           <Binding ElementName="tbSize3"
+                    Path="ActualWidth" />
+         </MultiBinding>
+        </Canvas.Left>
+        <Canvas.Top>
+         <MultiBinding Converter="{StaticResource MidValue}"
+                       ConverterParameter="1">
+           <Binding ElementName="cnvMain3"
+                    Path="ActualHeight" />
+           <Binding ElementName="tbSize3"
+                    Path="ActualHeight" />
+         </MultiBinding>
+        </Canvas.Top></TextBlock>
+    </Canvas>
+    <Canvas Name="cnvMain4"
+            Width="40"
+            Height="70">
+      <Ellipse Width="{Binding ElementName=cnvMain4, Path=ActualWidth}"
+               Height="{Binding ElementName=cnvMain4, Path=ActualHeight}"
+               Fill="Blue" />
+      <TextBlock Name="tbSize4"
+                 Foreground="White"
+                 Text="Choice">
+        <Canvas.Left>
+         <MultiBinding Converter="{StaticResource MidValue}">
+           <Binding ElementName="cnvMain4"
+                    Path="ActualWidth" />
+           <Binding ElementName="tbSize4"
+                    Path="ActualWidth" />
+         </MultiBinding>
+        </Canvas.Left>
+        <Canvas.Top>
+         <MultiBinding Converter="{StaticResource MidValue}">
+           <Binding ElementName="cnvMain4"
+                    Path="ActualHeight" />
+           <Binding ElementName="tbSize4"
+                    Path="ActualHeight" />
+         </MultiBinding>
+        </Canvas.Top></TextBlock>
+    </Canvas>
+    <Canvas Width="50"
+            Height="40">
+      <Polygon Points="0,0 25,35 50,0"
+               Name="cnvMain5"
+               Fill="LightBlue"
+               Stroke="Black"
+               StrokeThickness="2"></Polygon>
+      <TextBlock Name="tbSize5"
+                 Foreground="Black"
+                 Text="194">
+        <Canvas.Left>
+         <MultiBinding Converter="{StaticResource MidValue}"
+                       ConverterParameter="0">
+           <Binding ElementName="cnvMain5"
+                    Path="ActualWidth" />
+           <Binding ElementName="tbSize5"
+                    Path="ActualWidth" />
+         </MultiBinding>
+        </Canvas.Left>
+        <Canvas.Top>
+         <MultiBinding Converter="{StaticResource MidValue}"
+                       ConverterParameter="-8">
+           <Binding ElementName="cnvMain5"
+                    Path="ActualHeight" />
+           <Binding ElementName="tbSize5"
+                    Path="ActualHeight" />
+         </MultiBinding>
+        </Canvas.Top></TextBlock>
+    </Canvas>
+  </StackPanel>
+</Window>

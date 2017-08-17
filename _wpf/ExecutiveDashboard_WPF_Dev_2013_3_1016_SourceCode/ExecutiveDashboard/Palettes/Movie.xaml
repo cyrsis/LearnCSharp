@@ -1,0 +1,21 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+		
+	<FontFamily x:Key="font">Fonts/segoeuil.ttf#Segoe UI Light</FontFamily>
+	<FontFamily x:Key="fontWPF">/Fonts/#Segoe UI Light</FontFamily>
+	<Color x:Key="dashboardcolor1">#FF030504</Color>
+	<Color x:Key="dashboardcolor2">#FF188896</Color>
+	<Color x:Key="backgroundcolor1">#FF030504</Color>
+	<Color x:Key="backgroundcolor2">#FF4E5D60</Color>
+	<Color x:Key="textcolor">#FFE7FDFF</Color>
+	<Color x:Key="actualcolor">#FF5BDAFF</Color>
+	<Color x:Key="budgetedcolor">#FFFFA62F</Color>
+	<Color x:Key="overcolor">#FF29ABB3</Color>
+	<Color x:Key="undercolor">#FF1B7A9F</Color>
+	<Color x:Key="bikescolor">#FF7FFBF8</Color>
+	<Color x:Key="componenetscolor">#FF19BEDA</Color>
+	<Color x:Key="clothingcolor">#FF91E3FF</Color>
+	<Color x:Key="accessoriescolor">#FF0A7E93</Color>	
+	
+</ResourceDictionary>

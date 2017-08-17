@@ -1,0 +1,18 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="WpfComposition.Window1"
+	x:Name="Window"
+	Title="Window1"
+	Width="640" Height="452" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+
+	<Grid x:Name="LayoutRoot">
+		<Image Source="DrainCover.jpg" Stretch="None"/>
+		<TextBlock HorizontalAlignment="Left" Margin="63,66,0,0"
+			VerticalAlignment="Top" FontSize="54" TextWrapping="Wrap"
+			Foreground="Cyan" FontWeight="Bold"><Run Language="en-gb" Text="Some text"/></TextBlock>
+		<TextBlock Margin="87,87.823,279.083,0"
+			FontSize="54" TextWrapping="Wrap"
+			Foreground="Cyan" FontWeight="Bold" d:LayoutOverrides="Width, Height" VerticalAlignment="Top"><Run Language="en-gb" Text="Some text"/></TextBlock>
+	</Grid>
+</Window>

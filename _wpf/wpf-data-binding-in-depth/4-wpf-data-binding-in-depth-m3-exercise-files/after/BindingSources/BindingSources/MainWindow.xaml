@@ -1,0 +1,69 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Data="clr-namespace:Zza.Data;assembly=Zza.Data"
+        mc:Ignorable="d"
+        x:Class="BindingSources.MainWindow"
+        Title="MainWindow"
+        Height="350"
+        Width="525"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Window.Resources>
+        <CollectionViewSource x:Key="customerViewSource"
+                              Source="{Binding Customers}" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal">
+            <Button Content="Delete"
+                    Command="{Binding DeleteSelectedCommand}"
+                    CommandParameter="{Binding ElementName=customerDataGrid, Path=SelectedItem}" />
+            <Label Content="{Binding Path=Customers[0].Orders[1].OrderItems[0].Product.Name}" />
+        </StackPanel>
+        <DataGrid x:Name="customerDataGrid"
+                  Grid.Row="1"
+                  ItemsSource="{Binding Source={StaticResource customerViewSource}}"
+                  AutoGenerateColumns="False"
+                  SelectionChanged="customerDataGrid_SelectionChanged"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="idColumn"
+                                    Width="Auto"
+                                    Header="Id"
+                                    Binding="{Binding Id}" />
+                <DataGridTextColumn x:Name="firstNameColumn"
+                                    Width="Auto"
+                                    Header="First Name"
+                                    Binding="{Binding FirstName}" />
+                <DataGridTextColumn x:Name="lastNameColumn"
+                                    Width="Auto"
+                                    Header="Last Name"
+                                    Binding="{Binding LastName}" />
+                <DataGridTextColumn x:Name="emailColumn"
+                                    Width="Auto"
+                                    Header="Email"
+                                    Binding="{Binding Email}" />
+                <DataGridTextColumn x:Name="phoneColumn"
+                                    Width="Auto"
+                                    Header="Phone"
+                                    Binding="{Binding Phone}" />
+                <DataGridTemplateColumn x:Name="deleteButtonColumn"
+                                        Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=DataGrid}, Path=DataContext.DeleteCustomerCommand}"
+                                    CommandParameter="{Binding}"
+                                    Content="Delete" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

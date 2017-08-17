@@ -1,0 +1,112 @@
+﻿<Window x:Class="winLogin2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight"
+        Icon="/Images/Key.jpg"
+        FocusManager.FocusedElement="{Binding ElementName=txtUserName}"
+        Title="Login">
+  <Window.Resources>
+    <DropShadowEffect x:Key="shadowEffect"
+                      Color="Gray"
+                      Opacity=".50"
+                      ShadowDepth="10" />
+    <Style TargetType="TextBlock">
+      <Setter Property="Margin"
+              Value="4" />
+    </Style>
+    <Style TargetType="TextBox">
+      <Setter Property="Margin"
+              Value="4" />
+      <Setter Property="MinWidth"
+              Value="200" />
+      <Setter Property="HorizontalAlignment"
+              Value="Left" />
+    </Style>
+    <Style TargetType="PasswordBox">
+      <Setter Property="Margin"
+              Value="4" />
+      <Setter Property="MinWidth"
+              Value="200" />
+      <Setter Property="HorizontalAlignment"
+              Value="Left" />
+    </Style>
+    <Style TargetType="Button">
+      <Setter Property="Margin"
+              Value="6" />
+      <Setter Property="Padding"
+              Value="4" />
+      <Setter Property="MinWidth"
+              Value="50" />
+    </Style>
+    <Style TargetType="StackPanel"></Style>
+  </Window.Resources>
+  <Border CornerRadius="10"
+          BorderBrush="Gray"
+          BorderThickness="3"
+          Background="Beige"
+          Margin="24"
+          Padding="4"
+          Effect="{StaticResource shadowEffect}">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="60" />
+        <ColumnDefinition Width="100" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <StackPanel Grid.Column="0"
+                  Grid.Row="0"
+                  Grid.RowSpan="3">
+        <Image Name="imgKey"
+               Margin="8"
+               Source="/Images/Key.jpg"
+               Effect="{StaticResource shadowEffect}" />
+      </StackPanel>
+      <TextBlock Grid.Column="1"
+                 Grid.Row="0"
+                 Grid.ColumnSpan="2"
+                 FontSize="18"
+                 Margin="10"
+                 Text="Please Login To Access This Application" />
+      <TextBlock Grid.Column="1"
+                 Grid.Row="1"
+                 Text="User Name" />
+      <TextBox Grid.Column="2"
+               Grid.Row="1"
+               ToolTip="Enter Your User Name"
+               Name="txtUserName" />
+      <TextBlock Grid.Column="1"
+                 Grid.Row="2"
+                 Text="Password" />
+      <PasswordBox Grid.Column="2"
+                   Grid.Row="2"
+                   ToolTip="Enter Your Password"
+                   Name="txtPassword" />
+      <StackPanel Grid.Column="2"
+                  Grid.Row="3"
+                  Margin="10"
+                  HorizontalAlignment="Center"
+                  Orientation="Horizontal">
+        <Button Name="btnCancel"
+                IsCancel="True"
+                Content="Cancel"
+                Effect="{StaticResource shadowEffect}"
+                Click="btnCancel_Click" />
+        <Button Name="btnLogin"
+                IsDefault="True"
+                Content="Login"
+                Effect="{StaticResource shadowEffect}"
+                Click="btnLogin_Click" />
+      </StackPanel>
+    </Grid>
+  </Border>
+</Window>

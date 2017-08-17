@@ -1,0 +1,30 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+<StackPanel>
+  <StackPanel.Resources>
+    <DataTemplate x:Key="btn">
+      <Button>
+        _Click me
+      </Button>
+    </DataTemplate>
+  </StackPanel.Resources>
+
+  <ContentPresenter
+     ContentTemplate="{StaticResource btn}" />
+  <ContentPresenter
+     ContentTemplate="{StaticResource btn}" />
+  <ContentPresenter
+     ContentTemplate="{StaticResource btn}" />
+  <ContentPresenter
+     ContentTemplate="{StaticResource btn}" />
+  <ContentPresenter
+     ContentTemplate="{StaticResource btn}" />
+  <ContentPresenter
+     ContentTemplate="{StaticResource btn}" />
+  <ContentPresenter
+     ContentTemplate="{StaticResource btn}" />
+</StackPanel>
+
+</Grid>
+

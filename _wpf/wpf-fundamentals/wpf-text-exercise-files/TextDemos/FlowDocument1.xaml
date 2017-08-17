@@ -1,0 +1,36 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+ <Button>
+
+  <FlowDocument>
+    <Paragraph>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec magna dui, volutpat a, sodales nec, accumsan sed, nunc. Ut quis nunc. Vivamus luctus velit in nibh. Mauris eget risus. Quisque felis mauris, imperdiet sed, interdum ac, mollis quis, nibh. Mauris molestie arcu at enim. Integer justo
+    </Paragraph>
+
+    <Paragraph>
+      One of the slightly tedious things about preparing FlowDocument
+      demonstrations, is that you have to provide a certain amount of
+      text so that it looks moderately realistic. And you can't just
+      repeat the same stuff over and over again - repeating patterns in
+      text stand out and distract the eye, and they don't normally occur
+      in real text. This is the origin of the 'lipsum' tradition - generated
+      pseudo-Latin random text. Its randomness makes it look sufficiently
+      like real text that it's not distractingly fake.
+    </Paragraph>
+    <Paragraph>
+      <Italic>Lipsum</Italic> is an abbrevation of <Italic>L</Italic>orem
+      <Italic>Ipsum</Italic>, the two words that traditionally appear at
+      the start of any sequence of lipsum gobbledegook.
+    </Paragraph>
+    <Paragraph>
+      Phasellus in ipsum a dui sollicitudin fringilla. Suspendisse potenti. Suspendisse pretium sapien id urna. Etiam in felis a velit egestas bibendum. Integer erat. Donec non nulla et leo bibendum vestibulum. Aenean commodo dapibus sapien. Phasellus elit lacus, consectetuer adipiscing, commodo ut, aliquam a, tortor. Ut vitae velit. Quisque auctor nulla sit amet lacus. Etiam interdum. Nullam vitae ligula nec ligula feugiat venenatis. Nulla in risus vel elit bibendum cursus. Ut hendrerit. Aenean dolor nulla, mollis ac, aliquam ac, euismod et, est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed euismod, augue aliquet rutrum mattis, massa justo convallis nunc, vehicula dictum nulla orci nec enim. Pellentesque eget nibh ac mauris vestibulum sodales. Integer porttitor lectus at eros. 
+    </Paragraph>
+    <Paragraph>
+      Nunc quis nisi nec dui facilisis accumsan. Duis justo. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur quis magna. Fusce sagittis purus ac ipsum. Nam laoreet dui eu massa. Nam imperdiet pharetra nisi. Fusce eu dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse semper elit ut mauris. Suspendisse auctor, ante commodo iaculis porta, enim augue mattis nisl, ac convallis metus sem sit amet lectus. Fusce fringilla. Nunc pharetra. Sed sed enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
+    </Paragraph>
+  </FlowDocument>
+
+ </Button>
+
+</Page>

@@ -1,0 +1,54 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ExecutiveDashboard;component/Palettes/Brushes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="RadHorizontalBulletGraphStyle" TargetType="telerik:RadHorizontalBulletGraph">
+        <Setter Property="ComparativeMeasureThickness" Value="2"/>
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerik:RadHorizontalBulletGraph">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0"
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" >
+                            <Grid>
+                                <telerik:QualitativeRangeContainer ChildrenSource="{TemplateBinding QualitativeRanges}"
+                                                                        Range="{TemplateBinding Range}" />
+                                <telerik:PositioningIndicatorPanel x:Name="PART_AxisPanel" />
+                                <Grid>
+                                    <Grid.Resources>
+                                        <Style TargetType="telerik:BarItem">
+                                            <Setter Property="LengthPercent" Value="1" />
+                                        </Style>
+                                    </Grid.Resources>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="3*" />
+                                        <RowDefinition Height="1.5*" />
+                                    </Grid.RowDefinitions>
+
+                                    <telerik:FeaturedMeasurePresenter Grid.Row="0" Content="{TemplateBinding FeaturedMeasureInternal}" />
+                                    <telerik:FeaturedMeasurePresenter Grid.Row="1" Margin="0,1,0,0" Content="{TemplateBinding ProjectedMeasureInternal}" />
+                                    <telerik:ComparativeMeasuresContainer ChildrenSource="{TemplateBinding MergedComparativeMeasures}"
+                                                                           Range="{TemplateBinding Range}" />
+                                </Grid>
+                            </Grid>
+                        </Border>
+                        <telerik:QuantitativeScaleContainer Grid.Row="1"
+                                                                 TextFormatString="{TemplateBinding TextFormatString}"
+                                                                 Visibility="{TemplateBinding QuantitativeScaleVisibility}"
+                                                                 Range="{TemplateBinding Range}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,102 @@
+﻿<Window x:Class="Windows8Shell.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:Windows8Shell"
+        xmlns:my="clr-namespace:PDSA.WPF;assembly=PDSA.WPF"
+        Style="{StaticResource noChromeWindow}"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip"
+        Icon="/Windows8Shell;component/FrameworkUtilities_48x48.ico"
+        MouseDoubleClick="Window_MouseDoubleClick"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Loaded="Window_Loaded"
+        Unloaded="Window_Unloaded">
+  <Border x:Name="brdMain"
+          CornerRadius="10"
+          BorderBrush="Transparent"
+          Background="{StaticResource mainScreenBackground}"
+          BorderThickness="3"
+          Effect="{StaticResource mainDropShadow}"
+          Margin="14"
+          Padding="4">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="100" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <!-- Back Button Area -->
+        <ColumnDefinition Width="80" />
+        <!-- Content Area -->
+        <ColumnDefinition x:Name="colContent"
+                          Width="*" />
+        <!-- System Area -->
+        <ColumnDefinition x:Name="colSystem"
+                          Width="Auto" />
+      </Grid.ColumnDefinitions>
+      <my:PDSAucButtonImage Grid.Row="0"
+                            Grid.Column="0"
+                            x:Name="btnBack"
+                            VerticalAlignment="Center"
+                            ImageUri="/Images/LeftArrow.png"
+                            ToolTip="Back"
+                            Visibility="Hidden"
+                            Click="btnBack_Click" />
+      <TextBlock Grid.Row="0"
+                 Grid.Column="1"
+                 Style="{StaticResource mainHeaderText}"
+                 Text="PDSA Applications" />
+      <StackPanel Grid.Row="0"
+                  Grid.Column="2"
+                  Orientation="Horizontal">
+        <my:PDSAucButtonImage x:Name="btnMinimize"
+                              Click="btnMinimize_Click"
+                              ToolTip="Minimize"
+                              ImageUri="/Images/Minus.png" />
+        <my:PDSAucButtonImage x:Name="btnMaximize"
+                              Click="btnMaximize_Click"
+                              ToolTip="Maximize"
+                              ImageUri="/Images/Stop.png" />
+        <my:PDSAucButtonImage x:Name="btnClose"
+                              Click="btnClose_Click"
+                              ToolTip="Close"
+                              ImageUri="/Images/Close.png" />
+      </StackPanel>
+      <ScrollViewer Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Name="scrollTiles"
+                    BorderBrush="Transparent"
+                    Background="Transparent"
+                    Margin="2,0,0,0"
+                    MouseEnter="scrollTiles_MouseEnter"
+                    MouseLeave="scrollTiles_MouseLeave"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+        <src:ucStartTiles x:Name="startTiles"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Top" />
+      </ScrollViewer>
+      <Grid Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Name="contentArea"
+            Margin="0,0,10,0"
+            Visibility="Hidden" />
+      <my:PDSAucButtonImage Grid.Row="2"
+                            Grid.Column="1"
+                            x:Name="btnLeft"
+                            ToolTip="Scroll Tiles Left"
+                            ImageUri="/Images/LeftArrow.png"
+                            Click="btnLeft_Click" />
+      <my:PDSAucButtonImage Grid.Row="2"
+                            Grid.Column="2"
+                            x:Name="btnRight"
+                            ToolTip="Scroll Tiles Right"
+                            HorizontalAlignment="Right"
+                            ImageUri="/Images/RightArrow.png"
+                            Click="btnRight_Click" />
+    </Grid>
+  </Border>
+</Window>

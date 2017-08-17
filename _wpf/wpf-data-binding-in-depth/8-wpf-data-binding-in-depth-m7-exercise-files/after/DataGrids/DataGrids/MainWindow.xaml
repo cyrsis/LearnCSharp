@@ -1,0 +1,101 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Data="clr-namespace:Zza.Data;assembly=Zza.Data"
+        mc:Ignorable="d"
+        x:Class="DataGrids.MainWindow"
+        Title="MainWindow"
+        Height="350"
+        Width="525"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Window.Resources>
+        <CollectionViewSource x:Key="customerViewSource"
+                              Source="{Binding Customers}"
+                              d:DesignSource="{d:DesignInstance {x:Type Data:Customer}, CreateList=True}" />
+    </Window.Resources>
+    <Grid>
+
+        <DataGrid x:Name="customerDataGrid"
+                  ItemsSource="{Binding Source={StaticResource customerViewSource}}"
+                  EnableRowVirtualization="True"
+                  AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected"
+                  Margin="0,27,0.4,-0.2">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="idColumn"
+                                    Width="Auto"
+                                    Header="Id"
+                                    Binding="{Binding Id}" />
+                <DataGridTextColumn x:Name="firstNameColumn"
+                                    Width="Auto"
+                                    Header="First Name"
+                                    Binding="{Binding FirstName}" />
+                <DataGridTextColumn x:Name="lastNameColumn"
+                                    Width="Auto"
+                                    Header="Last Name"
+                                    Binding="{Binding LastName}" />
+                <DataGridTextColumn x:Name="phoneColumn"
+                                    Width="Auto"
+                                    Header="Phone"
+                                    Binding="{Binding Phone}" />
+                <DataGridTextColumn x:Name="emailColumn"
+                                    Width="*"
+                                    Header="Email"
+                                    Binding="{Binding Email}" />
+                <!--<DataGridTextColumn x:Name="stateColumn"
+                                    Width="Auto"
+                                    Header="State"
+                                    Binding="{Binding State}" />-->
+                <!--<DataGridComboBoxColumn x:Name="stateColumn"
+                                        Width="100"
+                                        Header="State"
+                                        ItemsSource="{Binding RelativeSource={RelativeSource AncestorType=DataGrid}, Path=DataContext.States}" SelectedItemBinding="{Binding State}" />-->
+                <DataGridTemplateColumn x:Name="stateColumn"
+                                        Width="Auto"
+                                        Header="State">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding RelativeSource={RelativeSource AncestorType=DataGrid}, Path=DataContext.States}"
+                                      SelectedItem="{Binding State}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                                      
+            </DataGrid.Columns>
+            <DataGrid.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </DataGrid.GroupStyle>
+            <!--<DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <DataGrid ItemsSource="{Binding Orders}"
+                              AutoGenerateColumns="True" />
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>-->
+        </DataGrid>
+        <Button Content="Sort"
+                HorizontalAlignment="Left"
+                Margin="10,3,0,0"
+                VerticalAlignment="Top"
+                Width="75"
+                Click="OnSort" />
+        <Button Content="Filter"
+                HorizontalAlignment="Left"
+                Margin="90,3,0,0"
+                VerticalAlignment="Top"
+                Width="75"
+                Click="OnFilter" />
+        <Button Content="Group"
+                HorizontalAlignment="Left"
+                Margin="170,3,0,0"
+                VerticalAlignment="Top"
+                Width="75"
+                Click="OnGroup" />
+
+    </Grid>
+</Window>

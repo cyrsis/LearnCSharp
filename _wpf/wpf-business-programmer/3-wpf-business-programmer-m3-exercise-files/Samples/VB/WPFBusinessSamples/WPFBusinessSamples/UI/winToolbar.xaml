@@ -1,0 +1,70 @@
+﻿<Window x:Class="winToolbar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Toolbar Sample"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight"
+        MinHeight="400"
+        MinWidth="400"
+        Loaded="Window_Loaded">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Name="brdDock"
+            Background="AliceBlue"
+            BorderBrush="LightBlue"
+            BorderThickness="2">
+      <DockPanel Grid.Row="0"
+                 LastChildFill="False"
+                 HorizontalAlignment="Stretch"
+                 Width="Auto">
+        <ToolBar Grid.Row="0"
+                 Name="tbrMain"
+                 Background="{Binding ElementName=brdDock, Path=Background}"
+                 DockPanel.Dock="Left"
+                 Band="0"
+                 BandIndex="0">
+          <Button Tag="New">
+            <Image Source="..\Images\New.gif" />
+          </Button>
+          <Button Tag="Save">
+            <Image Source="..\Images\Save.png" />
+          </Button>
+          <Button Tag="Delete">
+            <Image Source="..\Images\Delete.png" />
+          </Button>
+          <Separator />
+          <Button Tag="Explore">
+            <Image Source="..\Images\Explorer.bmp" />
+          </Button>
+        </ToolBar>
+        <ToolBar Grid.Row="0"
+                 Band="1"
+                 BandIndex="0"
+                 Background="{Binding ElementName=brdDock, Path=Background}"
+                 Name="tbrHelp"
+                 DockPanel.Dock="Right">
+          <Button Tag="Help">
+            <Image Source="..\Images\Help.png" />
+          </Button>
+        </ToolBar>
+      </DockPanel>
+    </Border>
+    <Border Grid.Row="1"
+            Padding="5"
+            Margin="5,10,5,10"
+            CornerRadius="10"
+            BorderBrush="Black"
+            BorderThickness="1">
+      <StackPanel HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch">
+        <TextBlock Text="This is the content area" />
+      </StackPanel>
+    </Border>
+    <TextBlock Grid.Row="2"
+               Text="This could be a StatusBar area" />
+  </Grid>
+</Window>

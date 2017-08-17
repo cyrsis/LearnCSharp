@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<Products>
+  <Product>
+    <ProductId>1</ProductId>
+    <ProductName>PDSA .NET Productivity Framework V4.1</ProductName>
+    <Price>5000</Price>
+    <Logo>/Images/Framework.gif</Logo>
+  </Product>
+  <Product>
+    <ProductId>2</ProductId>
+    <ProductName>Architecting ASP.NET Applications eBook</ProductName>
+    <Price>19.95</Price>
+    <Logo>/Images/ArchASPNET_100.gif</Logo>
+  </Product>
+  <Product>
+    <ProductId>3</ProductId>
+    <ProductName>Fundamentals of N-Tier eBook</ProductName>
+    <Price>19.95</Price>
+    <Logo>/Images/FundNTier_100.gif</Logo>
+  </Product>
+  <Product>
+    <ProductId>4</ProductId>
+    <ProductName>Security for ASP.NET Developers eBook</ProductName>
+    <Price>19.95</Price>
+    <Logo>/Images/FundSecurity_100.gif</Logo>
+  </Product>
+  <Product>
+    <ProductId>6</ProductId>
+    <ProductName>VB.NET Fundamentals eBook</ProductName>
+    <Price>19.95</Price>
+    <Logo>/Images/FundVBNet_100.gif</Logo>
+  </Product>
+  <Product>
+    <ProductId>7</ProductId>
+    <ProductName>Fundamentals of SQL Server 2005</ProductName>
+    <Price>19.95</Price>
+    <Logo>/Images/FundSQL_100.gif</Logo>
+  </Product>
+</Products>

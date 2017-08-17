@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="SalesDashboard.CountriesBrakedownUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+	xmlns:local="clr-namespace:SalesDashboard"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+	
+	<UserControl.Resources>
+		<local:CountryToSymbolConverter x:Key="CountryToSymbolConverter" />
+		<local:ProductCategoryToBrushConverter x:Key="ProductCategoryToBrushConverter" />
+		<FontFamily x:Key="geobats">../Fonts/geobats.ttf#GeoBats</FontFamily>
+	</UserControl.Resources>
+
+	<telerik:RadBusyIndicator x:Name="countriesBrakedownBusyIndicator" Style="{StaticResource RadBusyIndicatorStyle}" 
+				IsIndeterminate="{Binding IsActualsByCountriesAndProductCategoriesLoading}"
+				IsBusy="{Binding IsActualsByCountriesAndProductCategoriesLoading}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+		<StackPanel>
+			<ItemsControl x:Name="countryAmountsItemsControl" ItemsSource="{Binding SelectedSalesAmountsByCountriesAndProductCategories}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<telerik:RadUniformGrid Columns="3" Rows="2" />
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<Grid Margin="0,0,20,0">
+							<TextBlock TextWrapping="Wrap" Text="{Binding Country, Converter={StaticResource CountryToSymbolConverter}}" Foreground="{StaticResource text}" FontFamily="{StaticResource geobats}" FontSize="18" Opacity="0.15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,0,0,0"/>
+							<StackPanel Margin="0,10,0,0" Orientation="Vertical" d:LayoutOverrides="Height">
+								<TextBlock Foreground="{StaticResource text}">
+													<Run Text="{Binding Country}" />
+													<Run Text=":" />
+													<Run Text="{Binding TotalValue, StringFormat=\{0:C0\}}" />
+								</TextBlock>
+								<ItemsControl ItemsSource="{Binding SalesInfos}">
+									<ItemsControl.ItemTemplate>
+										<DataTemplate>
+											<telerik:RadHorizontalBulletGraph HorizontalAlignment="Stretch" Height="7"
+																QuantitativeScaleVisibility="Collapsed" ComparativeMeasureThickness="0" 
+																FeaturedMeasure="{Binding ActualAmount}"
+																FeaturedMeasureBrush="{Binding ProductCategory, Converter={StaticResource ProductCategoryToBrushConverter}}"
+																Maximum="{Binding DataContext.MaxSelectedSalesAmountsByCountriesAndProductCategories, ElementName=countriesBrakedownBusyIndicator}" 
+																Style="{StaticResource RadHorizontalBulletGraphStyle}"/>
+										</DataTemplate>
+									</ItemsControl.ItemTemplate>
+								</ItemsControl>
+							</StackPanel>
+						</Grid>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</StackPanel>
+	</telerik:RadBusyIndicator>
+</UserControl>

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Windows8Shell.ucStartGroup2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:PDSA.WPF;assembly=PDSA.WPF"
+             mc:Ignorable="d"
+             d:DesignHeight="500"
+             d:DesignWidth="800">
+  <UserControl.Resources>
+    <SolidColorBrush x:Key="tileBackground"
+                     Color="Black" />
+  </UserControl.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <my:PDSAucTile Grid.Row="0"
+                   Text="Users"
+                   Click="Tile_Click"
+                   ViewName="UsersView"
+                   Background="{StaticResource tileBackground}"
+                   Style="{StaticResource largeTile}"
+                   ImageUri="/Images-Tiles/Users.jpg" />
+    <my:PDSAucTile Grid.Row="1"
+                   Click="Tile_Click"
+                   ViewName="RolesView"
+                   Text="Roles"
+                   Background="{StaticResource tileBackground}"
+                   Style="{StaticResource largeTile}"
+                   ImageUri="/Images-Tiles/Roles.jpg" />
+    <my:PDSAucTile Grid.Row="2"
+                   Text="Permissions"
+                   Click="Tile_Click"
+                   ViewName="PermissionsView"
+                   Background="{StaticResource tileBackground}"
+                   Style="{StaticResource largeTile}"
+                   ImageUri="/Images-Tiles/Permission.jpg" />
+  </Grid>
+</UserControl>

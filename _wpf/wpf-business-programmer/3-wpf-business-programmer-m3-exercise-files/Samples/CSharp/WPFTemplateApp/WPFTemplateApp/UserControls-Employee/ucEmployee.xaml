@@ -1,0 +1,126 @@
+﻿<UserControl x:Class="WPFTemplateApp.ucEmployee"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             FontSize="16"
+             xmlns:vm="clr-namespace:WPFTemplateApp">
+  <UserControl.Resources>
+    <vm:EmployeeViewModel x:Key="viewModel" />
+  </UserControl.Resources>
+  <Border Style="{StaticResource Border_For_Forms}">
+    <Grid x:Name="grdMain"
+          DataContext="{Binding Source={StaticResource viewModel}}">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="200" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <ListView Grid.Row="0"
+                SelectionMode="Single"
+                x:Name="lstData"
+                SelectedIndex="0"
+                IsSynchronizedWithCurrentItem="True"
+                HorizontalContentAlignment="Stretch"
+                ItemsSource="{Binding Path=DataCollection}">
+        <ListView.SelectedValue>
+          <Binding Source="{StaticResource viewModel}"
+                   Path="DetailData"
+                   BindsDirectlyToSource="True"
+                   UpdateSourceTrigger="PropertyChanged"></Binding>
+        </ListView.SelectedValue>
+        <ListView.View>
+          <GridView>
+            <GridViewColumn Header="Actions">
+              <GridViewColumn.CellTemplate>
+                <DataTemplate>
+                  <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btnDelete"
+                            ToolTip="Delete Employee"
+                            Content="Del"
+                            Click="btnDelete_Click"
+                            Tag="{Binding}"></Button>
+                  </StackPanel>
+                </DataTemplate>
+              </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header="Employee ID"
+                            Width="Auto"
+                            DisplayMemberBinding="{Binding Path=EmployeeNumber}" />
+            <GridViewColumn Header="First Name"
+                            Width="150"
+                            DisplayMemberBinding="{Binding Path=FirstName}" />
+            <GridViewColumn Header="Last Name"
+                            Width="150"
+                            DisplayMemberBinding="{Binding Path=LastName}" />
+            <GridViewColumn Header="SSN"
+                            Width="180"
+                            DisplayMemberBinding="{Binding Path=SSN}" />
+          </GridView>
+        </ListView.View>
+      </ListView>
+      <StackPanel Grid.Row="1"
+                  Orientation="Horizontal">
+        <Button x:Name="btnAdd"
+                Margin="5"
+                IsEnabled="{Binding Path=IsAddEnabled}"
+                Content="Add"
+                Click="btnAdd_Click" />
+        <Button x:Name="btnSave"
+                Margin="5"
+                Content="Save"
+                IsEnabled="{Binding Path=IsSaveEnabled}"
+                Click="btnSave_Click" />
+        <Button x:Name="btnCancel"
+                Margin="5"
+                Content="Cancel"
+                IsEnabled="{Binding Path=IsCancelEnabled}"
+                Click="btnCancel_Click" />
+      </StackPanel>
+      <Grid Grid.Row="2"
+            Margin="5"
+            DataContext="{Binding Path=DetailData}">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="120"></ColumnDefinition>
+          <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Employee ID" />
+        <TextBox Grid.Row="0"
+                 Grid.Column="1"
+                 TextChanged="TextHasChanged"
+                 x:Name="txtEmployeeId"
+                 Text="{Binding Path=EmployeeNumber}" />
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Text="First Name" />
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 TextChanged="TextHasChanged"
+                 x:Name="txtFirstName"
+                 Text="{Binding Path=FirstName}" />
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Text="Last Name" />
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 x:Name="txtLastName"
+                 TextChanged="TextHasChanged"
+                 Text="{Binding Path=LastName}" />
+        <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Text="SSN" />
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 x:Name="txtSSN"
+                 TextChanged="TextHasChanged"
+                 Text="{Binding Path=SSN}" />
+      </Grid>
+    </Grid>
+  </Border>
+</UserControl>

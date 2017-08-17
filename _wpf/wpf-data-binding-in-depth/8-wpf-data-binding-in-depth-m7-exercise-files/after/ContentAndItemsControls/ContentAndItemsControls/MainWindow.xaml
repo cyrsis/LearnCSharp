@@ -1,0 +1,94 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Data="clr-namespace:Zza.Data;assembly=Zza.Data" mc:Ignorable="d" x:Class="ContentAndItemsControls.MainWindow"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="productViewSource" d:DesignSource="{d:DesignInstance {x:Type Data:Product}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource productViewSource}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="139*"/>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="productDataGrid"
+                  RowDetailsVisibilityMode="VisibleWhenSelected"
+                  ItemsSource="{Binding}"
+                  EnableRowVirtualization="True"
+                  AutoGenerateColumns="False"
+                  Margin="0,0,0,8">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Description">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Description}"
+                                       Loaded="DataGridCell_Loaded" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridCheckBoxColumn x:Name="hasOptionsColumn"
+                                        Width="SizeToHeader"
+                                        Header="Has Options"
+                                        Binding="{Binding HasOptions}" />
+                <DataGridTextColumn x:Name="idColumn"
+                                    Width="SizeToHeader"
+                                    Header="Id"
+                                    Binding="{Binding Id}" />
+                <DataGridTextColumn x:Name="imageColumn"
+                                    Width="SizeToHeader"
+                                    Header="Image"
+                                    Binding="{Binding Image}" />
+                <DataGridCheckBoxColumn x:Name="isVegetarianColumn"
+                                        Width="SizeToHeader"
+                                        Header="Is Vegetarian"
+                                        Binding="{Binding IsVegetarian}" />
+                <DataGridTextColumn x:Name="nameColumn"
+                                    Width="SizeToHeader"
+                                    Header="Name"
+                                    Binding="{Binding Name}" />
+                <DataGridTextColumn x:Name="sizeIdsColumn"
+                                    Width="SizeToHeader"
+                                    Header="Size Ids"
+                                    Binding="{Binding SizeIds}" />
+                <DataGridTextColumn x:Name="typeColumn"
+                                    Width="SizeToHeader"
+                                    Header="Type"
+                                    Binding="{Binding Type}" />
+                <DataGridCheckBoxColumn x:Name="withTomatoSauceColumn"
+                                        Width="SizeToHeader"
+                                        Header="With Tomato Sauce"
+                                        Binding="{Binding WithTomatoSauce}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <ListBox x:Name="productListBox"
+                 ItemsSource="{Binding}"
+                 Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"
+                               Loaded="ListBoxTextBlock_Loaded" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ContentControl x:Name="productContentControl"
+                        Grid.Row="2"
+                        Content="{Binding}">
+            <ContentControl.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock HorizontalAlignment="Left"
+                               Height="53"
+                               TextWrapping="Wrap"
+                               Text="{Binding Name}"
+                               VerticalAlignment="Top"
+                               Width="195" />
+                </DataTemplate>
+            </ContentControl.ContentTemplate>
+        </ContentControl>
+
+
+    </Grid>
+</Window>

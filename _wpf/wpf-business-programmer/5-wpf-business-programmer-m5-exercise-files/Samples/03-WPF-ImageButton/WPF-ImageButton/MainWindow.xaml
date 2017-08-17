@@ -1,0 +1,42 @@
+﻿<Window x:Class="WPF_ImageButton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:PDSA.WPF;assembly=PDSA.WPF"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        FontFamily="Segoe UI"
+        ShowInTaskbar="True"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Height="300"
+        Width="500">
+  <Grid Background="Gray">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right">
+<my:PDSAucButtonImage x:Name="btnMinimize"
+                      Click="btnMinimize_Click"
+                      ToolTip="Minimize Application"
+                      ImageUri="/PDSA.WPF;component/Images/Minus.png" />
+      <my:PDSAucButtonImage x:Name="btnMaximize"
+                            Click="btnMaximize_Click"
+                            ToolTip="Maximize Application"
+                            ImageUri="/PDSA.WPF;component/Images/Stop.png" />
+      <my:PDSAucButtonImage x:Name="btnClose"
+                            Click="btnClose_Click"
+                            ToolTip="Close Application"
+                            ImageUri="/PDSA.WPF;component/Images/Close.png" />
+    </StackPanel>
+    <TextBlock Grid.Row="1"
+               Margin="10"
+               Text="A Borderless window..."
+               FontSize="24" />
+    
+  </Grid>
+</Window>

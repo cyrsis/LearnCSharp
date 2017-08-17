@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFBusinessSamples", "WPFBusinessSamples\WPFBusinessSamples.csproj", "{1B87847C-1439-494D-85AB-1C1D42514F13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFComponents", "WPFComponents\WPFComponents.csproj", "{56A41F20-52CE-4463-8B55-22954F506BC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B87847C-1439-494D-85AB-1C1D42514F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B87847C-1439-494D-85AB-1C1D42514F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B87847C-1439-494D-85AB-1C1D42514F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B87847C-1439-494D-85AB-1C1D42514F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A41F20-52CE-4463-8B55-22954F506BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A41F20-52CE-4463-8B55-22954F506BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A41F20-52CE-4463-8B55-22954F506BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A41F20-52CE-4463-8B55-22954F506BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

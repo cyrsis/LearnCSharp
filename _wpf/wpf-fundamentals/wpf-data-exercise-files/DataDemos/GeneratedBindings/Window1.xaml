@@ -1,0 +1,43 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:loc="clr-namespace:BindingExample"
+    x:Class="BindingExample.Window1"
+    Title="Window1" Height="300" Width="366"
+        TextElement.FontSize="20" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+  
+  <Window.Resources>
+    <ObjectDataProvider x:Key="src" ObjectType="{x:Type loc:PeopleSource}" />
+  	<DataTemplate x:Key="PeopleTemplate">
+  		<Grid Width="252.677">
+  			<Grid.RowDefinitions>
+  				<RowDefinition/>
+  				<RowDefinition/>
+  			</Grid.RowDefinitions>
+  			<Grid.ColumnDefinitions>
+  				<ColumnDefinition Width="0.293*"/>
+  				<ColumnDefinition Width="0.707*"/>
+  			</Grid.ColumnDefinitions>
+  			<TextBox Margin="8.001,0,-0.001,0" Grid.Column="1" Grid.Row="0" Text="{Binding Path=Age}"/>
+  			<TextBox Margin="8.001,0,-0.001,0" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Text="{Binding Path=Name}"/>
+  			<Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="_Name:"/>
+  			<Label d:LayoutOverrides="GridBox" HorizontalAlignment="Left" VerticalAlignment="Top" Content="_Age:" Grid.Row="1"/>
+  		</Grid>
+  	</DataTemplate>
+  </Window.Resources>
+  
+  <Grid DataContext="{StaticResource src}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <ListBox ItemTemplate="{DynamicResource PeopleTemplate}" ItemsSource="{Binding Path=People, Mode=Default}" />
+    
+    <StackPanel Grid.Row="1" >
+      <Button Content="_Show..." Click="Button_Click" />
+      <Button Content="_Age..." Click="Button_Click_1" />
+
+    </StackPanel>
+  </Grid>
+</Window>

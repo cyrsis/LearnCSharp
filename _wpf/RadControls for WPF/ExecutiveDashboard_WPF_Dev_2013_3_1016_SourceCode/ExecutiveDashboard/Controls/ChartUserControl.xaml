@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="ExecutiveDashboard.ChartUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400"
+	x:Name="parent">
+
+	<UserControl.Resources>
+		<telerik:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+		<telerik:InvertedBooleanToVisibilityConverter x:Key="InvertedBooleanToVisibilityConverter" />
+	</UserControl.Resources>
+
+	<Grid x:Name="root">
+		<telerik:RadChart x:Name="radChart" Visibility="{Binding IsAnimating, ElementName=parent, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"
+						Background="Transparent" BorderBrush="{x:Null}" BorderThickness="0" Foreground="{StaticResource text}" 
+    					AxisForeground="{StaticResource text}" 
+                        FontFamily="{Binding Source={StaticResource paletteManager}, Path=Palette.font,Mode=TwoWay}">
+			<telerik:RadChart.SeriesMappings>
+				<telerik:SeriesMapping>
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:AreaSeriesDefinition ShowPointMarks="{Binding ShowPointMarks}" ShowItemLabels="False" PointMarkItemStyle="{StaticResource PointMarkItemStyle}">
+							<telerik:AreaSeriesDefinition.Appearance>
+								<telerik:SeriesAppearanceSettings Stroke="Transparent" StrokeThickness="0" Fill="{StaticResource actual}" />
+							</telerik:AreaSeriesDefinition.Appearance>
+						</telerik:AreaSeriesDefinition>
+					</telerik:SeriesMapping.SeriesDefinition>
+					<telerik:SeriesMapping.ItemMappings>
+						<telerik:ItemMapping FieldName="TotalActualValue" DataPointMember="YValue" />
+						<telerik:ItemMapping FieldName="Date" DataPointMember="XValue" />
+					</telerik:SeriesMapping.ItemMappings>
+				</telerik:SeriesMapping>
+				<telerik:SeriesMapping>
+					<telerik:SeriesMapping.SeriesDefinition>
+						<telerik:StepLineSeriesDefinition ShowPointMarks="False" ShowItemLabels="False" >
+							<telerik:StepLineSeriesDefinition.Appearance>
+								<telerik:SeriesAppearanceSettings Fill="Transparent" Stroke="{StaticResource budgeted}" StrokeThickness="2" />
+							</telerik:StepLineSeriesDefinition.Appearance>
+						</telerik:StepLineSeriesDefinition>
+					</telerik:SeriesMapping.SeriesDefinition>
+
+					<telerik:ItemMapping FieldName="TotalTargetValue" DataPointMember="YValue" />
+					<telerik:ItemMapping FieldName="Date" DataPointMember="XValue" />
+				</telerik:SeriesMapping>
+			</telerik:RadChart.SeriesMappings>
+			<telerik:RadChart.DefaultView>
+				<telerik:ChartDefaultView>
+					<telerik:ChartDefaultView.ChartArea>
+						<telerik:ChartArea Padding="0" Style="{StaticResource ChartAreaStyle}" Margin="0" EnableAnimations="False" VerticalAlignment="Top">
+							<telerik:ChartArea.AxisX>
+								<telerik:AxisX MajorTicksVisibility="Collapsed" LabelStep="0"  IsDateTime="True" 
+														   DefaultLabelFormat="{Binding AxisXDefaultLabelFormat}"
+														   AutoRange="{Binding IsAxisXAutoRange}" 
+														   Step="{Binding AxisXStep}"
+														   MinValue="{Binding AxisXMinValue}"
+														   MaxValue="{Binding AxisXMaxValue}">
+									<telerik:AxisX.AxisStyles>
+										<telerik:AxisStyles ItemLabelStyle="{StaticResource XItemLabelStyle}" />
+									</telerik:AxisX.AxisStyles>
+								</telerik:AxisX>
+							</telerik:ChartArea.AxisX>
+							<telerik:ChartArea.AxisY>
+								<telerik:AxisY ExtendDirection="None" MinorTicksVisibility="Collapsed" StripLinesVisibility="Collapsed" Step="0" MajorTicksVisibility="Collapsed" MajorGridLinesVisibility="Visible" PlotAreaAxisVisibility="Collapsed" IsZeroBased="True">
+									<telerik:AxisY.AxisStyles>
+										<telerik:AxisStyles GridLineStyle="{StaticResource YGridLineStyle}" ItemLabelStyle="{StaticResource YItemLabelStyle}" />
+									</telerik:AxisY.AxisStyles>
+								</telerik:AxisY>
+							</telerik:ChartArea.AxisY>
+						</telerik:ChartArea>
+					</telerik:ChartDefaultView.ChartArea>
+				</telerik:ChartDefaultView>
+			</telerik:RadChart.DefaultView>
+			<telerik:RadChart.ItemsSource>
+				<Binding Path="SelectedSalesTrendData" />
+			</telerik:RadChart.ItemsSource>
+		</telerik:RadChart>
+
+		<Image x:Name="chartImage" Visibility="{Binding IsAnimating, ElementName=parent, Converter={StaticResource BooleanToVisibilityConverter}}"
+			   VerticalAlignment="Stretch" Stretch="Fill" />
+	</Grid>
+</UserControl>

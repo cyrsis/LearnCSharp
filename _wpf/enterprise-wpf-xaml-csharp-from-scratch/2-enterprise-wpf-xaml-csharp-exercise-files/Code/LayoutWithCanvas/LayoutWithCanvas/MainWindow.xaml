@@ -1,0 +1,29 @@
+﻿<Window x:Class="LayoutWithCanvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+
+   <Canvas>
+      <Rectangle Canvas.Left="25"
+                 Canvas.Top="25"
+                 Width="50"
+                 Height="40"
+                 Fill="Red" />
+      <Rectangle Canvas.Left="100"
+                 Canvas.Top="25"
+                 Width="50"
+                 Height="40"
+                 Fill="Orange" />
+      <Rectangle Canvas.Left="125"
+                 Canvas.Top="40"
+                 Width="50"
+                 Height="40"
+                 Fill="Blue" />
+      <Ellipse Canvas.Left="25"
+               Canvas.Top="200"
+               Width="50"
+               Height="50"
+               Fill="Green" />
+
+   </Canvas>
+</Window>

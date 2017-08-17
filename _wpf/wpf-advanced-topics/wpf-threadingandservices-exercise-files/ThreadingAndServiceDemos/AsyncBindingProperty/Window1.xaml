@@ -1,0 +1,11 @@
+﻿<Window x:Class="AsyncBindingProperty.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="300" Width="300">
+  <Grid>
+    <StackPanel TextElement.FontSize="20">
+      <Button x:Name="getNewDataButton" Click="getNewDataButton_Click">_Get data...</Button>
+      <TextBlock Text="{Binding Data}" />
+    </StackPanel>
+  </Grid>
+</Window>

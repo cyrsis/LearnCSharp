@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFListBox.frmListBoxDataProvider"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:WPFComponents;assembly=WPFComponents"
+        Title="Data Bound List Box"
+        WindowStartupLocation="CenterScreen"
+        Height="390"
+        Width="682">
+  <Window.Resources>
+    <ObjectDataProvider x:Key="odpCust"
+                        ObjectType="{x:Type
+         src:AdvWorksDataContext}"
+                        MethodName="GetTable">
+      <ObjectDataProvider.MethodParameters>
+        <x:Type TypeName="src:Customer" />
+      </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+  </Window.Resources>
+  <Grid>
+    <ListBox ItemsSource="{Binding 
+        Source={StaticResource odpCust}}"
+             DisplayMemberPath="LastName"></ListBox>
+  </Grid>
+</Window>

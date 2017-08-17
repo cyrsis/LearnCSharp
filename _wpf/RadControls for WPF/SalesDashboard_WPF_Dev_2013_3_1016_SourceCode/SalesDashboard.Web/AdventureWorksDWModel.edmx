@@ -1,0 +1,1778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AdventureWorksDWAZ2008R2XLabsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AdventureWorksDWAZ2008R2XLabsModelStoreContainer">
+          <EntitySet Name="AdventureWorksDWBuildVersion" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.AdventureWorksDWBuildVersion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DatabaseLog" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DatabaseLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimAccount" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimAccount" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimCurrency" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimCurrency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimCustomer" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimCustomer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimDate" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimDate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimDepartmentGroup" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimDepartmentGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimEmployee" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimEmployee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimGeography" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimGeography" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimOrganization" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimOrganization" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimProduct" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimProduct" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimProductCategory" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimProductCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimProductSubcategory" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimProductSubcategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimPromotion" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimPromotion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimReseller" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimReseller" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimSalesReason" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimSalesReason" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimSalesTerritory" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimSalesTerritory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DimScenario" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.DimScenario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactAdditionalInternationalProductDescription" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactAdditionalInternationalProductDescription" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactCallCenter" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactCallCenter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactCurrencyRate" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactCurrencyRate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactFinance" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactFinance" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactInternetSales" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactInternetSales" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactInternetSalesQuota" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactInternetSalesQuota" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactInternetSalesReason" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactInternetSalesReason" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactResellerSales" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactResellerSales" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactSalesQuota" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactSalesQuota" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FactSurveyResponse" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.FactSurveyResponse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProspectiveBuyer" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.ProspectiveBuyer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrdersDetailsView" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.OrdersDetailsView" store:Type="Views" store:Schema="dbo" store:Name="OrdersDetailsView">
+            <DefiningQuery>SELECT 
+      [OrdersDetailsView].[SalesOrderNumber] AS [SalesOrderNumber], 
+      [OrdersDetailsView].[OrderDate] AS [OrderDate], 
+      [OrdersDetailsView].[ItemsSold] AS [ItemsSold], 
+      [OrdersDetailsView].[SalesAmount] AS [SalesAmount], 
+      [OrdersDetailsView].[Country] AS [Country], 
+      [OrdersDetailsView].[ProductsEnum] AS [ProductsEnum]
+      FROM [dbo].[OrdersDetailsView] AS [OrdersDetailsView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SalesAmountExtractView" EntityType="AdventureWorksDWAZ2008R2XLabsModel.Store.SalesAmountExtractView" store:Type="Views" store:Schema="dbo" store:Name="SalesAmountExtractView">
+            <DefiningQuery>SELECT 
+      [SalesAmountExtractView].[TargetAmount] AS [TargetAmount], 
+      [SalesAmountExtractView].[OrderDate] AS [OrderDate], 
+      [SalesAmountExtractView].[ActualAmount] AS [ActualAmount], 
+      [SalesAmountExtractView].[ProductCategory] AS [ProductCategory], 
+      [SalesAmountExtractView].[Country] AS [Country]
+      FROM [dbo].[SalesAmountExtractView] AS [SalesAmountExtractView]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_FactInternetSalesQuota_DimProductCategory" Association="AdventureWorksDWAZ2008R2XLabsModel.Store.FK_FactInternetSalesQuota_DimProductCategory">
+            <End Role="DimProductCategory" EntitySet="DimProductCategory" />
+            <End Role="FactInternetSalesQuota" EntitySet="FactInternetSalesQuota" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FactInternetSalesQuota_DimSalesTerritory" Association="AdventureWorksDWAZ2008R2XLabsModel.Store.FK_FactInternetSalesQuota_DimSalesTerritory">
+            <End Role="DimSalesTerritory" EntitySet="DimSalesTerritory" />
+            <End Role="FactInternetSalesQuota" EntitySet="FactInternetSalesQuota" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AdventureWorksDWBuildVersion">
+          <Key>
+            <PropertyRef Name="DBVersion" />
+            <PropertyRef Name="VersionDate" />
+          </Key>
+          <Property Name="DBVersion" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="VersionDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DatabaseLog">
+          <Key>
+            <PropertyRef Name="DatabaseLogID" />
+          </Key>
+          <Property Name="DatabaseLogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PostTime" Type="datetime" Nullable="false" />
+          <Property Name="DatabaseUser" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Event" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Schema" Type="nvarchar" MaxLength="128" />
+          <Property Name="Object" Type="nvarchar" MaxLength="128" />
+          <Property Name="TSQL" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="XmlEvent" Type="xml" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DimAccount">
+          <Key>
+            <PropertyRef Name="AccountKey" />
+          </Key>
+          <Property Name="AccountKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentAccountKey" Type="int" />
+          <Property Name="AccountCodeAlternateKey" Type="int" />
+          <Property Name="ParentAccountCodeAlternateKey" Type="int" />
+          <Property Name="AccountDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="AccountType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Operator" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomMembers" Type="nvarchar" MaxLength="300" />
+          <Property Name="ValueType" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomMemberOptions" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="DimCurrency">
+          <Key>
+            <PropertyRef Name="CurrencyKey" />
+          </Key>
+          <Property Name="CurrencyKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyAlternateKey" Type="nchar" Nullable="false" MaxLength="3" />
+          <Property Name="CurrencyName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DimCustomer">
+          <Key>
+            <PropertyRef Name="CustomerKey" />
+          </Key>
+          <Property Name="CustomerKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GeographyKey" Type="int" />
+          <Property Name="CustomerAlternateKey" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="Title" Type="nvarchar" MaxLength="8" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameStyle" Type="bit" />
+          <Property Name="BirthDate" Type="date" />
+          <Property Name="MaritalStatus" Type="nchar" MaxLength="1" />
+          <Property Name="Suffix" Type="nvarchar" MaxLength="10" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="1" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="YearlyIncome" Type="money" />
+          <Property Name="TotalChildren" Type="tinyint" />
+          <Property Name="NumberChildrenAtHome" Type="tinyint" />
+          <Property Name="EnglishEducation" Type="nvarchar" MaxLength="40" />
+          <Property Name="SpanishEducation" Type="nvarchar" MaxLength="40" />
+          <Property Name="FrenchEducation" Type="nvarchar" MaxLength="40" />
+          <Property Name="EnglishOccupation" Type="nvarchar" MaxLength="100" />
+          <Property Name="SpanishOccupation" Type="nvarchar" MaxLength="100" />
+          <Property Name="FrenchOccupation" Type="nvarchar" MaxLength="100" />
+          <Property Name="HouseOwnerFlag" Type="nchar" MaxLength="1" />
+          <Property Name="NumberCarsOwned" Type="tinyint" />
+          <Property Name="AddressLine1" Type="nvarchar" MaxLength="120" />
+          <Property Name="AddressLine2" Type="nvarchar" MaxLength="120" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="DateFirstPurchase" Type="date" />
+          <Property Name="CommuteDistance" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="DimDate">
+          <Key>
+            <PropertyRef Name="DateKey" />
+          </Key>
+          <Property Name="DateKey" Type="int" Nullable="false" />
+          <Property Name="FullDateAlternateKey" Type="date" Nullable="false" />
+          <Property Name="DayNumberOfWeek" Type="tinyint" Nullable="false" />
+          <Property Name="EnglishDayNameOfWeek" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="SpanishDayNameOfWeek" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="FrenchDayNameOfWeek" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DayNumberOfMonth" Type="tinyint" Nullable="false" />
+          <Property Name="DayNumberOfYear" Type="smallint" Nullable="false" />
+          <Property Name="WeekNumberOfYear" Type="tinyint" Nullable="false" />
+          <Property Name="EnglishMonthName" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="SpanishMonthName" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="FrenchMonthName" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="MonthNumberOfYear" Type="tinyint" Nullable="false" />
+          <Property Name="CalendarQuarter" Type="tinyint" Nullable="false" />
+          <Property Name="CalendarYear" Type="smallint" Nullable="false" />
+          <Property Name="CalendarSemester" Type="tinyint" Nullable="false" />
+          <Property Name="FiscalQuarter" Type="tinyint" Nullable="false" />
+          <Property Name="FiscalYear" Type="smallint" Nullable="false" />
+          <Property Name="FiscalSemester" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DimDepartmentGroup">
+          <Key>
+            <PropertyRef Name="DepartmentGroupKey" />
+          </Key>
+          <Property Name="DepartmentGroupKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentDepartmentGroupKey" Type="int" />
+          <Property Name="DepartmentGroupName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DimEmployee">
+          <Key>
+            <PropertyRef Name="EmployeeKey" />
+          </Key>
+          <Property Name="EmployeeKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentEmployeeKey" Type="int" />
+          <Property Name="EmployeeNationalIDAlternateKey" Type="nvarchar" MaxLength="15" />
+          <Property Name="ParentEmployeeNationalIDAlternateKey" Type="nvarchar" MaxLength="15" />
+          <Property Name="SalesTerritoryKey" Type="int" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameStyle" Type="bit" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="HireDate" Type="date" />
+          <Property Name="BirthDate" Type="date" />
+          <Property Name="LoginID" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="25" />
+          <Property Name="MaritalStatus" Type="nchar" MaxLength="1" />
+          <Property Name="EmergencyContactName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmergencyContactPhone" Type="nvarchar" MaxLength="25" />
+          <Property Name="SalariedFlag" Type="bit" />
+          <Property Name="Gender" Type="nchar" MaxLength="1" />
+          <Property Name="PayFrequency" Type="tinyint" />
+          <Property Name="BaseRate" Type="money" />
+          <Property Name="VacationHours" Type="smallint" />
+          <Property Name="SickLeaveHours" Type="smallint" />
+          <Property Name="CurrentFlag" Type="bit" Nullable="false" />
+          <Property Name="SalesPersonFlag" Type="bit" Nullable="false" />
+          <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DimGeography">
+          <Key>
+            <PropertyRef Name="GeographyKey" />
+          </Key>
+          <Property Name="GeographyKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" />
+          <Property Name="StateProvinceCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="StateProvinceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryRegionCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="EnglishCountryRegionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpanishCountryRegionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FrenchCountryRegionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="15" />
+          <Property Name="SalesTerritoryKey" Type="int" />
+        </EntityType>
+        <EntityType Name="DimOrganization">
+          <Key>
+            <PropertyRef Name="OrganizationKey" />
+          </Key>
+          <Property Name="OrganizationKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentOrganizationKey" Type="int" />
+          <Property Name="PercentageOfOwnership" Type="nvarchar" MaxLength="16" />
+          <Property Name="OrganizationName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CurrencyKey" Type="int" />
+        </EntityType>
+        <EntityType Name="DimProduct">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+          </Key>
+          <Property Name="ProductKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductAlternateKey" Type="nvarchar" MaxLength="25" />
+          <Property Name="ProductSubcategoryKey" Type="int" />
+          <Property Name="WeightUnitMeasureCode" Type="nchar" MaxLength="3" />
+          <Property Name="SizeUnitMeasureCode" Type="nchar" MaxLength="3" />
+          <Property Name="EnglishProductName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SpanishProductName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FrenchProductName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="StandardCost" Type="money" />
+          <Property Name="FinishedGoodsFlag" Type="bit" Nullable="false" />
+          <Property Name="Color" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="SafetyStockLevel" Type="smallint" />
+          <Property Name="ReorderPoint" Type="smallint" />
+          <Property Name="ListPrice" Type="money" />
+          <Property Name="Size" Type="nvarchar" MaxLength="50" />
+          <Property Name="SizeRange" Type="nvarchar" MaxLength="50" />
+          <Property Name="Weight" Type="float" />
+          <Property Name="DaysToManufacture" Type="int" />
+          <Property Name="ProductLine" Type="nchar" MaxLength="2" />
+          <Property Name="DealerPrice" Type="money" />
+          <Property Name="Class" Type="nchar" MaxLength="2" />
+          <Property Name="Style" Type="nchar" MaxLength="2" />
+          <Property Name="ModelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LargePhoto" Type="varbinary(max)" />
+          <Property Name="EnglishDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="FrenchDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="ChineseDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="ArabicDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="HebrewDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="ThaiDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="GermanDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="JapaneseDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="TurkishDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="DimProductCategory">
+          <Key>
+            <PropertyRef Name="ProductCategoryKey" />
+          </Key>
+          <Property Name="ProductCategoryKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductCategoryAlternateKey" Type="int" />
+          <Property Name="EnglishProductCategoryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SpanishProductCategoryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FrenchProductCategoryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DimProductSubcategory">
+          <Key>
+            <PropertyRef Name="ProductSubcategoryKey" />
+          </Key>
+          <Property Name="ProductSubcategoryKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductSubcategoryAlternateKey" Type="int" />
+          <Property Name="EnglishProductSubcategoryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SpanishProductSubcategoryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FrenchProductSubcategoryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProductCategoryKey" Type="int" />
+        </EntityType>
+        <EntityType Name="DimPromotion">
+          <Key>
+            <PropertyRef Name="PromotionKey" />
+          </Key>
+          <Property Name="PromotionKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PromotionAlternateKey" Type="int" />
+          <Property Name="EnglishPromotionName" Type="nvarchar" MaxLength="255" />
+          <Property Name="SpanishPromotionName" Type="nvarchar" MaxLength="255" />
+          <Property Name="FrenchPromotionName" Type="nvarchar" MaxLength="255" />
+          <Property Name="DiscountPct" Type="float" />
+          <Property Name="EnglishPromotionType" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpanishPromotionType" Type="nvarchar" MaxLength="50" />
+          <Property Name="FrenchPromotionType" Type="nvarchar" MaxLength="50" />
+          <Property Name="EnglishPromotionCategory" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpanishPromotionCategory" Type="nvarchar" MaxLength="50" />
+          <Property Name="FrenchPromotionCategory" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="MinQty" Type="int" />
+          <Property Name="MaxQty" Type="int" />
+        </EntityType>
+        <EntityType Name="DimReseller">
+          <Key>
+            <PropertyRef Name="ResellerKey" />
+          </Key>
+          <Property Name="ResellerKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GeographyKey" Type="int" />
+          <Property Name="ResellerAlternateKey" Type="nvarchar" MaxLength="15" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="25" />
+          <Property Name="BusinessType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ResellerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="NumberEmployees" Type="int" />
+          <Property Name="OrderFrequency" Type="char" MaxLength="1" />
+          <Property Name="OrderMonth" Type="tinyint" />
+          <Property Name="FirstOrderYear" Type="int" />
+          <Property Name="LastOrderYear" Type="int" />
+          <Property Name="ProductLine" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressLine1" Type="nvarchar" MaxLength="60" />
+          <Property Name="AddressLine2" Type="nvarchar" MaxLength="60" />
+          <Property Name="AnnualSales" Type="money" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MinPaymentType" Type="tinyint" />
+          <Property Name="MinPaymentAmount" Type="money" />
+          <Property Name="AnnualRevenue" Type="money" />
+          <Property Name="YearOpened" Type="int" />
+        </EntityType>
+        <EntityType Name="DimSalesReason">
+          <Key>
+            <PropertyRef Name="SalesReasonKey" />
+          </Key>
+          <Property Name="SalesReasonKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SalesReasonAlternateKey" Type="int" Nullable="false" />
+          <Property Name="SalesReasonName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SalesReasonReasonType" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DimSalesTerritory">
+          <Key>
+            <PropertyRef Name="SalesTerritoryKey" />
+          </Key>
+          <Property Name="SalesTerritoryKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SalesTerritoryAlternateKey" Type="int" />
+          <Property Name="SalesTerritoryRegion" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SalesTerritoryCountry" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SalesTerritoryGroup" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DimScenario">
+          <Key>
+            <PropertyRef Name="ScenarioKey" />
+          </Key>
+          <Property Name="ScenarioKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ScenarioName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FactAdditionalInternationalProductDescription">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+            <PropertyRef Name="CultureName" />
+          </Key>
+          <Property Name="ProductKey" Type="int" Nullable="false" />
+          <Property Name="CultureName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProductDescription" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactCallCenter">
+          <Key>
+            <PropertyRef Name="FactCallCenterID" />
+          </Key>
+          <Property Name="FactCallCenterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DateKey" Type="int" Nullable="false" />
+          <Property Name="WageType" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="Shift" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LevelOneOperators" Type="smallint" Nullable="false" />
+          <Property Name="LevelTwoOperators" Type="smallint" Nullable="false" />
+          <Property Name="TotalOperators" Type="smallint" Nullable="false" />
+          <Property Name="Calls" Type="int" Nullable="false" />
+          <Property Name="AutomaticResponses" Type="int" Nullable="false" />
+          <Property Name="Orders" Type="int" Nullable="false" />
+          <Property Name="IssuesRaised" Type="smallint" Nullable="false" />
+          <Property Name="AverageTimePerIssue" Type="smallint" Nullable="false" />
+          <Property Name="ServiceGrade" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactCurrencyRate">
+          <Key>
+            <PropertyRef Name="CurrencyKey" />
+            <PropertyRef Name="DateKey" />
+          </Key>
+          <Property Name="CurrencyKey" Type="int" Nullable="false" />
+          <Property Name="DateKey" Type="int" Nullable="false" />
+          <Property Name="AverageRate" Type="float" Nullable="false" />
+          <Property Name="EndOfDayRate" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactFinance">
+          <Key>
+            <PropertyRef Name="FinanceKey" />
+          </Key>
+          <Property Name="FinanceKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DateKey" Type="int" Nullable="false" />
+          <Property Name="OrganizationKey" Type="int" Nullable="false" />
+          <Property Name="DepartmentGroupKey" Type="int" Nullable="false" />
+          <Property Name="ScenarioKey" Type="int" Nullable="false" />
+          <Property Name="AccountKey" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactInternetSales">
+          <Key>
+            <PropertyRef Name="SalesOrderNumber" />
+            <PropertyRef Name="SalesOrderLineNumber" />
+          </Key>
+          <Property Name="ProductKey" Type="int" Nullable="false" />
+          <Property Name="OrderDateKey" Type="int" Nullable="false" />
+          <Property Name="DueDateKey" Type="int" Nullable="false" />
+          <Property Name="ShipDateKey" Type="int" Nullable="false" />
+          <Property Name="CustomerKey" Type="int" Nullable="false" />
+          <Property Name="PromotionKey" Type="int" Nullable="false" />
+          <Property Name="CurrencyKey" Type="int" Nullable="false" />
+          <Property Name="SalesTerritoryKey" Type="int" Nullable="false" />
+          <Property Name="SalesOrderNumber" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SalesOrderLineNumber" Type="tinyint" Nullable="false" />
+          <Property Name="RevisionNumber" Type="tinyint" Nullable="false" />
+          <Property Name="OrderQuantity" Type="smallint" Nullable="false" />
+          <Property Name="UnitPrice" Type="money" Nullable="false" />
+          <Property Name="ExtendedAmount" Type="money" Nullable="false" />
+          <Property Name="UnitPriceDiscountPct" Type="float" Nullable="false" />
+          <Property Name="DiscountAmount" Type="float" Nullable="false" />
+          <Property Name="ProductStandardCost" Type="money" Nullable="false" />
+          <Property Name="TotalProductCost" Type="money" Nullable="false" />
+          <Property Name="SalesAmount" Type="money" Nullable="false" />
+          <Property Name="TaxAmt" Type="money" Nullable="false" />
+          <Property Name="Freight" Type="money" Nullable="false" />
+          <Property Name="CarrierTrackingNumber" Type="nvarchar" MaxLength="25" />
+          <Property Name="CustomerPONumber" Type="nvarchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="FactInternetSalesQuota">
+          <Key>
+            <PropertyRef Name="QuotaKey" />
+          </Key>
+          <Property Name="QuotaKey" Type="int" Nullable="false" />
+          <Property Name="ProductCategoryKey" Type="int" Nullable="false" />
+          <Property Name="SalesTerritoryKey" Type="int" Nullable="false" />
+          <Property Name="OrderDateKey" Type="int" Nullable="false" />
+          <Property Name="SalesAmount" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactInternetSalesReason">
+          <Key>
+            <PropertyRef Name="SalesOrderNumber" />
+            <PropertyRef Name="SalesOrderLineNumber" />
+            <PropertyRef Name="SalesReasonKey" />
+          </Key>
+          <Property Name="SalesOrderNumber" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SalesOrderLineNumber" Type="tinyint" Nullable="false" />
+          <Property Name="SalesReasonKey" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactResellerSales">
+          <Key>
+            <PropertyRef Name="SalesOrderNumber" />
+            <PropertyRef Name="SalesOrderLineNumber" />
+          </Key>
+          <Property Name="ProductKey" Type="int" Nullable="false" />
+          <Property Name="OrderDateKey" Type="int" Nullable="false" />
+          <Property Name="DueDateKey" Type="int" Nullable="false" />
+          <Property Name="ShipDateKey" Type="int" Nullable="false" />
+          <Property Name="ResellerKey" Type="int" Nullable="false" />
+          <Property Name="EmployeeKey" Type="int" Nullable="false" />
+          <Property Name="PromotionKey" Type="int" Nullable="false" />
+          <Property Name="CurrencyKey" Type="int" Nullable="false" />
+          <Property Name="SalesTerritoryKey" Type="int" Nullable="false" />
+          <Property Name="SalesOrderNumber" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SalesOrderLineNumber" Type="tinyint" Nullable="false" />
+          <Property Name="RevisionNumber" Type="tinyint" />
+          <Property Name="OrderQuantity" Type="smallint" />
+          <Property Name="UnitPrice" Type="money" />
+          <Property Name="ExtendedAmount" Type="money" />
+          <Property Name="UnitPriceDiscountPct" Type="float" />
+          <Property Name="DiscountAmount" Type="float" />
+          <Property Name="ProductStandardCost" Type="money" />
+          <Property Name="TotalProductCost" Type="money" />
+          <Property Name="SalesAmount" Type="money" />
+          <Property Name="TaxAmt" Type="money" />
+          <Property Name="Freight" Type="money" />
+          <Property Name="CarrierTrackingNumber" Type="nvarchar" MaxLength="25" />
+          <Property Name="CustomerPONumber" Type="nvarchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="FactSalesQuota">
+          <Key>
+            <PropertyRef Name="SalesQuotaKey" />
+          </Key>
+          <Property Name="SalesQuotaKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeKey" Type="int" Nullable="false" />
+          <Property Name="DateKey" Type="int" Nullable="false" />
+          <Property Name="CalendarYear" Type="smallint" Nullable="false" />
+          <Property Name="CalendarQuarter" Type="tinyint" Nullable="false" />
+          <Property Name="SalesAmountQuota" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactSurveyResponse">
+          <Key>
+            <PropertyRef Name="SurveyResponseKey" />
+          </Key>
+          <Property Name="SurveyResponseKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DateKey" Type="int" Nullable="false" />
+          <Property Name="CustomerKey" Type="int" Nullable="false" />
+          <Property Name="ProductCategoryKey" Type="int" Nullable="false" />
+          <Property Name="EnglishProductCategoryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProductSubcategoryKey" Type="int" Nullable="false" />
+          <Property Name="EnglishProductSubcategoryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ProspectiveBuyer">
+          <Key>
+            <PropertyRef Name="ProspectiveBuyerKey" />
+          </Key>
+          <Property Name="ProspectiveBuyerKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProspectAlternateKey" Type="nvarchar" MaxLength="15" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="MaritalStatus" Type="nchar" MaxLength="1" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="1" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="YearlyIncome" Type="money" />
+          <Property Name="TotalChildren" Type="tinyint" />
+          <Property Name="NumberChildrenAtHome" Type="tinyint" />
+          <Property Name="Education" Type="nvarchar" MaxLength="40" />
+          <Property Name="Occupation" Type="nvarchar" MaxLength="100" />
+          <Property Name="HouseOwnerFlag" Type="nchar" MaxLength="1" />
+          <Property Name="NumberCarsOwned" Type="tinyint" />
+          <Property Name="AddressLine1" Type="nvarchar" MaxLength="120" />
+          <Property Name="AddressLine2" Type="nvarchar" MaxLength="120" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" />
+          <Property Name="StateProvinceCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="15" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Salutation" Type="nvarchar" MaxLength="8" />
+          <Property Name="Unknown" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\WORK\SAMPLEAPPS\DASHBOARDS\SALESDASHBOARD_SL\SALESDASHBOARD_SL.WEB\APP_DATA\ADVENTUREWORKSDWAZ2008R2XLABS.MDF.dbo.OrdersDetailsView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="OrdersDetailsView">
+          <Key>
+            <PropertyRef Name="SalesOrderNumber" />
+          </Key>
+          <Property Name="SalesOrderNumber" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="OrderDate" Type="date" />
+          <Property Name="ItemsSold" Type="int" />
+          <Property Name="SalesAmount" Type="money" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductsEnum" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\WORK\SAMPLEAPPS\DASHBOARDS\SALESDASHBOARD_SL\SALESDASHBOARD_SL.WEB\APP_DATA\ADVENTUREWORKSDWAZ2008R2XLABS.MDF.dbo.SalesAmountExtractView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SalesAmountExtractView">
+          <Key>
+            <PropertyRef Name="OrderDate" />
+            <PropertyRef Name="ActualAmount" />
+            <PropertyRef Name="ProductCategory" />
+            <PropertyRef Name="Country" />
+          </Key>
+          <Property Name="TargetAmount" Type="money" />
+          <Property Name="OrderDate" Type="date" Nullable="false" />
+          <Property Name="ActualAmount" Type="money" Nullable="false" />
+          <Property Name="ProductCategory" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_FactInternetSalesQuota_DimProductCategory">
+          <End Role="DimProductCategory" Type="AdventureWorksDWAZ2008R2XLabsModel.Store.DimProductCategory" Multiplicity="1" />
+          <End Role="FactInternetSalesQuota" Type="AdventureWorksDWAZ2008R2XLabsModel.Store.FactInternetSalesQuota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DimProductCategory">
+              <PropertyRef Name="ProductCategoryKey" />
+            </Principal>
+            <Dependent Role="FactInternetSalesQuota">
+              <PropertyRef Name="ProductCategoryKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FactInternetSalesQuota_DimSalesTerritory">
+          <End Role="DimSalesTerritory" Type="AdventureWorksDWAZ2008R2XLabsModel.Store.DimSalesTerritory" Multiplicity="1" />
+          <End Role="FactInternetSalesQuota" Type="AdventureWorksDWAZ2008R2XLabsModel.Store.FactInternetSalesQuota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DimSalesTerritory">
+              <PropertyRef Name="SalesTerritoryKey" />
+            </Principal>
+            <Dependent Role="FactInternetSalesQuota">
+              <PropertyRef Name="SalesTerritoryKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetOrdersDataForAllCustomersForPeriod" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="start" Type="date" Mode="In" />
+          <Parameter Name="end" Type="date" Mode="In" />
+          <Parameter Name="startIndex" Type="int" Mode="In" />
+          <Parameter Name="itemCount" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetSalesAmountsByCountriesAndProductCategories" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="startDate" Type="datetime2" Mode="In" />
+          <Parameter Name="endDate" Type="datetime2" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdventureWorksDWAZ2008R2XLabsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AdventureWorksDWAZ2008R2XLabsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DimAccount" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimAccount" />
+          <EntitySet Name="DimCurrency" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimCurrency" />
+          <EntitySet Name="DimCustomer" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimCustomer" />
+          <EntitySet Name="DimDate" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimDate" />
+          <EntitySet Name="DimDepartmentGroup" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimDepartmentGroup" />
+          <EntitySet Name="DimEmployee" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimEmployee" />
+          <EntitySet Name="DimGeography" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimGeography" />
+          <EntitySet Name="DimOrganization" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimOrganization" />
+          <EntitySet Name="DimProduct" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimProduct" />
+          <EntitySet Name="DimProductCategory" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimProductCategory" />
+          <EntitySet Name="DimProductSubcategory" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimProductSubcategory" />
+          <EntitySet Name="DimPromotion" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimPromotion" />
+          <EntitySet Name="DimReseller" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimReseller" />
+          <EntitySet Name="DimSalesReason" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimSalesReason" />
+          <EntitySet Name="DimSalesTerritory" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimSalesTerritory" />
+          <EntitySet Name="DimScenario" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimScenario" />
+          <EntitySet Name="FactAdditionalInternationalProductDescription" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactAdditionalInternationalProductDescription" />
+          <EntitySet Name="FactCallCenter" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactCallCenter" />
+          <EntitySet Name="FactCurrencyRate" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactCurrencyRate" />
+          <EntitySet Name="FactFinance" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactFinance" />
+          <EntitySet Name="FactInternetSales" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSales" />
+          <EntitySet Name="FactInternetSalesReason" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesReason" />
+          <EntitySet Name="FactResellerSales" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactResellerSales" />
+          <EntitySet Name="FactSalesQuota" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactSalesQuota" />
+          <EntitySet Name="FactSurveyResponse" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactSurveyResponse" />
+          <EntitySet Name="ProspectiveBuyer" EntityType="AdventureWorksDWAZ2008R2XLabsModel.ProspectiveBuyer" />
+          <EntitySet Name="AdventureWorksDWBuildVersion" EntityType="AdventureWorksDWAZ2008R2XLabsModel.AdventureWorksDWBuildVersion" />
+          <EntitySet Name="DatabaseLog" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DatabaseLog" />
+          <EntitySet Name="FactInternetSalesQuota" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota" />
+          <AssociationSet Name="FK_FactInternetSalesQuota_DimDate" Association="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimDate">
+            <End Role="DimDate" EntitySet="DimDate" />
+            <End Role="FactInternetSalesQuota" EntitySet="FactInternetSalesQuota" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FactInternetSalesQuota_DimProductCategory" Association="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimProductCategory">
+            <End Role="DimProductCategory" EntitySet="DimProductCategory" />
+            <End Role="FactInternetSalesQuota" EntitySet="FactInternetSalesQuota" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FactInternetSalesQuota_DimSalesTerritory" Association="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimSalesTerritory">
+            <End Role="DimSalesTerritory" EntitySet="DimSalesTerritory" />
+            <End Role="FactInternetSalesQuota" EntitySet="FactInternetSalesQuota" />
+          </AssociationSet>
+          <FunctionImport Name="GetOrdersDataForAllCustomersForPeriod" ReturnType="Collection(AdventureWorksDWAZ2008R2XLabsModel.OrderDetailsForCustomers)">
+            <Parameter Name="start" Mode="In" Type="DateTime" />
+            <Parameter Name="end" Mode="In" Type="DateTime" />
+            <Parameter Name="startIndex" Mode="In" Type="Int32" />
+            <Parameter Name="itemCount" Mode="In" Type="Int32" />
+          </FunctionImport>
+	<FunctionImport Name="GetSalesAmountsByCountriesAndProductCategories" ReturnType="Collection(AdventureWorksDWAZ2008R2XLabsModel.SalesInfo)">
+            <Parameter Name="startDate" Mode="In" Type="DateTime" />
+            <Parameter Name="endDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="OrdersDetails" EntityType="AdventureWorksDWAZ2008R2XLabsModel.OrdersDetails" />
+          <EntitySet Name="SalesAmountExtractView" EntityType="AdventureWorksDWAZ2008R2XLabsModel.SalesAmountExtract" />
+        </EntityContainer>
+        <EntityType Name="DimAccount">
+          <Key>
+            <PropertyRef Name="AccountKey" />
+          </Key>
+          <Property Name="AccountKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentAccountKey" Type="Int32" />
+          <Property Name="AccountCodeAlternateKey" Type="Int32" />
+          <Property Name="ParentAccountCodeAlternateKey" Type="Int32" />
+          <Property Name="AccountDescription" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AccountType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Operator" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustomMembers" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="ValueType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustomMemberOptions" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DimCurrency">
+          <Key>
+            <PropertyRef Name="CurrencyKey" />
+          </Key>
+          <Property Name="CurrencyKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyAlternateKey" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="true" />
+          <Property Name="CurrencyName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DimCustomer">
+          <Key>
+            <PropertyRef Name="CustomerKey" />
+          </Key>
+          <Property Name="CustomerKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GeographyKey" Type="Int32" />
+          <Property Name="CustomerAlternateKey" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NameStyle" Type="Boolean" />
+          <Property Name="BirthDate" Type="DateTime" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+          <Property Name="Suffix" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Gender" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="YearlyIncome" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalChildren" Type="Byte" />
+          <Property Name="NumberChildrenAtHome" Type="Byte" />
+          <Property Name="EnglishEducation" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishEducation" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchEducation" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="EnglishOccupation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishOccupation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchOccupation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="HouseOwnerFlag" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+          <Property Name="NumberCarsOwned" Type="Byte" />
+          <Property Name="AddressLine1" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="AddressLine2" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="DateFirstPurchase" Type="DateTime" />
+          <Property Name="CommuteDistance" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DimDate">
+          <Key>
+            <PropertyRef Name="DateKey" />
+          </Key>
+          <Property Name="DateKey" Type="Int32" Nullable="false" />
+          <Property Name="FullDateAlternateKey" Type="DateTime" Nullable="false" />
+          <Property Name="DayNumberOfWeek" Type="Byte" Nullable="false" />
+          <Property Name="EnglishDayNameOfWeek" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishDayNameOfWeek" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchDayNameOfWeek" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="DayNumberOfMonth" Type="Byte" Nullable="false" />
+          <Property Name="DayNumberOfYear" Type="Int16" Nullable="false" />
+          <Property Name="WeekNumberOfYear" Type="Byte" Nullable="false" />
+          <Property Name="EnglishMonthName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishMonthName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchMonthName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="MonthNumberOfYear" Type="Byte" Nullable="false" />
+          <Property Name="CalendarQuarter" Type="Byte" Nullable="false" />
+          <Property Name="CalendarYear" Type="Int16" Nullable="false" />
+          <Property Name="CalendarSemester" Type="Byte" Nullable="false" />
+          <Property Name="FiscalQuarter" Type="Byte" Nullable="false" />
+          <Property Name="FiscalYear" Type="Int16" Nullable="false" />
+          <Property Name="FiscalSemester" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="FactInternetSalesQuota" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimDate" FromRole="DimDate" ToRole="FactInternetSalesQuota" />
+        </EntityType>
+        <EntityType Name="DimDepartmentGroup">
+          <Key>
+            <PropertyRef Name="DepartmentGroupKey" />
+          </Key>
+          <Property Name="DepartmentGroupKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentDepartmentGroupKey" Type="Int32" />
+          <Property Name="DepartmentGroupName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DimEmployee">
+          <Key>
+            <PropertyRef Name="EmployeeKey" />
+          </Key>
+          <Property Name="EmployeeKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentEmployeeKey" Type="Int32" />
+          <Property Name="EmployeeNationalIDAlternateKey" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="ParentEmployeeNationalIDAlternateKey" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="SalesTerritoryKey" Type="Int32" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NameStyle" Type="Boolean" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HireDate" Type="DateTime" />
+          <Property Name="BirthDate" Type="DateTime" />
+          <Property Name="LoginID" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+          <Property Name="EmergencyContactName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EmergencyContactPhone" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="SalariedFlag" Type="Boolean" />
+          <Property Name="Gender" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+          <Property Name="PayFrequency" Type="Byte" />
+          <Property Name="BaseRate" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="VacationHours" Type="Int16" />
+          <Property Name="SickLeaveHours" Type="Int16" />
+          <Property Name="CurrentFlag" Type="Boolean" Nullable="false" />
+          <Property Name="SalesPersonFlag" Type="Boolean" Nullable="false" />
+          <Property Name="DepartmentName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DimGeography">
+          <Key>
+            <PropertyRef Name="GeographyKey" />
+          </Key>
+          <Property Name="GeographyKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="City" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="StateProvinceCode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="StateProvinceName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CountryRegionCode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="EnglishCountryRegionName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishCountryRegionName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchCountryRegionName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="SalesTerritoryKey" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DimOrganization">
+          <Key>
+            <PropertyRef Name="OrganizationKey" />
+          </Key>
+          <Property Name="OrganizationKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentOrganizationKey" Type="Int32" />
+          <Property Name="PercentageOfOwnership" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="OrganizationName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CurrencyKey" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DimProduct">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+          </Key>
+          <Property Name="ProductKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductAlternateKey" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="ProductSubcategoryKey" Type="Int32" />
+          <Property Name="WeightUnitMeasureCode" Type="String" MaxLength="3" Unicode="true" FixedLength="true" />
+          <Property Name="SizeUnitMeasureCode" Type="String" MaxLength="3" Unicode="true" FixedLength="true" />
+          <Property Name="EnglishProductName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishProductName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchProductName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StandardCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FinishedGoodsFlag" Type="Boolean" Nullable="false" />
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="SafetyStockLevel" Type="Int16" />
+          <Property Name="ReorderPoint" Type="Int16" />
+          <Property Name="ListPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Size" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SizeRange" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Weight" Type="Double" />
+          <Property Name="DaysToManufacture" Type="Int32" />
+          <Property Name="ProductLine" Type="String" MaxLength="2" Unicode="true" FixedLength="true" />
+          <Property Name="DealerPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Class" Type="String" MaxLength="2" Unicode="true" FixedLength="true" />
+          <Property Name="Style" Type="String" MaxLength="2" Unicode="true" FixedLength="true" />
+          <Property Name="ModelName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LargePhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="EnglishDescription" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchDescription" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="ChineseDescription" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="ArabicDescription" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="HebrewDescription" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="ThaiDescription" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="GermanDescription" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="JapaneseDescription" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="TurkishDescription" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="Status" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DimProductCategory">
+          <Key>
+            <PropertyRef Name="ProductCategoryKey" />
+          </Key>
+          <Property Name="ProductCategoryKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductCategoryAlternateKey" Type="Int32" />
+          <Property Name="EnglishProductCategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishProductCategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchProductCategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="FactInternetSalesQuota" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimProductCategory" FromRole="DimProductCategory" ToRole="FactInternetSalesQuota" />
+        </EntityType>
+        <EntityType Name="DimProductSubcategory">
+          <Key>
+            <PropertyRef Name="ProductSubcategoryKey" />
+          </Key>
+          <Property Name="ProductSubcategoryKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductSubcategoryAlternateKey" Type="Int32" />
+          <Property Name="EnglishProductSubcategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishProductSubcategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchProductSubcategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProductCategoryKey" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DimPromotion">
+          <Key>
+            <PropertyRef Name="PromotionKey" />
+          </Key>
+          <Property Name="PromotionKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PromotionAlternateKey" Type="Int32" />
+          <Property Name="EnglishPromotionName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishPromotionName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchPromotionName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="DiscountPct" Type="Double" />
+          <Property Name="EnglishPromotionType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishPromotionType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchPromotionType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EnglishPromotionCategory" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SpanishPromotionCategory" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FrenchPromotionCategory" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="MinQty" Type="Int32" />
+          <Property Name="MaxQty" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DimReseller">
+          <Key>
+            <PropertyRef Name="ResellerKey" />
+          </Key>
+          <Property Name="ResellerKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GeographyKey" Type="Int32" />
+          <Property Name="ResellerAlternateKey" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="BusinessType" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ResellerName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NumberEmployees" Type="Int32" />
+          <Property Name="OrderFrequency" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="OrderMonth" Type="Byte" />
+          <Property Name="FirstOrderYear" Type="Int32" />
+          <Property Name="LastOrderYear" Type="Int32" />
+          <Property Name="ProductLine" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AddressLine1" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="AddressLine2" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="AnnualSales" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BankName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MinPaymentType" Type="Byte" />
+          <Property Name="MinPaymentAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AnnualRevenue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="YearOpened" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DimSalesReason">
+          <Key>
+            <PropertyRef Name="SalesReasonKey" />
+          </Key>
+          <Property Name="SalesReasonKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SalesReasonAlternateKey" Type="Int32" Nullable="false" />
+          <Property Name="SalesReasonName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SalesReasonReasonType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DimSalesTerritory">
+          <Key>
+            <PropertyRef Name="SalesTerritoryKey" />
+          </Key>
+          <Property Name="SalesTerritoryKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SalesTerritoryAlternateKey" Type="Int32" />
+          <Property Name="SalesTerritoryRegion" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SalesTerritoryCountry" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SalesTerritoryGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="FactInternetSalesQuota" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimSalesTerritory" FromRole="DimSalesTerritory" ToRole="FactInternetSalesQuota" />
+        </EntityType>
+        <EntityType Name="DimScenario">
+          <Key>
+            <PropertyRef Name="ScenarioKey" />
+          </Key>
+          <Property Name="ScenarioKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScenarioName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="FactAdditionalInternationalProductDescription">
+          <Key>
+            <PropertyRef Name="ProductKey" />
+            <PropertyRef Name="CultureName" />
+          </Key>
+          <Property Name="ProductKey" Type="Int32" Nullable="false" />
+          <Property Name="CultureName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProductDescription" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="FactCallCenter">
+          <Key>
+            <PropertyRef Name="FactCallCenterID" />
+          </Key>
+          <Property Name="FactCallCenterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateKey" Type="Int32" Nullable="false" />
+          <Property Name="WageType" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="Shift" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LevelOneOperators" Type="Int16" Nullable="false" />
+          <Property Name="LevelTwoOperators" Type="Int16" Nullable="false" />
+          <Property Name="TotalOperators" Type="Int16" Nullable="false" />
+          <Property Name="Calls" Type="Int32" Nullable="false" />
+          <Property Name="AutomaticResponses" Type="Int32" Nullable="false" />
+          <Property Name="Orders" Type="Int32" Nullable="false" />
+          <Property Name="IssuesRaised" Type="Int16" Nullable="false" />
+          <Property Name="AverageTimePerIssue" Type="Int16" Nullable="false" />
+          <Property Name="ServiceGrade" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactCurrencyRate">
+          <Key>
+            <PropertyRef Name="CurrencyKey" />
+            <PropertyRef Name="DateKey" />
+          </Key>
+          <Property Name="CurrencyKey" Type="Int32" Nullable="false" />
+          <Property Name="DateKey" Type="Int32" Nullable="false" />
+          <Property Name="AverageRate" Type="Double" Nullable="false" />
+          <Property Name="EndOfDayRate" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactFinance">
+          <Key>
+            <PropertyRef Name="FinanceKey" />
+          </Key>
+          <Property Name="FinanceKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateKey" Type="Int32" Nullable="false" />
+          <Property Name="OrganizationKey" Type="Int32" Nullable="false" />
+          <Property Name="DepartmentGroupKey" Type="Int32" Nullable="false" />
+          <Property Name="ScenarioKey" Type="Int32" Nullable="false" />
+          <Property Name="AccountKey" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactInternetSales">
+          <Key>
+            <PropertyRef Name="SalesOrderNumber" />
+            <PropertyRef Name="SalesOrderLineNumber" />
+          </Key>
+          <Property Name="ProductKey" Type="Int32" Nullable="false" />
+          <Property Name="OrderDateKey" Type="Int32" Nullable="false" />
+          <Property Name="DueDateKey" Type="Int32" Nullable="false" />
+          <Property Name="ShipDateKey" Type="Int32" Nullable="false" />
+          <Property Name="CustomerKey" Type="Int32" Nullable="false" />
+          <Property Name="PromotionKey" Type="Int32" Nullable="false" />
+          <Property Name="CurrencyKey" Type="Int32" Nullable="false" />
+          <Property Name="SalesTerritoryKey" Type="Int32" Nullable="false" />
+          <Property Name="SalesOrderNumber" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SalesOrderLineNumber" Type="Byte" Nullable="false" />
+          <Property Name="RevisionNumber" Type="Byte" Nullable="false" />
+          <Property Name="OrderQuantity" Type="Int16" Nullable="false" />
+          <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="ExtendedAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="UnitPriceDiscountPct" Type="Double" Nullable="false" />
+          <Property Name="DiscountAmount" Type="Double" Nullable="false" />
+          <Property Name="ProductStandardCost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="TotalProductCost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="SalesAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="TaxAmt" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Freight" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="CarrierTrackingNumber" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="CustomerPONumber" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="FactInternetSalesReason">
+          <Key>
+            <PropertyRef Name="SalesOrderNumber" />
+            <PropertyRef Name="SalesOrderLineNumber" />
+            <PropertyRef Name="SalesReasonKey" />
+          </Key>
+          <Property Name="SalesOrderNumber" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SalesOrderLineNumber" Type="Byte" Nullable="false" />
+          <Property Name="SalesReasonKey" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FactResellerSales">
+          <Key>
+            <PropertyRef Name="SalesOrderNumber" />
+            <PropertyRef Name="SalesOrderLineNumber" />
+          </Key>
+          <Property Name="ProductKey" Type="Int32" Nullable="false" />
+          <Property Name="OrderDateKey" Type="Int32" Nullable="false" />
+          <Property Name="DueDateKey" Type="Int32" Nullable="false" />
+          <Property Name="ShipDateKey" Type="Int32" Nullable="false" />
+          <Property Name="ResellerKey" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeKey" Type="Int32" Nullable="false" />
+          <Property Name="PromotionKey" Type="Int32" Nullable="false" />
+          <Property Name="CurrencyKey" Type="Int32" Nullable="false" />
+          <Property Name="SalesTerritoryKey" Type="Int32" Nullable="false" />
+          <Property Name="SalesOrderNumber" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SalesOrderLineNumber" Type="Byte" Nullable="false" />
+          <Property Name="RevisionNumber" Type="Byte" />
+          <Property Name="OrderQuantity" Type="Int16" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ExtendedAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="UnitPriceDiscountPct" Type="Double" />
+          <Property Name="DiscountAmount" Type="Double" />
+          <Property Name="ProductStandardCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalProductCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SalesAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TaxAmt" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Freight" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CarrierTrackingNumber" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="CustomerPONumber" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="FactSalesQuota">
+          <Key>
+            <PropertyRef Name="SalesQuotaKey" />
+          </Key>
+          <Property Name="SalesQuotaKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeKey" Type="Int32" Nullable="false" />
+          <Property Name="DateKey" Type="Int32" Nullable="false" />
+          <Property Name="CalendarYear" Type="Int16" Nullable="false" />
+          <Property Name="CalendarQuarter" Type="Byte" Nullable="false" />
+          <Property Name="SalesAmountQuota" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="FactSurveyResponse">
+          <Key>
+            <PropertyRef Name="SurveyResponseKey" />
+          </Key>
+          <Property Name="SurveyResponseKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateKey" Type="Int32" Nullable="false" />
+          <Property Name="CustomerKey" Type="Int32" Nullable="false" />
+          <Property Name="ProductCategoryKey" Type="Int32" Nullable="false" />
+          <Property Name="EnglishProductCategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProductSubcategoryKey" Type="Int32" Nullable="false" />
+          <Property Name="EnglishProductSubcategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ProspectiveBuyer">
+          <Key>
+            <PropertyRef Name="ProspectiveBuyerKey" />
+          </Key>
+          <Property Name="ProspectiveBuyerKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProspectAlternateKey" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BirthDate" Type="DateTime" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+          <Property Name="Gender" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="YearlyIncome" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalChildren" Type="Byte" />
+          <Property Name="NumberChildrenAtHome" Type="Byte" />
+          <Property Name="Education" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="Occupation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="HouseOwnerFlag" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+          <Property Name="NumberCarsOwned" Type="Byte" />
+          <Property Name="AddressLine1" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="AddressLine2" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="StateProvinceCode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Salutation" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="Unknown" Type="Int32" />
+        </EntityType>
+        <EntityType Name="AdventureWorksDWBuildVersion">
+          <Key>
+            <PropertyRef Name="DBVersion" />
+            <PropertyRef Name="VersionDate" />
+          </Key>
+          <Property Type="String" Name="DBVersion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="VersionDate" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DatabaseLog">
+          <Key>
+            <PropertyRef Name="DatabaseLogID" />
+          </Key>
+          <Property Type="Int32" Name="DatabaseLogID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="PostTime" Nullable="false" />
+          <Property Type="String" Name="DatabaseUser" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Event" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Schema" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Object" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TSQL" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="XmlEvent" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FactInternetSalesQuota">
+          <Key>
+            <PropertyRef Name="QuotaKey" />
+          </Key>
+          <Property Type="Int32" Name="QuotaKey" Nullable="false" />
+          <Property Type="Int32" Name="ProductCategoryKey" Nullable="false" />
+          <Property Type="Int32" Name="OrderDateKey" Nullable="false" />
+          <Property Type="Decimal" Name="SalesAmount" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="DimDate" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimDate" FromRole="FactInternetSalesQuota" ToRole="DimDate" />
+          <NavigationProperty Name="DimProductCategory" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimProductCategory" FromRole="FactInternetSalesQuota" ToRole="DimProductCategory" />
+          <Property Type="Int32" Name="SalesTerritoryKey" Nullable="false" />
+          <NavigationProperty Name="DimSalesTerritory" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimSalesTerritory" FromRole="FactInternetSalesQuota" ToRole="DimSalesTerritory" />
+        </EntityType>
+        <Association Name="FK_FactInternetSalesQuota_DimDate">
+          <End Type="AdventureWorksDWAZ2008R2XLabsModel.DimDate" Role="DimDate" Multiplicity="1" />
+          <End Type="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota" Role="FactInternetSalesQuota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DimDate">
+              <PropertyRef Name="DateKey" />
+            </Principal>
+            <Dependent Role="FactInternetSalesQuota">
+              <PropertyRef Name="OrderDateKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FactInternetSalesQuota_DimProductCategory">
+          <End Type="AdventureWorksDWAZ2008R2XLabsModel.DimProductCategory" Role="DimProductCategory" Multiplicity="1" />
+          <End Type="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota" Role="FactInternetSalesQuota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DimProductCategory">
+              <PropertyRef Name="ProductCategoryKey" />
+            </Principal>
+            <Dependent Role="FactInternetSalesQuota">
+              <PropertyRef Name="ProductCategoryKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FactInternetSalesQuota_DimSalesTerritory">
+          <End Type="AdventureWorksDWAZ2008R2XLabsModel.DimSalesTerritory" Role="DimSalesTerritory" Multiplicity="1" />
+          <End Type="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota" Role="FactInternetSalesQuota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DimSalesTerritory">
+              <PropertyRef Name="SalesTerritoryKey" />
+            </Principal>
+            <Dependent Role="FactInternetSalesQuota">
+              <PropertyRef Name="SalesTerritoryKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="OrderDetailsForCustomers">
+          <Property Type="String" Name="SalesOrderNumber" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="OrderDate" Nullable="true" />
+          <Property Type="Int32" Name="ItemsSold" Nullable="true" />
+          <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="19" />
+          <Property Type="String" Name="Country" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ProductsEnum" Nullable="true" />
+        </ComplexType>
+	<ComplexType Name="SalesInfo">
+          <Property Type="String" Name="SalesTerritoryCountry" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="C1" Nullable="false" />
+          <Property Type="Decimal" Name="TotalValue" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="C3" Nullable="true" />
+          <Property Type="Decimal" Name="ActualValue" Nullable="true" Precision="19" />
+          <Property Type="String" Name="ProductCategory" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="OrdersDetails">
+          <Key>
+            <PropertyRef Name="SalesOrderNumber" />
+          </Key>
+          <Property Type="String" Name="SalesOrderNumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="OrderDate" />
+          <Property Type="Int32" Name="ItemsSold" />
+          <Property Type="Decimal" Name="SalesAmount" Precision="19" Scale="4" />
+          <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProductsEnum" />
+        </EntityType>
+        <EntityType Name="SalesAmountExtract">
+          <Key>
+            <PropertyRef Name="OrderDate" />
+            <PropertyRef Name="ActualAmount" />
+            <PropertyRef Name="ProductCategory" />
+            <PropertyRef Name="Country" />
+          </Key>
+          <Property Type="Decimal" Name="TargetAmount" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="OrderDate" Nullable="false" />
+          <Property Type="Decimal" Name="ActualAmount" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="String" Name="ProductCategory" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Country" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AdventureWorksDWAZ2008R2XLabsModelStoreContainer" CdmEntityContainer="AdventureWorksDWAZ2008R2XLabsEntities">
+          <EntitySetMapping Name="DimAccount"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimAccount"><MappingFragment StoreEntitySet="DimAccount">
+            <ScalarProperty Name="AccountKey" ColumnName="AccountKey" />
+            <ScalarProperty Name="ParentAccountKey" ColumnName="ParentAccountKey" />
+            <ScalarProperty Name="AccountCodeAlternateKey" ColumnName="AccountCodeAlternateKey" />
+            <ScalarProperty Name="ParentAccountCodeAlternateKey" ColumnName="ParentAccountCodeAlternateKey" />
+            <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+            <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+            <ScalarProperty Name="Operator" ColumnName="Operator" />
+            <ScalarProperty Name="CustomMembers" ColumnName="CustomMembers" />
+            <ScalarProperty Name="ValueType" ColumnName="ValueType" />
+            <ScalarProperty Name="CustomMemberOptions" ColumnName="CustomMemberOptions" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimCurrency"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimCurrency"><MappingFragment StoreEntitySet="DimCurrency">
+            <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+            <ScalarProperty Name="CurrencyAlternateKey" ColumnName="CurrencyAlternateKey" />
+            <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimCustomer"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimCustomer"><MappingFragment StoreEntitySet="DimCustomer">
+            <ScalarProperty Name="CustomerKey" ColumnName="CustomerKey" />
+            <ScalarProperty Name="GeographyKey" ColumnName="GeographyKey" />
+            <ScalarProperty Name="CustomerAlternateKey" ColumnName="CustomerAlternateKey" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="NameStyle" ColumnName="NameStyle" />
+            <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+            <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+            <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+            <ScalarProperty Name="Gender" ColumnName="Gender" />
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="YearlyIncome" ColumnName="YearlyIncome" />
+            <ScalarProperty Name="TotalChildren" ColumnName="TotalChildren" />
+            <ScalarProperty Name="NumberChildrenAtHome" ColumnName="NumberChildrenAtHome" />
+            <ScalarProperty Name="EnglishEducation" ColumnName="EnglishEducation" />
+            <ScalarProperty Name="SpanishEducation" ColumnName="SpanishEducation" />
+            <ScalarProperty Name="FrenchEducation" ColumnName="FrenchEducation" />
+            <ScalarProperty Name="EnglishOccupation" ColumnName="EnglishOccupation" />
+            <ScalarProperty Name="SpanishOccupation" ColumnName="SpanishOccupation" />
+            <ScalarProperty Name="FrenchOccupation" ColumnName="FrenchOccupation" />
+            <ScalarProperty Name="HouseOwnerFlag" ColumnName="HouseOwnerFlag" />
+            <ScalarProperty Name="NumberCarsOwned" ColumnName="NumberCarsOwned" />
+            <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+            <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="DateFirstPurchase" ColumnName="DateFirstPurchase" />
+            <ScalarProperty Name="CommuteDistance" ColumnName="CommuteDistance" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimDate"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimDate"><MappingFragment StoreEntitySet="DimDate">
+            <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+            <ScalarProperty Name="FullDateAlternateKey" ColumnName="FullDateAlternateKey" />
+            <ScalarProperty Name="DayNumberOfWeek" ColumnName="DayNumberOfWeek" />
+            <ScalarProperty Name="EnglishDayNameOfWeek" ColumnName="EnglishDayNameOfWeek" />
+            <ScalarProperty Name="SpanishDayNameOfWeek" ColumnName="SpanishDayNameOfWeek" />
+            <ScalarProperty Name="FrenchDayNameOfWeek" ColumnName="FrenchDayNameOfWeek" />
+            <ScalarProperty Name="DayNumberOfMonth" ColumnName="DayNumberOfMonth" />
+            <ScalarProperty Name="DayNumberOfYear" ColumnName="DayNumberOfYear" />
+            <ScalarProperty Name="WeekNumberOfYear" ColumnName="WeekNumberOfYear" />
+            <ScalarProperty Name="EnglishMonthName" ColumnName="EnglishMonthName" />
+            <ScalarProperty Name="SpanishMonthName" ColumnName="SpanishMonthName" />
+            <ScalarProperty Name="FrenchMonthName" ColumnName="FrenchMonthName" />
+            <ScalarProperty Name="MonthNumberOfYear" ColumnName="MonthNumberOfYear" />
+            <ScalarProperty Name="CalendarQuarter" ColumnName="CalendarQuarter" />
+            <ScalarProperty Name="CalendarYear" ColumnName="CalendarYear" />
+            <ScalarProperty Name="CalendarSemester" ColumnName="CalendarSemester" />
+            <ScalarProperty Name="FiscalQuarter" ColumnName="FiscalQuarter" />
+            <ScalarProperty Name="FiscalYear" ColumnName="FiscalYear" />
+            <ScalarProperty Name="FiscalSemester" ColumnName="FiscalSemester" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimDepartmentGroup"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimDepartmentGroup"><MappingFragment StoreEntitySet="DimDepartmentGroup">
+            <ScalarProperty Name="DepartmentGroupKey" ColumnName="DepartmentGroupKey" />
+            <ScalarProperty Name="ParentDepartmentGroupKey" ColumnName="ParentDepartmentGroupKey" />
+            <ScalarProperty Name="DepartmentGroupName" ColumnName="DepartmentGroupName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimEmployee"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimEmployee"><MappingFragment StoreEntitySet="DimEmployee">
+            <ScalarProperty Name="EmployeeKey" ColumnName="EmployeeKey" />
+            <ScalarProperty Name="ParentEmployeeKey" ColumnName="ParentEmployeeKey" />
+            <ScalarProperty Name="EmployeeNationalIDAlternateKey" ColumnName="EmployeeNationalIDAlternateKey" />
+            <ScalarProperty Name="ParentEmployeeNationalIDAlternateKey" ColumnName="ParentEmployeeNationalIDAlternateKey" />
+            <ScalarProperty Name="SalesTerritoryKey" ColumnName="SalesTerritoryKey" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+            <ScalarProperty Name="NameStyle" ColumnName="NameStyle" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+            <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+            <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+            <ScalarProperty Name="EmergencyContactName" ColumnName="EmergencyContactName" />
+            <ScalarProperty Name="EmergencyContactPhone" ColumnName="EmergencyContactPhone" />
+            <ScalarProperty Name="SalariedFlag" ColumnName="SalariedFlag" />
+            <ScalarProperty Name="Gender" ColumnName="Gender" />
+            <ScalarProperty Name="PayFrequency" ColumnName="PayFrequency" />
+            <ScalarProperty Name="BaseRate" ColumnName="BaseRate" />
+            <ScalarProperty Name="VacationHours" ColumnName="VacationHours" />
+            <ScalarProperty Name="SickLeaveHours" ColumnName="SickLeaveHours" />
+            <ScalarProperty Name="CurrentFlag" ColumnName="CurrentFlag" />
+            <ScalarProperty Name="SalesPersonFlag" ColumnName="SalesPersonFlag" />
+            <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+            <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+            <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimGeography"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimGeography"><MappingFragment StoreEntitySet="DimGeography">
+            <ScalarProperty Name="GeographyKey" ColumnName="GeographyKey" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="StateProvinceCode" ColumnName="StateProvinceCode" />
+            <ScalarProperty Name="StateProvinceName" ColumnName="StateProvinceName" />
+            <ScalarProperty Name="CountryRegionCode" ColumnName="CountryRegionCode" />
+            <ScalarProperty Name="EnglishCountryRegionName" ColumnName="EnglishCountryRegionName" />
+            <ScalarProperty Name="SpanishCountryRegionName" ColumnName="SpanishCountryRegionName" />
+            <ScalarProperty Name="FrenchCountryRegionName" ColumnName="FrenchCountryRegionName" />
+            <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+            <ScalarProperty Name="SalesTerritoryKey" ColumnName="SalesTerritoryKey" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimOrganization"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimOrganization"><MappingFragment StoreEntitySet="DimOrganization">
+            <ScalarProperty Name="OrganizationKey" ColumnName="OrganizationKey" />
+            <ScalarProperty Name="ParentOrganizationKey" ColumnName="ParentOrganizationKey" />
+            <ScalarProperty Name="PercentageOfOwnership" ColumnName="PercentageOfOwnership" />
+            <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+            <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimProduct"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimProduct"><MappingFragment StoreEntitySet="DimProduct">
+            <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+            <ScalarProperty Name="ProductAlternateKey" ColumnName="ProductAlternateKey" />
+            <ScalarProperty Name="ProductSubcategoryKey" ColumnName="ProductSubcategoryKey" />
+            <ScalarProperty Name="WeightUnitMeasureCode" ColumnName="WeightUnitMeasureCode" />
+            <ScalarProperty Name="SizeUnitMeasureCode" ColumnName="SizeUnitMeasureCode" />
+            <ScalarProperty Name="EnglishProductName" ColumnName="EnglishProductName" />
+            <ScalarProperty Name="SpanishProductName" ColumnName="SpanishProductName" />
+            <ScalarProperty Name="FrenchProductName" ColumnName="FrenchProductName" />
+            <ScalarProperty Name="StandardCost" ColumnName="StandardCost" />
+            <ScalarProperty Name="FinishedGoodsFlag" ColumnName="FinishedGoodsFlag" />
+            <ScalarProperty Name="Color" ColumnName="Color" />
+            <ScalarProperty Name="SafetyStockLevel" ColumnName="SafetyStockLevel" />
+            <ScalarProperty Name="ReorderPoint" ColumnName="ReorderPoint" />
+            <ScalarProperty Name="ListPrice" ColumnName="ListPrice" />
+            <ScalarProperty Name="Size" ColumnName="Size" />
+            <ScalarProperty Name="SizeRange" ColumnName="SizeRange" />
+            <ScalarProperty Name="Weight" ColumnName="Weight" />
+            <ScalarProperty Name="DaysToManufacture" ColumnName="DaysToManufacture" />
+            <ScalarProperty Name="ProductLine" ColumnName="ProductLine" />
+            <ScalarProperty Name="DealerPrice" ColumnName="DealerPrice" />
+            <ScalarProperty Name="Class" ColumnName="Class" />
+            <ScalarProperty Name="Style" ColumnName="Style" />
+            <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+            <ScalarProperty Name="LargePhoto" ColumnName="LargePhoto" />
+            <ScalarProperty Name="EnglishDescription" ColumnName="EnglishDescription" />
+            <ScalarProperty Name="FrenchDescription" ColumnName="FrenchDescription" />
+            <ScalarProperty Name="ChineseDescription" ColumnName="ChineseDescription" />
+            <ScalarProperty Name="ArabicDescription" ColumnName="ArabicDescription" />
+            <ScalarProperty Name="HebrewDescription" ColumnName="HebrewDescription" />
+            <ScalarProperty Name="ThaiDescription" ColumnName="ThaiDescription" />
+            <ScalarProperty Name="GermanDescription" ColumnName="GermanDescription" />
+            <ScalarProperty Name="JapaneseDescription" ColumnName="JapaneseDescription" />
+            <ScalarProperty Name="TurkishDescription" ColumnName="TurkishDescription" />
+            <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+            <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimProductCategory"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimProductCategory"><MappingFragment StoreEntitySet="DimProductCategory">
+            <ScalarProperty Name="ProductCategoryKey" ColumnName="ProductCategoryKey" />
+            <ScalarProperty Name="ProductCategoryAlternateKey" ColumnName="ProductCategoryAlternateKey" />
+            <ScalarProperty Name="EnglishProductCategoryName" ColumnName="EnglishProductCategoryName" />
+            <ScalarProperty Name="SpanishProductCategoryName" ColumnName="SpanishProductCategoryName" />
+            <ScalarProperty Name="FrenchProductCategoryName" ColumnName="FrenchProductCategoryName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimProductSubcategory"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimProductSubcategory"><MappingFragment StoreEntitySet="DimProductSubcategory">
+            <ScalarProperty Name="ProductSubcategoryKey" ColumnName="ProductSubcategoryKey" />
+            <ScalarProperty Name="ProductSubcategoryAlternateKey" ColumnName="ProductSubcategoryAlternateKey" />
+            <ScalarProperty Name="EnglishProductSubcategoryName" ColumnName="EnglishProductSubcategoryName" />
+            <ScalarProperty Name="SpanishProductSubcategoryName" ColumnName="SpanishProductSubcategoryName" />
+            <ScalarProperty Name="FrenchProductSubcategoryName" ColumnName="FrenchProductSubcategoryName" />
+            <ScalarProperty Name="ProductCategoryKey" ColumnName="ProductCategoryKey" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimPromotion"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimPromotion"><MappingFragment StoreEntitySet="DimPromotion">
+            <ScalarProperty Name="PromotionKey" ColumnName="PromotionKey" />
+            <ScalarProperty Name="PromotionAlternateKey" ColumnName="PromotionAlternateKey" />
+            <ScalarProperty Name="EnglishPromotionName" ColumnName="EnglishPromotionName" />
+            <ScalarProperty Name="SpanishPromotionName" ColumnName="SpanishPromotionName" />
+            <ScalarProperty Name="FrenchPromotionName" ColumnName="FrenchPromotionName" />
+            <ScalarProperty Name="DiscountPct" ColumnName="DiscountPct" />
+            <ScalarProperty Name="EnglishPromotionType" ColumnName="EnglishPromotionType" />
+            <ScalarProperty Name="SpanishPromotionType" ColumnName="SpanishPromotionType" />
+            <ScalarProperty Name="FrenchPromotionType" ColumnName="FrenchPromotionType" />
+            <ScalarProperty Name="EnglishPromotionCategory" ColumnName="EnglishPromotionCategory" />
+            <ScalarProperty Name="SpanishPromotionCategory" ColumnName="SpanishPromotionCategory" />
+            <ScalarProperty Name="FrenchPromotionCategory" ColumnName="FrenchPromotionCategory" />
+            <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+            <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+            <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+            <ScalarProperty Name="MaxQty" ColumnName="MaxQty" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimReseller"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimReseller"><MappingFragment StoreEntitySet="DimReseller">
+            <ScalarProperty Name="ResellerKey" ColumnName="ResellerKey" />
+            <ScalarProperty Name="GeographyKey" ColumnName="GeographyKey" />
+            <ScalarProperty Name="ResellerAlternateKey" ColumnName="ResellerAlternateKey" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+            <ScalarProperty Name="ResellerName" ColumnName="ResellerName" />
+            <ScalarProperty Name="NumberEmployees" ColumnName="NumberEmployees" />
+            <ScalarProperty Name="OrderFrequency" ColumnName="OrderFrequency" />
+            <ScalarProperty Name="OrderMonth" ColumnName="OrderMonth" />
+            <ScalarProperty Name="FirstOrderYear" ColumnName="FirstOrderYear" />
+            <ScalarProperty Name="LastOrderYear" ColumnName="LastOrderYear" />
+            <ScalarProperty Name="ProductLine" ColumnName="ProductLine" />
+            <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+            <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+            <ScalarProperty Name="AnnualSales" ColumnName="AnnualSales" />
+            <ScalarProperty Name="BankName" ColumnName="BankName" />
+            <ScalarProperty Name="MinPaymentType" ColumnName="MinPaymentType" />
+            <ScalarProperty Name="MinPaymentAmount" ColumnName="MinPaymentAmount" />
+            <ScalarProperty Name="AnnualRevenue" ColumnName="AnnualRevenue" />
+            <ScalarProperty Name="YearOpened" ColumnName="YearOpened" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimSalesReason"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimSalesReason"><MappingFragment StoreEntitySet="DimSalesReason">
+            <ScalarProperty Name="SalesReasonKey" ColumnName="SalesReasonKey" />
+            <ScalarProperty Name="SalesReasonAlternateKey" ColumnName="SalesReasonAlternateKey" />
+            <ScalarProperty Name="SalesReasonName" ColumnName="SalesReasonName" />
+            <ScalarProperty Name="SalesReasonReasonType" ColumnName="SalesReasonReasonType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimSalesTerritory"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimSalesTerritory"><MappingFragment StoreEntitySet="DimSalesTerritory">
+            <ScalarProperty Name="SalesTerritoryKey" ColumnName="SalesTerritoryKey" />
+            <ScalarProperty Name="SalesTerritoryAlternateKey" ColumnName="SalesTerritoryAlternateKey" />
+            <ScalarProperty Name="SalesTerritoryRegion" ColumnName="SalesTerritoryRegion" />
+            <ScalarProperty Name="SalesTerritoryCountry" ColumnName="SalesTerritoryCountry" />
+            <ScalarProperty Name="SalesTerritoryGroup" ColumnName="SalesTerritoryGroup" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DimScenario"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DimScenario"><MappingFragment StoreEntitySet="DimScenario">
+            <ScalarProperty Name="ScenarioKey" ColumnName="ScenarioKey" />
+            <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FactAdditionalInternationalProductDescription"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactAdditionalInternationalProductDescription"><MappingFragment StoreEntitySet="FactAdditionalInternationalProductDescription">
+            <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+            <ScalarProperty Name="CultureName" ColumnName="CultureName" />
+            <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FactCallCenter"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactCallCenter"><MappingFragment StoreEntitySet="FactCallCenter">
+            <ScalarProperty Name="FactCallCenterID" ColumnName="FactCallCenterID" />
+            <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+            <ScalarProperty Name="WageType" ColumnName="WageType" />
+            <ScalarProperty Name="Shift" ColumnName="Shift" />
+            <ScalarProperty Name="LevelOneOperators" ColumnName="LevelOneOperators" />
+            <ScalarProperty Name="LevelTwoOperators" ColumnName="LevelTwoOperators" />
+            <ScalarProperty Name="TotalOperators" ColumnName="TotalOperators" />
+            <ScalarProperty Name="Calls" ColumnName="Calls" />
+            <ScalarProperty Name="AutomaticResponses" ColumnName="AutomaticResponses" />
+            <ScalarProperty Name="Orders" ColumnName="Orders" />
+            <ScalarProperty Name="IssuesRaised" ColumnName="IssuesRaised" />
+            <ScalarProperty Name="AverageTimePerIssue" ColumnName="AverageTimePerIssue" />
+            <ScalarProperty Name="ServiceGrade" ColumnName="ServiceGrade" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FactCurrencyRate"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactCurrencyRate"><MappingFragment StoreEntitySet="FactCurrencyRate">
+            <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+            <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+            <ScalarProperty Name="AverageRate" ColumnName="AverageRate" />
+            <ScalarProperty Name="EndOfDayRate" ColumnName="EndOfDayRate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FactFinance"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactFinance"><MappingFragment StoreEntitySet="FactFinance">
+            <ScalarProperty Name="FinanceKey" ColumnName="FinanceKey" />
+            <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+            <ScalarProperty Name="OrganizationKey" ColumnName="OrganizationKey" />
+            <ScalarProperty Name="DepartmentGroupKey" ColumnName="DepartmentGroupKey" />
+            <ScalarProperty Name="ScenarioKey" ColumnName="ScenarioKey" />
+            <ScalarProperty Name="AccountKey" ColumnName="AccountKey" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FactInternetSales"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSales"><MappingFragment StoreEntitySet="FactInternetSales">
+            <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+            <ScalarProperty Name="OrderDateKey" ColumnName="OrderDateKey" />
+            <ScalarProperty Name="DueDateKey" ColumnName="DueDateKey" />
+            <ScalarProperty Name="ShipDateKey" ColumnName="ShipDateKey" />
+            <ScalarProperty Name="CustomerKey" ColumnName="CustomerKey" />
+            <ScalarProperty Name="PromotionKey" ColumnName="PromotionKey" />
+            <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+            <ScalarProperty Name="SalesTerritoryKey" ColumnName="SalesTerritoryKey" />
+            <ScalarProperty Name="SalesOrderNumber" ColumnName="SalesOrderNumber" />
+            <ScalarProperty Name="SalesOrderLineNumber" ColumnName="SalesOrderLineNumber" />
+            <ScalarProperty Name="RevisionNumber" ColumnName="RevisionNumber" />
+            <ScalarProperty Name="OrderQuantity" ColumnName="OrderQuantity" />
+            <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+            <ScalarProperty Name="ExtendedAmount" ColumnName="ExtendedAmount" />
+            <ScalarProperty Name="UnitPriceDiscountPct" ColumnName="UnitPriceDiscountPct" />
+            <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+            <ScalarProperty Name="ProductStandardCost" ColumnName="ProductStandardCost" />
+            <ScalarProperty Name="TotalProductCost" ColumnName="TotalProductCost" />
+            <ScalarProperty Name="SalesAmount" ColumnName="SalesAmount" />
+            <ScalarProperty Name="TaxAmt" ColumnName="TaxAmt" />
+            <ScalarProperty Name="Freight" ColumnName="Freight" />
+            <ScalarProperty Name="CarrierTrackingNumber" ColumnName="CarrierTrackingNumber" />
+            <ScalarProperty Name="CustomerPONumber" ColumnName="CustomerPONumber" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FactInternetSalesReason"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesReason"><MappingFragment StoreEntitySet="FactInternetSalesReason">
+            <ScalarProperty Name="SalesOrderNumber" ColumnName="SalesOrderNumber" />
+            <ScalarProperty Name="SalesOrderLineNumber" ColumnName="SalesOrderLineNumber" />
+            <ScalarProperty Name="SalesReasonKey" ColumnName="SalesReasonKey" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FactResellerSales"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactResellerSales"><MappingFragment StoreEntitySet="FactResellerSales">
+            <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+            <ScalarProperty Name="OrderDateKey" ColumnName="OrderDateKey" />
+            <ScalarProperty Name="DueDateKey" ColumnName="DueDateKey" />
+            <ScalarProperty Name="ShipDateKey" ColumnName="ShipDateKey" />
+            <ScalarProperty Name="ResellerKey" ColumnName="ResellerKey" />
+            <ScalarProperty Name="EmployeeKey" ColumnName="EmployeeKey" />
+            <ScalarProperty Name="PromotionKey" ColumnName="PromotionKey" />
+            <ScalarProperty Name="CurrencyKey" ColumnName="CurrencyKey" />
+            <ScalarProperty Name="SalesTerritoryKey" ColumnName="SalesTerritoryKey" />
+            <ScalarProperty Name="SalesOrderNumber" ColumnName="SalesOrderNumber" />
+            <ScalarProperty Name="SalesOrderLineNumber" ColumnName="SalesOrderLineNumber" />
+            <ScalarProperty Name="RevisionNumber" ColumnName="RevisionNumber" />
+            <ScalarProperty Name="OrderQuantity" ColumnName="OrderQuantity" />
+            <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+            <ScalarProperty Name="ExtendedAmount" ColumnName="ExtendedAmount" />
+            <ScalarProperty Name="UnitPriceDiscountPct" ColumnName="UnitPriceDiscountPct" />
+            <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+            <ScalarProperty Name="ProductStandardCost" ColumnName="ProductStandardCost" />
+            <ScalarProperty Name="TotalProductCost" ColumnName="TotalProductCost" />
+            <ScalarProperty Name="SalesAmount" ColumnName="SalesAmount" />
+            <ScalarProperty Name="TaxAmt" ColumnName="TaxAmt" />
+            <ScalarProperty Name="Freight" ColumnName="Freight" />
+            <ScalarProperty Name="CarrierTrackingNumber" ColumnName="CarrierTrackingNumber" />
+            <ScalarProperty Name="CustomerPONumber" ColumnName="CustomerPONumber" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FactSalesQuota"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactSalesQuota"><MappingFragment StoreEntitySet="FactSalesQuota">
+            <ScalarProperty Name="SalesQuotaKey" ColumnName="SalesQuotaKey" />
+            <ScalarProperty Name="EmployeeKey" ColumnName="EmployeeKey" />
+            <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+            <ScalarProperty Name="CalendarYear" ColumnName="CalendarYear" />
+            <ScalarProperty Name="CalendarQuarter" ColumnName="CalendarQuarter" />
+            <ScalarProperty Name="SalesAmountQuota" ColumnName="SalesAmountQuota" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FactSurveyResponse"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactSurveyResponse"><MappingFragment StoreEntitySet="FactSurveyResponse">
+            <ScalarProperty Name="SurveyResponseKey" ColumnName="SurveyResponseKey" />
+            <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+            <ScalarProperty Name="CustomerKey" ColumnName="CustomerKey" />
+            <ScalarProperty Name="ProductCategoryKey" ColumnName="ProductCategoryKey" />
+            <ScalarProperty Name="EnglishProductCategoryName" ColumnName="EnglishProductCategoryName" />
+            <ScalarProperty Name="ProductSubcategoryKey" ColumnName="ProductSubcategoryKey" />
+            <ScalarProperty Name="EnglishProductSubcategoryName" ColumnName="EnglishProductSubcategoryName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProspectiveBuyer"><EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.ProspectiveBuyer"><MappingFragment StoreEntitySet="ProspectiveBuyer">
+            <ScalarProperty Name="ProspectiveBuyerKey" ColumnName="ProspectiveBuyerKey" />
+            <ScalarProperty Name="ProspectAlternateKey" ColumnName="ProspectAlternateKey" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+            <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+            <ScalarProperty Name="Gender" ColumnName="Gender" />
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="YearlyIncome" ColumnName="YearlyIncome" />
+            <ScalarProperty Name="TotalChildren" ColumnName="TotalChildren" />
+            <ScalarProperty Name="NumberChildrenAtHome" ColumnName="NumberChildrenAtHome" />
+            <ScalarProperty Name="Education" ColumnName="Education" />
+            <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+            <ScalarProperty Name="HouseOwnerFlag" ColumnName="HouseOwnerFlag" />
+            <ScalarProperty Name="NumberCarsOwned" ColumnName="NumberCarsOwned" />
+            <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+            <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="StateProvinceCode" ColumnName="StateProvinceCode" />
+            <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="Salutation" ColumnName="Salutation" />
+            <ScalarProperty Name="Unknown" ColumnName="Unknown" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AdventureWorksDWBuildVersion">
+            <EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.AdventureWorksDWBuildVersion">
+              <MappingFragment StoreEntitySet="AdventureWorksDWBuildVersion">
+                <ScalarProperty Name="VersionDate" ColumnName="VersionDate" />
+                <ScalarProperty Name="DBVersion" ColumnName="DBVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DatabaseLog">
+            <EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.DatabaseLog">
+              <MappingFragment StoreEntitySet="DatabaseLog">
+                <ScalarProperty Name="XmlEvent" ColumnName="XmlEvent" />
+                <ScalarProperty Name="TSQL" ColumnName="TSQL" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="Schema" ColumnName="Schema" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="DatabaseUser" ColumnName="DatabaseUser" />
+                <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+                <ScalarProperty Name="DatabaseLogID" ColumnName="DatabaseLogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FactInternetSalesQuota">
+            <EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota">
+              <MappingFragment StoreEntitySet="FactInternetSalesQuota">
+                <ScalarProperty Name="SalesTerritoryKey" ColumnName="SalesTerritoryKey" />
+                <ScalarProperty Name="SalesAmount" ColumnName="SalesAmount" />
+                <ScalarProperty Name="OrderDateKey" ColumnName="OrderDateKey" />
+                <ScalarProperty Name="ProductCategoryKey" ColumnName="ProductCategoryKey" />
+                <ScalarProperty Name="QuotaKey" ColumnName="QuotaKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetOrdersDataForAllCustomersForPeriod" FunctionName="AdventureWorksDWAZ2008R2XLabsModel.Store.GetOrdersDataForAllCustomersForPeriod" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.OrderDetailsForCustomers">
+                <ScalarProperty Name="SalesOrderNumber" ColumnName="SalesOrderNumber" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="ItemsSold" ColumnName="ItemsSold" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="ProductsEnum" ColumnName="ProductsEnum" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+	  <FunctionImportMapping FunctionImportName="GetSalesAmountsByCountriesAndProductCategories" FunctionName="AdventureWorksDWAZ2008R2XLabsModel.Store.GetSalesAmountsByCountriesAndProductCategories">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.SalesInfo">
+                <ScalarProperty Name="SalesTerritoryCountry" ColumnName="SalesTerritoryCountry" />
+                <ScalarProperty Name="C1" ColumnName="C1" />
+                <ScalarProperty Name="TotalValue" ColumnName="C2" />
+                <ScalarProperty Name="C3" ColumnName="C3" />
+                <ScalarProperty Name="ActualValue" ColumnName="C4" />
+                <ScalarProperty Name="ProductCategory" ColumnName="C5" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="OrdersDetails">
+            <EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.OrdersDetails">
+              <MappingFragment StoreEntitySet="OrdersDetailsView">
+                <ScalarProperty Name="ProductsEnum" ColumnName="ProductsEnum" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="SalesAmount" ColumnName="SalesAmount" />
+                <ScalarProperty Name="ItemsSold" ColumnName="ItemsSold" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="SalesOrderNumber" ColumnName="SalesOrderNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SalesAmountExtractView">
+            <EntityTypeMapping TypeName="AdventureWorksDWAZ2008R2XLabsModel.SalesAmountExtract">
+              <MappingFragment StoreEntitySet="SalesAmountExtractView">
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="ProductCategory" ColumnName="ProductCategory" />
+                <ScalarProperty Name="ActualAmount" ColumnName="ActualAmount" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="TargetAmount" ColumnName="TargetAmount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AdventureWorksDWModel">
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimAccount" Width="1.5" PointX="0.75" PointY="0.75" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimCurrency" Width="1.5" PointX="2.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimCustomer" Width="1.5" PointX="2.75" PointY="3.75" Height="6.5955208333333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimDate" Width="1.5" PointX="4.75" PointY="0.75" Height="4.6725065104166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimDepartmentGroup" Width="1.5" PointX="6.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimEmployee" Width="1.5" PointX="6.75" PointY="3.75" Height="6.787822265625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimGeography" Width="1.5" PointX="8.75" PointY="0.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimOrganization" Width="1.5" PointX="8.75" PointY="4.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimProduct" Width="1.5" PointX="8.75" PointY="7.75" Height="7.9416308593750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimProductCategory" Width="1.5" PointX="10.75" PointY="0.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimProductSubcategory" Width="1.5" PointX="10.75" PointY="3.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimPromotion" Width="1.5" PointX="10.75" PointY="6.75" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimReseller" Width="1.5" PointX="0.75" PointY="11.75" Height="4.8648079427083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimSalesReason" Width="1.5" PointX="2.75" PointY="11.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimSalesTerritory" Width="1.5" PointX="4.75" PointY="11.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimScenario" Width="1.5" PointX="10.75" PointY="11.75" Height="1.4033821614583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactAdditionalInternationalProductDescription" Width="1.5" PointX="12.75" PointY="0.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactCallCenter" Width="1.5" PointX="12.75" PointY="3.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactCurrencyRate" Width="1.5" PointX="12.75" PointY="8.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactFinance" Width="1.5" PointX="12.75" PointY="11.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSales" Width="1.5" PointX="14.75" PointY="0.75" Height="5.4417122395833282" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesReason" Width="1.5" PointX="2.75" PointY="14.75" Height="1.5956835937500067" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactResellerSales" Width="1.5" PointX="4.75" PointY="14.75" Height="5.63401367187501" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactSalesQuota" Width="1.5" PointX="14.75" PointY="7.75" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactSurveyResponse" Width="1.5" PointX="14.75" PointY="10.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.ProspectiveBuyer" Width="1.5" PointX="14.75" PointY="14.75" Height="5.63401367187501" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.AdventureWorksDWBuildVersion" Width="1.5" PointX="11.375" PointY="15.75" Height="1.4033821614583246" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.DatabaseLog" Width="1.5" PointX="7.375" PointY="16.75" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota" Width="1.5" PointX="17" PointY="2.125" Height="2.1725878906250102" />
+        <AssociationConnector Association="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimDate" >
+          <ConnectorPoint PointX="5.5" PointY="0.75" />
+          <ConnectorPoint PointX="5.5" PointY="0.50000000000000178" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="0.50000000000000122" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="0.50000000000000178" />
+          <ConnectorPoint PointX="16.625" PointY="0.50000000000000178" />
+          <ConnectorPoint PointX="16.625" PointY="3.4035953776041663" />
+          <ConnectorPoint PointX="17" PointY="3.4035953776041663" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimProductCategory" >
+          <ConnectorPoint PointX="12.25" PointY="1.8362939453124998" />
+          <ConnectorPoint PointX="12.5" PointY="1.8362939453124998" />
+          <ConnectorPoint PointX="12.5" PointY="0.25000000000000178" />
+          <ConnectorPoint PointX="17.75" PointY="0.25000000000000178" />
+          <ConnectorPoint PointX="17.75" PointY="2.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimSalesTerritory" >
+          <ConnectorPoint PointX="6.25" PointY="12.8362939453125" />
+          <ConnectorPoint PointX="8.5" PointY="12.8362939453125" />
+          <ConnectorPoint PointX="8.5" PointY="7.5" />
+          <ConnectorPoint PointX="10.5" PointY="7.5" />
+          <ConnectorPoint PointX="10.5" PointY="3.5" />
+          <ConnectorPoint PointX="14.5" PointY="3.5" />
+          <ConnectorPoint PointX="14.5" PointY="6.4417122395833264" />
+          <ConnectorPoint PointX="17.125" PointY="6.4417122395833264" />
+          <ConnectorPoint PointX="17.125" PointY="6" />
+          <ConnectorPoint PointX="17.75" PointY="6" />
+          <ConnectorPoint PointX="17.75" PointY="4.6821907552083326" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.OrdersDetails" Width="1.5" PointX="0.75" PointY="17.75" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="AdventureWorksDWAZ2008R2XLabsModel.SalesAmountExtract" Width="2.5" PointX="17.375" PointY="6.25" Height="1.9802864583333246" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

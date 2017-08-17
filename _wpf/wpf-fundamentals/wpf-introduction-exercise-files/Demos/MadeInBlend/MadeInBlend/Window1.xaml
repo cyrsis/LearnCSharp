@@ -1,0 +1,35 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="MadeInBlend.Window1"
+	x:Name="Window"
+	Title="Window1"
+	Width="640" Height="480">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="316*"/>
+			<ColumnDefinition Width="302*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.498*"/>
+			<RowDefinition Height="0.502*"/>
+		</Grid.RowDefinitions>
+		<Rectangle Margin="122,53,273,27" Fill="Cyan" Stroke="#FF000000" RadiusY="28.5" RadiusX="28.5" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+			<Rectangle.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="1" ScaleY="1"/>
+					<SkewTransform AngleX="0" AngleY="0"/>
+					<RotateTransform Angle="10"/>
+					<TranslateTransform X="0" Y="0"/>
+				</TransformGroup>
+			</Rectangle.RenderTransform>
+		</Rectangle>
+		<Path Margin="34.435,6.963,101.597,32.158" Fill="#FFF90000" Stretch="Fill" Stroke="#FF000000" Data="M97,228 C116.49992,226.5 211.5,270.5 214.5,277.5 217.5,284.5 218.5,308.5 205.5,350.5 192.5,392.5 228.49948,428.5 135.49985,401.5 42.500216,374.5 36.50024,362.49969 34.500248,305.49982 32.500256,248.49995 77.500077,229.5 97,228 z" Grid.Row="1"/>
+		<StackPanel Margin="67.264,55.963,24,-15.805" Grid.Row="1">
+			<Button Content="Button" Click="Button_Click_1" />
+			<Button Content="Button" Click="Button_Click" x:Name="myButton"/>
+			<Button Content="Button"/>
+		</StackPanel>
+	</Grid>
+</Window>

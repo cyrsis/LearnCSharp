@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="SalesDashboard.ProductsIndicatorControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" >
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid x:Name="stckPnl">
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition Width="12" />
+				<ColumnDefinition Width="12" />
+				<ColumnDefinition Width="12" />
+				<ColumnDefinition Width="12"/>     	
+			</Grid.ColumnDefinitions>
+            <Rectangle StrokeThickness="0" Fill="{StaticResource bikes}" Height="8" Width="8" Margin="4,0,0,0" Visibility="{Binding HasBikesProducts, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Column="0" HorizontalAlignment="Left" />
+            <Rectangle StrokeThickness="0" Fill="{StaticResource components}" Height="8"  Width="8" Margin="4,0,0,0" Visibility="{Binding HasComponentsProducts, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Column="1" HorizontalAlignment="Left" />
+            <Rectangle StrokeThickness="0" Fill="{StaticResource clothing}" Height="8"  Width="8" Margin="4,0,0,0" Visibility="{Binding HasClothingProducts, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Column="2" HorizontalAlignment="Left" />
+            <Rectangle StrokeThickness="0" Fill="{StaticResource accessories}" Height="8"  Width="8" Margin="4,0,0,0" Visibility="{Binding HasAccessoriesProducts, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Column="3" HorizontalAlignment="Left" />
+        </Grid>
+    </Grid>
+</UserControl>

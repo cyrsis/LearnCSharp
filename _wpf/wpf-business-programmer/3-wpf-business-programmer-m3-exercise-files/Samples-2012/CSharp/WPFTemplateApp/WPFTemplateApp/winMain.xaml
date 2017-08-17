@@ -1,0 +1,188 @@
+﻿<Window x:Class="WPFTemplateApp.winMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF Template Application"
+        WindowState="Maximized"
+        MinWidth="800"
+        MinHeight="600"
+        Icon="/Images/Note16.ico"
+        Loaded="Window_Loaded">
+  <Window.Resources></Window.Resources>
+  <Grid x:Name="grdLayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition x:Name="rowToolbar"
+                     Height="Auto" />
+      <RowDefinition x:Name="rowContent"
+                     Height="*" />
+      <RowDefinition x:Name="rowError"
+                     Height="Auto" />
+      <RowDefinition x:Name="rowStatusBar"
+                     Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="0"
+            Style="{StaticResource toolBarStyle}">
+      <DockPanel LastChildFill="False"
+                 HorizontalAlignment="Stretch"
+                 Width="Auto">
+        <ToolBar x:Name="tbrMain"
+                 DockPanel.Dock="Left"
+                 HorizontalAlignment="Left"
+                 Band="0"
+                 BandIndex="1">
+          <Button x:Name="btnEmployee"
+                  Tag="Employee"
+                  ToolTip="Display Employee Information"
+                  Style="{StaticResource menuStyle}"
+                  Content="Employee"
+                  Click="btnEmployee_Click" />
+          <Button x:Name="btnProduct"
+                  Tag="Product"
+                  Style="{StaticResource menuStyle}"
+                  Content="Product"
+                  Click="btnProduct_Click" />
+          <Button x:Name="btnProductWithImages"
+                  Tag="Product with Images"
+                  ToolBar.OverflowMode="AsNeeded"
+                  Style="{StaticResource menuStyle}"
+                  Content="Product (Images)"
+                  Click="btnProductWithImages_Click" />
+          <Button x:Name="btnProductDetail"
+                  Tag="Product Detail"
+                  ToolBar.OverflowMode="AsNeeded"
+                  Style="{StaticResource menuStyle}"
+                  Content="Product (Detail)"
+                  Click="btnProductDetail_Click" />
+        </ToolBar>
+        <ToolBar x:Name="tbrSecurity"
+                 DockPanel.Dock="Left"
+                 HorizontalAlignment="Left"
+                 Band="1"
+                 BandIndex="1">
+          <Button x:Name="btnSecurity"
+                  Tag="Security"
+                  Style="{StaticResource menuStyle}"
+                  Content="Security" />
+          <Button x:Name="btnPermissionCat"
+                  Tag="PermissionCategory"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Permission Categories" />
+          <Button x:Name="btnPermission"
+                  Tag="Permission"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Permissions" />
+          <Button x:Name="btnUserCat"
+                  Tag="UserCat"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="User Categories" />
+          <Button x:Name="btnUsers"
+                  Tag="Users"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Users" />
+          <Button x:Name="btnUsersRoles"
+                  Tag="UsersRoles"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Map Users to Roles" />
+          <Button x:Name="btnRolesPerms"
+                  Tag="RolesPermissions"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Map Roles to Permissions" />
+          <Button x:Name="btnSecurityControls"
+                  Tag="SecurityControls"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Security Controls" />
+          <Button x:Name="btnChangePassword"
+                  Tag="ChangePassword"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Change Password" />
+        </ToolBar>
+        <ToolBar x:Name="tbrMaintenance"
+                 DockPanel.Dock="Left"
+                 HorizontalAlignment="Left"
+                 Band="1"
+                 BandIndex="1">
+          <Button x:Name="btnLookups"
+                  Tag="Lookups"
+                  Style="{StaticResource menuStyle}"
+                  Content="Lookups" />
+          <Button x:Name="btnExceptions"
+                  Tag="Exceptions"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Exceptions" />
+          <Button x:Name="btnUserTracking"
+                  Tag="UserTracking"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="User Tracking" />
+          <Button x:Name="btnUserLogins"
+                  Tag="UserLogins"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="User Logins" />
+          <Button x:Name="btnEventLog"
+                  Tag="EventLog"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Event Log" />
+          <Button x:Name="btnAuditTracking"
+                  Tag="AuditTracking"
+                  ToolBar.OverflowMode="Always"
+                  Style="{StaticResource menuLargeStyle}"
+                  Content="Audit Tracking" />
+        </ToolBar>
+        <ToolBar DockPanel.Dock="Right"
+                 Band="2"
+                 BandIndex="1"
+                 x:Name="tbrHelp">
+          <Button Name="btnHelp"
+                  Tag="Help"
+                  Style="{StaticResource menuStyle}"
+                  Content="Help" />
+          <Button Name="btnAbout"
+                  Tag="About"
+                  Style="{StaticResource menuStyle}"
+                  Content="About" />
+        </ToolBar>
+      </DockPanel>
+    </Border>
+    <Canvas Margin="4"
+            Grid.Row="1"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Name="contentArea" />
+    <TextBlock Name="tbFatalError"
+               Grid.Row="2"
+               Style="{StaticResource errorMsg}"
+               Visibility="Collapsed"></TextBlock>
+    <Border Grid.Row="3"
+            Style="{StaticResource statusBarStyle}">
+      <StatusBar x:Name="statusBarMain"
+                 HorizontalAlignment="Stretch">
+        <StatusBar.ItemsPanel>
+          <ItemsPanelTemplate>
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+            </Grid>
+          </ItemsPanelTemplate>
+        </StatusBar.ItemsPanel>
+        <StatusBarItem Grid.Column="0">
+          <TextBlock x:Name="sbMessages"
+                     Text="Status Messages Go Here"></TextBlock>
+        </StatusBarItem>
+        <StatusBarItem Grid.Column="1"
+                       HorizontalAlignment="Right"></StatusBarItem>
+      </StatusBar>
+    </Border>
+  </Grid>
+</Window>

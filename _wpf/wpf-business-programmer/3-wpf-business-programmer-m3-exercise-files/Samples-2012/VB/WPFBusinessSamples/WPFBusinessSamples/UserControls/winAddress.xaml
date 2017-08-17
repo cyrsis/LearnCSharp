@@ -1,0 +1,20 @@
+﻿<Window x:Class="winAddress"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:WPFComponents;assembly=WPFComponents"
+        Style="{StaticResource DemoWindowStyle}"
+        Title="Address User Control"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight">
+  <Grid>
+    <StackPanel>
+      <src:ucAddress Name="ucAddr"></src:ucAddress>
+      <Button Name="btnSetData"
+              Content="Set Data"
+              Click="btnSetData_Click" />
+      <Button Name="btnGetData"
+              Content="Get Data"
+              Click="btnGetData_Click" />
+    </StackPanel>
+  </Grid>
+</Window>

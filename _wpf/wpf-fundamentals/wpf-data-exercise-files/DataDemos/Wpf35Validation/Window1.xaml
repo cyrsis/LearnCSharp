@@ -1,0 +1,46 @@
+﻿<Window x:Class="Wpf35Validation.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        FocusManager.FocusedElement="{Binding ElementName=nameText}"
+    xmlns:loc="clr-namespace:Wpf35Validation"
+        TextElement.FontSize="20"
+    Title="Window1" Height="300" Width="300">
+
+  <Window.Resources>
+    <Style TargetType="TextBox">
+    <Setter Property="Margin" Value="4" />
+    <Style.Triggers>
+      <Trigger Property="Validation.HasError" Value="true">
+        <Setter Property="ToolTip"
+        Value="{Binding RelativeSource={RelativeSource Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+      </Trigger>
+    </Style.Triggers>
+    </Style>
+
+  </Window.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Label Content="_Name:" Target="{Binding ElementName=nameText}" />
+    <TextBox x:Name="nameText" Grid.Column="1"
+             Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged,
+                    ValidatesOnDataErrors=True}" />
+
+    <Label Content="_Age:" Target="{Binding ElementName=ageText}" Grid.Row="1" />
+    <TextBox x:Name="ageText" Grid.Column="1" Grid.Row="1"
+             Text="{Binding Path=Age, UpdateSourceTrigger=PropertyChanged,
+                    ValidatesOnDataErrors=True}" />
+    
+    
+    
+  </Grid>
+</Window>

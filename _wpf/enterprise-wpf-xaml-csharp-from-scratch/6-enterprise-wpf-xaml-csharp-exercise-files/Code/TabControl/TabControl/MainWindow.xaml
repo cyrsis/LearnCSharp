@@ -1,0 +1,21 @@
+﻿<Window x:Class="TabControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+      <TabControl>
+         <TabItem Header="Tab 1">Hello, this is in tab 1</TabItem>
+         <TabItem Header="Tab 2">
+            <StackPanel>
+               <StackPanel Orientation="Horizontal">
+                  <TextBlock Text="Name" />
+                  <TextBox Width="80"
+                           Height="30" />
+               </StackPanel>
+               <CheckBox Content="I like tabs" />
+            </StackPanel>
+         </TabItem>
+         <TabItem Header="Tab 3"></TabItem>
+      </TabControl>
+   </Grid>
+</Window>

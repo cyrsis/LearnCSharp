@@ -1,0 +1,2 @@
+To run the demos in this module, you will need to follow the instructions
+in the first Module's setup.txt to create the Zza Database.

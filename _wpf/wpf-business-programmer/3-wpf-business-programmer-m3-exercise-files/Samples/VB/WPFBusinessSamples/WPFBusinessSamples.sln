@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WPFBusinessSamples", "WPFBusinessSamples\WPFBusinessSamples.vbproj", "{1010C95C-8F6A-4959-AA8E-6B580E2B65B1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WPFComponents", "WPFComponents\WPFComponents.vbproj", "{7D5B49EA-E05C-4BB9-B3A7-D4E6C0E86155}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1010C95C-8F6A-4959-AA8E-6B580E2B65B1}.Debug|x86.ActiveCfg = Debug|x86
+		{1010C95C-8F6A-4959-AA8E-6B580E2B65B1}.Debug|x86.Build.0 = Debug|x86
+		{1010C95C-8F6A-4959-AA8E-6B580E2B65B1}.Release|x86.ActiveCfg = Release|x86
+		{1010C95C-8F6A-4959-AA8E-6B580E2B65B1}.Release|x86.Build.0 = Release|x86
+		{7D5B49EA-E05C-4BB9-B3A7-D4E6C0E86155}.Debug|x86.ActiveCfg = Debug|x86
+		{7D5B49EA-E05C-4BB9-B3A7-D4E6C0E86155}.Debug|x86.Build.0 = Debug|x86
+		{7D5B49EA-E05C-4BB9-B3A7-D4E6C0E86155}.Release|x86.ActiveCfg = Release|x86
+		{7D5B49EA-E05C-4BB9-B3A7-D4E6C0E86155}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

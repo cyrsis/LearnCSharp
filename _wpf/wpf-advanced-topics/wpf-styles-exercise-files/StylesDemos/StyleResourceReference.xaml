@@ -1,0 +1,16 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <Grid.Resources>
+    <Style x:Key="{x:Type Button}">
+      <Setter Property="TextElement.FontFamily" Value="Segoe Script" />
+      <Setter Property="TextElement.FontSize" Value="30" />
+    </Style>
+  </Grid.Resources>
+
+  <StackPanel>
+    <Button Content="Click me" />
+    <Button Content="Click me" />
+    <Button Content="Click me" />
+  </StackPanel>
+</Grid>

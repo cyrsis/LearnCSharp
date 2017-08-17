@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPFBusinessSamples.winWindowEllipse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Height="300"
+        Width="300">
+<Window.Resources>
+  <VisualBrush x:Key="brEllipse">
+    <VisualBrush.Visual>
+      <Ellipse Fill="Beige"
+               Height="200"
+               Width="200"
+               StrokeThickness="1"
+               Stroke="Black" />
+    </VisualBrush.Visual>
+  </VisualBrush>
+</Window.Resources>
+  <Grid Background="{StaticResource brEllipse}">
+    <StackPanel VerticalAlignment="Center"
+                Margin="10">
+      <TextBlock Text="Drag to Move Window"
+                 Margin="10"></TextBlock>
+      <Button Style="{StaticResource BasicButton}"
+              Click="Button_Click">Close Me</Button>
+    </StackPanel>
+  </Grid>
+</Window>

@@ -1,0 +1,3 @@
+﻿Class winShapeCanvas
+
+End Class

@@ -1,0 +1,13 @@
+﻿<Window x:Class="CustomControlDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="220" Width="350">
+    <Grid>
+        <StackPanel Margin="20">
+            <Border BorderBrush="Red" BorderThickness="5">
+                <TextBlock FontSize="18" Margin="5" Text="This is a TextBlock" />
+            </Border>
+            <Button Margin="10" Content="Click me" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="PathSyntax.Window1"
+	x:Name="Window"
+	Title="Window1"
+	Width="640" Height="480">
+
+	<Grid x:Name="LayoutRoot">
+		<Path HorizontalAlignment="Left" Margin="47.937,45.902,0,130.5" Width="225.72" Fill="#FFFFFFFF" Stretch="Fill" Stroke="#FF000000"
+     Data="M111,46 C200.50006,49.5 200.5,62.5 237.5,89.5 274.5,116.5 275.5,125.5 270.5,176.5 265.5,227.5 206.50006,312.5 206.50006,312.5 L134.50002,284.5 60.499967,227.5 104.49999,160.5 53.499961,133.5 C53.499961,133.5 21.499942,42.5 111,46 z"/>
+	</Grid>
+</Window>

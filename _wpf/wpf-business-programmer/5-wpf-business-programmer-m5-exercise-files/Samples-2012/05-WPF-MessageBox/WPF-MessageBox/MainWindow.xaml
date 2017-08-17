@@ -1,0 +1,58 @@
+﻿<Window xmlns:my="clr-namespace:PDSA.WPF;assembly=PDSA.WPF"
+        x:Class="WPF_MessageBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        FontSize="14"
+        Background="{StaticResource normalBackground}"
+        Title="Custom Message Box"
+        Height="400"
+        Width="800">
+  <Window.Resources>
+    <Style TargetType="TextBlock">
+      <Setter Property="Margin"
+              Value="10" />
+    </Style>
+    <Style TargetType="Button">
+      <Setter Property="Margin"
+              Value="10" />
+    </Style>
+    <!-- Main Screen Drop Shadow Effect -->
+    <DropShadowEffect Color="DarkSlateGray"
+                      x:Key="mainDropShadow"
+                      ShadowDepth="8" />
+  </Window.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <TextBlock Text="This sample shows how to create your own Message box control similar to the MessageBox, but allows you to add your own styling."
+               TextWrapping="Wrap"
+               FontSize="16" />
+    <StackPanel Grid.Row="1"
+                Orientation="Horizontal"
+                VerticalAlignment="Top">
+      <my:PDSAucButton Text="Normal MessageBox"
+                       x:Name="btnMessageBox"
+                       Effect="{StaticResource mainDropShadow}"
+                       Click="btnMessageBox_Click" />
+      <my:PDSAucButton Text="OK Button Only"
+                       x:Name="btnOKOnly"
+                       Effect="{StaticResource mainDropShadow}"
+                       Click="btnOKOnly_Click" />
+      <my:PDSAucButton Text="Yes/No Buttons"
+                       x:Name="btnYesNo"
+                       Effect="{StaticResource mainDropShadow}"
+                       Click="btnYesNo_Click" />
+      <my:PDSAucButton Text="OK/Cancel Buttons"
+                       x:Name="btnOkCancel"
+                       Effect="{StaticResource mainDropShadow}"
+                       Click="btnOkCancel_Click" />
+      <my:PDSAucButton Text="Yes/No/Cancel Buttons"
+                       x:Name="btnYesNoCancel"
+                       Effect="{StaticResource mainDropShadow}"
+                       Click="btnYesNoCancel_Click" />
+    </StackPanel>
+  </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="MenuDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+      <ListBox>
+         <ListBox.ContextMenu>
+            <ContextMenu>
+               <MenuItem Header="File">
+                  <MenuItem Header="New..." />
+                  <MenuItem Header="Open..." />
+                  <Separator />
+                  <MenuItem Header="Add">
+                     <MenuItem Header="New Window" />
+                     <MenuItem Header="New Project" />
+                  </MenuItem>
+                  <Separator />
+                  <MenuItem Header="Save As You Go"
+                            IsCheckable="True" />
+               </MenuItem>
+               <MenuItem Header="Edit">
+                  <MenuItem Header="Cut" />
+                  <MenuItem Header="Copy" />
+                  <MenuItem Header="Paste" />
+               </MenuItem>
+            </ContextMenu>
+         </ListBox.ContextMenu>
+         <ListBoxItem Content="Item 1" />
+         <ListBoxItem Content="Item 2" />
+         <ListBoxItem Content="Item 3" />
+      </ListBox>
+   </Grid>
+</Window>

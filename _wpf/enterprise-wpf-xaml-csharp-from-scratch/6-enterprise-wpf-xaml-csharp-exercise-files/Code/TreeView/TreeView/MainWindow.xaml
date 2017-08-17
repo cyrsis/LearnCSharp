@@ -1,0 +1,29 @@
+﻿<Window x:Class="TreeView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+      <TreeView>
+         <TreeViewItem Header="Animals">
+            <TreeViewItem Header="Mammals">
+               <TreeViewItem Header="Dogs">
+                  <TreeViewItem Header="Spaniels" />
+                  <TreeViewItem Header="Working Dogs" />
+                  <TreeViewItem Header="Retrievers" />
+               </TreeViewItem>
+               <TreeViewItem Header="Cats">
+                  <TreeViewItem Header="Tiger" />
+                  <TreeViewItem Header="Leopard" />
+                  <TreeViewItem Header="Cougar" />
+               </TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Marsupials">
+               <TreeViewItem Header="Kangaroo" />
+               <TreeViewItem Header="Koala" />
+            </TreeViewItem>
+         </TreeViewItem>
+         <TreeViewItem Header="Plants" />
+         <TreeViewItem Header="Other" />
+      </TreeView>
+   </Grid>
+</Window>

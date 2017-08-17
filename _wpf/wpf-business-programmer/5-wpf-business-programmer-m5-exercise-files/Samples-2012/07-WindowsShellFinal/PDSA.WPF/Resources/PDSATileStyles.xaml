@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- ***************** -->
+  <!-- ** Tile Styles ** -->
+  <!-- ***************** -->
+  <!-- Tile Border Highlight Color -->
+  <Color x:Key="pdsaTileBorderHighlightColor">Black</Color>
+  <!-- Tile Border -->
+  <Style TargetType="Border"
+         x:Key="pdsaTileBorderStyle">
+    <Setter Property="Margin"
+            Value="0" />
+    <Setter Property="Padding"
+            Value="4" />
+    <Setter Property="Opacity"
+            Value="1" />
+    <Setter Property="BorderBrush"
+            Value="Transparent" />
+    <Setter Property="BorderThickness"
+            Value="3" />
+    <Setter Property="HorizontalAlignment"
+            Value="Stretch" />
+    <Setter Property="CornerRadius"
+            Value="1" />
+    <Setter Property="Background"
+            Value="Transparent" />
+  </Style>
+  <!-- Tile Image -->
+  <Style TargetType="Image"
+         x:Key="pdsaTileImageStyle">
+    <Setter Property="Margin"
+            Value="0,4,0,4" />
+    <Setter Property="HorizontalAlignment"
+            Value="Center" />
+  </Style>
+  <!-- Tile TextBlock -->
+  <Style TargetType="TextBlock"
+         x:Key="pdsaTileTextBlockStyle">
+    <Setter Property="Margin"
+            Value="10,4,10,4" />
+    <Setter Property="Foreground"
+            Value="White" />
+    <Setter Property="HorizontalAlignment"
+            Value="Left" />
+    <Setter Property="FontFamily"
+            Value="Segoe UI" />
+    <Setter Property="FontSize"
+            Value="11" />
+  </Style>
+</ResourceDictionary>

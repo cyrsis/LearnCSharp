@@ -1,0 +1,15 @@
+﻿<Application x:Class="BindingProperties.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="TrueStyle">
+            <Setter Property="Control.Foreground"
+                    Value="Red" />
+        </Style>
+        <Style x:Key="FalseStyle">
+            <Setter Property="Control.Foreground"
+                    Value="Black" />
+        </Style>
+    </Application.Resources>
+</Application>

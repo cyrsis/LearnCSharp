@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSMHideShow", "VSMHideShow\VSMHideShow.csproj", "{c0f0e0d9-e542-46b0-847a-f3f8966b51e4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0F0E0D9-E542-46B0-847A-F3F8966B51E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F0E0D9-E542-46B0-847A-F3F8966B51E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F0E0D9-E542-46B0-847A-F3F8966B51E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F0E0D9-E542-46B0-847A-F3F8966B51E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

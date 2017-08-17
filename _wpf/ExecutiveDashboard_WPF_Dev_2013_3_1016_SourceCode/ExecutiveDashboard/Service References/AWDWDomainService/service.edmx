@@ -1,0 +1,619 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="AdventureWorksDWAZ2008R2XLabsModel" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityType Name="DimAccount">
+        <Key>
+          <PropertyRef Name="AccountKey" />
+        </Key>
+        <Property Name="AccountKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ParentAccountKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="AccountCodeAlternateKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ParentAccountCodeAlternateKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="AccountDescription" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="AccountType" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="Operator" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="CustomMembers" Type="Edm.String" Nullable="true" MaxLength="300" Unicode="true" FixedLength="false" />
+        <Property Name="ValueType" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="CustomMemberOptions" Type="Edm.String" Nullable="true" MaxLength="200" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="DimCurrency">
+        <Key>
+          <PropertyRef Name="CurrencyKey" />
+        </Key>
+        <Property Name="CurrencyKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="CurrencyAlternateKey" Type="Edm.String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="true" />
+        <Property Name="CurrencyName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="DimCustomer">
+        <Key>
+          <PropertyRef Name="CustomerKey" />
+        </Key>
+        <Property Name="CustomerKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="GeographyKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="CustomerAlternateKey" Type="Edm.String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="Title" Type="Edm.String" Nullable="true" MaxLength="8" Unicode="true" FixedLength="false" />
+        <Property Name="FirstName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="MiddleName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="LastName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="NameStyle" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="BirthDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="MaritalStatus" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="true" />
+        <Property Name="Suffix" Type="Edm.String" Nullable="true" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="Gender" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="EmailAddress" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="YearlyIncome" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="TotalChildren" Type="Edm.Byte" Nullable="true" />
+        <Property Name="NumberChildrenAtHome" Type="Edm.Byte" Nullable="true" />
+        <Property Name="EnglishEducation" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishEducation" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchEducation" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="true" FixedLength="false" />
+        <Property Name="EnglishOccupation" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishOccupation" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchOccupation" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+        <Property Name="HouseOwnerFlag" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="true" />
+        <Property Name="NumberCarsOwned" Type="Edm.Byte" Nullable="true" />
+        <Property Name="AddressLine1" Type="Edm.String" Nullable="true" MaxLength="120" Unicode="true" FixedLength="false" />
+        <Property Name="AddressLine2" Type="Edm.String" Nullable="true" MaxLength="120" Unicode="true" FixedLength="false" />
+        <Property Name="Phone" Type="Edm.String" Nullable="true" MaxLength="20" Unicode="true" FixedLength="false" />
+        <Property Name="DateFirstPurchase" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="CommuteDistance" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="DimDate">
+        <Key>
+          <PropertyRef Name="DateKey" />
+        </Key>
+        <Property Name="DateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FullDateAlternateKey" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="DayNumberOfWeek" Type="Edm.Byte" Nullable="false" />
+        <Property Name="EnglishDayNameOfWeek" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishDayNameOfWeek" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchDayNameOfWeek" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="DayNumberOfMonth" Type="Edm.Byte" Nullable="false" />
+        <Property Name="DayNumberOfYear" Type="Edm.Int16" Nullable="false" />
+        <Property Name="WeekNumberOfYear" Type="Edm.Byte" Nullable="false" />
+        <Property Name="EnglishMonthName" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishMonthName" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchMonthName" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="MonthNumberOfYear" Type="Edm.Byte" Nullable="false" />
+        <Property Name="CalendarQuarter" Type="Edm.Byte" Nullable="false" />
+        <Property Name="CalendarYear" Type="Edm.Int16" Nullable="false" />
+        <Property Name="CalendarSemester" Type="Edm.Byte" Nullable="false" />
+        <Property Name="FiscalQuarter" Type="Edm.Byte" Nullable="false" />
+        <Property Name="FiscalYear" Type="Edm.Int16" Nullable="false" />
+        <Property Name="FiscalSemester" Type="Edm.Byte" Nullable="false" />
+        <NavigationProperty Name="FactInternetSalesQuota" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimDate" FromRole="DimDate" ToRole="FactInternetSalesQuota" />
+      </EntityType>
+      <EntityType Name="DimDepartmentGroup">
+        <Key>
+          <PropertyRef Name="DepartmentGroupKey" />
+        </Key>
+        <Property Name="DepartmentGroupKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ParentDepartmentGroupKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="DepartmentGroupName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="DimEmployee">
+        <Key>
+          <PropertyRef Name="EmployeeKey" />
+        </Key>
+        <Property Name="EmployeeKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ParentEmployeeKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="EmployeeNationalIDAlternateKey" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="ParentEmployeeNationalIDAlternateKey" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="SalesTerritoryKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="FirstName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="LastName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="MiddleName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="NameStyle" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Title" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="HireDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="BirthDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="LoginID" Type="Edm.String" Nullable="true" MaxLength="256" Unicode="true" FixedLength="false" />
+        <Property Name="EmailAddress" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="Phone" Type="Edm.String" Nullable="true" MaxLength="25" Unicode="true" FixedLength="false" />
+        <Property Name="MaritalStatus" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="true" />
+        <Property Name="EmergencyContactName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="EmergencyContactPhone" Type="Edm.String" Nullable="true" MaxLength="25" Unicode="true" FixedLength="false" />
+        <Property Name="SalariedFlag" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Gender" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="true" />
+        <Property Name="PayFrequency" Type="Edm.Byte" Nullable="true" />
+        <Property Name="BaseRate" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="VacationHours" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SickLeaveHours" Type="Edm.Int16" Nullable="true" />
+        <Property Name="CurrentFlag" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="SalesPersonFlag" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="DepartmentName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="StartDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="EndDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Status" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="DimGeography">
+        <Key>
+          <PropertyRef Name="GeographyKey" />
+        </Key>
+        <Property Name="GeographyKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="City" Type="Edm.String" Nullable="true" MaxLength="30" Unicode="true" FixedLength="false" />
+        <Property Name="StateProvinceCode" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="StateProvinceName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="CountryRegionCode" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="EnglishCountryRegionName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishCountryRegionName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchCountryRegionName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="PostalCode" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="SalesTerritoryKey" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="DimOrganization">
+        <Key>
+          <PropertyRef Name="OrganizationKey" />
+        </Key>
+        <Property Name="OrganizationKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ParentOrganizationKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="PercentageOfOwnership" Type="Edm.String" Nullable="true" MaxLength="16" Unicode="true" FixedLength="false" />
+        <Property Name="OrganizationName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="CurrencyKey" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="DimProduct">
+        <Key>
+          <PropertyRef Name="ProductKey" />
+        </Key>
+        <Property Name="ProductKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ProductAlternateKey" Type="Edm.String" Nullable="true" MaxLength="25" Unicode="true" FixedLength="false" />
+        <Property Name="ProductSubcategoryKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="WeightUnitMeasureCode" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="true" />
+        <Property Name="SizeUnitMeasureCode" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="true" />
+        <Property Name="EnglishProductName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishProductName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchProductName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="StandardCost" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="FinishedGoodsFlag" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Color" Type="Edm.String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="SafetyStockLevel" Type="Edm.Int16" Nullable="true" />
+        <Property Name="ReorderPoint" Type="Edm.Int16" Nullable="true" />
+        <Property Name="ListPrice" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="Size" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SizeRange" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="Weight" Type="Edm.Double" Nullable="true" />
+        <Property Name="DaysToManufacture" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ProductLine" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="true" />
+        <Property Name="DealerPrice" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="Class" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="true" />
+        <Property Name="Style" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="true" />
+        <Property Name="ModelName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="LargePhoto" Type="Edm.Binary" Nullable="true" MaxLength="Max" FixedLength="false" />
+        <Property Name="EnglishDescription" Type="Edm.String" Nullable="true" MaxLength="400" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchDescription" Type="Edm.String" Nullable="true" MaxLength="400" Unicode="true" FixedLength="false" />
+        <Property Name="ChineseDescription" Type="Edm.String" Nullable="true" MaxLength="400" Unicode="true" FixedLength="false" />
+        <Property Name="ArabicDescription" Type="Edm.String" Nullable="true" MaxLength="400" Unicode="true" FixedLength="false" />
+        <Property Name="HebrewDescription" Type="Edm.String" Nullable="true" MaxLength="400" Unicode="true" FixedLength="false" />
+        <Property Name="ThaiDescription" Type="Edm.String" Nullable="true" MaxLength="400" Unicode="true" FixedLength="false" />
+        <Property Name="GermanDescription" Type="Edm.String" Nullable="true" MaxLength="400" Unicode="true" FixedLength="false" />
+        <Property Name="JapaneseDescription" Type="Edm.String" Nullable="true" MaxLength="400" Unicode="true" FixedLength="false" />
+        <Property Name="TurkishDescription" Type="Edm.String" Nullable="true" MaxLength="400" Unicode="true" FixedLength="false" />
+        <Property Name="StartDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="EndDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Status" Type="Edm.String" Nullable="true" MaxLength="7" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="DimProductCategory">
+        <Key>
+          <PropertyRef Name="ProductCategoryKey" />
+        </Key>
+        <Property Name="ProductCategoryKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ProductCategoryAlternateKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="EnglishProductCategoryName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishProductCategoryName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchProductCategoryName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <NavigationProperty Name="FactInternetSalesQuota" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimProductCategory" FromRole="DimProductCategory" ToRole="FactInternetSalesQuota" />
+      </EntityType>
+      <EntityType Name="DimProductSubcategory">
+        <Key>
+          <PropertyRef Name="ProductSubcategoryKey" />
+        </Key>
+        <Property Name="ProductSubcategoryKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ProductSubcategoryAlternateKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="EnglishProductSubcategoryName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishProductSubcategoryName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchProductSubcategoryName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="ProductCategoryKey" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="DimPromotion">
+        <Key>
+          <PropertyRef Name="PromotionKey" />
+        </Key>
+        <Property Name="PromotionKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="PromotionAlternateKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="EnglishPromotionName" Type="Edm.String" Nullable="true" MaxLength="255" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishPromotionName" Type="Edm.String" Nullable="true" MaxLength="255" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchPromotionName" Type="Edm.String" Nullable="true" MaxLength="255" Unicode="true" FixedLength="false" />
+        <Property Name="DiscountPct" Type="Edm.Double" Nullable="true" />
+        <Property Name="EnglishPromotionType" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishPromotionType" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchPromotionType" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="EnglishPromotionCategory" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SpanishPromotionCategory" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="FrenchPromotionCategory" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="StartDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="EndDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="MinQty" Type="Edm.Int32" Nullable="true" />
+        <Property Name="MaxQty" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="DimReseller">
+        <Key>
+          <PropertyRef Name="ResellerKey" />
+        </Key>
+        <Property Name="ResellerKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="GeographyKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ResellerAlternateKey" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="Phone" Type="Edm.String" Nullable="true" MaxLength="25" Unicode="true" FixedLength="false" />
+        <Property Name="BusinessType" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        <Property Name="ResellerName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="NumberEmployees" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OrderFrequency" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="false" FixedLength="true" />
+        <Property Name="OrderMonth" Type="Edm.Byte" Nullable="true" />
+        <Property Name="FirstOrderYear" Type="Edm.Int32" Nullable="true" />
+        <Property Name="LastOrderYear" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ProductLine" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="AddressLine1" Type="Edm.String" Nullable="true" MaxLength="60" Unicode="true" FixedLength="false" />
+        <Property Name="AddressLine2" Type="Edm.String" Nullable="true" MaxLength="60" Unicode="true" FixedLength="false" />
+        <Property Name="AnnualSales" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="BankName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="MinPaymentType" Type="Edm.Byte" Nullable="true" />
+        <Property Name="MinPaymentAmount" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="AnnualRevenue" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="YearOpened" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="DimSalesReason">
+        <Key>
+          <PropertyRef Name="SalesReasonKey" />
+        </Key>
+        <Property Name="SalesReasonKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="SalesReasonAlternateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="SalesReasonName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SalesReasonReasonType" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="DimSalesTerritory">
+        <Key>
+          <PropertyRef Name="SalesTerritoryKey" />
+        </Key>
+        <Property Name="SalesTerritoryKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="SalesTerritoryAlternateKey" Type="Edm.Int32" Nullable="true" />
+        <Property Name="SalesTerritoryRegion" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SalesTerritoryCountry" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SalesTerritoryGroup" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <NavigationProperty Name="FactInternetSalesQuota" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimSalesTerritory" FromRole="DimSalesTerritory" ToRole="FactInternetSalesQuota" />
+      </EntityType>
+      <EntityType Name="DimScenario">
+        <Key>
+          <PropertyRef Name="ScenarioKey" />
+        </Key>
+        <Property Name="ScenarioKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ScenarioName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="FactAdditionalInternationalProductDescription">
+        <Key>
+          <PropertyRef Name="ProductKey" />
+          <PropertyRef Name="CultureName" />
+        </Key>
+        <Property Name="ProductKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CultureName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="ProductDescription" Type="Edm.String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="FactCallCenter">
+        <Key>
+          <PropertyRef Name="FactCallCenterID" />
+        </Key>
+        <Property Name="FactCallCenterID" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="DateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="WageType" Type="Edm.String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="Shift" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+        <Property Name="LevelOneOperators" Type="Edm.Int16" Nullable="false" />
+        <Property Name="LevelTwoOperators" Type="Edm.Int16" Nullable="false" />
+        <Property Name="TotalOperators" Type="Edm.Int16" Nullable="false" />
+        <Property Name="Calls" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AutomaticResponses" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Orders" Type="Edm.Int32" Nullable="false" />
+        <Property Name="IssuesRaised" Type="Edm.Int16" Nullable="false" />
+        <Property Name="AverageTimePerIssue" Type="Edm.Int16" Nullable="false" />
+        <Property Name="ServiceGrade" Type="Edm.Double" Nullable="false" />
+      </EntityType>
+      <EntityType Name="FactCurrencyRate">
+        <Key>
+          <PropertyRef Name="CurrencyKey" />
+          <PropertyRef Name="DateKey" />
+        </Key>
+        <Property Name="CurrencyKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AverageRate" Type="Edm.Double" Nullable="false" />
+        <Property Name="EndOfDayRate" Type="Edm.Double" Nullable="false" />
+      </EntityType>
+      <EntityType Name="FactFinance">
+        <Key>
+          <PropertyRef Name="FinanceKey" />
+        </Key>
+        <Property Name="FinanceKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="DateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="OrganizationKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DepartmentGroupKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ScenarioKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AccountKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Amount" Type="Edm.Double" Nullable="false" />
+      </EntityType>
+      <EntityType Name="FactInternetSales">
+        <Key>
+          <PropertyRef Name="SalesOrderNumber" />
+          <PropertyRef Name="SalesOrderLineNumber" />
+        </Key>
+        <Property Name="ProductKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="OrderDateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DueDateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipDateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CustomerKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PromotionKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CurrencyKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="SalesTerritoryKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+        <Property Name="SalesOrderLineNumber" Type="Edm.Byte" Nullable="false" />
+        <Property Name="RevisionNumber" Type="Edm.Byte" Nullable="false" />
+        <Property Name="OrderQuantity" Type="Edm.Int16" Nullable="false" />
+        <Property Name="UnitPrice" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="ExtendedAmount" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="UnitPriceDiscountPct" Type="Edm.Double" Nullable="false" />
+        <Property Name="DiscountAmount" Type="Edm.Double" Nullable="false" />
+        <Property Name="ProductStandardCost" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="TotalProductCost" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="SalesAmount" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="TaxAmt" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="Freight" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="CarrierTrackingNumber" Type="Edm.String" Nullable="true" MaxLength="25" Unicode="true" FixedLength="false" />
+        <Property Name="CustomerPONumber" Type="Edm.String" Nullable="true" MaxLength="25" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="FactInternetSalesReason">
+        <Key>
+          <PropertyRef Name="SalesOrderNumber" />
+          <PropertyRef Name="SalesOrderLineNumber" />
+          <PropertyRef Name="SalesReasonKey" />
+        </Key>
+        <Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+        <Property Name="SalesOrderLineNumber" Type="Edm.Byte" Nullable="false" />
+        <Property Name="SalesReasonKey" Type="Edm.Int32" Nullable="false" />
+      </EntityType>
+      <EntityType Name="FactResellerSales">
+        <Key>
+          <PropertyRef Name="SalesOrderNumber" />
+          <PropertyRef Name="SalesOrderLineNumber" />
+        </Key>
+        <Property Name="ProductKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="OrderDateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DueDateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipDateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ResellerKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="EmployeeKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PromotionKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CurrencyKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="SalesTerritoryKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+        <Property Name="SalesOrderLineNumber" Type="Edm.Byte" Nullable="false" />
+        <Property Name="RevisionNumber" Type="Edm.Byte" Nullable="true" />
+        <Property Name="OrderQuantity" Type="Edm.Int16" Nullable="true" />
+        <Property Name="UnitPrice" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="ExtendedAmount" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="UnitPriceDiscountPct" Type="Edm.Double" Nullable="true" />
+        <Property Name="DiscountAmount" Type="Edm.Double" Nullable="true" />
+        <Property Name="ProductStandardCost" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="TotalProductCost" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="SalesAmount" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="TaxAmt" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="Freight" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="CarrierTrackingNumber" Type="Edm.String" Nullable="true" MaxLength="25" Unicode="true" FixedLength="false" />
+        <Property Name="CustomerPONumber" Type="Edm.String" Nullable="true" MaxLength="25" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="FactSalesQuota">
+        <Key>
+          <PropertyRef Name="SalesQuotaKey" />
+        </Key>
+        <Property Name="SalesQuotaKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="EmployeeKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CalendarYear" Type="Edm.Int16" Nullable="false" />
+        <Property Name="CalendarQuarter" Type="Edm.Byte" Nullable="false" />
+        <Property Name="SalesAmountQuota" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+      </EntityType>
+      <EntityType Name="FactSurveyResponse">
+        <Key>
+          <PropertyRef Name="SurveyResponseKey" />
+        </Key>
+        <Property Name="SurveyResponseKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="DateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CustomerKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ProductCategoryKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="EnglishProductCategoryName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="ProductSubcategoryKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="EnglishProductSubcategoryName" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="ProspectiveBuyer">
+        <Key>
+          <PropertyRef Name="ProspectiveBuyerKey" />
+        </Key>
+        <Property Name="ProspectiveBuyerKey" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="ProspectAlternateKey" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="FirstName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="MiddleName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="LastName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="BirthDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="MaritalStatus" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="true" />
+        <Property Name="Gender" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="EmailAddress" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="YearlyIncome" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="TotalChildren" Type="Edm.Byte" Nullable="true" />
+        <Property Name="NumberChildrenAtHome" Type="Edm.Byte" Nullable="true" />
+        <Property Name="Education" Type="Edm.String" Nullable="true" MaxLength="40" Unicode="true" FixedLength="false" />
+        <Property Name="Occupation" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+        <Property Name="HouseOwnerFlag" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="true" />
+        <Property Name="NumberCarsOwned" Type="Edm.Byte" Nullable="true" />
+        <Property Name="AddressLine1" Type="Edm.String" Nullable="true" MaxLength="120" Unicode="true" FixedLength="false" />
+        <Property Name="AddressLine2" Type="Edm.String" Nullable="true" MaxLength="120" Unicode="true" FixedLength="false" />
+        <Property Name="City" Type="Edm.String" Nullable="true" MaxLength="30" Unicode="true" FixedLength="false" />
+        <Property Name="StateProvinceCode" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="PostalCode" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
+        <Property Name="Phone" Type="Edm.String" Nullable="true" MaxLength="20" Unicode="true" FixedLength="false" />
+        <Property Name="Salutation" Type="Edm.String" Nullable="true" MaxLength="8" Unicode="true" FixedLength="false" />
+        <Property Name="Unknown" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="AdventureWorksDWBuildVersion">
+        <Key>
+          <PropertyRef Name="DBVersion" />
+          <PropertyRef Name="VersionDate" />
+        </Key>
+        <Property Name="DBVersion" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="VersionDate" Type="Edm.DateTime" Nullable="false" />
+      </EntityType>
+      <EntityType Name="DatabaseLog">
+        <Key>
+          <PropertyRef Name="DatabaseLogID" />
+        </Key>
+        <Property Name="DatabaseLogID" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="PostTime" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="DatabaseUser" Type="Edm.String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+        <Property Name="Event" Type="Edm.String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+        <Property Name="Schema" Type="Edm.String" Nullable="true" MaxLength="128" Unicode="true" FixedLength="false" />
+        <Property Name="Object" Type="Edm.String" Nullable="true" MaxLength="128" Unicode="true" FixedLength="false" />
+        <Property Name="TSQL" Type="Edm.String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        <Property Name="XmlEvent" Type="Edm.String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="FactInternetSalesQuota">
+        <Key>
+          <PropertyRef Name="QuotaKey" />
+        </Key>
+        <Property Name="QuotaKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ProductCategoryKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="OrderDateKey" Type="Edm.Int32" Nullable="false" />
+        <Property Name="SalesAmount" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="SalesTerritoryKey" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="DimDate" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimDate" FromRole="FactInternetSalesQuota" ToRole="DimDate" />
+        <NavigationProperty Name="DimProductCategory" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimProductCategory" FromRole="FactInternetSalesQuota" ToRole="DimProductCategory" />
+        <NavigationProperty Name="DimSalesTerritory" Relationship="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimSalesTerritory" FromRole="FactInternetSalesQuota" ToRole="DimSalesTerritory" />
+      </EntityType>
+      <EntityType Name="sysdiagrams">
+        <Key>
+          <PropertyRef Name="diagram_id" />
+        </Key>
+        <Property Name="name" Type="Edm.String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+        <Property Name="principal_id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="diagram_id" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="version" Type="Edm.Int32" Nullable="true" />
+        <Property Name="definition" Type="Edm.Binary" Nullable="true" MaxLength="Max" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="OrdersDetailsView">
+        <Key>
+          <PropertyRef Name="SalesOrderNumber" />
+        </Key>
+        <Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+        <Property Name="OrderDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="ItemsSold" Type="Edm.Int32" Nullable="true" />
+        <Property Name="SalesAmount" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="Country" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="ProductsEnum" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="SalesAmountExtract">
+        <Key>
+          <PropertyRef Name="OrderDate" />
+          <PropertyRef Name="ActualAmount" />
+          <PropertyRef Name="ProductCategory" />
+          <PropertyRef Name="Country" />
+        </Key>
+        <Property Name="TargetAmount" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4" />
+        <Property Name="OrderDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="ActualAmount" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" />
+        <Property Name="ProductCategory" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <Association Name="FK_FactInternetSalesQuota_DimDate">
+        <End Role="DimDate" Type="AdventureWorksDWAZ2008R2XLabsModel.DimDate" Multiplicity="1" />
+        <End Role="FactInternetSalesQuota" Type="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="DimDate">
+            <PropertyRef Name="DateKey" />
+          </Principal>
+          <Dependent Role="FactInternetSalesQuota">
+            <PropertyRef Name="OrderDateKey" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_FactInternetSalesQuota_DimProductCategory">
+        <End Role="DimProductCategory" Type="AdventureWorksDWAZ2008R2XLabsModel.DimProductCategory" Multiplicity="1" />
+        <End Role="FactInternetSalesQuota" Type="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="DimProductCategory">
+            <PropertyRef Name="ProductCategoryKey" />
+          </Principal>
+          <Dependent Role="FactInternetSalesQuota">
+            <PropertyRef Name="ProductCategoryKey" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_FactInternetSalesQuota_DimSalesTerritory">
+        <End Role="DimSalesTerritory" Type="AdventureWorksDWAZ2008R2XLabsModel.DimSalesTerritory" Multiplicity="1" />
+        <End Role="FactInternetSalesQuota" Type="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="DimSalesTerritory">
+            <PropertyRef Name="SalesTerritoryKey" />
+          </Principal>
+          <Dependent Role="FactInternetSalesQuota">
+            <PropertyRef Name="SalesTerritoryKey" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+    </Schema>
+    <Schema Namespace="ExecutiveDashboard.Web" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="AdventureWorksDWAZ2008R2XLabsEntities" p7:LazyLoadingEnabled="true" m:IsDefaultEntityContainer="true" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <FunctionImport Name="GetActualsByCountries" EntitySet="SalesAmountExtractView" ReturnType="Collection(AdventureWorksDWAZ2008R2XLabsModel.SalesAmountExtract)" m:HttpMethod="GET">
+          <Parameter Name="start" Type="Edm.String" Mode="In" />
+          <Parameter Name="end" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="GetDailyActualsVsTargetsByProduct" EntitySet="SalesAmountExtractView" ReturnType="Collection(AdventureWorksDWAZ2008R2XLabsModel.SalesAmountExtract)" m:HttpMethod="GET" />
+        <EntitySet Name="DimAccount" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimAccount" />
+        <EntitySet Name="DimCurrency" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimCurrency" />
+        <EntitySet Name="DimCustomer" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimCustomer" />
+        <EntitySet Name="DimDate" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimDate" />
+        <EntitySet Name="DimDepartmentGroup" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimDepartmentGroup" />
+        <EntitySet Name="DimEmployee" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimEmployee" />
+        <EntitySet Name="DimGeography" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimGeography" />
+        <EntitySet Name="DimOrganization" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimOrganization" />
+        <EntitySet Name="DimProduct" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimProduct" />
+        <EntitySet Name="DimProductCategory" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimProductCategory" />
+        <EntitySet Name="DimProductSubcategory" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimProductSubcategory" />
+        <EntitySet Name="DimPromotion" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimPromotion" />
+        <EntitySet Name="DimReseller" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimReseller" />
+        <EntitySet Name="DimSalesReason" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimSalesReason" />
+        <EntitySet Name="DimSalesTerritory" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimSalesTerritory" />
+        <EntitySet Name="DimScenario" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DimScenario" />
+        <EntitySet Name="FactAdditionalInternationalProductDescription" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactAdditionalInternationalProductDescription" />
+        <EntitySet Name="FactCallCenter" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactCallCenter" />
+        <EntitySet Name="FactCurrencyRate" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactCurrencyRate" />
+        <EntitySet Name="FactFinance" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactFinance" />
+        <EntitySet Name="FactInternetSales" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSales" />
+        <EntitySet Name="FactInternetSalesReason" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesReason" />
+        <EntitySet Name="FactResellerSales" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactResellerSales" />
+        <EntitySet Name="FactSalesQuota" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactSalesQuota" />
+        <EntitySet Name="FactSurveyResponse" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactSurveyResponse" />
+        <EntitySet Name="ProspectiveBuyer" EntityType="AdventureWorksDWAZ2008R2XLabsModel.ProspectiveBuyer" />
+        <EntitySet Name="AdventureWorksDWBuildVersion" EntityType="AdventureWorksDWAZ2008R2XLabsModel.AdventureWorksDWBuildVersion" />
+        <EntitySet Name="DatabaseLog" EntityType="AdventureWorksDWAZ2008R2XLabsModel.DatabaseLog" />
+        <EntitySet Name="FactInternetSalesQuota" EntityType="AdventureWorksDWAZ2008R2XLabsModel.FactInternetSalesQuota" />
+        <EntitySet Name="sysdiagrams" EntityType="AdventureWorksDWAZ2008R2XLabsModel.sysdiagrams" />
+        <EntitySet Name="OrdersDetailsView" EntityType="AdventureWorksDWAZ2008R2XLabsModel.OrdersDetailsView" />
+        <EntitySet Name="SalesAmountExtractView" EntityType="AdventureWorksDWAZ2008R2XLabsModel.SalesAmountExtract" />
+        <AssociationSet Name="FK_FactInternetSalesQuota_DimDate" Association="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimDate">
+          <End Role="DimDate" EntitySet="DimDate" />
+          <End Role="FactInternetSalesQuota" EntitySet="FactInternetSalesQuota" />
+        </AssociationSet>
+        <AssociationSet Name="FK_FactInternetSalesQuota_DimProductCategory" Association="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimProductCategory">
+          <End Role="DimProductCategory" EntitySet="DimProductCategory" />
+          <End Role="FactInternetSalesQuota" EntitySet="FactInternetSalesQuota" />
+        </AssociationSet>
+        <AssociationSet Name="FK_FactInternetSalesQuota_DimSalesTerritory" Association="AdventureWorksDWAZ2008R2XLabsModel.FK_FactInternetSalesQuota_DimSalesTerritory">
+          <End Role="DimSalesTerritory" EntitySet="DimSalesTerritory" />
+          <End Role="FactInternetSalesQuota" EntitySet="FactInternetSalesQuota" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

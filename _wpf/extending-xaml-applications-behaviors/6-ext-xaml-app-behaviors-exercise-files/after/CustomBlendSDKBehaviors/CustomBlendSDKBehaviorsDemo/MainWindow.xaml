@@ -1,0 +1,46 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:CustomBlendBehaviors="clr-namespace:CustomBlendBehaviors;assembly=CustomBlendBehaviors"
+        xmlns:local="clr-namespace:CustomBlendSDKBehaviorsDemo" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        x:Class="CustomBlendSDKBehaviorsDemo.MainWindow"
+        Title="MainWindow"
+        Height="350"
+        Width="525">
+    <Window.Resources>
+    	<DataTemplate x:Key="PersonTemplate">
+    		<TextBlock Text="{Binding Name}" >
+    			<i:Interaction.Triggers>
+    				<local:EmployeeTrigger BossName="Homer">
+    					<ei:ChangePropertyAction PropertyName="Foreground">
+    						<ei:ChangePropertyAction.Value>
+    							<SolidColorBrush Color="#FFF30B0B"/>
+    						</ei:ChangePropertyAction.Value>
+    					</ei:ChangePropertyAction>
+    				</local:EmployeeTrigger>
+    			</i:Interaction.Triggers>
+    		</TextBlock>
+    	</DataTemplate>
+    </Window.Resources>
+	<Grid>
+		<TextBox HorizontalAlignment="Left"
+			Height="23"
+			Margin="32,24,0,0"
+			TextWrapping="Wrap"
+			Text="TextBox"
+			VerticalAlignment="Top"
+			Width="120">
+			<i:Interaction.Behaviors>
+				<CustomBlendBehaviors:NumericInputBehavior EnableDecimalInput="True" />
+			</i:Interaction.Behaviors>
+		</TextBox>
+		<ListBox ItemsSource="{Binding Persons, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+			ItemTemplate="{StaticResource PersonTemplate}"
+			HorizontalAlignment="Left"
+			Height="210"
+			Margin="32,71,0,0"
+			VerticalAlignment="Top"
+			Width="173" />
+
+	</Grid>
+</Window>

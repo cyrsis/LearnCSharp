@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTypes>
+  <DataType>
+    <Name>object</Name>
+  </DataType>
+  <DataType>
+    <Name>bool</Name>
+  </DataType>
+  <DataType>
+    <Name>char</Name>
+  </DataType>
+  <DataType>
+    <Name>short</Name>
+  </DataType>
+  <DataType>
+    <Name>int</Name>
+  </DataType>
+  <DataType>
+    <Name>long</Name>
+  </DataType>
+  <DataType>
+    <Name>single</Name>
+  </DataType>
+  <DataType>
+    <Name>double</Name>
+  </DataType>
+  <DataType>
+    <Name>decimal</Name>
+  </DataType>
+  <DataType>
+    <Name>DateTime</Name>
+  </DataType>
+  <DataType>
+    <Name>string</Name>
+  </DataType>
+</DataTypes>

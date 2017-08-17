@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPFListBox.frmListBoxFormatConverter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:WPFComponents;assembly=WPFComponents"
+        Title="List Box Formatting using ValueConverter"
+        WindowStartupLocation="CenterScreen"
+        Height="390"
+        Width="682">
+  <Window.Resources>
+    <src:XmlElementToDecimalConverter x:Key="sdConvert" />
+    <XmlDataProvider x:Key="xmlProducts"
+                     Source="/Xml/Product.xml"
+                     XPath="Products/Product"></XmlDataProvider>
+  </Window.Resources>
+  <Grid>
+    <ListBox Name="lstProducts"
+             ItemsSource="{Binding Source={StaticResource xmlProducts}}"
+             IsSynchronizedWithCurrentItem="True">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <Image Margin="8" Source="{Binding XPath=Logo}"
+                   Width="100"></Image>
+            <Label Width="250"
+                   Content="{Binding XPath=ProductName}"></Label>
+            <Label Width="100" ContentStringFormat="{}{0:C}"
+                   Content="{Binding XPath=Price, 
+                   Converter={StaticResource sdConvert}}"></Label>
+          </StackPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+  </Grid>
+</Window>

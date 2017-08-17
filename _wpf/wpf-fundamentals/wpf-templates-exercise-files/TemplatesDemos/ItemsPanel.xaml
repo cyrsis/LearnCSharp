@@ -1,0 +1,22 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+<ListBox ItemsSource="{x:Static Fonts.SystemFontFamilies}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+  <ListBox.ItemsPanel>
+    <ItemsPanelTemplate> 
+      <WrapPanel Orientation="Horizontal" />
+    </ItemsPanelTemplate>    
+  </ListBox.ItemsPanel>
+
+  <ListBox.ItemTemplate>
+    <DataTemplate>
+      <TextBlock Text="{Binding}" FontFamily="{Binding}" FontSize="20" />
+    </DataTemplate>
+  </ListBox.ItemTemplate>
+
+</ListBox>
+
+
+</Page>
+

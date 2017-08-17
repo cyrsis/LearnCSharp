@@ -1,0 +1,142 @@
+﻿<Window x:Class="WPF_Tile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:PDSA.WPF;assembly=PDSA.WPF"
+        FontFamily="Segoe UI"
+        WindowStartupLocation="CenterScreen"
+        Title="Test PDSA Tile User Control"
+        Height="650"
+        Width="570">
+  <Window.Resources>
+    <!-- *********************** -->
+    <!-- **    Tile Styles    ** -->
+    <!-- *********************** -->
+    <!-- A Large Tile -->
+    <Style TargetType="my:PDSAucTile"
+           x:Key="tileLarge">
+      <Setter Property="Width"
+              Value="240" />
+      <Setter Property="Height"
+              Value="120" />
+      <Setter Property="Margin"
+              Value="8" />
+      <Setter Property="Background"
+              Value="DarkSlateGray" />
+    </Style>
+    <!-- A Small Tile -->
+    <Style TargetType="my:PDSAucTile"
+           x:Key="tileSmall"
+           BasedOn="{StaticResource tileLarge}">
+      <Setter Property="Width"
+              Value="120" />
+      <Setter Property="Height"
+              Value="120" />
+    </Style>
+    <Style TargetType="Button">
+      <Setter Property="Margin"
+              Value="8" />
+      <Setter Property="Padding"
+              Value="6" />
+    </Style>
+    <Style TargetType="TextBlock">
+      <Setter Property="Margin"
+              Value="4" />
+    </Style>
+    <Style TargetType="GroupBox">
+      <Setter Property="Margin"
+              Value="6" />
+    </Style>
+  </Window.Resources>
+  <Grid Background="Gray">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <GroupBox Header="PDSA Tiles">
+      <WrapPanel Orientation="Horizontal"
+                 VerticalAlignment="Top">
+        <my:PDSAucTile Text="Computer Cleaner"
+                       Name="tileComputerCleaner"
+                       ViewName="ComputerCleanerView"
+                       Click="tile_Click"
+                       ToolTip="Click here to run the Computer Cleaner"
+                       Style="{StaticResource tileLarge}"
+                       ImageUri="/Images-Tiles/ComputerCleaner.png" />
+        <my:PDSAucTile Text="Convert Color"
+                       Name="tileConvertColor"
+                       ViewName="ConvertColorView"
+                       Click="tile_Click"
+                       ToolTip="Click here to run the Convert Color Utility"
+                       Style="{StaticResource tileLarge}"
+                       ImageUri="/Images-Tiles/ConvertColor.png" />
+        <my:PDSAucTile Text="License"
+                       Name="tileLicense"
+                       ViewName="LicenseView"
+                       Click="tile_Click"
+                       ToolTip="Click here to License this software"
+                       Style="{StaticResource tileLarge}"
+                       ImageUri="/Images-Tiles/License.png" />
+        <my:PDSAucTile Text="Project Cleaner"
+                       Name="tileProjectCleaner"
+                       ViewName="ProjectCleanerView"
+                       Click="tile_Click"
+                       ToolTip="Click here to run the Project Cleaner"
+                       Style="{StaticResource tileLarge}"
+                       ImageUri="/Images-Tiles/ProjectCleaner.png" />
+        <my:PDSAucTile Text="Property Builder"
+                       Name="tilePropertyBuilder"
+                       ViewName="PropertyBuilderView"
+                       Click="tile_Click"
+                       ToolTip="Click here to run the Property Builder"
+                       Style="{StaticResource tileSmall}"
+                       ImageUri="/Images-Tiles/PropertyBuilder.png" />
+        <my:PDSAucTile Text="XML Builder"
+                       Name="tileXmlBuilder"
+                       ViewName="XMLBuilderView"
+                       Click="tile_Click"
+                       ToolTip="Click here to run the XML Builder"
+                       Style="{StaticResource tileSmall}"
+                       ImageUri="/Images-Tiles/XMLBuilder.png" />
+      </WrapPanel>
+    </GroupBox>
+    <GroupBox Grid.Row="1"
+              Header="Tile Information">
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Text" />
+        <TextBlock Grid.Row="0"
+                   Grid.Column="1"
+                   Name="tbText" />
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Text="ViewName" />
+        <TextBlock Grid.Row="1"
+                   Grid.Column="1"
+                   Name="tbViewName" />
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Text="ImageUri" />
+        <TextBlock Grid.Row="2"
+                   Grid.Column="1"
+                   Name="tbImageUri" />
+        <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Text="ToolTip" />
+        <TextBlock Grid.Row="3"
+                   Grid.Column="1"
+                   Name="tbToolTip" />
+      </Grid>
+    </GroupBox>
+  </Grid>
+</Window>

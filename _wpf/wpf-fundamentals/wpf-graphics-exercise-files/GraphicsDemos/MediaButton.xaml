@@ -1,0 +1,68 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" > 
+
+  <Page.Resources>
+    <DrawingBrush x:Key="filmEdgeBrush" TileMode="Tile" Viewbox="0,0,8,12" Viewport="0,0,8,12" ViewportUnits="Absolute" ViewboxUnits="Absolute">
+      <DrawingBrush.Drawing>
+        <GeometryDrawing Brush="Black">
+          <GeometryDrawing.Geometry>
+            <CombinedGeometry GeometryCombineMode="Xor">
+              <CombinedGeometry.Geometry1>
+                <RectangleGeometry Rect="0,0,8,12" />
+              </CombinedGeometry.Geometry1>
+              <CombinedGeometry.Geometry2>
+            <RectangleGeometry Rect="2,2,4,4" />
+              </CombinedGeometry.Geometry2>
+            </CombinedGeometry>
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+      </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <EllipseGeometry x:Key="geom1" RadiusX="35" RadiusY="35" Center="50,40" />
+    <RectangleGeometry x:Key="geom2" Rect="0,20,100,40" />
+
+  </Page.Resources>
+
+<StackPanel Orientation="Horizontal">
+  <StackPanel Orientation="Vertical" Margin="10,0" >
+  <StackPanel Orientation="Horizontal" Margin="10,2" >
+    <Button>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+          <ColumnDefinition />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="0" Width="8" Fill="{StaticResource filmEdgeBrush}" />
+        <Rectangle Grid.Column="2" Width="8" Fill="{StaticResource filmEdgeBrush}" />
+
+        <MediaElement Grid.Column="1" Width="100" Height="75" Source="c:\Users\Public\Videos\Sample Videos\Lake.wmv" IsMuted="True" >
+          <MediaElement.LayoutTransform>
+            <RotateTransform Angle="0" />
+          </MediaElement.LayoutTransform>
+
+<!--
+          <MediaElement.Triggers>
+            <EventTrigger RoutedEvent="MediaElement.Loaded">
+              <BeginStoryboard>
+                <Storyboard>
+                  <DoubleAnimation By="360" Duration="0:1:0" Storyboard.TargetProperty="(MediaElement.LayoutTransform).(RotateTransform.Angle)" />
+                </Storyboard>
+              </BeginStoryboard>
+            </EventTrigger>
+          </MediaElement.Triggers>
+-->
+        </MediaElement>
+
+        <TextBlock Grid.Column="1" Text="Click me!" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <TextBlock.BitmapEffect> <OuterGlowBitmapEffect GlowColor="White" GlowSize="10" /> </TextBlock.BitmapEffect>
+        </TextBlock>
+       </Grid>
+    </Button>
+
+
+  </StackPanel>
+  </StackPanel>
+
+</StackPanel>
+</Page>

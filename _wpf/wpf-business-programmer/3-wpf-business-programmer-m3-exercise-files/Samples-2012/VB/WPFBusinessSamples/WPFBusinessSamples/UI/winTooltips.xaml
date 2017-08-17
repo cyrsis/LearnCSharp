@@ -1,0 +1,43 @@
+﻿<Window x:Class="winTooltips"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tooltip Examples"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight">
+  <Window.Resources>
+    <Style TargetType="TextBlock">
+      <Setter Property="Margin"
+              Value="4" />
+      <Setter Property="Width"
+              Value="100" />
+    </Style>
+    <Style TargetType="TextBox">
+      <Setter Property="Margin"
+              Value="4" />
+      <Setter Property="MinWidth"
+              Value="200" />
+    </Style>
+  </Window.Resources>
+  <StackPanel>
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Text="First Name" />
+      <TextBox Name="txtFirst"
+               ToolTip="Please enter a First Name" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Text="Last Name" />
+      <TextBox Name="txtLast"
+               ToolTip="Please enter a Last Name" />
+    </StackPanel>
+    <StackPanel HorizontalAlignment="Left"
+                Orientation="Horizontal">
+      <TextBlock Text="" />
+      <Button Name="btnClose"
+              HorizontalAlignment="Left"
+              Width="80"
+              Style="{StaticResource BasicButton}"
+              Content="Close"
+              Click="btnClose_Click" />
+    </StackPanel>
+  </StackPanel>
+</Window>

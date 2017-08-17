@@ -1,0 +1,22 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <FontFamily x:Key="font">Comic Sans MS</FontFamily>
+    <FontFamily x:Key="fontWPF">Comic Sans MS</FontFamily>
+
+    <Color x:Key="dashboardcolor1">#FFDB80FE</Color>
+    <Color x:Key="dashboardcolor2">#FFF0EDE7</Color>
+    <Color x:Key="backgroundcolor1">#FF7E3EBF</Color>
+    <Color x:Key="backgroundcolor2">#FFFFF700</Color>
+    <Color x:Key="textcolor">#FFFE0300</Color>
+    <Color x:Key="actualcolor">#FF8E51FE</Color>
+    <Color x:Key="budgetedcolor">#FF494345</Color>
+    <Color x:Key="overcolor">#FF00FEEA</Color>
+    <Color x:Key="undercolor">#FFFE0300</Color>
+    <Color x:Key="bikescolor">#FFFE6200</Color>
+    <Color x:Key="componenetscolor">#FFFEFE00</Color>
+    <Color x:Key="clothingcolor">#FFFD6674</Color>
+    <Color x:Key="accessoriescolor">#FF00FEF0</Color>
+
+</ResourceDictionary>

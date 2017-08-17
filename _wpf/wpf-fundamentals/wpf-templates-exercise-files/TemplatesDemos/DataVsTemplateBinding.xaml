@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+<Button Width="75" Height="35" Background="Blue">
+  <Button.Template>
+    <ControlTemplate TargetType="{x:Type Button}">
+      <Ellipse Fill="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" />
+    </ControlTemplate>
+  </Button.Template>
+
+  _Click me
+</Button>
+
+
+</Page>
+

@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- ****************************************** -->
+  <!--   Linear Gradient Brushes   -->
+  <!-- ****************************************** -->
+  <LinearGradientBrush x:Key="SampleBrush"
+                       StartPoint="0,0"
+                       EndPoint="0,1">
+    <GradientStop Offset="0"
+                  Color="#FF528CF4" />
+    <GradientStop Offset="0.5"
+                  Color="#FFA7C4F7" />
+    <GradientStop Offset="1"
+                  Color="#FFCADDFD" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="SampleBrush2"
+                       StartPoint="0,0"
+                       EndPoint="0,1">
+    <GradientStop Offset="0"
+                  Color="Gray" />
+    <GradientStop Offset="0.5"
+                  Color="LightGray" />
+    <GradientStop Offset="1"
+                  Color="White" />
+  </LinearGradientBrush>
+  <!-- ****************************************** -->
+  <!--   Large Buttons  -->
+  <!-- ****************************************** -->
+  <Style TargetType="Button">
+    <Setter Property="Margin"
+            Value="4"></Setter>
+    <Setter Property="MinWidth"
+            Value="220"></Setter>
+    <Setter Property="VerticalAlignment"
+            Value="Top"></Setter>
+    <Setter Property="HorizontalAlignment"
+            Value="Left"></Setter>
+  </Style>
+  <!-- ****************************************** -->
+  <!--   Grid -->
+  <!-- ****************************************** -->
+  <Style TargetType="Grid">
+    <Setter Property="Background"
+            Value="{StaticResource SampleBrush}"></Setter>
+  </Style>
+</ResourceDictionary>

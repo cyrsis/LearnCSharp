@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="Windows8Shell.ucStartGroup1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:PDSA.WPF;assembly=PDSA.WPF"
+             mc:Ignorable="d"
+             d:DesignHeight="500"
+             d:DesignWidth="800">
+  <UserControl.Resources>
+    <SolidColorBrush x:Key="tileBackground"
+                     Color="DarkSlateGray" />
+  </UserControl.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <my:PDSAucTile Grid.Row="0"
+                   Grid.Column="0"
+                   ViewName="ProductView"
+                   ToolTip="Click here to launch the Product Maintenance Screen"
+                   Click="Tile_Click"
+                   Text="Products"
+                   Background="{StaticResource tileBackground}"
+                   Style="{StaticResource largeTile}"
+                   ImageUri="/Images-Tiles/PropertyBuilder.png" />
+    <my:PDSAucTile Grid.Row="1"
+                   Grid.Column="0"
+                   Click="Tile_Click"
+                   ViewName="ComputerCleanerView"
+                   Text="Computer Cleaner"
+                   Background="{StaticResource tileBackground}"
+                   Style="{StaticResource largeTile}"
+                   ImageUri="/Images-Tiles/ComputerCleaner.png" />
+    <my:PDSAucTile Grid.Row="2"
+                   Grid.Column="0"
+                   Click="Tile_Click"
+                   ViewName="ProjectCleanerView"
+                   Text="Project Cleaner"
+                   Background="{StaticResource tileBackground}"
+                   Style="{StaticResource largeTile}"
+                   ImageUri="/Images-Tiles/ProjectCleaner.png" />
+    <my:PDSAucTile Grid.Row="0"
+                   Grid.Column="1"
+                   Click="Tile_Click"
+                   ViewName="XMLBuilderView"
+                   Text="XML Builder"
+                   Background="{StaticResource tileBackground}"
+                   Style="{StaticResource largeTile}"
+                   ImageUri="/Images-Tiles/XmlBuilder.png" />
+    <my:PDSAucTile Grid.Row="1"
+                   Grid.Column="1"
+                   Click="Tile_Click"
+                   ViewName="ConvertColorView"
+                   Text="Color to RGB"
+                   Background="{StaticResource tileBackground}"
+                   Style="{StaticResource largeTile}"
+                   ImageUri="/Images-Tiles/ConvertColor.png" />
+    <my:PDSAucTile Grid.Row="2"
+                   Grid.Column="1"
+                   Click="Tile_Click"
+                   ViewName="ADReaderView"
+                   Text="AD Reader"
+                   Background="{StaticResource tileBackground}"
+                   Style="{StaticResource largeTile}"
+                   ImageUri="/Images-Tiles/ActiveDirectoryReader.png" />
+    <StackPanel Grid.Row="0"
+                Grid.Column="2"
+                Orientation="Horizontal">
+      <my:PDSAucTile Text="App Builder"
+                     Click="Tile_Click"
+                     ViewName="AppBuilderView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/ApplicationBuilder.png" />
+      <my:PDSAucTile Text="Config Manager"
+                     ViewName="ConfigManagerView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/ConfigurationManager.png" />
+    </StackPanel>
+    <StackPanel Grid.Row="1"
+                Grid.Column="2"
+                Orientation="Horizontal">
+      <my:PDSAucTile Text="DB Documenter"
+                     Click="Tile_Click"
+                     ViewName="DBDocumenterView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/DatabaseDocumenter.png" />
+      <my:PDSAucTile Text="Message Editor"
+                     Click="Tile_Click"
+                     ViewName="MessageEditorView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/MessageEditor.png" />
+    </StackPanel>
+  </Grid>
+</UserControl>

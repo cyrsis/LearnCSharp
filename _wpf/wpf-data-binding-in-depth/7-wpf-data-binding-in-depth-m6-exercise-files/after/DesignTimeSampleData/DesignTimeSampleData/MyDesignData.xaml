@@ -1,0 +1,4 @@
+﻿<data:Customer xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:data="clr-namespace:Zza.Data;assembly=Zza.Data" Id="F0E52094-4358-43D1-923B-B2E0C99F69C9" FirstName="Brian">
+</data:Customer>

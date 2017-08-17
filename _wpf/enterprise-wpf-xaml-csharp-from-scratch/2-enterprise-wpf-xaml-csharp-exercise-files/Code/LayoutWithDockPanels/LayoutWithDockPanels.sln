@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutWithDockPanels", "LayoutWithDockPanels\LayoutWithDockPanels.csproj", "{3EF5A251-F73B-49EF-8881-DEDF2C394BEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EF5A251-F73B-49EF-8881-DEDF2C394BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF5A251-F73B-49EF-8881-DEDF2C394BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF5A251-F73B-49EF-8881-DEDF2C394BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF5A251-F73B-49EF-8881-DEDF2C394BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

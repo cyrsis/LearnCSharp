@@ -1,0 +1,18 @@
+﻿<Window x:Class="Brushes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+    	<Rectangle HorizontalAlignment="Left" Height="129.527" Margin="82.811,69.457,0,0" Stroke="Black" VerticalAlignment="Top" Width="183.268">
+    		<Rectangle.Fill>
+    			<RadialGradientBrush>
+    				<GradientStop Color="#FFBD2929" Offset="0"/>
+    				<GradientStop Color="White" Offset="1"/>
+    				<GradientStop Color="#FF8090D8" Offset="0.414"/>
+    				<GradientStop Color="#FF172C8F" Offset="0.791"/>
+    			</RadialGradientBrush>
+    		</Rectangle.Fill>
+    	</Rectangle>
+        
+    </Grid>
+</Window>

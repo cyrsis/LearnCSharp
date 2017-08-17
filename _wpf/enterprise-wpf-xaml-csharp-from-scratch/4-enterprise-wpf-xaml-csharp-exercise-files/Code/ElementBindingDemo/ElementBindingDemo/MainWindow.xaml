@@ -1,0 +1,15 @@
+﻿<Window x:Class="ElementBindingDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+      <StackPanel Orientation="Horizontal">
+         <Slider Name="mySlider"
+                 Minimum="0"
+                 Maximum="100"
+                 Width="300" />
+         <TextBlock Margin="5"
+                    Text="{Binding Value, ElementName=mySlider}" />
+      </StackPanel>
+   </Grid>
+</Window>

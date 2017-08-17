@@ -1,0 +1,87 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:VSMHideShow"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        x:Class="VSMHideShow.MainWindow"
+        Title="MainWindow"
+        Height="350"
+        Width="525">
+    <Grid x:Name="LayoutRoot">
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="CollapsedStates">
+    			<VisualStateGroup.Transitions>
+    				<VisualTransition GeneratedDuration="0:0:0.5" To="Normal">
+    					<VisualTransition.GeneratedEasingFunction>
+    						<CubicEase EasingMode="EaseInOut"/>
+    					</VisualTransition.GeneratedEasingFunction>
+    				</VisualTransition>
+    				<VisualTransition GeneratedDuration="0:0:0.5" To="Collapsed">
+    					<VisualTransition.GeneratedEasingFunction>
+    						<CubicEase EasingMode="EaseInOut"/>
+    					</VisualTransition.GeneratedEasingFunction>
+    				</VisualTransition>
+    			</VisualStateGroup.Transitions>
+    			<VisualState x:Name="Normal"/>
+    			<VisualState x:Name="Collapsed">
+    				<Storyboard>
+    					<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="TopBar">
+    						<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    					</DoubleAnimationUsingKeyFrames>
+    					<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="BottomBar">
+    						<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    					</DoubleAnimationUsingKeyFrames>
+    					<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="CollapseButton">
+    						<EasingDoubleKeyFrame KeyTime="0" Value="-180"/>
+    					</DoubleAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
+        <Grid x:Name="MainContent">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"
+                    MinHeight="0" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto"
+                    MinHeight="0" />
+            </Grid.RowDefinitions>
+            <Rectangle x:Name="TopBar"
+                Fill="#C1C1C5"
+                Stroke="Black"
+                Height="50" />
+            <Rectangle x:Name="BottomBar"
+                Fill="#C1C1C5"
+                Grid.Row="2"
+                Stroke="Black"
+                Height="50" />
+        </Grid>
+        <Image x:Name="CollapseButton"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="Collapse-Light-Theme.png"
+            Stretch="None"
+            RenderTransformOrigin="0.5,0.5"
+            Margin="485,285,0,0">
+        	<i:Interaction.Triggers>
+        		<i:EventTrigger EventName="MouseLeftButtonDown">
+        			<ei:CallMethodAction TargetObject="{Binding Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainWindow}}}" MethodName="ToggleIsCollapsed"/>
+        		</i:EventTrigger>
+        		<ei:DataTrigger Binding="{Binding IsCollapsed, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainWindow}}}" Value="False">
+        			<ei:GoToStateAction StateName="Normal"/>
+        		</ei:DataTrigger>
+        		<ei:DataTrigger Binding="{Binding IsCollapsed, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainWindow}}}" Value="True">
+        			<ei:GoToStateAction StateName="Collapsed"/>
+        		</ei:DataTrigger>
+        	</i:Interaction.Triggers>
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+    </Grid>
+</Window>

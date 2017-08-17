@@ -1,0 +1,12 @@
+<OutOfBrowserSettings ShortName="Telerik Sales Dashboard" EnableGPUAcceleration="True" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>A short description of the application.</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="Telerik Sales Dashboard" Height="480" Width="640" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons>
+    <Icon Size="16,16">Images/DashIco-16x16.png</Icon>
+    <Icon Size="32,32">Images/DashIco-32x32.png</Icon>
+    <Icon Size="48,48">Images/DashIco-48x48.png</Icon>
+    <Icon Size="128,128">Images/DashIco-128x128.png</Icon>
+  </OutOfBrowserSettings.Icons>
+</OutOfBrowserSettings>

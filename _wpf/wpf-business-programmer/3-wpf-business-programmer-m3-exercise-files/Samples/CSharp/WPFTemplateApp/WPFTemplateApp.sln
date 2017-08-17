@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTemplateApp", "WPFTemplateApp\WPFTemplateApp.csproj", "{62B15F06-D5CC-41F7-BFDF-E5FFE2B1FEFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62B15F06-D5CC-41F7-BFDF-E5FFE2B1FEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B15F06-D5CC-41F7-BFDF-E5FFE2B1FEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B15F06-D5CC-41F7-BFDF-E5FFE2B1FEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B15F06-D5CC-41F7-BFDF-E5FFE2B1FEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

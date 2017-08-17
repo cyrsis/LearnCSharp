@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="Windows8Shell.ucStartGroup3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:PDSA.WPF;assembly=PDSA.WPF"
+             mc:Ignorable="d"
+             d:DesignHeight="500"
+             d:DesignWidth="800">
+  <UserControl.Resources>
+    <SolidColorBrush x:Key="tileBackground"
+                     Color="DarkSlateGray" />
+  </UserControl.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0"
+                Grid.Column="0"
+                Orientation="Horizontal">
+      <my:PDSAucTile Text="Menu Items"
+                     Click="Tile_Click"
+                     ViewName="MenuItemsView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/Menu.jpg" />
+      <my:PDSAucTile Text="Logs"
+                     Click="Tile_Click"
+                     ViewName="LogsView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/Log.jpg" />
+    </StackPanel>
+    <StackPanel Grid.Row="1"
+                Grid.Column="0"
+                Orientation="Horizontal">
+      <my:PDSAucTile Text="License"
+                     Click="Tile_Click"
+                     ViewName="LicenseView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/License.png" />
+      <my:PDSAucTile Text="Lookup Tables"
+                     Click="Tile_Click"
+                     ViewName="LookupTablesView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/XmlBuilder.png" />
+    </StackPanel>
+    <StackPanel Grid.Row="2"
+                Grid.Column="0"
+                Orientation="Horizontal">
+      <my:PDSAucTile Text="Settings"
+                     Click="Tile_Click"
+                     ViewName="SettingsView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/ConvertColor.png" />
+      <my:PDSAucTile Text="Maintenance"
+                     Click="Tile_Click"
+                     ViewName="MaintenanceView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/ActiveDirectoryReader.png" />
+    </StackPanel>
+    <StackPanel Grid.Row="0"
+                Grid.Column="1"
+                Orientation="Horizontal">
+      <my:PDSAucTile Text="Users to Roles"
+                     Click="Tile_Click"
+                     ViewName="UsersToRolesView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/MapToRoles.jpg" />
+      <my:PDSAucTile Text="Perms to Roles"
+                     Click="Tile_Click"
+                     ViewName="PermsToRolesView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/MapToUsers.jpg" />
+    </StackPanel>
+    <StackPanel Grid.Row="1"
+                Grid.Column="1"
+                Orientation="Horizontal">
+      <my:PDSAucTile Text="Permission Cat."
+                     Click="Tile_Click"
+                     ViewName="PermissionCategoriesView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/PermCats.jpg" />
+      <my:PDSAucTile Text="Security Settings"
+                     Click="Tile_Click"
+                     ViewName="SecuritySettingsView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/Security.jpg" />
+    </StackPanel>
+    <StackPanel Grid.Row="2"
+                Grid.Column="1"
+                Orientation="Horizontal">
+      <my:PDSAucTile Text="Haystack"
+                     Click="Tile_Click"
+                     ViewName="HaystackView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/Haystack_alone.gif" />
+      <my:PDSAucTile Text="Framework Utils"
+                     Click="Tile_Click"
+                     ViewName="FrameworkUtilitiesView"
+                     Background="{StaticResource tileBackground}"
+                     Style="{StaticResource smallTile}"
+                     ImageUri="/Images-Tiles/FrameworkUtilities.png" />
+    </StackPanel>
+  </Grid>
+</UserControl>

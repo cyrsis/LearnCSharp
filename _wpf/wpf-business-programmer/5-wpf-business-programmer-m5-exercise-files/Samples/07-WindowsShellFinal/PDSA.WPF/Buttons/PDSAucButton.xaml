@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="PDSA.WPF.PDSAucButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="100"
+             d:DesignWidth="100">
+  <Border Name="pdsaButtonBorderStyle"
+          Style="{DynamicResource pdsaButtonBorderStyle}"
+          MouseDown="pdsaButtonBorderStyle_MouseDown"
+          MouseUp="pdsaButtonBorderStyle_MouseUp"
+          MouseEnter="pdsaButtonBorderStyle_MouseEnter"
+          MouseLeave="pdsaButtonBorderStyle_MouseLeave">
+    <TextBlock Text="{Binding Path=Text}"
+               Name="tbText"
+               Style="{DynamicResource pdsaButtonTextBlockStyle}" />
+  </Border>
+</UserControl>

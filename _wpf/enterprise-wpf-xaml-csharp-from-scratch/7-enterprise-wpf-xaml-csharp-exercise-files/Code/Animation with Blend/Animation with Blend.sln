@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animation with Blend", "Animation with Blend\Animation with Blend.csproj", "{bf606ae0-4b79-44cd-8a19-fcff07f2e7d9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF606AE0-4B79-44CD-8A19-FCFF07F2E7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF606AE0-4B79-44CD-8A19-FCFF07F2E7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF606AE0-4B79-44CD-8A19-FCFF07F2E7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF606AE0-4B79-44CD-8A19-FCFF07F2E7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

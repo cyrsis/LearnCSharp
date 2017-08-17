@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69FA9D5C-CCB5-44FE-A5DD-8AF0F437AAF5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TabControls</RootNamespace>
+    <AssemblyName>TabControls</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ProductView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="ProductView.xaml.cs">
+      <DependentUpon>ProductView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProductViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zza.Data\Zza.Data.csproj">
+      <Project>{bb1e80de-e6d1-4e29-bc2d-db66b81163c5}</Project>
+      <Name>Zza.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\amadeus.jpg" />
+    <Resource Include="Images\applejuice.jpg" />
+    <Resource Include="Images\aquah2o.jpg" />
+    <Resource Include="Images\asianchicken.jpg" />
+    <Resource Include="Images\beverage.jpg" />
+    <Resource Include="Images\bigcountrysalad.jpg" />
+    <Resource Include="Images\caesarsalad.jpg" />
+    <Resource Include="Images\caesersalad.jpg" />
+    <Resource Include="Images\cascadefog.jpg" />
+    <Resource Include="Images\checkmark.jpg" />
+    <Resource Include="Images\chefsalad.jpg" />
+    <Resource Include="Images\chickencaesarsalad.jpg" />
+    <Resource Include="Images\chickencaesersalad.jpg" />
+    <Resource Include="Images\chickencoolness.jpg" />
+    <Resource Include="Images\cola.jpg" />
+    <Resource Include="Images\dietcola.jpg" />
+    <Resource Include="Images\dr.popper.jpg" />
+    <Resource Include="Images\drpopper.jpg" />
+    <Resource Include="Images\energade.jpg" />
+    <Resource Include="Images\farmersalad.jpg" />
+    <Resource Include="Images\gardengallop.jpg" />
+    <Resource Include="Images\gardensalad.jpg" />
+    <Resource Include="Images\grecoirish.jpg" />
+    <Resource Include="Images\greeksalad.jpg" />
+    <Resource Include="Images\greentea.jpg" />
+    <Resource Include="Images\holysmokes.jpg" />
+    <Resource Include="Images\hulapie.jpg" />
+    <Resource Include="Images\italianstallion.jpg" />
+    <Resource Include="Images\items.jpg" />
+    <Resource Include="Images\jerusalem.jpg" />
+    <Resource Include="Images\lemonspruce.jpg" />
+    <Resource Include="Images\lisbon.jpg" />
+    <Resource Include="Images\littlevenus.jpg" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\makeyourown.jpg" />
+    <Resource Include="Images\mamamia.jpg" />
+    <Resource Include="Images\nocheese.jpg" />
+    <Resource Include="Images\orangejuice.jpg" />
+    <Resource Include="Images\person.jpg" />
+    <Resource Include="Images\pestolante.jpg" />
+    <Resource Include="Images\pizza.jpg" />
+    <Resource Include="Images\plaincheese.jpg" />
+    <Resource Include="Images\porkbbq.jpg" />
+    <Resource Include="Images\rootbeer.jpg" />
+    <Resource Include="Images\salad.jpg" />
+    <Resource Include="Images\shanghai.jpg" />
+    <Resource Include="Images\soda.jpg" />
+    <Resource Include="Images\southoftheborder.jpg" />
+    <Resource Include="Images\spinachsalad.jpg" />
+    <Resource Include="Images\tajmahal.jpg" />
+    <Resource Include="Images\thaichickensalad.jpg" />
+    <Resource Include="Images\tomterrific.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

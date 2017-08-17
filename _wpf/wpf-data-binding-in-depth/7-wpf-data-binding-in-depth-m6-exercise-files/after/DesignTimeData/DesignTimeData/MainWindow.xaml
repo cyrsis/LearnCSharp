@@ -1,0 +1,220 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Data="clr-namespace:Zza.Data;assembly=Zza.Data"
+        mc:Ignorable="d"
+        x:Class="DesignTimeData.MainWindow"
+        Title="MainWindow"
+        Height="392.387"
+        Width="525"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="customerViewSource"
+                              d:DesignSource="{d:DesignInstance {x:Type Data:Customer}, CreateList=True}" />
+        <CollectionViewSource x:Key="productViewSource"
+                              d:DesignSource="{d:DesignInstance {x:Type Data:Product}, CreateList=True}" />
+    </Window.Resources>
+    <Grid DataContext="{StaticResource customerViewSource}">
+
+        <DataGrid x:Name="customerDataGrid"
+                  RowDetailsVisibilityMode="VisibleWhenSelected"
+                  Margin="10,10,10.4,218.4"
+                  ItemsSource="{Binding}"
+                  EnableRowVirtualization="True"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="cityColumn"
+                                    Width="SizeToHeader"
+                                    Header="City"
+                                    Binding="{Binding City}" />
+                <DataGridTextColumn x:Name="emailColumn"
+                                    Width="SizeToHeader"
+                                    Header="Email"
+                                    Binding="{Binding Email}" />
+                <DataGridTextColumn x:Name="firstNameColumn"
+                                    Width="SizeToHeader"
+                                    Header="First Name"
+                                    Binding="{Binding FirstName}" />
+                <DataGridTextColumn x:Name="fullNameColumn"
+                                    Width="SizeToHeader"
+                                    IsReadOnly="True"
+                                    Header="Full Name"
+                                    Binding="{Binding FullName}" />
+                <DataGridTextColumn x:Name="idColumn"
+                                    Width="SizeToHeader"
+                                    Header="Id"
+                                    Binding="{Binding Id}" />
+                <DataGridTextColumn x:Name="lastNameColumn"
+                                    Width="SizeToHeader"
+                                    Header="Last Name"
+                                    Binding="{Binding LastName}" />
+                <DataGridTextColumn x:Name="phoneColumn"
+                                    Width="SizeToHeader"
+                                    Header="Phone"
+                                    Binding="{Binding Phone}" />
+                <DataGridTextColumn x:Name="stateColumn"
+                                    Width="SizeToHeader"
+                                    Header="State"
+                                    Binding="{Binding State}" />
+                <DataGridTextColumn x:Name="storeIdColumn"
+                                    Width="SizeToHeader"
+                                    Header="Store Id"
+                                    Binding="{Binding StoreId}" />
+                <DataGridTextColumn x:Name="streetColumn"
+                                    Width="SizeToHeader"
+                                    Header="Street"
+                                    Binding="{Binding Street}" />
+                <DataGridTextColumn x:Name="zipColumn"
+                                    Width="SizeToHeader"
+                                    Header="Zip"
+                                    Binding="{Binding Zip}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid x:Name="grid1"
+              HorizontalAlignment="Left"
+              Margin="10,158,0,0"
+              VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Content="Email:"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Margin="3"
+                   Grid.Row="0"
+                   VerticalAlignment="Center" />
+            <TextBox x:Name="emailTextBox"
+                     Grid.Column="1"
+                     HorizontalAlignment="Left"
+                     Height="23"
+                     Margin="3"
+                     Grid.Row="0"
+                     Text="{Binding Email, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"
+                     VerticalAlignment="Center"
+                     Width="120" />
+            <Label Content="First Name:"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Margin="3"
+                   Grid.Row="1"
+                   VerticalAlignment="Center" />
+            <TextBox x:Name="firstNameTextBox"
+                     Grid.Column="1"
+                     HorizontalAlignment="Left"
+                     Height="23"
+                     Margin="3"
+                     Grid.Row="1"
+                     Text="{Binding FirstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"
+                     VerticalAlignment="Center"
+                     Width="120" />
+            <Label Content="Id:"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Margin="3"
+                   Grid.Row="2"
+                   VerticalAlignment="Center" />
+            <TextBox x:Name="idTextBox"
+                     Grid.Column="1"
+                     HorizontalAlignment="Left"
+                     Height="23"
+                     Margin="3"
+                     Grid.Row="2"
+                     Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"
+                     VerticalAlignment="Center"
+                     Width="120" />
+            <Label Content="Last Name:"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Margin="3"
+                   Grid.Row="3"
+                   VerticalAlignment="Center" />
+            <TextBox x:Name="lastNameTextBox"
+                     Grid.Column="1"
+                     HorizontalAlignment="Left"
+                     Height="23"
+                     Margin="3"
+                     Grid.Row="3"
+                     Text="{Binding LastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"
+                     VerticalAlignment="Center"
+                     Width="120" />
+            <Label Content="Phone:"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Margin="3"
+                   Grid.Row="4"
+                   VerticalAlignment="Center" />
+            <TextBox x:Name="phoneTextBox"
+                     Grid.Column="1"
+                     HorizontalAlignment="Left"
+                     Height="23"
+                     Margin="3"
+                     Grid.Row="4"
+                     Text="{Binding Phone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"
+                     VerticalAlignment="Center"
+                     Width="120" />
+        </Grid>
+        <Grid x:Name="grid2"
+              HorizontalAlignment="Left"
+              Margin="236,158,0,0"
+              VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Content="Last Name:"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   Margin="3"
+                   Grid.Row="0"
+                   VerticalAlignment="Center" />
+            <TextBox x:Name="lastNameTextBox1"
+                     Grid.Column="1"
+                     HorizontalAlignment="Left"
+                     Height="23"
+                     Margin="3"
+                     Grid.Row="0"
+                     Text="{Binding LastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"
+                     VerticalAlignment="Center"
+                     Width="120" />
+        </Grid>
+        <TextBox HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="318,196,0,0"
+                 TextWrapping="Wrap"
+                 Text="{Binding FirstName}"
+                 VerticalAlignment="Top"
+                 Width="120" />
+        <ComboBox x:Name="customerComboBox"
+                  DisplayMemberPath="City"
+                  ItemsSource="{Binding}"
+                  Margin="239,237,80.4,107.4"
+                  SelectedValuePath="City">
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="262,269,0,0"
+                 TextWrapping="Wrap"
+                 Text="{Binding Path=Name, Source={StaticResource productViewSource}}"
+                 VerticalAlignment="Top"
+                 Width="120" />
+        <ListBox HorizontalAlignment="Left"
+                 Height="55"
+                 Margin="262,297,0,0"
+                 VerticalAlignment="Top"
+                 Width="176"
+                 ItemTemplate="{DynamicResource ProductTemplate}" />
+
+    </Grid>
+</Window>

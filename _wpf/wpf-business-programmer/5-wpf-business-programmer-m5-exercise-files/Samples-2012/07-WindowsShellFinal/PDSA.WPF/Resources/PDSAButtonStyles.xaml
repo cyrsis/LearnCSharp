@@ -1,0 +1,143 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- ************************* -->
+  <!-- ** Hover Button Styles ** -->
+  <!-- ************************* -->
+  <!-- Hover TextBlock Style -->
+  <Style TargetType="TextBlock"
+         x:Key="pdsaButtonTextBlockStyle">
+    <Setter Property="Foreground"
+            Value="GhostWhite" />
+    <Setter Property="Margin"
+            Value="10" />
+    <Setter Property="FontSize"
+            Value="14" />
+    <Setter Property="HorizontalAlignment"
+            Value="Center" />
+  </Style>
+  <!-- Hover Brush for Pressed Hover Button Text Block -->
+  <SolidColorBrush x:Key="pdsaButtonTextBlockStylePressed"
+                   Color="Black" />
+  <!-- Hover Border Thickness -->
+  <Thickness x:Key="pdsaButtonBorderStyleThickness"
+             Bottom="0"
+             Left="0"
+             Right="0"
+             Top="0" />
+  <!-- Hover Border Brush -->
+  <SolidColorBrush x:Key="pdsaButtonBorderBrushStyle"
+                   Color="Black" />
+  <!-- Style for when hovering over button -->
+  <RadialGradientBrush x:Key="pdsaButtonOverStyle">
+    <GradientStop Color="#FF5F5F5F"
+                  Offset="0" />
+    <GradientStop Color="#FFADADAD"
+                  Offset="1" />
+  </RadialGradientBrush>
+  <!-- Style for when button is pressed -->
+  <LinearGradientBrush EndPoint="1,0.5"
+                       StartPoint="0,0.5"
+                       x:Key="pdsaButtonPressedStyle">
+    <GradientStop Color="#FF5F5F5F"
+                  Offset="0" />
+    <GradientStop Color="#FFADADAD"
+                  Offset="1" />
+  </LinearGradientBrush>
+  <!-- Style for normal button -->
+  <LinearGradientBrush EndPoint="0.5,1"
+                       StartPoint="0.5,0"
+                       x:Key="pdsaButtonNormalStyle">
+    <GradientStop Color="#FF5F5F5F"
+                  Offset="0" />
+    <GradientStop Color="#FFADADAD"
+                  Offset="1" />
+  </LinearGradientBrush>
+  <!-- Overall Style for Hover Button -->
+  <Style TargetType="Border"
+         x:Key="pdsaButtonBorderStyle">
+    <Setter Property="Margin"
+            Value="6" />
+    <Setter Property="CornerRadius"
+            Value="5" />
+    <Setter Property="Background"
+            Value="{StaticResource pdsaButtonNormalStyle}" />
+    <Setter Property="BorderBrush"
+            Value="{StaticResource pdsaButtonBorderBrushStyle}" />
+    <Setter Property="BorderThickness"
+            Value="{StaticResource pdsaButtonBorderStyleThickness}" />
+  </Style>
+  <!-- ****************************** -->
+  <!-- ** Image/Text Button Styles ** -->
+  <!-- ****************************** -->
+  <!-- Image/Text Button Border -->
+  <Style TargetType="Border"
+         x:Key="pdsaButtonImageTextBorderStyle">
+    <Setter Property="Margin"
+            Value="4" />
+    <Setter Property="BorderBrush"
+            Value="White" />
+    <Setter Property="BorderThickness"
+            Value="1" />
+    <Setter Property="HorizontalAlignment"
+            Value="Center" />
+    <Setter Property="CornerRadius"
+            Value="50" />
+    <Setter Property="Width"
+            Value="32" />
+    <Setter Property="Height"
+            Value="32" />
+    <Setter Property="Background"
+            Value="Transparent" />
+  </Style>
+  <!-- Image/Text Button Image -->
+  <Style TargetType="Image"
+         x:Key="pdsaButtonImageTextImageStyle">
+    <Setter Property="Margin"
+            Value="0" />
+  </Style>
+  <!-- Image/Text Button TextBlock -->
+  <Style TargetType="TextBlock"
+         x:Key="pdsaButtonImageTextTextBlockStyle">
+    <Setter Property="Margin"
+            Value="2" />
+    <Setter Property="Foreground"
+            Value="White" />
+    <Setter Property="HorizontalAlignment"
+            Value="Center" />
+    <Setter Property="FontSize"
+            Value="9" />
+  </Style>
+  <!-- ************************* -->
+  <!-- ** Image Button Styles ** -->
+  <!-- ************************* -->
+  <!-- Image/Text Button Border -->
+  <Style TargetType="Border"
+         x:Key="pdsaButtonImageBorderStyle">
+    <Setter Property="Margin"
+            Value="4" />
+    <Setter Property="Padding"
+            Value="2" />
+    <Setter Property="BorderBrush"
+            Value="Transparent" />
+    <Setter Property="BorderThickness"
+            Value="1" />
+    <Setter Property="VerticalAlignment"
+            Value="Top" />
+    <Setter Property="HorizontalAlignment"
+            Value="Left" />
+    <Setter Property="Background"
+            Value="Transparent" />
+  </Style>
+  <!-- Image Button -->
+  <Style TargetType="Image"
+         x:Key="pdsaButtonImageImageStyle">
+    <Setter Property="Width"
+            Value="40" />
+    <Setter Property="Margin"
+            Value="6" />
+    <Setter Property="VerticalAlignment"
+            Value="Top" />
+    <Setter Property="HorizontalAlignment"
+            Value="Left" />
+  </Style>
+</ResourceDictionary>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AdvWorks">
+  <DataContextMoniker Name="/AdvWorksDataContext" />
+  <nestedChildShapes>
+    <classShape Id="75fd6996-c514-4379-bb62-37b58cefcb05" absoluteBounds="1.75, 1, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/AdvWorksDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e44ecb8-531f-456b-8123-63c402639ba1" absoluteBounds="1.7650000000000001, 1.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

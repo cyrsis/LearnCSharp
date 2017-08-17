@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3AE72D99-8591-4ECC-AE2E-73EF4928AC82}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Windows8Shell</RootNamespace>
+    <AssemblyName>Windows8Shell</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FrameworkUtilities_48x48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ProductDataClasses\Product.cs" />
+    <Compile Include="ProductDataClasses\ProductManager.cs" />
+    <Compile Include="ProductViewModel\ProductViewModel.cs" />
+    <Compile Include="ProductView\ucProductView.xaml.cs">
+      <DependentUpon>ucProductView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tiles\ucStartGroup3.xaml.cs">
+      <DependentUpon>ucStartGroup3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tiles\ucStartGroup1.xaml.cs">
+      <DependentUpon>ucStartGroup1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tiles\ucStartGroup2.xaml.cs">
+      <DependentUpon>ucStartGroup2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tiles\ucStartTiles.xaml.cs">
+      <DependentUpon>ucStartTiles.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ProductView\ucProductView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tiles\ucStartGroup3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\ApplicationStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tiles\ucStartGroup1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tiles\ucStartGroup2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tiles\ucStartTiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LeftArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Minus.png" />
+    <Resource Include="Images\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images-Tiles\ActiveDirectoryReader.png" />
+    <Resource Include="Images-Tiles\ApplicationBuilder.png" />
+    <Resource Include="Images-Tiles\ComputerCleaner.png" />
+    <Resource Include="Images-Tiles\ConfigurationManager.png" />
+    <Resource Include="Images-Tiles\ConvertColor.png" />
+    <Resource Include="Images-Tiles\DatabaseDocumenter.png" />
+    <Resource Include="Images-Tiles\MessageEditor.png" />
+    <Resource Include="Images-Tiles\ProjectCleaner.png" />
+    <Resource Include="Images-Tiles\PropertyBuilder.png" />
+    <Resource Include="Images-Tiles\Security.jpg" />
+    <Resource Include="Images-Tiles\XMLBuilder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images-Tiles\haystack_alone.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images-Tiles\FrameworkUtilities_48x48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FrameworkUtilities_48x48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images-Tiles\License.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images-Tiles\Log.jpg" />
+    <Resource Include="Images-Tiles\Maintenance.jpg" />
+    <Resource Include="Images-Tiles\MapToRoles.jpg" />
+    <Resource Include="Images-Tiles\MapToUsers.jpg" />
+    <Resource Include="Images-Tiles\Menu.jpg" />
+    <Resource Include="Images-Tiles\PermCats.jpg" />
+    <Resource Include="Images-Tiles\Permission.jpg" />
+    <Resource Include="Images-Tiles\Roles.jpg" />
+    <Resource Include="Images-Tiles\Users.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images-Tiles\FrameworkUtilities.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Xml\Product.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PDSA.Common\PDSA.Common.csproj">
+      <Project>{C2FD6C53-AB38-4B58-AC9D-0A1F386B2A8A}</Project>
+      <Name>PDSA.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDSA.WPF\PDSA.WPF.csproj">
+      <Project>{8DB9CBFD-FE4E-420F-8EE5-E086AC488BFA}</Project>
+      <Name>PDSA.WPF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Close_White.png" />
+    <Resource Include="Images\Edit_White.png" />
+    <Resource Include="Images\Plus_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Trash_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Save_White.png" />
+    <Resource Include="Images\Undo_White.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

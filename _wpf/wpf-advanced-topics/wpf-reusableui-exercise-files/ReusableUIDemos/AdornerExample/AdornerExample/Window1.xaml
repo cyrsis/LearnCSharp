@@ -1,0 +1,13 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="AdornerExample.Window1"
+	x:Name="Window"
+	Title="Window1"
+	Width="640" Height="480">
+
+	<Grid x:Name="LayoutRoot">
+		<Rectangle HorizontalAlignment="Left" Margin="107,120,0,0" VerticalAlignment="Top" Width="123" Height="79" Fill="#FFFFCD00" Stroke="#FF000000" RadiusX="30.5" RadiusY="30.5"/>
+		<Rectangle HorizontalAlignment="Left" Margin="48,72,0,192" Width="233" Fill="#FFFF0000" Stroke="#FF000000" RadiusX="30.5" RadiusY="30.5"/>
+	</Grid>
+</Window>

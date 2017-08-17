@@ -1,0 +1,53 @@
+﻿<Window x:Class="PDSA.WPF.PDSAMessageBoxView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:PDSA.WPF"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        ShowInTaskbar="True"
+        FontFamily="Segoe UI"
+        WindowStartupLocation="CenterScreen"
+        Height="300"
+        Width="420"
+        KeyUp="Window_KeyUp"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Deactivated="Window_Deactivated">
+  <Window.Resources>
+    <!-- Set style for PDSA Button -->
+    <Style TargetType="my:PDSAucButton">
+      <Setter Property="Effect"
+              Value="{StaticResource pdsaMessageBoxButtonShadow}" />
+      <Setter Property="Width"
+              Value="80" />
+    </Style>
+  </Window.Resources>
+  <Border Style="{StaticResource pdsaMessageBoxBorder}">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="tbMessage"
+                 Style="{StaticResource pdsaMessageBoxTextBlock}"
+                 Text="Message goes here..."
+                 TextWrapping="Wrap" />
+      <StackPanel Grid.Row="1"
+                  Style="{StaticResource pdsaMessageBoxStackPanel}">
+        <my:PDSAucButton Text="Yes"
+                         x:Name="btnYes"
+                         Click="btnYes_Click" />
+        <my:PDSAucButton Text="No"
+                         x:Name="btnNo"
+                         Click="btnNo_Click" />
+        <my:PDSAucButton Text="OK"
+                         x:Name="btnOk"
+                         Click="btnOk_Click" />
+        <my:PDSAucButton Text="Cancel"
+                         x:Name="btnCancel"
+                         Click="btnCancel_Click" />
+      </StackPanel>
+    </Grid>
+  </Border>
+</Window>

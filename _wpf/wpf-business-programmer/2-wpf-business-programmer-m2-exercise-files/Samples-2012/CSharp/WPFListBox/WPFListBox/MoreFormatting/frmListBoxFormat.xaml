@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPFListBox.frmListBoxFormat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:WPFComponents;assembly=WPFComponents"
+        Title="List Box Formatting with a Class"
+        WindowStartupLocation="CenterScreen"
+        Height="390"
+        Width="682"
+        Loaded="Window_Loaded">
+  <Grid>
+    <ListBox Name="lstProducts"
+             ItemsSource="{Binding}"
+             IsSynchronizedWithCurrentItem="True">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <Image Margin="8"
+                   Source="{Binding Path=Logo}"
+                   Width="100"></Image>
+            <Label Width="250"
+                   Content="{Binding Path=ProductName}"></Label>
+            <Label Width="100" ContentStringFormat="C"
+                   Content="{Binding Path=Price}"></Label>
+          </StackPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+  </Grid>
+</Window>

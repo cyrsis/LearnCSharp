@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="WpfControlLibrary.UserControl1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="120" Width="166">
+    <Grid>
+    <Button Margin="38,6,19,58" Name="button1">
+      <Button.RenderTransform>
+        <RotateTransform Angle="20" />
+      </Button.RenderTransform>
+      WPF!</Button>
+  </Grid>
+</UserControl>

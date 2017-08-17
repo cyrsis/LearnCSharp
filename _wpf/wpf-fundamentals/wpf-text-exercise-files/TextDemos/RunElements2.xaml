@@ -1,0 +1,9 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <TextBlock FontSize="20">
+    <Run Text="Windows "/><Italic><Run Text="Presentation" /></Italic><Run Text=" Foundation" />
+  </TextBlock>
+
+</Grid>
+

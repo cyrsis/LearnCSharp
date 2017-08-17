@@ -1,0 +1,51 @@
+﻿<Window x:Class="WPFDataSamples.frmListBoxWithGrouping1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:WPFComponents;assembly=WPFComponents"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="List Box with Grouping"
+        WindowStartupLocation="CenterScreen"
+        Height="300"
+        Width="300">
+  <Window.Resources>
+    <ObjectDataProvider x:Key="odpCust"
+                        ObjectType="{x:Type src:AdvWorksDataContext}"
+                        MethodName="GetAllCustomers"></ObjectDataProvider>
+    <CollectionViewSource x:Key="custColl"
+                          Source="{Binding Source={StaticResource odpCust}}">
+      <CollectionViewSource.GroupDescriptions>
+        <PropertyGroupDescription PropertyName="Title" />
+      </CollectionViewSource.GroupDescriptions>
+    </CollectionViewSource>
+  </Window.Resources>
+  <Grid>
+    <ListBox Name="listBox1"
+             ItemsSource="{Binding Source={StaticResource custColl}}">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Path=FirstName}" />
+            <Label></Label>
+            <TextBlock Text="{Binding Path=LastName}" />
+          </StackPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+      <ListBox.GroupStyle>
+        <GroupStyle>
+          <GroupStyle.HeaderTemplate>
+            <DataTemplate>
+              <Border BorderBrush="Black"
+                      BorderThickness="1"
+                      Margin="4">
+                <TextBlock FontWeight="Bold"
+                           Background="Blue"
+                           Foreground="White"
+                           Text="{Binding Path=Name}" />
+              </Border>
+            </DataTemplate>
+          </GroupStyle.HeaderTemplate>
+        </GroupStyle>
+      </ListBox.GroupStyle>
+    </ListBox>
+  </Grid>
+</Window>

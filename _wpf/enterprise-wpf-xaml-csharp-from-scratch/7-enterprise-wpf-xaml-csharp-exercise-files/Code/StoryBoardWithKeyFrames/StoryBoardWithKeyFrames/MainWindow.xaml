@@ -1,0 +1,31 @@
+﻿<Window x:Class="StoryBoardWithKeyFrames.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+      <Button Content="OK"
+              Width="30"
+              Height="30">
+         <Button.Triggers>
+            <EventTrigger RoutedEvent="Button.Click">
+               <EventTrigger.Actions>
+                  <BeginStoryboard>
+                     <Storyboard>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width"
+                                                       Duration="0:0:4">
+                           <LinearDoubleKeyFrame Value="30"
+                                                 KeyTime="0:0:0" />
+                           <LinearDoubleKeyFrame Value="40"
+                                                 KeyTime="0:0:1" />
+                           <LinearDoubleKeyFrame Value="200"
+                                                 KeyTime="0:0:2" />
+                        </DoubleAnimationUsingKeyFrames>
+                     </Storyboard>
+                  </BeginStoryboard>
+               </EventTrigger.Actions>
+            </EventTrigger>
+         </Button.Triggers>
+      </Button>
+
+   </Grid>
+</Window>

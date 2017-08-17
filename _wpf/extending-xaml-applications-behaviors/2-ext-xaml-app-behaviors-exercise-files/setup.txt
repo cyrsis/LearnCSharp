@@ -1,0 +1,2 @@
+To run the WPF demo, open the solution in Visual Studio 2012 or 2013.
+To run the Windows 8.1 demo, open the solution in Visual Studio 2013.

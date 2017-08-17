@@ -1,0 +1,21 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+			 xmlns:local="clr-namespace:SalesDashboard"
+             x:Class="SalesDashboard.App"
+             >
+    <Application.Resources>
+    	<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Styles/RadTimeBarStyle.xaml"/>				
+				<ResourceDictionary Source="Styles/RadSparklineStyle.xaml"/>
+				<ResourceDictionary Source="Styles/RadChartStyle.xaml"/>
+				<ResourceDictionary Source="Styles/RadBulletGraphStyle.xaml"/>
+                <ResourceDictionary Source="Styles/RadButtonsStyle.xaml"/>
+                <ResourceDictionary Source="Styles/ScrollViewerStyle.xaml"/>
+                <ResourceDictionary Source="Styles/ListBoxStyle.xaml"/>
+				<ResourceDictionary Source="Styles/RadBusyIndicatorstyle.xaml"/>
+				<ResourceDictionary Source="Styles/RadGridViewStyle.xaml"/>
+			</ResourceDictionary.MergedDictionaries>    		
+		</ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPFListBox.frmListBoxConverterObject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:WPFComponents;assembly=WPFComponents"
+        Title="Formatting using ValueConverter and Object"
+        WindowStartupLocation="CenterScreen"
+        Height="390"
+        Width="682">
+  <Window.Resources>
+    <src:ProductObjectConverter x:Key="sdConvert" />
+    <ObjectDataProvider x:Key="odpProduct"
+                        ObjectType="{x:Type src:Product}"
+                        MethodName="GetProductCollection"></ObjectDataProvider>
+  </Window.Resources>
+  <Grid>
+    <ListBox Name="lstProducts"
+             ItemsSource="{Binding Source={StaticResource odpProduct}}"
+             IsSynchronizedWithCurrentItem="True">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <Image Margin="8" Source="{Binding Path=Logo}"
+                   Width="100"></Image>
+            <Label Width="350"
+                   Content="{Binding Converter={StaticResource sdConvert}}"></Label>
+            <Label Width="80" ContentStringFormat="{}{0:C}"
+                   Content="{Binding Path=Price}"></Label>
+          </StackPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+  </Grid>
+</Window>

@@ -1,0 +1,11 @@
+﻿<Application x:Class="ApplicationResources.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="Window1.xaml">
+  
+  <Application.Resources>
+    <SolidColorBrush x:Key="psGreenBrush" Color="#63B941" />
+    <SolidColorBrush x:Key="psOrangeBrush" Color="#FF9020" />
+  </Application.Resources>
+
+</Application>

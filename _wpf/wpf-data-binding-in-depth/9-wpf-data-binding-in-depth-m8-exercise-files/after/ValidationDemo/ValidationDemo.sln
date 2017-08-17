@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationDemo", "ValidationDemo\ValidationDemo.csproj", "{B075F905-018D-4C83-A1D4-132D03B1A2D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B075F905-018D-4C83-A1D4-132D03B1A2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B075F905-018D-4C83-A1D4-132D03B1A2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B075F905-018D-4C83-A1D4-132D03B1A2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B075F905-018D-4C83-A1D4-132D03B1A2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

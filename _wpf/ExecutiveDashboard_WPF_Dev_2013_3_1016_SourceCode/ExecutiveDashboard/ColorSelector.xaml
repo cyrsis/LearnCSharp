@@ -1,0 +1,189 @@
+﻿<UserControl x:Class="ExecutiveDashboard.ColorSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    d:DesignHeight="300" d:DesignWidth="400" 
+    xmlns:local="clr-namespace:ExecutiveDashboard"
+	>
+
+    <UserControl.Resources>
+        <Style x:Key="ThumbStyle" TargetType="Thumb">
+            <Setter Property="IsTabStop" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Thumb">
+                        <Grid x:Name="grid" Background="#00FFFFFF" RenderTransformOrigin="0.5,0.5">
+                            <Path Data="M20,0 L0,40 L40,40 Z" Fill="#FF000000" Stretch="Fill" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Height="7">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="180"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                            	</Path.RenderTransform>
+                            </Path>
+                            <Path Data="M20,0 L0,40 L40,40 Z" Fill="#FF000000" Stretch="Fill" VerticalAlignment="Bottom" Height="7"/>    
+                    </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+			
+		<Style x:Key="TrackStyle" TargetType="ContentControl">
+            <Setter Property="Height" Value="24"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ContentControl">
+                        <Rectangle>
+                            <Rectangle.Fill>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="1,1">
+                                    <GradientStop Color="#FFFF0000" Offset="0" />
+                                    <GradientStop Color="#FEFFFF00" Offset="0.17" />
+                                    <GradientStop Color="#FE00FF00" Offset="0.317" />
+                                    <GradientStop Color="#FE00FFFF" Offset="0.464" />
+                                    <GradientStop Color="#FE0000FF" Offset="0.625" />
+                                    <GradientStop Color="#FEFF00FF" Offset="0.857" />
+                                    <GradientStop Color="#FFFF0000" Offset="1" />
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+            
+        <Style x:Key="HueSliderStyle" TargetType="telerik:RadSlider">
+            <Setter Property="ThumbStyle" Value="{StaticResource ThumbStyle}"/>
+            <Setter Property="TrackStyle" Value="{StaticResource TrackStyle}"/>
+            <Setter Property="IsTabStop" Value="False"/>
+			<Setter Property="HandlesVisibility" Value="Collapsed"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="telerik:RadSlider">
+                        <telerik:LayoutTransformControl x:Name="layoutControl" RenderTransformOrigin=".5 0">
+                            <telerik:LayoutTransformControl.LayoutTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </telerik:LayoutTransformControl.LayoutTransform>
+                            <Grid UseLayoutRounding="True">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ContentControl x:Name="Track" Background="{TemplateBinding Background}" Grid.ColumnSpan="3" Grid.Column="1"  Style="{TemplateBinding TrackStyle}" VerticalAlignment="Stretch"/>
+                                <RepeatButton x:Name="DecreaseButton" Visibility="Collapsed" />
+                                <RepeatButton x:Name="LargeDecreaseButton" Opacity="0" Grid.Column="1" Delay="{TemplateBinding Delay}" Interval="{TemplateBinding RepeatInterval}" Visibility="Visible"/>
+                                <Grid Grid.Column="2" Visibility="{TemplateBinding ThumbVisibility}">
+                                    <Thumb x:Name="SingleThumbHost" Style="{TemplateBinding ThumbStyle}" Width="10" Height="24" HorizontalAlignment="Center"/>
+                                    <StackPanel x:Name="RangeThumbsPanel" Orientation="Horizontal" Visibility="Collapsed">
+                                        <Thumb x:Name="RangeStartThumb" Style="{TemplateBinding ThumbStyle}"/>
+                                        <Thumb x:Name="RangeMiddleThumb" Style="{TemplateBinding ThumbStyle}"/>
+                                        <Thumb x:Name="RangeEndThumb" Style="{TemplateBinding ThumbStyle}"/>
+                                    </StackPanel>
+                                </Grid>
+                                <RepeatButton x:Name="LargeIncreaseButton" Opacity="0" Grid.Column="3" Delay="{TemplateBinding Delay}" Interval="{TemplateBinding RepeatInterval}" Visibility="Visible"/>
+								<RepeatButton x:Name="IncreaseButton" Grid.Column="4" Visibility="Collapsed"/>
+                            </Grid>
+                        </telerik:LayoutTransformControl>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ColorPickerThumbStyle" TargetType="Thumb">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Thumb">
+                        <Grid Background="#00A94646">
+							<Grid.Resources>
+								<SolidColorBrush x:Key="Background" Color="#FF003255" />
+								<SolidColorBrush x:Key="ThumbInnerRoundBorderBrush"
+										Color="#FFFFFFFF" />
+								<SolidColorBrush x:Key="ThumbOuterRoundBorderBrush"
+										Color="#FF000000" />
+							</Grid.Resources>
+							<Ellipse HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+									Stroke="#FFFFFFFF" StrokeThickness="1" />
+							<Ellipse HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+									Stroke="#FF000000" StrokeThickness="2" Margin="1,1,1,1" />
+							<Ellipse HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+									Stroke="#FFFFFFFF" StrokeThickness="1" Margin="3,3,3,3" />
+						</Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+		<local:HSLtoRGBConverter x:Key="hslToRGBConverter" />
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Width="Auto" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <telerik:RadSlider x:Name="saturationSlider" Visibility="Collapsed" Value="{Binding Saturation, Mode=TwoWay}"
+					HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1"
+					LargeChange="0.1" Grid.ColumnSpan="1" />
+        <telerik:RadSlider x:Name="luminanceSlider" Visibility="Collapsed" Value="{Binding Luminance, Mode=TwoWay}"
+					HorizontalAlignment="Center" VerticalAlignment="Stretch"
+					Grid.Column="1" LargeChange="0.1" />
+        <telerik:RadSlider x:Name="hueSlider" Value="{Binding Hue, Mode=TwoWay}"
+					HorizontalAlignment="Center" VerticalAlignment="Stretch" Visibility="Visible" Style="{StaticResource HueSliderStyle}"
+					Orientation="Vertical" Grid.Column="2" LargeChange="0.1" IsMoveToPointEnabled="True"
+					Margin="2,0,0,0" />
+									
+        <Rectangle x:Name="hueRectangle" Fill="Transparent" Grid.Column="2"/>
+		
+        <Rectangle Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+					Width="Auto" x:Name="PaleteRectangle"
+					RadiusX="0" RadiusY="0" StrokeThickness="1">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="{Binding ElementName=hueSlider, Path=Value, Converter={StaticResource hslToRGBConverter}}" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+					Width="Auto" Visibility="Visible" RadiusX="0" RadiusY="0"
+					StrokeThickness="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="1.06599998474121,0.5"
+							StartPoint="-0.0659999996423721,0.5">
+                    <GradientStop Color="#FFFFFFFF" />
+                    <GradientStop Color="#00FFFFFF" Offset="0.902" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+					Width="Auto" Visibility="Visible" RadiusX="0" RadiusY="0"
+					StrokeThickness="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="#FF000000" Offset="0" />
+                    <GradientStop Color="#00000000" Offset="0.906" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Canvas x:Name="colorAreaCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto"
+                Grid.ColumnSpan="1" Background="#00FFFFFF">
+            
+            <Thumb  x:Name="colorPickerThumb" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Width="15" Height="15" Style="{StaticResource ColorPickerThumbStyle}" />
+        </Canvas>
+    </Grid>
+</UserControl>

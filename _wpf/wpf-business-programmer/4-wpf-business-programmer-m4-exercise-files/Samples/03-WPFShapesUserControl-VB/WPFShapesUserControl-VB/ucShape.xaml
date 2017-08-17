@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="ucShape"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:src="clr-namespace:WPFShapesUserControl_VB"
+             Loaded="UserControl_Loaded">
+  <Canvas x:Name="cnvMain"
+          Width="{Binding ElementName=userControlShape, 
+                          Path=ActualWidth}"
+          Height="{Binding ElementName=userControlShape, 
+                           Path=ActualHeight}">
+    <TextBlock x:Name="tblock" />
+  </Canvas>
+</UserControl>

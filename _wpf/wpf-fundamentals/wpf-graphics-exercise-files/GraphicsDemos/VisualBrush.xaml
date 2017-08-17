@@ -1,0 +1,36 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" > 
+
+ <Grid.RowDefinitions>
+  <RowDefinition Height="2*" />
+  <RowDefinition Height="1*" />
+ </Grid.RowDefinitions>
+
+ <Grid x:Name="content" Background="Transparent">
+ <GroupBox Header="Name" HorizontalAlignment="Left">
+   <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+     <TextBlock Text="Given name:" Margin="0,1,4,0" />
+     <TextBox Width="80" />
+     <TextBlock Text="Surname:" Margin="4,1,4,0" />
+     <TextBox Width="80" />
+   </StackPanel>
+ </GroupBox>
+ </Grid>
+
+ <Rectangle Grid.Row="1">
+   <Rectangle.Fill>
+     <VisualBrush Visual="{Binding ElementName=content}" Viewport="0,-1,1,1" TileMode="FlipY">
+     </VisualBrush>
+   </Rectangle.Fill>
+ </Rectangle>
+ <Rectangle Grid.Row="1">
+   <Rectangle.Fill>
+     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+       <GradientStop Offset="0" Color="#00FFFFFF" />
+       <GradientStop Offset="1" Color="#FFFFFFFF" />
+     </LinearGradientBrush>
+   </Rectangle.Fill>
+ </Rectangle>
+
+
+</Grid>
+

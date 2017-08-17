@@ -1,0 +1,71 @@
+﻿<Window x:Class="WPFBusinessSamples.winMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource DemoWindowStyle}"
+        WindowStartupLocation="CenterScreen"
+        Title="Business Samples (C#)"
+        MinHeight="500"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight">
+  <Grid>
+    <StackPanel>
+      <StackPanel Margin="10">
+        <TextBlock MaxWidth="300"
+                   TextWrapping="Wrap"
+                   Text="All the styles for this form are located in the &lt;Application.Resources&gt; in the App.xaml file." />
+      </StackPanel>
+      <TabControl>
+        <TabItem Header="Layout">
+          <StackPanel>
+            <Button Name="btnDockPanelLayout"
+                    Click="btnDockPanelLayout_Click">Dock Panel Layout of Screen</Button>
+            <Button Name="btnGridLayout"
+                    Click="btnGridLayout_Click">Grid Layout of Screen</Button>
+            <Button Name="btnGridLayout2"
+                    Click="btnGridLayout2_Click">Grid Layout of Screen with Bottom Row</Button>
+          </StackPanel>
+        </TabItem>
+        <TabItem Header="UI Samples">
+          <StackPanel>
+            <Button Name="btnMenus"
+                    Click="btnMenus_Click">Menus</Button>
+            <Button Name="btnMenusOnLeft"
+                    Click="btnMenusOnLeft_Click">Menus on Left</Button>
+            <Button Name="btnAbout"
+                    Click="btnAbout_Click">About Form</Button>
+            <Button Name="btnLogin"
+                    Click="btnLogin_Click">Login Form</Button>
+            <Button Name="btnToolbar"
+                    Click="btnToolbar_Click">Toolbar</Button>
+            <Button Name="btnStatusbar"
+                    Click="btnStatusbar_Click">Status Bar</Button>
+            <Button Name="btnStatusbarPanels"
+                    Click="btnStatusbarPanels_Click">Status Bar using ItemsPanelTemplate</Button>
+            <Button Name="btnTooltip"
+                    Click="btnTooltip_Click">Tool Tips</Button>
+            <Button Name="btnHyperlink"
+                    Click="btnHyperlink_Click">Hyperlink</Button>
+          </StackPanel>
+        </TabItem>
+        <TabItem Header="Window Tricks">
+          <StackPanel>
+            <Button Name="btnWinNoBorder"
+                    Click="btnWinNoBorder_Click">No Border</Button>
+            <Button Name="btnWinEllipse"
+                    Click="btnWinEllipse_Click">Window as a Circle</Button>
+            <Button Name="btnLogin2"
+                    Click="btnLogin2_Click">Login Form - No Border/Shadow</Button>
+          </StackPanel>
+        </TabItem>
+        <TabItem Header="User Controls">
+          <StackPanel>
+            <Button Name="btnAddressUserControl"
+                    Click="btnAddressUserControl_Click">Address User Control</Button>
+            <Button Name="btnLoadUserControl"
+                    Click="btnLoadUserControl_Click">Load User Control</Button>
+          </StackPanel>
+        </TabItem>
+      </TabControl>
+    </StackPanel>
+  </Grid>
+</Window>
