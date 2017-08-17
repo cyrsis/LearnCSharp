@@ -1,0 +1,18 @@
+﻿@using Web.Controllers
+@using Web.Helpers
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <h2>Welcome!</h2>
+    <div class="well">
+	    <p class="lead">
+		    @ViewBag.Message
+	    </p>
+		<p>
+			@(Html.BootstrapActionLinkButton<HomeController>(
+				  c => c.SetName(), "Set Your Name"))
+		</p>
+    </div>
+</div>

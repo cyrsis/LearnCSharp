@@ -1,0 +1,24 @@
+﻿@using Microsoft.Web.Mvc
+@using Web.Controllers
+@model Web.Models.TaskSummaryViewModel[]
+@{
+	ViewBag.Title = "Home Page";
+}
+
+<h2>SpecsFor Course - Module 4 Sample</h2>
+<p class="lead">
+	Welcome to the sample TODO list project!  Here are your tasks!
+</p>
+<div class="list-group">
+	<a href="@(Html.BuildUrlFromExpression<AddTaskController>(c => c.Add()))" class="list-group-item list-group-item-success">
+		<i class="glyphicon glyphicon-plus-sign"></i>
+		Add Task
+	</a>
+	@foreach (var task in Model)
+	{
+		<a href="@(Html.BuildUrlFromExpression<ViewTaskController>(c => c.ViewTask(task.Id)))" class="list-group-item">
+			<i class="glyphicon glyphicon-unchecked"></i>
+			@task.Title
+		</a>
+	}
+</div>

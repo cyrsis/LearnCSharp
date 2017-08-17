@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Sixeyed.SpecFlowItAll.Domain.Model;assembly=Sixeyed.SpecFlowItAll.Domain" mc:Ignorable="d" x:Class="Sixeyed.SpecFlowItAll.WpfApplication.MainWindow"
+        Title="MainWindow" Height="351.209" Width="977.627" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <CollectionViewSource x:Key="productViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:Product}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource productViewSource}">
+        <DataGrid x:Name="productDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,38,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" FontSize="16">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="codeColumn" Binding="{Binding Code}" Header="Code" Width="130"/>
+                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding Name}" Header="Name" Width="210"/>
+                <DataGridTextColumn x:Name="stockCountColumn" Binding="{Binding StockCount}" Header="Stock Count" Width="SizeToHeader"/>
+                <DataGridCheckBoxColumn x:Name="isAvailableColumn" Binding="{Binding IsAvailable}" Header="Is Available" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="supplierNameColumn" Binding="{Binding Supplier.Name}" Header="Supplier" Width="250"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="reorderButton" Click="Reorder_Click" CommandParameter="{Binding Path=Code}">Reorder</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="discontinueButton" Click="Discontinue_Click" CommandParameter="{Binding Path=Code}">Discontinue</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

@@ -1,0 +1,52 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoursewareApp"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="400"
+        Width="600"
+        FontSize='16'
+        Background='#FF301606'
+        WindowState='Maximized'>
+  <Grid x:Name='mainGrid'
+        Margin='20'
+        Background='#FF6E4933'>
+
+    <Border x:Name='mainBorder'
+            BorderBrush='#FFAA4806'
+            BorderThickness='15'
+            ClipToBounds='True'
+            MaxWidth='600'
+            MaxHeight='400'>
+
+      <Grid>
+        <Image x:Name='foodImage'
+               Source='Pretzel.jpg'
+               Stretch='UniformToFill'
+               MouseEnter='foodImage_MouseEnter'
+               MouseLeave='foodImage_MouseLeave'/>
+
+        <Grid x:Name='headerGrid'
+              Background='#88FFFFFF'
+              HorizontalAlignment='Center'
+              VerticalAlignment='Center'
+              Visibility='Hidden'>
+          <Border BorderBrush='#FFAA4806'
+                  BorderThickness='1'>
+            <TextBlock FontFamily='Candara'
+                       FontSize='48'
+                       Text='Fresh Hot Preztels'
+                       Foreground='#FFAA4806'
+                       Margin='20' />
+          </Border>
+        </Grid>
+
+      </Grid>
+    </Border>
+
+  </Grid>
+
+</Window> 

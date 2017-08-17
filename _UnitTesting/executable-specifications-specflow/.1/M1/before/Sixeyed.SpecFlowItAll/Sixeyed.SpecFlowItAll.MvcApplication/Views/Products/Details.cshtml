@@ -1,0 +1,33 @@
+﻿@model Sixeyed.SpecFlowItAll.Domain.Model.Product
+
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<fieldset>
+    <legend>@Html.DisplayFor(model => model.Name)</legend>
+
+    <h3 id="availability">
+        In stock to buy now!
+    </h3>
+
+    <div class="display-label">
+        Product Code:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Code)
+    </div>
+
+    <div class="display-label">
+         In Stock:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StockCount)
+    </div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

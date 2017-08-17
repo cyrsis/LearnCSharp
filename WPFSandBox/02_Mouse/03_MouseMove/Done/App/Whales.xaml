@@ -1,0 +1,31 @@
+﻿<Window x:Class="CoursewareApp.Whales"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="Orbs"
+				Height="400"
+				Width="600"
+				FontSize='16'
+				Background='#FF301606' WindowState='Maximized'>
+	<Grid x:Name='mainGrid'
+				Margin='20'
+				Background='#FF6E4933'>
+
+		<Border x:Name='mainBorder'
+						BorderBrush='#FFAA4806'
+						BorderThickness='15'
+						ClipToBounds='True'>
+			<UniformGrid MouseMove='Grid_MouseMove'
+									 x:Name='innerGrid'
+									
+									 Background='LightBlue' 
+                   Columns='9' Rows='9'>
+				
+				
+			</UniformGrid>
+		</Border>
+	</Grid>
+</Window>

@@ -1,0 +1,53 @@
+﻿@model dynamic
+@foreach (var prop in ViewData.ModelMetadata.Properties.Where(p => p.ShowForEdit))
+{
+	//ViewBag.Title will override Model.Title.  This ensures that doesn't happen.
+	object oldViewData = null;
+	var hasConflictingViewData = ViewData.TryGetValue(prop.PropertyName, out oldViewData);
+
+	if (hasConflictingViewData)
+	{
+		ViewData.Remove(prop.PropertyName);
+	}
+
+	if (prop.TemplateHint == "HiddenInput")
+	{
+		@Html.Hidden(prop.PropertyName)
+	}
+	else if (prop.ModelType == typeof(bool) && string.IsNullOrEmpty(prop.TemplateHint))
+	{
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<div class="checkbox">
+					@Html.CheckBox(prop.PropertyName)
+					@Html.Label(prop.PropertyName)
+				</div>
+			</div>
+		</div>
+	}
+	else if (!prop.IsComplexType)
+	{
+		<div class="form-group">
+			@Html.Label(prop.PropertyName)
+			@if (prop.DataTypeName == "ReadOnly")
+			{
+				<p class="form-control-static">
+					@Html.Display(prop.PropertyName)
+				</p>
+			}
+			else
+			{
+				@Html.Editor(prop.PropertyName, new {htmlAttributes=new{@class="form-control"}})
+			}
+		</div>
+	}
+	else
+	{
+		@Html.Editor(prop.PropertyName, prop.ModelType.Name)
+	}
+
+	if (hasConflictingViewData)
+	{
+		ViewData.Add(prop.PropertyName, oldViewData);
+	}
+}

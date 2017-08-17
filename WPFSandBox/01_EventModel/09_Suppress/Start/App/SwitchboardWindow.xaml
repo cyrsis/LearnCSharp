@@ -1,0 +1,22 @@
+﻿<Window x:Class="CoursewareApp.SwitchboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoursewareApp"
+        mc:Ignorable="d"
+        Title="SwitchboardWindow"
+        Height="300"
+        Width="300">
+  
+  <StackPanel HorizontalAlignment='Center'>
+    <Button x:Name='suppressButton'
+            Content='Suppress Example'
+            Click='SuppressButton_Click'
+            Margin='20,10' Padding='6'/>
+    <Button x:Name='ButtonExample'
+            Click='ButtonExample_Click'
+            Content='Button Handles'
+            Margin='20,10' Padding='6' />
+  </StackPanel>
+</Window>

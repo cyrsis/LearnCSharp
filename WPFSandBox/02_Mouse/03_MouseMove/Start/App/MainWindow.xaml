@@ -1,0 +1,74 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="MainWindow"
+				Height="400"
+				Width="600"
+				FontSize='16'
+				Background='#FF301606'>
+	<Grid x:Name='mainGrid'
+				Margin='20'
+				Background='#FF6E4933'>
+
+		<Border x:Name='mainBorder'
+						BorderBrush='#FFAA4806'
+						BorderThickness='15'
+						ClipToBounds='True'>
+			<Grid MouseMove='Grid_MouseMove'
+						x:Name='innerGrid'>
+
+				<Image x:Name='pastryImage'
+							 Source='patterntall.jpg'
+							 Stretch='UniformToFill' />
+  
+				<Line x:Name='line1'
+							Stroke='#FFEC6408'
+							StrokeThickness='2'
+							X1='0'
+							Y1='0' />
+				
+				<Line x:Name='line2'
+							Stroke='#FFEC6408'
+							StrokeThickness='2'
+							X1='0'
+							Y1='165' />
+
+				<Line x:Name='line3'
+							Stroke='#FFEC6408'
+							StrokeThickness='2'
+							X1='0'
+							Y1='330' />
+
+				<Line x:Name='line4'
+							Stroke='#FFEC6408'
+							StrokeThickness='2'
+							X1='530'
+							Y1='0' />
+
+				<Line x:Name='line5'
+							Stroke='#FFEC6408'
+							StrokeThickness='2'
+							X1='530'
+							Y1='165' />
+
+				<Line x:Name='line6'
+							Stroke='#FFEC6408'
+							StrokeThickness='2'
+							X1='530'
+							Y1='330' />
+
+				<Ellipse x:Name='ellipse1'
+								 Fill='#FFEC6408'
+								 HorizontalAlignment='Left'
+								 VerticalAlignment='Top'
+								 Width='20'
+								 Height='20' />
+			</Grid>
+		</Border>
+	</Grid>
+
+</Window> 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Weavers>
+  
+  <Caseless />
+
+  <!-- By default, Caseless uses StringComparison.OrdinalIgnoreCase -->
+  
+  <!-- <Caseless StringComparison="InvariantCultureIgnoreCase" /> -->
+
+   <!--<Caseless StringComparison="CurrentCulture" />--> 
+  
+
+</Weavers>

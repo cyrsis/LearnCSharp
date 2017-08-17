@@ -1,0 +1,11 @@
+﻿@using Web.Controllers
+@using Web.Helpers
+@{
+	ViewBag.Title = "You aren't a Matt!";
+}
+
+<h2>Unauthorized!</h2>
+<p class="lead">You don't <i>look</i> like a Matt.  I'm not letting you in!</p>
+<p>
+	@(Html.BootstrapActionLinkButton<HomeController>(c => c.Index(), "Back Home"))
+</p>

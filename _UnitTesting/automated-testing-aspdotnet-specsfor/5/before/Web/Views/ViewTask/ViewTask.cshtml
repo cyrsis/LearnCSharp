@@ -1,0 +1,21 @@
+﻿@using Microsoft.Web.Mvc
+@using Web.Controllers
+@model Web.Models.TaskDetailsViewModel
+
+@{
+	ViewBag.Title = Model.Title;
+}
+
+<h2>
+	@Model.Title
+	<a href="@(Html.BuildUrlFromExpression<ShareTaskController>(c => c.ShareTask(Model.Id)))" class="btn btn-primary btn-lg">
+		<i class="glyphicon glyphicon-share-alt"></i>
+	</a>
+</h2>
+<div class="well well-sm">
+	@Model.Description
+</div>
+<div class="btn-group">
+	@(Html.ActionLink<HomeController>(c => c.Index(), "Back Home", new { @class = "btn btn-default" }))	
+	@(Html.ActionLink<EditTaskController>(c => c.Edit(Model.Id), "Edit Task", new { @class = "btn btn-primary" }))	
+</div>

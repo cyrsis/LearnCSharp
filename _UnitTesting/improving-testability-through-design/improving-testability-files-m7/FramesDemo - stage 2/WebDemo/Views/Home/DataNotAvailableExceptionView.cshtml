@@ -1,0 +1,14 @@
+﻿@model Common.DataNotAvailableException
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Data Error</title>
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2>Well...</h2>
+        <p>Right now we are not able to process your request because our data store seems to be out of order.</p>
+        <p>Please visit us in a minute and try again.</p>
+        <p>Failed to access @Model.FailingObjectName</p>
+    </body>
+</html>

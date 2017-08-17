@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="System.Windows.RoutedEventArgs">
+    <Position X="0.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.EventArgs">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.ContextMenuEventArgs" Collapsed="true">
+    <Position X="5" Y="2.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.DragEventArgs" Collapsed="true">
+    <Position X="5" Y="3.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.InkCanvasStrokeCollectedEventArgs" Collapsed="true">
+    <Position X="8" Y="2.5" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Input.MouseEventArgs" Collapsed="true">
+    <Position X="5" Y="4.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Input.StylusEventArgs" Collapsed="true">
+    <Position X="8" Y="3.5" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.TextChangedEventArgs" Collapsed="true">
+    <Position X="8" Y="4.5" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="MainWindow"
+				Height="400"
+				Width="600"
+				FontSize='24'
+				Background='#FF301606'>
+	<Grid>
+		<Border BorderBrush='#FFAA4806'
+						BorderThickness='5'
+						Margin='30'
+						ClipToBounds='True'>
+			<Image x:Name='foodImage'
+						 Source='Pretzel.jpg'
+						 Stretch='UniformToFill' >
+				<Image.RenderTransform>
+					<SkewTransform x:Name='theTransform' />
+				</Image.RenderTransform>
+			</Image>
+		</Border>
+	</Grid>
+</Window> 

@@ -1,0 +1,58 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="MainWindow"
+				Height="400"
+				Width="600"
+				FontSize='16'
+				Background='#FFddddff'>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width='2*' />
+			<ColumnDefinition Width='1*' />
+		</Grid.ColumnDefinitions>
+		<StackPanel Grid.Column='0'
+								KeyUp='All_KeyUp'
+								KeyDown='All_KeyDown'>
+			<TextBlock Text='Text appears in the textbox after a keyup event.' />
+			<TextBlock Text='Watch the events for this textbox.' />
+			<TextBox  Margin='20,10'
+								Name='textBox1' />
+
+			<TextBlock Text='Disallow punctuation' />
+			<TextBox  Margin='20,10'
+								PreviewTextInput='TextBox2_PreviewTextInput'
+								x:Name='textBox2' />
+
+			<TextBlock Text='Disallow Letters' />
+			<TextBox  Margin='20,10'
+								
+								Name='textBox3'
+								PreviewTextInput='TextBox3_PreviewTextInput' />
+
+
+
+			<StackPanel Orientation='Horizontal'>
+				
+				<TextBlock Text=''
+									 Name='enteredTextBlock'
+									 Background='LightYellow'
+									 Margin='0,10,0,0' />
+
+			</StackPanel>
+
+		</StackPanel>
+		<StackPanel  Grid.Column='1'>
+			<Button Content='Clear List'
+							Click='Button_Click' />
+			<ListBox x:Name='resultsListBox'
+							 MinHeight='300' />
+			
+		</StackPanel>
+	</Grid>
+
+</Window> 

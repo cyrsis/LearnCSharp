@@ -1,0 +1,21 @@
+﻿@using Microsoft.Web.Mvc
+@using Web.Controllers
+@model Web.Models.LogOnForm
+
+@{
+	ViewBag.Title = "Log On";
+}
+
+<h2>Log On...</h2>
+@using (Html.BeginForm<AuthenticationController>(c => c.LogOn(null), FormMethod.Post, new { role = "form" }))
+{
+	<div class="form-group">
+		@Html.LabelFor(x => x.Username)
+		@Html.TextBoxFor(x => x.Username, new { @class = "form-control input-lg" })
+	</div>
+	<div class="form-group">
+		@Html.LabelFor(x => x.Password)
+		@Html.PasswordFor(x => x.Password, new { @class = "form-control input-lg" })
+	</div>
+	<button type="submit" class="btn btn-primary">Log On!</button>
+}

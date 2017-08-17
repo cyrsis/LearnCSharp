@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="System.Windows.RoutedEventArgs">
+    <Position X="0.5" Y="2.75" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.EventArgs">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.ContextMenuEventArgs">
+    <Position X="4" Y="4.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.DragEventArgs" Collapsed="true">
+    <Position X="4" Y="3.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.InkCanvasStrokeCollectedEventArgs" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="2.75" />
+    <InheritanceLine Type="System.Windows.RoutedEventArgs" ManuallyRouted="true">
+      <Path>
+        <Point X="1.75" Y="2.75" />
+        <Point X="1.75" Y="2.346" />
+        <Point X="3.549" Y="2.346" />
+        <Point X="3.549" Y="3.345" />
+        <Point X="8.125" Y="3.345" />
+        <Point X="8.125" Y="5.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Input.MouseEventArgs" Collapsed="true">
+    <Position X="4" Y="2.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Input.StylusEventArgs" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.TextChangedEventArgs" Collapsed="true">
+    <Position X="6.75" Y="2.5" Width="2.75" />
+    <InheritanceLine Type="System.Windows.RoutedEventArgs" ManuallyRouted="true">
+      <Path>
+        <Point X="1.75" Y="2.75" />
+        <Point X="1.75" Y="2.346" />
+        <Point X="3.57" Y="2.346" />
+        <Point X="3.57" Y="5.431" />
+        <Point X="8.125" Y="5.431" />
+        <Point X="8.125" Y="3.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,21 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Specify Your Name";
+}
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<h2>Set Name</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        What is your name? @Html.TextBox("name")
+        <button type="submit">Set Name</button>
+    </p>
+}

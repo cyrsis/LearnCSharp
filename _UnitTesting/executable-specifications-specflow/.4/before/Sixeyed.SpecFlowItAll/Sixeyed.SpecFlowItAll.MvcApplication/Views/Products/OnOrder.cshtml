@@ -1,0 +1,19 @@
+﻿@model Sixeyed.SpecFlowItAll.Domain.Model.Product
+
+@{
+    ViewBag.Title = "Product On Order";
+}
+
+<h2>Product Details</h2>
+
+<fieldset>
+    <legend>@Html.DisplayFor(model => model.Name)</legend>
+
+    <h2 id="availability">
+        Out of stock! Sorry, this product will be available again soon.
+    </h2>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

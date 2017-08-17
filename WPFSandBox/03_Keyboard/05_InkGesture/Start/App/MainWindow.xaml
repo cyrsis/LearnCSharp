@@ -1,0 +1,87 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="MainWindow"
+				Height="400"
+				Width="600"
+				FontSize='16'
+				Background='#FF301606'
+				WindowState='Maximized'>
+	<Grid x:Name='mainGrid'
+				Margin='20'
+				Background='#FF6E4933'>
+		<Grid.RowDefinitions>
+			<RowDefinition Height='44*' />
+			<RowDefinition Height='287*' />
+		</Grid.RowDefinitions>
+		<StackPanel Orientation='Horizontal'>
+			<TextBlock Text='Gesture:'
+								 Margin='3,0'
+								 Foreground='White' />
+			<TextBlock x:Name='gestureResultTextBlock'
+								 Text=''
+								 Margin='3,0'
+								 Foreground='Gold'
+								 MinWidth='120' />
+			<TextBlock x:Name='confidenceResultTextBlock'
+								 Text='Confidence Level:'
+								 Margin='3,0'
+								 Foreground='White' />
+			<TextBlock Text=''
+								 Margin='3,0'
+								 Foreground='Gold' />
+		</StackPanel>
+		<Border x:Name='mainBorder'
+						BorderBrush='#FFAA4806'
+						BorderThickness='15'
+						ClipToBounds='True'
+						MaxWidth='600'
+						MaxHeight='400'
+						Grid.Row='1'>
+
+			<Grid>
+				<InkCanvas x:Name='mainInk'
+									 Gesture='mainInk_Gesture'
+									 EditingMode='GestureOnly'>
+
+					<InkCanvas.Background>
+						<ImageBrush ImageSource='XrayHand.png'
+												Stretch='UniformToFill'>
+							<ImageBrush.Transform>
+								<TransformGroup>
+									<ScaleTransform x:Name='scaleTransform'
+																	ScaleX='2.0'
+																	ScaleY='2.0' />
+									<TranslateTransform x:Name='translateTransform' />
+								</TransformGroup>
+							</ImageBrush.Transform>
+						</ImageBrush>
+					</InkCanvas.Background>
+
+				</InkCanvas>
+
+				<Grid x:Name='headerGrid'
+							Background='#88FFFFFF'
+							HorizontalAlignment='Center'
+							VerticalAlignment='Center'
+							Visibility='Hidden'>
+					<Border BorderBrush='#FFAA4806'
+									BorderThickness='1'>
+						<TextBlock FontFamily='Candara'
+											 FontSize='48'
+											 Text='Fresh Hot Preztels'
+											 Foreground='#FFAA4806'
+											 Margin='20' />
+					</Border>
+				</Grid>
+
+			</Grid>
+		</Border>
+
+	</Grid>
+
+</Window> 

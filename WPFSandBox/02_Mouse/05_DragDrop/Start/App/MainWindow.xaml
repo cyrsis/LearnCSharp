@@ -1,0 +1,74 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoursewareApp"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="720"
+        Width="1280"
+        FontSize='16'
+        Background='#FF301606'
+        WindowState='Maximized'>
+  <Grid x:Name='mainGrid'
+        Margin='20'
+        Background='#FF6E4933'>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width='1*' />
+      <ColumnDefinition Width='4*' />
+    </Grid.ColumnDefinitions>
+    <StackPanel>
+      <TextBlock Text='Source Images'
+                 Foreground='White'
+                 FontSize='24' />
+      <Border BorderBrush='White'
+              BorderThickness='6'
+              Margin='12,6'>
+        <Border BorderBrush='Black'
+                BorderThickness='1'>
+          <Image x:Name='SourceImage1'
+                 Height='160'
+                 Stretch='UniformToFill'
+                 Source='Images/Lunch.jpg' />
+        </Border>
+      </Border>
+      <Border BorderBrush='White'
+              BorderThickness='6'
+              Margin='12,6'>
+        <Border BorderBrush='Black'
+                BorderThickness='1'>
+          <Image x:Name='SourceImage2'
+                 Height='160'
+                 Stretch='UniformToFill'
+                 Source='Images/Pastry.jpg' />
+        </Border>
+      </Border>
+
+      <Border BorderBrush='White'
+              BorderThickness='6'
+              Margin='12,6'>
+        <Border BorderBrush='Black'
+                BorderThickness='1'>
+          <Image x:Name='SourceImage3'
+                 Height='160'
+                 Stretch='UniformToFill'
+                 Source='Images/Pretzel.jpg' />
+        </Border>
+      </Border>
+    </StackPanel>
+    <Border x:Name='mainBorder'
+            BorderBrush='#FFAA4806'
+            BorderThickness='15'
+            ClipToBounds='True'
+            Grid.Column='1'
+            Margin='20'>
+
+      <Image x:Name='foodImage'
+             Source='Images/Pretzel.jpg'
+             Stretch='UniformToFill' />
+
+    </Border>
+  </Grid>
+
+</Window> 

@@ -1,0 +1,10 @@
+﻿html, body {
+    font-family: Arial;
+    height: 80%;
+    width: 80%;
+}
+
+div {
+    height: 100%;
+    text-align: left;
+}

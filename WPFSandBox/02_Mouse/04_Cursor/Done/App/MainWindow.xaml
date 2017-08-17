@@ -1,0 +1,74 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoursewareApp"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="400"
+        Width="600"
+        FontSize='16'
+        Background='#FF301606'>
+  <Grid x:Name='mainGrid'
+        Margin='20'
+        Background='#FF6E4933'>
+
+    <Border x:Name='mainBorder'
+            BorderBrush='#FFAA4806'
+            BorderThickness='15'
+            ClipToBounds='True'>
+      <UniformGrid  Columns='5'
+                    Rows='3'>
+
+        <Ellipse Fill='DarkOrange'
+                 Cursor='AppStarting'
+                 ToolTip='AppStarting' />
+        <Ellipse Fill='DarkSalmon'
+                 Cursor='Arrow'
+                 ToolTip='Arrow' />
+        <Ellipse Fill='DarkOrange'
+                 Cursor='ArrowCD'
+                 ToolTip='ArrowCD' />
+        <Ellipse Fill='DarkSalmon'
+                 Cursor='Cross'
+                 ToolTip='Cross' />
+        <Ellipse Fill='DarkOrange'
+                 Cursor='Hand'
+                 ToolTip='Hand' />
+        <Ellipse Fill='DarkSalmon'
+                 Cursor='Help'
+                 ToolTip='Help' />
+        <Ellipse Fill='DarkOrange'
+                 Cursor='IBeam'
+                 ToolTip='IBeam' />
+        <Ellipse Fill='DarkSalmon'
+                 Cursor='No'
+                 ToolTip='No' />
+        <Ellipse Fill='DarkOrange'
+                 Cursor='Pen'
+                 ToolTip='Pen' />
+        <Ellipse Fill='DarkSalmon'
+                 Cursor='ScrollAll'
+                 ToolTip='ScrollAll' />
+        <Ellipse Fill='DarkOrange'
+                 Cursor='ScrollE'
+                 ToolTip='ScrollE' />
+        <Ellipse Fill='DarkSalmon'
+                 Cursor='SizeAll'
+                 ToolTip='SizeAll' />
+        <Ellipse Fill='DarkOrange'
+                 Cursor='UpArrow'
+                 ToolTip='UpArrow' />
+        <Ellipse Fill='DarkSalmon'
+                 Cursor='Wait'
+                 ToolTip='Wait' />
+        <Ellipse Fill='LightBlue'
+                 ToolTip='Cursor set in code.'
+                 MouseEnter='Ellipse_MouseEnter' />
+
+      </UniformGrid>
+    </Border>
+  </Grid>
+
+</Window> 

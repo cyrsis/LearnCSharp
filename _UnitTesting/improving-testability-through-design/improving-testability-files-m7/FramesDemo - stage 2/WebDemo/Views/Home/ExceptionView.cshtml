@@ -1,0 +1,14 @@
+﻿@model System.Exception
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Error</title>
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2>Well...</h2>
+        <p>Right now we are not able to process your request.</p>
+        <p>Please keep trying to use our services.</p>
+        <p>Additional information: @Model.GetType().Name</p>
+    </body>
+</html>

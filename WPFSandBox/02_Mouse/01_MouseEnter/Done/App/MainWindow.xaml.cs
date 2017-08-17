@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Effects;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Threading;
+
+namespace CoursewareApp {
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainWindow : Window {
+		public MainWindow() {
+			InitializeComponent();
+			
+		}
+
+    private void foodImage_MouseEnter(object sender, MouseEventArgs e) {
+      foodImage.Effect = new BlurEffect();
+      headerGrid.Visibility = Visibility.Visible;
+    }
+
+    private void foodImage_MouseLeave(object sender, MouseEventArgs e) {
+      foodImage.Effect = null;
+      headerGrid.Visibility = Visibility.Hidden;
+    }
+  }
+}

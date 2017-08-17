@@ -1,0 +1,31 @@
+﻿@using Microsoft.Web.Mvc
+@using Web.Controllers
+@using Web.HtmlHelpers
+@using Web.Models
+@model Web.Models.TaskSummaryViewModel[]
+@{
+	ViewBag.Title = "Home Page";
+}
+
+<h2>SpecsFor Course - Module 8 Sample</h2>
+<p class="lead">
+	Welcome to the sample TODO list project!  Here are your tasks!
+</p>
+<div class="list-group">
+	@(Html.BootstrapModalFor<AddTaskForm>()
+		  .PostTo<AddTaskController>(c => c.Add())
+		  .AddLinkClass("list-group-item", "list-group-item-success")
+		  .Title("Add Task")
+		  .CloseButtonLabel("Cancel")
+		  .SaveButtonLabel("Add Task")
+		  .LinkBody(@<text>
+			<i class="glyphicon glyphicon-plus-sign"></i> Add Task
+		</text>))
+	@foreach (var task in Model)
+	{
+		<a href="@(Html.BuildUrlFromExpression<ViewTaskController>(c => c.ViewTask(task.Id)))" class="list-group-item">
+			<i class="glyphicon glyphicon-unchecked"></i>
+			@task.Title
+		</a>
+	}
+</div>

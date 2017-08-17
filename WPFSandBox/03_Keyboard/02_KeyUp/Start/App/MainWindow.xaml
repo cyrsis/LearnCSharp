@@ -1,0 +1,53 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="MainWindow"
+				Height="440"
+				Width="600"
+				FontSize='16'
+				Background='#FFddddff'>
+	<StackPanel Margin='5'>
+		<TextBlock Text='Focus must be set on a TextBox before it can receive key events.' />
+		<TextBlock Text='KeyUp and KeyDown are the main events.  Check for the key value with the e.Key arg' />
+		<TextBox  Margin='20,10'
+							KeyUp='TextBox_KeyUp'
+							Name='text1' />
+
+		<TextBlock Text='Check for action like Home or Escape.' />
+		<TextBox  Margin='20,10'
+							KeyUp='text2_KeyUp'
+							Name='text2' />
+
+		<TextBlock Text='Check for toggle key like Caps Lock.' />
+		<TextBox  Margin='20,10'
+							KeyUp='text3_KeyUp'
+							Name='text3' />
+
+		<TextBlock Text='Check for modifier key button like ALT, SHIFT, CTRL' />
+		<TextBox  Margin='20,10'
+							KeyUp='text4_KeyUp'
+							Name='text4' />
+    <TextBlock Text='Result here...'
+							 Name='resultTextBlock'
+							 Background='LightYellow'
+							 Margin='20,10,0,0' />
+
+		<StackPanel Orientation='Horizontal'>
+			<Button Content='Clear'
+							Click='clearButton_Click'
+							x:Name='clearButton'
+							Margin='20,10,15,0' />
+			<TextBlock Text=''
+								 Name='enteredTextBlock'
+								 Background='LightYellow'
+								 Margin='0,10,0,0' />
+
+		</StackPanel>
+
+	</StackPanel>
+
+</Window> 

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Weavers>
+  <Virtuosity>
+    <ExcludeNamespaces>
+        Demo.People
+    </ExcludeNamespaces>
+    <!--<IncludeNamespaces>
+        Some.Namespace
+        Some.Other.Namespace
+    </IncludeNamespaces>-->
+  </Virtuosity>
+</Weavers>

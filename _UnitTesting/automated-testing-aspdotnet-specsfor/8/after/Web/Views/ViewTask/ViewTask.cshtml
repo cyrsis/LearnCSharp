@@ -1,0 +1,18 @@
+﻿@using Microsoft.Web.Mvc
+@using Web.Controllers
+@model Web.Models.TaskDetailsViewModel
+
+@{
+	ViewBag.Title = Model.Title;
+}
+
+<h2>
+	@Html.DisplayFor(x => x.Title)
+</h2>
+<div  class="well well-sm">
+	@Html.DisplayFor(x => x.Description)
+</div>
+<div class="btn-group">
+	@(Html.ActionLink<HomeController>(c => c.Index(), "Back Home", new { @class = "btn btn-default" }))	
+	@(Html.ActionLink<EditTaskController>(c => c.Edit(Model.Id), "Edit Task", new { @class = "btn btn-primary" }))	
+</div>

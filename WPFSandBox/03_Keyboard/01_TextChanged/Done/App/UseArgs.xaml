@@ -1,0 +1,39 @@
+﻿<Window x:Class="CoursewareApp.UseArgs"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="UseArgs"
+				Height="300"
+				Width="400"
+				FontSize='18'>
+	<StackPanel Background='#FFC0AEA3'>
+		<TextBlock Text='Type text, cut or paste text:' />
+		<TextBox  TextChanged='TextBox_TextChanged' />
+		<TextBlock Text='Data from the Changes arg:' />
+
+		<TextBlock x:Name='resultsTextBlock' />
+		<StackPanel Orientation='Horizontal'>
+			<TextBlock Text='Added Length: '
+								 MinWidth=' 150' />
+			<TextBlock x:Name='addedTextBlock'
+								 Foreground='#FFA15800' />
+		</StackPanel>
+
+		<StackPanel Orientation='Horizontal'>
+			<TextBlock Text='Offset: '
+								 MinWidth=' 150' />
+			<TextBlock  x:Name='offsetTextBlock'
+									Foreground='#FFA15800' />
+		</StackPanel>
+
+		<StackPanel Orientation='Horizontal'>
+			<TextBlock Text='Removed Length: '
+								 MinWidth=' 150' />
+			<TextBlock  x:Name='removedTextBlock'
+									Foreground='#FFA15800' />
+		</StackPanel>
+	</StackPanel>
+</Window>

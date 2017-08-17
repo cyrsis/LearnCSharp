@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Weavers>
+  
+  
+  <Obsolete
+    TreatAsErrorFormat="Oh no! This will break from version '{0}'. "
+    RemoveInVersionFormat="Say your goodbyes, will disappear in version '{0}'. "
+    ReplacementFormat="Feel free to use '{0}' instead. " />
+</Weavers>

@@ -1,0 +1,6 @@
+﻿namespace DTODemo
+{
+    class CatDTO
+    {
+    }
+}

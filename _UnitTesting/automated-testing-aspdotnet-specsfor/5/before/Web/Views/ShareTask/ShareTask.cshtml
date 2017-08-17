@@ -1,0 +1,11 @@
+﻿@using Microsoft.Web.Mvc
+@using Web.Controllers
+@{
+	ViewBag.Title = "Shared!";
+}
+
+<h2>You've shared a task!</h2>
+<p>Now all your friends know what you are working on!</p>
+<p>
+	@(Html.ActionLink<HomeController>(c => c.Index(), "Back Home", new { @class = "btn btn-default" }))
+</p>
