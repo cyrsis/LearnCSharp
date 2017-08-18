@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcp1-3", "pcp1-3\pcp1-3.vcxproj", "{3593B855-8A7A-972D-5D82-601BD6AF3DFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3593B855-8A7A-972D-5D82-601BD6AF3DFB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3593B855-8A7A-972D-5D82-601BD6AF3DFB}.Debug|Win32.Build.0 = Debug|Win32
+		{3593B855-8A7A-972D-5D82-601BD6AF3DFB}.Release|Win32.ActiveCfg = Release|Win32
+		{3593B855-8A7A-972D-5D82-601BD6AF3DFB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

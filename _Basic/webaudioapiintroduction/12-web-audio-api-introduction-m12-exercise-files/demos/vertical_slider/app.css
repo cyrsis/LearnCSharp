@@ -1,0 +1,13 @@
+	
+		.container{
+			position:relative;
+			left:30%;
+			top:50px;
+		}
+
+		#pad {
+		background-color:red;
+		width:200px;
+		height:200px;
+		}
+	

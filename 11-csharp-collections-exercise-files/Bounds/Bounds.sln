@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bounds", "Bounds\Bounds.csproj", "{BB6BA9E6-152F-44D7-A4EE-94D3C5CB17EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB6BA9E6-152F-44D7-A4EE-94D3C5CB17EB}.Debug|x86.ActiveCfg = Debug|x86
+		{BB6BA9E6-152F-44D7-A4EE-94D3C5CB17EB}.Debug|x86.Build.0 = Debug|x86
+		{BB6BA9E6-152F-44D7-A4EE-94D3C5CB17EB}.Release|x86.ActiveCfg = Release|x86
+		{BB6BA9E6-152F-44D7-A4EE-94D3C5CB17EB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+        <rewrite>
+            <rules>
+                <rule name="Block bad.localtest.me" patternSyntax="Wildcard" stopProcessing="true">
+                    <match url="*" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="bad.localtest.me" />
+                    </conditions>
+                    <action type="CustomResponse" statusCode="401" statusReason="Unauthorized: Access is denied due to invalid credentials" statusDescription="You do not have permission to view this site using the credentials that you supplied." />
+                </rule>
+            </rules>
+        </rewrite>

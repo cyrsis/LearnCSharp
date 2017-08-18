@@ -1,0 +1,98 @@
+/* basic page setup and text stuff */
+
+body, html {
+  margin: 0;
+
+}
+
+body {
+  min-width: 1200px;
+}
+
+button {
+    background-color: #000;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius:5%;
+    width: 120px;
+    position: absolute;
+    box-shadow: inset 0px 0px 0px rgba(0,0,0);
+    transition: 0.1s all;
+    -webkit-transition: 0.1s all;
+}
+
+button:hover, button:focus {
+  opacity: 0.8;
+}
+
+button:active {
+  box-shadow: inset 0px 0px 10px rgba(0,0,0);
+}
+
+.play {
+  position:relative;
+  top:100px;
+  left:3px;
+  font-size:2em;
+}
+
+.stop {
+  left:3px;
+  top:150px;
+  font-size:2em;
+}
+
+.center-audio{
+  margin-left:120px;
+  height:100px;
+  width:80px;
+  position:relative;
+}
+
+.controls{
+  position:relative;
+  top:120px;
+  margin: 0 auto; 
+  width:65px;
+}
+
+.left {
+  margin-left:-35px;
+  background: url(icons/arrow_left.png) no-repeat center, linear-gradient(to bottom,  #000 0%,#000 100%);
+}
+
+.right {
+  margin-left:100px;
+  background: url(icons/arrow_right.png) no-repeat center, linear-gradient(to bottom,  #000 0%,#000 100%);
+}
+
+.zoomInButton {
+  margin-left:50%;
+  top:20px;
+  background: url(icons/zoom_out.png) no-repeat center, linear-gradient(to bottom,  #000 0%,#000 100%);
+}
+
+.zoomOutButton {
+  top:-25px;
+  margin-left:50%;
+  background: url(icons/zoom_in.png) no-repeat center, linear-gradient(to bottom,  #000 0%,#000 100%);
+}
+
+.move {
+  width: 60px;
+  height: 40px;
+  background-size: 50% 60%, 100% 100%;
+}
+
+
+
+.controls-container {
+  margin:0 auto;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 500px;
+  width: 1200px;
+  background-color:orange;
+  position: relative;
+}

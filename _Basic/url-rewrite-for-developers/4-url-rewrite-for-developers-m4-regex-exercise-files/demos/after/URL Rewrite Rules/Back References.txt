@@ -1,0 +1,13 @@
+        <rewrite>
+            <rules>
+                <rule name="Back References">
+                    <match url="(city/)?(.+)" />
+                    <conditions trackAllCaptures="true">
+                        <add input="{HTTP_HOST}" pattern="^www\.localtest\.me$" negate="true" />
+                        <add input="{HTTP_HOST}" pattern="^(.+)\.localtest\.me$" />
+                        <add input="{QUERY_STRING}" pattern="(isbeta=true)" />
+                    </conditions>
+                    <action type="Rewrite" url="/cityinfo.php?cmd={R:2}&amp;city={C:1}" appendQueryString="false" />
+                </rule>
+            </rules>
+        </rewrite>

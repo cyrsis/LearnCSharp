@@ -1,0 +1,19 @@
+﻿<Window x:Class="Adder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="339" Width="327">
+    <Grid Height="303" Width="300">
+        <Button Content="Get Data" Height="23" HorizontalAlignment="Left" Margin="144,24,0,0" Name="GetData" VerticalAlignment="Top" Width="75" Click="GetData_Click" />
+        <Label Content="One" Height="28" HorizontalAlignment="Left" Margin="72,79,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="127,79,0,0" Name="number1" VerticalAlignment="Top" Width="120" />
+        <Label Content="Two" Height="28" HorizontalAlignment="Left" Margin="69,106,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="127,108,0,0" Name="number2" VerticalAlignment="Top" Width="120" />
+        <Label Content="Three" Height="28" HorizontalAlignment="Left" Margin="64,135,0,0" Name="label3" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="127,137,0,0" Name="number3" VerticalAlignment="Top" Width="120" />
+        <Button Content="Refresh Total" Height="23" HorizontalAlignment="Left" Margin="144,216,0,0" Name="RefreshTotal" VerticalAlignment="Top" Width="75" Click="RefreshTotal_Click" />
+        <Label Content="Total" Height="28" HorizontalAlignment="Left" Margin="64,261,0,0" Name="label4" VerticalAlignment="Top" />
+        <Label Content="" Height="28" HorizontalAlignment="Left" Margin="127,261,0,0" Name="TotalLabel" VerticalAlignment="Top" />
+        <Label Content="Your Number" Height="28" HorizontalAlignment="Left" Margin="22,182,0,0" Name="label5" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="127,187,0,0" Name="yournumber" VerticalAlignment="Top" Width="120" />
+    </Grid>
+</Window>

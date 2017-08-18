@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualityInt", "EqualityInt\EqualityInt.csproj", "{1B5B77B8-339D-4AFD-A0C2-8B5A56785EDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B5B77B8-339D-4AFD-A0C2-8B5A56785EDE}.Debug|x86.ActiveCfg = Debug|x86
+		{1B5B77B8-339D-4AFD-A0C2-8B5A56785EDE}.Debug|x86.Build.0 = Debug|x86
+		{1B5B77B8-339D-4AFD-A0C2-8B5A56785EDE}.Release|x86.ActiveCfg = Release|x86
+		{1B5B77B8-339D-4AFD-A0C2-8B5A56785EDE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

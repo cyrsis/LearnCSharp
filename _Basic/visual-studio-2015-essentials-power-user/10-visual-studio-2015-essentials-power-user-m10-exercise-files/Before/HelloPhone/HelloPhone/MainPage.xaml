@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="HelloPhone.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloPhone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock  Name="Result" HorizontalAlignment="Left" Margin="142,345,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="90,394,0,0" VerticalAlignment="Top"/>
+            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.945,3.341" Margin="90,249,0,0"/>
+
+        </Grid>
+        <Button Content="Tap me" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,89,0,0" Grid.Row="1" Click="Button_Click" Height="100" Width="200" FontSize="30"/>
+
+
+    </Grid>
+</Page>

@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.Disposable.ConsoleApp", "Sixeyed.Disposable.ConsoleApp\Sixeyed.Disposable.ConsoleApp.csproj", "{DA730E47-2104-4B6C-A422-5FDA6F191085}"
+	ProjectSection(ProjectDependencies) = postProject
+		{849F4E65-CB1D-4494-AF46-4564AA1FF921} = {849F4E65-CB1D-4494-AF46-4564AA1FF921}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.Disposable.WcfService", "Sixeyed.Disposable.WcfService\Sixeyed.Disposable.WcfService.csproj", "{849F4E65-CB1D-4494-AF46-4564AA1FF921}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Sixeyed.Disposable.Database", "Sixeyed.Disposable.Database\Sixeyed.Disposable.Database.sqlproj", "{4640FCEF-56AC-4237-9674-07835750CDE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.Disposable.DomainConsoleApp", "Sixeyed.Disposable.DomainConsoleApp\Sixeyed.Disposable.DomainConsoleApp.csproj", "{E07E2331-227D-48C3-AC18-CEF3B1D29DCB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{849F4E65-CB1D-4494-AF46-4564AA1FF921} = {849F4E65-CB1D-4494-AF46-4564AA1FF921}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Books", "Books", "{7923FBD1-D61C-48A6-842C-CAEC85BBD508}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A Tale of Two Cities", "A Tale of Two Cities", "{41D52A74-C4FF-4EA4-A49E-E4924442F94C}"
+	ProjectSection(SolutionItems) = preProject
+		Books\A Tale of Two Cities\contents.txt = Books\A Tale of Two Cities\contents.txt
+		Books\A Tale of Two Cities\excerpt.txt = Books\A Tale of Two Cities\excerpt.txt
+		Books\A Tale of Two Cities\pg98.txt = Books\A Tale of Two Cities\pg98.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bleak House", "Bleak House", "{6AECE32A-B139-45D1-86CA-D8DF5075FD74}"
+	ProjectSection(SolutionItems) = preProject
+		Books\Bleak House\pg1023.txt = Books\Bleak House\pg1023.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA730E47-2104-4B6C-A422-5FDA6F191085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA730E47-2104-4B6C-A422-5FDA6F191085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA730E47-2104-4B6C-A422-5FDA6F191085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA730E47-2104-4B6C-A422-5FDA6F191085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{849F4E65-CB1D-4494-AF46-4564AA1FF921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{849F4E65-CB1D-4494-AF46-4564AA1FF921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{849F4E65-CB1D-4494-AF46-4564AA1FF921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{849F4E65-CB1D-4494-AF46-4564AA1FF921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4640FCEF-56AC-4237-9674-07835750CDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4640FCEF-56AC-4237-9674-07835750CDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4640FCEF-56AC-4237-9674-07835750CDE5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4640FCEF-56AC-4237-9674-07835750CDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4640FCEF-56AC-4237-9674-07835750CDE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4640FCEF-56AC-4237-9674-07835750CDE5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E07E2331-227D-48C3-AC18-CEF3B1D29DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07E2331-227D-48C3-AC18-CEF3B1D29DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07E2331-227D-48C3-AC18-CEF3B1D29DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07E2331-227D-48C3-AC18-CEF3B1D29DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{41D52A74-C4FF-4EA4-A49E-E4924442F94C} = {7923FBD1-D61C-48A6-842C-CAEC85BBD508}
+		{6AECE32A-B139-45D1-86CA-D8DF5075FD74} = {7923FBD1-D61C-48A6-842C-CAEC85BBD508}
+	EndGlobalSection
+EndGlobal

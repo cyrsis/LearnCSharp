@@ -1,0 +1,12 @@
+        <rewrite>
+            <rules>
+                <rule name="Subdomain redirect" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^www\.[^/]+\.[^/]+$" negate="true" />
+                        <add input="{HTTP_HOST}" pattern="^([^/]+)\.([^/]+\.[^/]+)$" />
+                    </conditions>
+                    <action type="Redirect" url="http://www.{C:2}/{C:1}/{R:0}" />
+                </rule>
+            </rules>
+        </rewrite>

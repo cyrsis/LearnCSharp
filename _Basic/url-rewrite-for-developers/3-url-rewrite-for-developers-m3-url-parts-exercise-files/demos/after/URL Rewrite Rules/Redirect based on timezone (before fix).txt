@@ -1,0 +1,11 @@
+        <rewrite>
+            <rules>
+                <rule name="Redirect based on timezone (if they have it)" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{HTTP_TIME_ZONE}" pattern="EST" />
+                    </conditions>
+                    <action type="Redirect" url="http://est.localtest.me" />
+                </rule>
+            </rules>
+        </rewrite>

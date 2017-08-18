@@ -1,0 +1,12 @@
+        <rewrite>
+            <rules>
+                <rule name="Redirect to www.localtest.me" stopProcessing="true">
+                    <match url="(.*)" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^www\.localtest\.me$" negate="true" />
+                        <add input="{CACHE_URL}" pattern="^(.+)://" />
+                    </conditions>
+                    <action type="Redirect" url="{C:1}://www.localtest.me/{R:1}" />
+                </rule>
+            </rules>
+        </rewrite>

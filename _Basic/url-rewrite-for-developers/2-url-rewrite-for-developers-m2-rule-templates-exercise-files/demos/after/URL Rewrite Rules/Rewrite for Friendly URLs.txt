@@ -1,0 +1,19 @@
+        <rewrite>
+            <rewriteMaps>
+                <rewriteMap name="Friendly URLs">
+                    <add key="/aboutus" value="/articles.aspx?id=9" />
+                    <add key="/contactus" value="/articles.aspx?id=27" />
+                    <add key="/contactus/" value="/articles.aspx?id=27" />
+                    <add key="/products" value="/products.aspx" />
+                </rewriteMap>
+            </rewriteMaps>
+            <rules>
+                <rule name="Rewrite for Friendly URLs">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{Friendly URLs:{REQUEST_URI}}" pattern="(.+)" />
+                    </conditions>
+                    <action type="Rewrite" url="{C:1}" appendQueryString="false" />
+                </rule>
+            </rules>
+        </rewrite>

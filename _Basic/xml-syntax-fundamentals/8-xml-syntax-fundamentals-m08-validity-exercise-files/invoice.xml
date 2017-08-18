@@ -1,0 +1,25 @@
+<!DOCTYPE invoice SYSTEM "invoice.dtd">
+<invoice>
+  <buyer>
+    <name>Sam</name>
+    <address>Seattle</address>
+  </buyer>
+  <seller>
+    <name>Annie</name>
+    <address>Baltimore</address>
+  </seller>
+  <detail>
+    <line>
+      <description>Backpack</description>
+      <quantity>1</quantity>
+      <each>20.00</each>
+      <total>20.00</total>
+    </line>
+  </detail>
+  <totals>
+    <preTax>20.00</preTax>
+    <tax>1.40</tax>
+    <tax>1.00</tax>
+    <total currency="USD">22.40</total>
+  </totals>
+</invoice>

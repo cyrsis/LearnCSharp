@@ -1,0 +1,29 @@
+﻿<div id="vehicleDetails" style="border: thin">
+    <h3 id="vehicleName"></h3>
+    <h4 id="vehicleProductionDates"></h4>
+    <div style="float: left">
+        <img id="vehicleImage" />
+    </div>
+    <div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#vehicleDetails').hide();
+        var vehicleId = '@ViewData["vehicleId"]';
+        var client = new ApiClient.Vehicles;
+        client.getVehicle(vehicleId, function (data) {
+            if (data) {
+                $('#vehicleName').text(data.Name);
+                $('#vehicleImage').attr('src', data.ImageUrl);
+                var dateText = 'Made from: ' + data.ProducedFromUtc.substring(0, 10);
+                if (data.ProducedToUtc) {
+                    dateText = dateText + ' to: ' + data.ProducedToUtc.substring(0, 10);
+                }
+                $('#vehicleProductionDates').text(dateText);
+            }
+            $('#vehicleDetails').toggle();
+        });
+    });
+</script>

@@ -1,0 +1,9 @@
+<configuration>
+	<cache-config name="Sixeyed.Core.Cache" inproc="false">
+		<cleanup interval="60sec"/>
+		<log trace-errors="true" trace-debug="false" enabled="true"/>
+		<storage cache-size="200mb"/>
+		<eviction-policy default-priority="normal" eviction-ratio="10%" eviction-enabled="true"/>
+		<perf-counters enabled="true"/>
+	</cache-config>
+</configuration>

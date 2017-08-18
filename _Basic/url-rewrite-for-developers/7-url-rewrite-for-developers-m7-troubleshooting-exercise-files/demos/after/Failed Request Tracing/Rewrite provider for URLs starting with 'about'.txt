@@ -1,0 +1,12 @@
+    <system.webServer>
+        <tracing>
+            <traceFailedRequests>
+                <add path="about*">
+                    <traceAreas>
+                        <add provider="WWW Server" areas="Rewrite" verbosity="Verbose" />
+                    </traceAreas>
+                    <failureDefinitions statusCodes="200-999" />
+                </add>
+            </traceFailedRequests>
+        </tracing>
+    </system.webServer>

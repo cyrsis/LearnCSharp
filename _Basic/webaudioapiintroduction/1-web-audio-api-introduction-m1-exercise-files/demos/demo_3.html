@@ -1,0 +1,61 @@
+<script>
+
+"use strict"
+function audioContextCheck(){
+  if (typeof AudioContext !== "undefined") {
+    return new AudioContext();
+  }
+  else if (typeof webkitAudioContext !== "undefined") {
+    return new webkitAudioContext();
+  }
+  else if (typeof mozAudioContext !== "undefined") {
+    return new mozAudioContext();
+  }
+  else {
+    throw new Error('AudioContext not supported');
+  }
+}
+ 
+
+
+var audioContext = audioContextCheck();
+
+
+
+
+
+
+
+
+var osc1 = audioContext.createOscillator();
+osc1.type = "sawtooth";
+osc1.frequency.value = 300;
+
+
+var osc2 = audioContext.createOscillator();
+osc2.type = "square";
+osc2.frequency.value = 300;
+
+osc1.start(audioContext.currentTime);
+osc2.start(audioContext.currentTime);
+
+var gainOsc1 = audioContext.createGain();
+var gainOsc2 = audioContext.createGain();
+var gainMix = audioContext.createGain();
+
+gainOsc1.gain.value = 1;
+gainOsc2.gain.value = 1;
+
+osc1.connect(gainOsc1);
+osc2.connect(gainOsc2);
+gainOsc1.connect(gainMix);
+gainOsc2.connect(gainMix);
+gainMix.connect(audioContext.destination);
+
+
+
+
+
+
+
+</script>

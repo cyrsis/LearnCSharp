@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5e189105-7a2b-49ab-93e7-11237000b0e4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Sixeyed.CarValet.Services/VehicleService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VehicleService.xsd" MetadataType="Schema" ID="9df9376e-e115-428a-95f1-6dd3ec2b0377" SourceId="1" SourceUrl="http://localhost/Sixeyed.CarValet.Services/VehicleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="VehicleService1.xsd" MetadataType="Schema" ID="f74ed6dd-f1e7-445d-98ac-bbf2667509f4" SourceId="1" SourceUrl="http://localhost/Sixeyed.CarValet.Services/VehicleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="VehicleService2.xsd" MetadataType="Schema" ID="920aea95-e65f-46df-83bf-140b7f3c7db1" SourceId="1" SourceUrl="http://localhost/Sixeyed.CarValet.Services/VehicleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="VehicleService3.xsd" MetadataType="Schema" ID="a890d6eb-d32e-4a87-bb69-f64f146c7cbd" SourceId="1" SourceUrl="http://localhost/Sixeyed.CarValet.Services/VehicleService.svc?xsd=xsd3" />
+    <MetadataFile FileName="VehicleService.wsdl" MetadataType="Wsdl" ID="091a9c0c-6a1e-4ffb-b546-413598e0f47e" SourceId="1" SourceUrl="http://localhost/Sixeyed.CarValet.Services/VehicleService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

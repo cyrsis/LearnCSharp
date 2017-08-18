@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Northwind">
+  <DataContextMoniker Name="/NorthwindDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2192c641-bb4c-45ad-ae4f-19944f97001e" absoluteBounds="0.875, 0.875, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/NorthwindDataContext/LinqCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97d0e7cf-10b1-4209-a9f8-f9ea8d07f563" absoluteBounds="0.89, 1.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="700314ed-39c4-4bdd-8e0d-c7f415a065e7" absoluteBounds="0.875, 3, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/NorthwindDataContext/LinqProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="453ffd56-c3b5-4d47-8dad-00b7c522f2e9" absoluteBounds="0.89, 3.46, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.875 : 2.29984781901042); (1.875 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NorthwindDataContext/LinqCategory/Category_Product" />
+      <nodes>
+        <classShapeMoniker Id="2192c641-bb4c-45ad-ae4f-19944f97001e" />
+        <classShapeMoniker Id="700314ed-39c4-4bdd-8e0d-c7f415a065e7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

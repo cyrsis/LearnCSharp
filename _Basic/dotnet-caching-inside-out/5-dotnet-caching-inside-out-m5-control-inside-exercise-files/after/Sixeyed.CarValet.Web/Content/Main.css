@@ -1,0 +1,14 @@
+﻿body {
+    font-family: Georgia;
+}
+
+.logo {
+    font-size:36px;
+}
+
+.cmsBanner {
+    position:fixed; 
+    left:500px;
+     top:150px;
+     border-style: double;
+}

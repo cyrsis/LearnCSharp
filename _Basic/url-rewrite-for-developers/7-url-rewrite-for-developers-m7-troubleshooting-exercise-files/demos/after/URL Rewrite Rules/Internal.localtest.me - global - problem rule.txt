@@ -1,0 +1,10 @@
+                <rule name="Internal.localtest.me" enabled="false">
+                    <match url=".*" />
+                    <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+                        <add input="{HTTP_HOST}" pattern="(internal\.)?localtest\.me$" />
+                    </conditions>
+                    <serverVariables>
+                        <set name="HTTP_HOST" value="internal.localtest.me" />
+                    </serverVariables>
+                    <action type="None" />
+                </rule>

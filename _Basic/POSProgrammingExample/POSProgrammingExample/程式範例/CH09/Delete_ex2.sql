@@ -1,0 +1,2 @@
+use TestSIS
+DELETE FROM AccountsPayable

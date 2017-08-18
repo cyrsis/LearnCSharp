@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <section name="dataCache" type="Microsoft.ApplicationServer.Caching.DataCacheSection, Microsoft.ApplicationServer.Caching.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    </configSections>
+    <dataCache size="Small">
+        <caches>
+            <cache consistency="StrongConsistency" name="default">
+                <policy>
+                    <eviction type="Lru" />
+                    <expiration defaultTTL="10" isExpirable="true" />
+                </policy>
+            </cache>
+        </caches>
+        <hosts>
+            <host replicationPort="22236" arbitrationPort="22235" clusterPort="22234"
+                hostId="2116494160" size="2047" leadHost="true" account="GBBUPAGROUP\VMSBHWDEVAZR03$"
+                cacheHostName="AppFabricCachingService" name="VMSBHWDEVAZR03"
+                cachePort="22233" />
+        </hosts>
+    </dataCache>
+</configuration>

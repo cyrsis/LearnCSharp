@@ -1,0 +1,122 @@
+﻿
+<div id="vehicleLookup">
+    <h2>Your Vehicle</h2>
+    <label for="vehicleMake">Make:</label>
+    <input type=text class="txtVehicleMake linkedList1" name="vehicleMake" id="vehicleMake" value="" size="28" />
+    <label for="vehicleModel">Model:</label>
+    <input type=text class="txtVehicleModel linkedList1" name="vehicleModel" id="vehicleModel" value="" size="28" /> 
+    <input type="button" id="checkVehicle" value="Find" />
+    <div id="vehicleDetails" style="border:thin">
+        <a id="myQuotes">
+            <h3 id="vehicleName"></h3>
+        </a>
+        <h4 id="vehicleProductionDates"></h4>
+        <div style="float:left">
+        <img id="vehicleImage" />
+        </div>
+        <div>
+        <p id="vehicleInfo" style="padding-left:10px">Huic quum fas cui suum sunt omne ego. Sed toga rea vim eram tur quum. Adjuvetis perlegere immittant quaslibet separatum nec eas rum uno explorant. Eos mox tur tum casu nunc huic bile meum. Ad sequentia expendere considero se dubitandi. Loco modi regi tur sex apti data olim.</p>
+            </div>
+    </div>
+</div>
+
+<script>
+    //add auto-complete to make and model lookups
+    var $modelElement;
+
+    $(function () {
+        $('.txtVehicleMake').autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: 'http://localhost/Sixeyed.CarValet.Api/api/makes',
+                    dataType: 'json',
+                    data: "startsWith=" + request.term,
+                    success: function (data) {
+                        var suggestions = [];
+                        $.each(data, function (i, val) {
+                            suggestions.push(val);
+                        });
+                        response(suggestions);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                    }
+                });
+            },
+            minLength: 1,
+            select: function (event, ui) {
+            },
+            open: function () {
+                $(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+            },
+            close: function () {
+                $(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+            }
+        });
+
+        $('.txtVehicleModel').autocomplete({
+            search: function (event, ui) {
+                $modelElement = $(this);
+            },
+            source: function (request, response) {
+                var modelClasses = $modelElement.attr('class');
+                var listClass = '';
+                if (modelClasses.indexOf("linkedList") > 0) {
+                    listClass = modelClasses.substring(modelClasses.indexOf("linkedList"), modelClasses.indexOf("linkedList") + 11);
+                }
+                var make = $(".txtVehicleMake." + listClass).val();
+                $.ajax({
+                    url: 'http://localhost/Sixeyed.CarValet.Api/api/models',
+                    dataType: 'json',
+                    data: "makeName=" + make + "&startsWith=" + request.term,
+                    success: function (data) {
+                        var suggestions = [];
+                        $.each(data, function (i, val) {
+                            suggestions.push(val);
+                        });
+                        response(suggestions);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                    }
+                });
+            },
+            minLength: 1,
+            select: function (event, ui) {
+            },
+            open: function () {
+                $(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+            },
+            close: function () {
+                $(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+            }
+        });
+    });
+</script>
+
+<script>
+    //wire up vehicle check
+    $(function () {
+        $('#vehicleDetails').hide();
+        $('#checkVehicle').on('click', function () {
+            $('#vehicleDetails').hide();
+            var makeName = $('#vehicleMake').val();
+            var modelName = $('#vehicleModel').val();
+            var client = new ApiClient.Vehicles;
+            client.searchVehicles(makeName, modelName, function (data) {
+                if (data) {
+                    for (i = 0; i < data.length; i++) {
+                        //TODO - template
+                        $('#vehicleName').text('Select: ' + data[i].Name);
+                        $('#vehicleImage').attr('src', data[i].ImageUrl);
+                        var dateText = 'Made from: ' + data[i].ProducedFromUtc.substring(0, 10);
+                        if (data[i].ProducedToUtc) {
+                            dateText = dateText + ' to: ' + data[i].ProducedToUtc.substring(0, 10);
+                        }
+                        $('#vehicleProductionDates').text(dateText);
+                        $('#myQuotes').attr('href', 'MyQuotes?vehicleId=' + data[i].VehicleId);
+                    }
+                    $('#vehicleDetails').toggle();
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,8 @@
+<!ENTITY e SYSTEM "../bdir/e.xml">
+<!NOTATION gif-file SYSTEM "gif-uri">
+<!ENTITY x SYSTEM "x.gif" NDATA gif-file>
+
+<!ELEMENT start ( #PCDATA | image | org )*>
+<!ELEMENT image EMPTY>
+<!ATTLIST image ent ENTITY #REQUIRED>
+<!ELEMENT org ( #PCDATA )>

@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "MyQuotes";
+}
+
+<h1>My Quotes</h1>
+
+<div id="cms" class="cmsBanner">
+    @Html.Raw(Sixeyed.CarValet.Web.ApiClient.ContentClient.GetItems("MYQUOTES").First().Value)
+</div>
+
+@if (ViewBag.Quotes != null)
+{
+    <div id="quotes">
+        <h2>Your Quotes</h2>
+        @Html.ActionLink("Get Another Quote", "GetQuotes")
+        @foreach (Sixeyed.CarValet.Api.Models.QuoteModel quote in ViewBag.Quotes)
+        {
+            <div style="float: left">
+                <h3>@quote.ProductName : £@quote.Cost</h3>
+                <ul>
+                    @foreach (var option in quote.Options)
+                    {
+                        <li>@option</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div id="location">
+        <h2>Your Location</h2>
+        @using (Html.BeginForm("GetQuotePrices", "Quotes"))
+        {
+            <input name="vehicleId" id="vehicleId" type="hidden" value="@ViewBag.vehicleId" />
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" name="postalCode" id="postalCode" size="14" value="@ViewBag.postalCode" />
+            <input type="submit" value="Get Your Quotes!">
+        }
+    </div>
+}
+
+<div id="details" style="clear: both">
+    @Html.Partial("VehicleDetails", ViewData)
+</div>

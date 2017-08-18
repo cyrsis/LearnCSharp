@@ -1,0 +1,163 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{A538004A-6E84-4636-B994-B71416C2A694}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Sixeyed.CarValet.Database", "Sixeyed.CarValet.Database\Sixeyed.CarValet.Database.sqlproj", "{520EB106-1BDB-4B53-86AC-030C2E268459}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Entities", "Sixeyed.CarValet.Entities\Sixeyed.CarValet.Entities.csproj", "{879E26F7-B8EF-4E7C-B963-61D759F06941}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{31DB98D9-97EB-48A8-BC4E-397CC6ED5920}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1A4764BA-6947-49F4-8587-4E8395E69611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Services", "Sixeyed.CarValet.Services\Sixeyed.CarValet.Services.csproj", "{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Api", "Sixeyed.CarValet.Api\Sixeyed.CarValet.Api.csproj", "{2FEED4DE-7286-431A-87BF-315F18A76D2E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{956A1217-A998-4FEE-BEA8-C514570B662D} = {956A1217-A998-4FEE-BEA8-C514570B662D}
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E} = {FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{2CFBB979-A3CB-489E-BE33-AC2EF1B76897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Web", "Sixeyed.CarValet.Web\Sixeyed.CarValet.Web.csproj", "{352B8D52-D258-4641-A74A-CB3808F75F43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{A078A74B-E85F-4148-A75B-1AA9A12E8498}"
+	ProjectSection(SolutionItems) = preProject
+		RandomText.txt = RandomText.txt
+		Assets\RESTClient.json = Assets\RESTClient.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{9E942E0A-C0ED-4B22-8569-0900E7B53AAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Legacy", "Legacy", "{98572BEA-2848-4A33-9CC2-47E273C9E7B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.LegacyServices", "Sixeyed.CarValet.LegacyServices\Sixeyed.CarValet.LegacyServices.csproj", "{956A1217-A998-4FEE-BEA8-C514570B662D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.Core", "Sixeyed.Core\Sixeyed.Core.csproj", "{305905AA-7D68-4B40-A4DC-DD4181BAF953}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{85EB943A-15E4-4F96-B3D0-9B940FF5248B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Entities.Tests", "Sixeyed.CarValet.Entities.Tests\Sixeyed.CarValet.Entities.Tests.csproj", "{23C3BE4B-293F-4B13-AF3D-F6311112E1F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Web.PerfTest", "Sixeyed.CarValet.Web.PerfTest\Sixeyed.CarValet.Web.PerfTest.csproj", "{83E9CF94-760A-40CB-B771-9EEDA94FA6B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC6FFDDD-7F0F-4ABF-B224-E4384B5917CF}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Sixeyed.CarValet.vsmdi = Sixeyed.CarValet.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.LegacyServices.Tests", "Sixeyed.CarValet.LegacyServices.Tests\Sixeyed.CarValet.LegacyServices.Tests.csproj", "{144A385D-DDF2-4E1B-8683-90772888BE5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CacheConfiguration", "CacheConfiguration", "{A0867489-698B-4BFF-B128-57FC004246E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppFabric", "AppFabric", "{75F85930-210D-454B-B514-E543E215EC9B}"
+	ProjectSection(SolutionItems) = preProject
+		Assets\CacheConfiguration\AppFabric\ClusterConfig.xml = Assets\CacheConfiguration\AppFabric\ClusterConfig.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NCacheExpress", "NCacheExpress", "{ABF7AFA0-C460-407C-99CF-E8C8DFB98145}"
+	ProjectSection(SolutionItems) = preProject
+		Assets\CacheConfiguration\NCacheExpress\Alachisoft.NCacheExpress.Service.exe.config = Assets\CacheConfiguration\NCacheExpress\Alachisoft.NCacheExpress.Service.exe.config
+		Assets\CacheConfiguration\NCacheExpress\config.ncconf = Assets\CacheConfiguration\NCacheExpress\config.ncconf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Squid", "Squid", "{83446314-1E6C-49D6-8A16-803155387715}"
+	ProjectSection(SolutionItems) = preProject
+		Assets\CacheConfiguration\Squid\clearcache.bat = Assets\CacheConfiguration\Squid\clearcache.bat
+		Assets\CacheConfiguration\Squid\squid.conf = Assets\CacheConfiguration\Squid\squid.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1CFB638A-292D-4D6B-BAF2-AAF6BE61667E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Sixeyed.CarValet.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{879E26F7-B8EF-4E7C-B963-61D759F06941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879E26F7-B8EF-4E7C-B963-61D759F06941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879E26F7-B8EF-4E7C-B963-61D759F06941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879E26F7-B8EF-4E7C-B963-61D759F06941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352B8D52-D258-4641-A74A-CB3808F75F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352B8D52-D258-4641-A74A-CB3808F75F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352B8D52-D258-4641-A74A-CB3808F75F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352B8D52-D258-4641-A74A-CB3808F75F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{956A1217-A998-4FEE-BEA8-C514570B662D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956A1217-A998-4FEE-BEA8-C514570B662D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956A1217-A998-4FEE-BEA8-C514570B662D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956A1217-A998-4FEE-BEA8-C514570B662D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{305905AA-7D68-4B40-A4DC-DD4181BAF953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305905AA-7D68-4B40-A4DC-DD4181BAF953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305905AA-7D68-4B40-A4DC-DD4181BAF953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305905AA-7D68-4B40-A4DC-DD4181BAF953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23C3BE4B-293F-4B13-AF3D-F6311112E1F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23C3BE4B-293F-4B13-AF3D-F6311112E1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23C3BE4B-293F-4B13-AF3D-F6311112E1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23C3BE4B-293F-4B13-AF3D-F6311112E1F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E9CF94-760A-40CB-B771-9EEDA94FA6B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E9CF94-760A-40CB-B771-9EEDA94FA6B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E9CF94-760A-40CB-B771-9EEDA94FA6B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E9CF94-760A-40CB-B771-9EEDA94FA6B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144A385D-DDF2-4E1B-8683-90772888BE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144A385D-DDF2-4E1B-8683-90772888BE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144A385D-DDF2-4E1B-8683-90772888BE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144A385D-DDF2-4E1B-8683-90772888BE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A538004A-6E84-4636-B994-B71416C2A694} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{31DB98D9-97EB-48A8-BC4E-397CC6ED5920} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{1A4764BA-6947-49F4-8587-4E8395E69611} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{2CFBB979-A3CB-489E-BE33-AC2EF1B76897} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{9E942E0A-C0ED-4B22-8569-0900E7B53AAC} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{98572BEA-2848-4A33-9CC2-47E273C9E7B3} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{520EB106-1BDB-4B53-86AC-030C2E268459} = {A538004A-6E84-4636-B994-B71416C2A694}
+		{879E26F7-B8EF-4E7C-B963-61D759F06941} = {31DB98D9-97EB-48A8-BC4E-397CC6ED5920}
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E} = {1A4764BA-6947-49F4-8587-4E8395E69611}
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E} = {1A4764BA-6947-49F4-8587-4E8395E69611}
+		{352B8D52-D258-4641-A74A-CB3808F75F43} = {2CFBB979-A3CB-489E-BE33-AC2EF1B76897}
+		{A0867489-698B-4BFF-B128-57FC004246E4} = {A078A74B-E85F-4148-A75B-1AA9A12E8498}
+		{305905AA-7D68-4B40-A4DC-DD4181BAF953} = {9E942E0A-C0ED-4B22-8569-0900E7B53AAC}
+		{956A1217-A998-4FEE-BEA8-C514570B662D} = {98572BEA-2848-4A33-9CC2-47E273C9E7B3}
+		{23C3BE4B-293F-4B13-AF3D-F6311112E1F4} = {85EB943A-15E4-4F96-B3D0-9B940FF5248B}
+		{83E9CF94-760A-40CB-B771-9EEDA94FA6B4} = {85EB943A-15E4-4F96-B3D0-9B940FF5248B}
+		{AC6FFDDD-7F0F-4ABF-B224-E4384B5917CF} = {85EB943A-15E4-4F96-B3D0-9B940FF5248B}
+		{144A385D-DDF2-4E1B-8683-90772888BE5E} = {85EB943A-15E4-4F96-B3D0-9B940FF5248B}
+		{75F85930-210D-454B-B514-E543E215EC9B} = {A0867489-698B-4BFF-B128-57FC004246E4}
+		{ABF7AFA0-C460-407C-99CF-E8C8DFB98145} = {A0867489-698B-4BFF-B128-57FC004246E4}
+		{83446314-1E6C-49D6-8A16-803155387715} = {A0867489-698B-4BFF-B128-57FC004246E4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35;packages\Unity.Interception.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

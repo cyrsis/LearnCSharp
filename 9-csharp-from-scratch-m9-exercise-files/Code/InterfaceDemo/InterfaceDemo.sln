@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceDemo", "InterfaceDemo\InterfaceDemo.csproj", "{83F98202-B920-49AD-8649-2CE2E54AA694}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83F98202-B920-49AD-8649-2CE2E54AA694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F98202-B920-49AD-8649-2CE2E54AA694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F98202-B920-49AD-8649-2CE2E54AA694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F98202-B920-49AD-8649-2CE2E54AA694}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

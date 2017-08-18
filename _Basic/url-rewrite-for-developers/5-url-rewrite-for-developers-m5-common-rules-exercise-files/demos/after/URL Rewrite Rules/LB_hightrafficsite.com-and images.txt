@@ -1,0 +1,21 @@
+<!-- Note that these are server level rules -->
+        <rewrite>
+            <globalRules>
+                <clear />
+                <rule name="LB_hightrafficesite.com">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^(www\.)?hightrafficsite\.com$" />
+                        <add input="{URL}" pattern="^/images/" negate="true" />
+                    </conditions>
+                    <action type="Rewrite" url="http://hightrafficesite.com/{R:0}" />
+                </rule>
+                <rule name="LB_images.hightrafficsite.com">
+                    <match url="^images/" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^(www\.)?hightrafficsite\.com$" />
+                    </conditions>
+                    <action type="Rewrite" url="http://images.hightrafficsite.com/{R:0}" />
+                </rule>
+            </globalRules>
+        </rewrite>

@@ -1,0 +1,12 @@
+        <rewrite>
+            <rules>
+                <rule name="Enforce www's" stopProcessing="true">
+                    <match url="(.*)" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^www\.localtest\.me$" negate="true" />
+                        <add input="{HTTP_HOST}" pattern="^localtest\.me$" />
+                    </conditions>
+                    <action type="Redirect" url="http://www.localtest.me/{R:1}" />
+                </rule>
+            </rules>
+        </rewrite>

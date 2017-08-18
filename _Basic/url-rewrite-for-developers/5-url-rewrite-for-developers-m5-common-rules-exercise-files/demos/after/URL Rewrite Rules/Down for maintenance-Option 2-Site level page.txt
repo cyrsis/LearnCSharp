@@ -1,0 +1,11 @@
+        <rewrite>
+            <rules>
+                <rule name="Down for maintenance">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{URL}" pattern="^/content" negate="true" />
+                    </conditions>
+                    <action type="Rewrite" url="/downformaintenance.aspx" />
+                </rule>
+            </rules>
+        </rewrite>

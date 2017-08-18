@@ -1,0 +1,22 @@
+<!-- Note that these are server level rules -->
+        <rewrite>
+            <globalRules>
+                <clear />
+                <rule name="Down for maintenance for localtest.me - content" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+                        <add input="{HTTP_HOST}" pattern="^(www\.)?localtest\.me$" />
+                        <add input="{URL}" pattern="^/content" />
+                    </conditions>
+                    <action type="Rewrite" url="http://downformaintenance.localtest.me/{R:0}" appendQueryString="false" />
+                </rule>
+                <rule name="Down for maintenance for localtest.me" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+                        <add input="{HTTP_HOST}" pattern="^(www\.)?localtest\.me$" />
+                    </conditions>
+                    <action type="Rewrite" url="http://downformaintenance.localtest.me/" appendQueryString="false" />
+                </rule>
+            </globalRules>
+        </rewrite>
+

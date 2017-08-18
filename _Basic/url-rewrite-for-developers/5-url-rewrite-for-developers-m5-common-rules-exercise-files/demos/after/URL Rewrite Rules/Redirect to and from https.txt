@@ -1,0 +1,20 @@
+        <rewrite>
+            <rules>
+                <rule name="Redirect to https" stopProcessing="true">
+                    <match url="(login|signup|payment|signup\.aspx)/?$" />
+                    <conditions>
+                        <add input="{HTTPS}" pattern="off" />
+                    </conditions>
+                    <action type="Redirect" url="https://www.localtest.me/{R:0}" />
+                </rule>
+                <rule name="Redirect from https" stopProcessing="true">
+                    <match url="(login|signup|payment|signup\.aspx)/?$" negate="true" />
+                    <conditions>
+                        <add input="{HTTPS}" pattern="on" />
+                        <add input="{URL}" pattern="^(.*\.(aspx|htm|html|php)|[^.]*)$" />
+                        <add input="{URL}" pattern="(/css|/js)$" negate="true" />
+                    </conditions>
+                    <action type="Redirect" url="http://{HTTP_HOST}{URL}" />
+                </rule>
+            </rules>
+        </rewrite>

@@ -1,0 +1,13 @@
+/* add style here */
+
+h1 {
+font-size: 30.5px;
+}
+
+h3 {
+font-size: 18px;
+}
+
+h1, h2, h3 {
+line-height: inherit;
+}

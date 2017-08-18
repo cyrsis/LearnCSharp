@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <title>Pluralsight - Skype Web SDK Audio, Video and Conferencing - M4</title>
+    <!-- SkypeWeb library requires IE compatible mode turned off -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+
+    <meta name="author" content="Matthew Proctor, Melbourne, Australia" />
+    <link rel="canonical" href="https://www.matthewproctor.com" />
+
+    <link rel="shortcut icon" href="http://www.pluralsight.com/favicon.ico">
+
+    <!-- the jQuery library written by John Resig (MIT license) -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+
+    <!-- SkypeWebSDK Bootstrap Library -->
+    <script src="https://swx.cdn.skype.com/shared/v/1.1.23.0/SkypeBootstrap.min.js"></script>
+
+    <!-- Load Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript functions & styles for this demonstration -->
+    <script src="index.js?123697"></script>
+    <link href="index.css?124" rel="stylesheet">
+</head>
+<body>
+    <div class="signinframe">
+
+        <div id="loginbox">
+            <div>Login</div>
+            <div id="address" contenteditable="true" class="input form-control"></div>
+            <div>Password</div>
+            <input type="password" id="password" name="password" class="input form-control" />
+            <div id="signin" class="button">Sign In</div>
+        </div>
+    </div>
+
+    <div id="loggedinbox">
+        <div id="startChat" class="button">Start chatService</div>
+        <div id="list_contacts" class="button">List Contacts</div>
+        <div id="stopChat" class="button">Stop chatService</div>
+        <div id="signout" class="button">Sign Out</div>
+
+        <br />
+        <div class="container container-fluid">
+            <div class="row" id="cards">
+            </div>
+        </div>
+
+        <div class="container" id="conversationbox" style="border:1px solid lightgray;">
+            <div id="conversationheader">
+                <p><b>Conversation Participants</b></p>
+            </div>
+            <div class="row" id="participantlist">
+            </div>
+            <div id="conversationfooter">
+                <div id="addaudio" class="button"><i class="glyphicon glyphicon-volume-up"></i>&nbsp;Add Audio to Conversation</div>
+                <div id="muteaudio" class="button"><i class="glyphicon glyphicon-pause"></i>&nbsp;Toggle Mute</div>
+                <div id="holdaudio" class="button"><i class="glyphicon glyphicon-ban-circle"></i>&nbsp;Toggle Hold</div>
+                <div id="stopaudio" class="button"><i class="glyphicon glyphicon-volume-off"></i>&nbsp;Remove Audio</div>
+
+                <div id="keypad">
+                    <table class="thekeypad" id="thekeypad">
+                        <tr>
+                            <td><div id="send1" class="button">1</div></td>
+                            <td><div id="send2" class="button">2</div></td>
+                            <td><div id="send3" class="button">3</div></td>
+                        </tr>
+                        <tr>
+                            <td><div id="send4" class="button">4</div></td>
+                            <td><div id="send5" class="button">5</div></td>
+                            <td><div id="send6" class="button">6</div></td>
+                        </tr>
+                        <tr>
+                            <td><div id="send7" class="button">7</div></td>
+                            <td><div id="send8" class="button">8</div></td>
+                            <td><div id="send9" class="button">9</div></td>
+                        </tr>
+                        <tr>
+                            <td><div id="sendstar" class="button">*</div></td>
+                            <td><div id="send0" class="button">0</div></td>
+                            <td><div id="sendpound" class="button">#</div></td>
+                        </tr>
+                    </table>
+                </div>
+                
+
+            </div>
+            <br clear="all" />
+        </div>
+
+        <div class="row" id="conversationdetails">
+        </div>
+
+    </div>
+
+    <div id="logging_box" contenteditable="false" class="code"><b>Event Logs<br /></b></div>
+
+</body>
+</html>

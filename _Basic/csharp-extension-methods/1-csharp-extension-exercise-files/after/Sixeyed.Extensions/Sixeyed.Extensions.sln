@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.Extensions.Samples", "Sixeyed.Extensions.Samples\Sixeyed.Extensions.Samples.csproj", "{BAF6745E-0137-40DA-ADFF-2922E79B8E02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2D52A0DD-B66E-4FC6-8C73-704A4D64A954}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.Extensions.Tests", "Sixeyed.Extensions.Tests\Sixeyed.Extensions.Tests.csproj", "{440E0A3F-178B-4B87-A167-704028CC8648}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8BA5D50C-229D-4A89-AC8C-438CDC6B6118}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://sixeyed.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Sixeyed.Extensions.Samples\\Sixeyed.Extensions.Samples.csproj
+		SccProjectName1 = Sixeyed.Extensions.Samples
+		SccLocalPath1 = Sixeyed.Extensions.Samples
+		SccProjectUniqueName2 = Sixeyed.Extensions.Tests\\Sixeyed.Extensions.Tests.csproj
+		SccProjectTopLevelParentUniqueName2 = Sixeyed.Extensions.sln
+		SccProjectName2 = Sixeyed.Extensions.Tests
+		SccLocalPath2 = Sixeyed.Extensions.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAF6745E-0137-40DA-ADFF-2922E79B8E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF6745E-0137-40DA-ADFF-2922E79B8E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF6745E-0137-40DA-ADFF-2922E79B8E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF6745E-0137-40DA-ADFF-2922E79B8E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440E0A3F-178B-4B87-A167-704028CC8648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440E0A3F-178B-4B87-A167-704028CC8648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440E0A3F-178B-4B87-A167-704028CC8648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440E0A3F-178B-4B87-A167-704028CC8648}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{440E0A3F-178B-4B87-A167-704028CC8648} = {2D52A0DD-B66E-4FC6-8C73-704A4D64A954}
+	EndGlobalSection
+EndGlobal

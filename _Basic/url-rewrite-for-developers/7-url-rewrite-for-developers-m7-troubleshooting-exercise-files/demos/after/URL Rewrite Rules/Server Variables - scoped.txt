@@ -1,0 +1,7 @@
+                <rule name="Server Variables - scoped" patternSyntax="Wildcard" stopProcessing="true">
+                    <match url="*" />
+                    <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+                        <add input="{REMOTE_ADDR}" pattern="127.0.0.1" />
+                    </conditions>
+                    <action type="Redirect" url="http://www.bing.com/?val={HTTP_HOST}" redirectType="Temporary" />
+                </rule>

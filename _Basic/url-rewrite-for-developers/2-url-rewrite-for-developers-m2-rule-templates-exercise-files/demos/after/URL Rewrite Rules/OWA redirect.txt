@@ -1,0 +1,12 @@
+        <rewrite>
+            <rules>
+                <rule name="OWA redirect" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{HTTPS}" pattern="off" />
+                        <add input="{HTTP_HOST}" pattern="^owa\.localtest\.me$" />
+                    </conditions>
+                    <action type="Redirect" url="https://{HTTP_HOST}/{R:0}" redirectType="Temporary" />
+                </rule>
+            </rules>
+        </rewrite>

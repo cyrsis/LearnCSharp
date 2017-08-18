@@ -1,0 +1,33 @@
+        <rewrite>
+            <rules>
+                <rule name="Running country from subfolder">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{URL}" pattern="^/content" negate="true" />
+                        <add input="{HTTP_HOST}" pattern="^www" negate="true" />
+                        <add input="{HTTP_HOST}" pattern="^(.+)\.localtest\.me$" />
+                    </conditions>
+                    <action type="Rewrite" url="/{C:1}/{R:0}" />
+                </rule>
+                <rule name="Redirect non-valid countries" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions trackAllCaptures="true">
+                        <add input="{HTTP_HOST}" pattern="^(.+)\.localtest\.me$" />
+                        <add input="{ApprovedCountries:{C:1}}" pattern="^1$" negate="true" />
+                        <add input="{HTTP_HOST}" pattern="^www" negate="true" />
+                    </conditions>
+                    <action type="Redirect" url="http://www.localtest.me/" />
+                </rule>
+            </rules>
+            <rewriteMaps>
+                <rewriteMap name="ApprovedCountries">
+                    <add key="Nigeria" value="1" />
+                    <add key="Ethiopia" value="1" />
+                    <add key="Egypt" value="1" />
+                    <add key="Tanzania" value="1" />
+                    <add key="Kenya" value="1" />
+                    <add key="Algeria" value="1" />
+                    <add key="SouthAfrica" value="1" />
+                </rewriteMap>
+            </rewriteMaps>
+        </rewrite>

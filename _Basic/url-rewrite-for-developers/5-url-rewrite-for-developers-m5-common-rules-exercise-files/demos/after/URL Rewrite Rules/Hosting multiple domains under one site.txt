@@ -1,0 +1,31 @@
+        <rewrite>
+            <outboundRules>
+                <rule name="Remove calgary/ from html" preCondition="ResponseIsHtml1">
+                    <match filterByTags="A, Form, Img" pattern="^(.*)calgary/(.*)" />
+                    <action type="Rewrite" value="{R:1}{R:2}" />
+                </rule>
+                <rule name="Remove calgary/ from the response headers">
+                    <match serverVariable="RESPONSE_LOCATION" pattern="(.*)calgary/(.*)" />
+                    <action type="Rewrite" value="{R:1}{R:2}" />
+                </rule>
+                <preConditions>
+                    <preCondition name="ResponseIsHtml1">
+                        <add input="{RESPONSE_CONTENT_TYPE}" pattern="^text/html" />
+                    </preCondition>
+                </preConditions>
+            </outboundRules>
+            <rules>
+                <rule name="Rewrite allaboutcalgary.com">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^(www\.)?allaboutcalgary\.com$" />
+                        <add input="{URL}" pattern="^/calgary" negate="true" />
+                    </conditions>
+                    <action type="Rewrite" url="/calgary/{R:0}" />
+                </rule>
+                <rule name="Redirect calgary/" stopProcessing="true">
+                    <match url="^calgary/(.*)" />
+                    <action type="Redirect" url="/{R:1}" />
+                </rule>
+            </rules>
+        </rewrite>

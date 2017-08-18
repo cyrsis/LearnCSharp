@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ContentModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ContentModelStoreContainer">
+    <EntitySet Name="Contents" EntityType="ContentModel.Store.Contents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContentItems" EntityType="ContentModel.Store.ContentItems" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ContentContentItem" Association="ContentModel.Store.ContentContentItem">
+      <End Role="Content" EntitySet="Contents" />
+      <End Role="ContentItem" EntitySet="ContentItems" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Contents">
+    <Key>
+      <PropertyRef Name="ContentCode" />
+    </Key>
+    <Property Name="ContentCode" Type="nvarchar" StoreGeneratedPattern="Identity" Nullable="false" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContentItems">
+    <Key>
+      <PropertyRef Name="ContentItemId" />
+    </Key>
+    <Property Name="ContentItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Index" Type="int" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsHtml" Type="bit" Nullable="false" />
+    <Property Name="Content_ContentCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="ContentContentItem">
+    <End Role="Content" Type="ContentModel.Store.Contents" Multiplicity="1" />
+    <End Role="ContentItem" Type="ContentModel.Store.ContentItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Content">
+        <PropertyRef Name="ContentCode" />
+      </Principal>
+      <Dependent Role="ContentItem">
+        <PropertyRef Name="Content_ContentCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ContentModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ContentEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Contents" EntityType="ContentModel.Content" />
+          <EntitySet Name="ContentItems" EntityType="ContentModel.ContentItem" />
+          <AssociationSet Name="ContentContentItem" Association="ContentModel.ContentContentItem">
+            <End Role="Content" EntitySet="Contents" />
+            <End Role="ContentItem" EntitySet="ContentItems" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ContentCode" />
+          </Key>
+          <Property Type="String" Name="ContentCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="10" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <NavigationProperty Name="ContentItems" Relationship="ContentModel.ContentContentItem" FromRole="Content" ToRole="ContentItem" />
+        </EntityType>
+        <EntityType Name="ContentItem">
+          <Key>
+            <PropertyRef Name="ContentItemId" />
+          </Key>
+          <Property Type="Int32" Name="ContentItemId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Content" Relationship="ContentModel.ContentContentItem" FromRole="ContentItem" ToRole="Content" />
+          <Property Type="Int32" Name="Index" Nullable="false" />
+          <Property Type="String" Name="Value" Nullable="false" />
+          <Property Type="Boolean" Name="IsHtml" Nullable="false" />
+        </EntityType>
+        <Association Name="ContentContentItem">
+          <End Type="ContentModel.Content" Role="Content" Multiplicity="1" />
+          <End Type="ContentModel.ContentItem" Role="ContentItem" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ContentModelStoreContainer" CdmEntityContainer="ContentEntities">
+    <EntitySetMapping Name="Contents">
+      <EntityTypeMapping TypeName="IsTypeOf(ContentModel.Content)">
+        <MappingFragment StoreEntitySet="Contents">
+          <ScalarProperty Name="ContentCode" ColumnName="ContentCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContentItems">
+      <EntityTypeMapping TypeName="IsTypeOf(ContentModel.ContentItem)">
+        <MappingFragment StoreEntitySet="ContentItems">
+          <ScalarProperty Name="ContentItemId" ColumnName="ContentItemId" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="IsHtml" ColumnName="IsHtml" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ContentContentItem" TypeName="ContentModel.ContentContentItem" StoreEntitySet="ContentItems">
+      <EndProperty Name="Content">
+        <ScalarProperty Name="ContentCode" ColumnName="Content_ContentCode" />
+      </EndProperty>
+      <EndProperty Name="ContentItem">
+        <ScalarProperty Name="ContentItemId" ColumnName="ContentItemId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,16 @@
+<!ENTITY % contact "( name, address )">
+<!ELEMENT invoice ( buyer, seller, detail, totals )>
+<!ELEMENT buyer ( %contact; )>
+<!ELEMENT seller ( %contact; )>
+<!ELEMENT detail ( line+ )>
+<!ELEMENT line ( description, quantity, each, total )>
+<!ELEMENT totals ( preTax, tax*, total )>
+<!ELEMENT name ( #PCDATA )>
+<!ELEMENT address ( #PCDATA )>
+<!ELEMENT description ( #PCDATA )>
+<!ELEMENT quantity ( #PCDATA )>
+<!ELEMENT each ( #PCDATA )>
+<!ELEMENT preTax ( #PCDATA )>
+<!ELEMENT tax ( #PCDATA )>
+<!ELEMENT total ( #PCDATA )>
+<!ATTLIST total currency ( GBP | USD | CAD ) "CAD">

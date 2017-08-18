@@ -1,0 +1,27 @@
+﻿@model Sixeyed.ExtensionLibrary.Stubs.Web.Models.UserModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>C# Extension Methods</h2>
+    <p class="lead">Extension methods are a powerful C# feature which are underused and often misunderstood. In this course you’ll learn all about writing, using and organising extension methods...</p>
+    <p><a href="http://pluralsight.com/training/Courses/TableOfContents/csharp-extension-methods" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+    <div class="row">
+        <h2>Confirmation</h2>
+        <p>
+            @Html.LabelFor(model => model.Name)
+            @Html.ValueFor(model => model.Name)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.CurrentModule)
+            @Html.ValueFor(model => model.CurrentModule)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Status)
+            @Html.ValueFor(model => model.Status)
+        </p>
+    </div>

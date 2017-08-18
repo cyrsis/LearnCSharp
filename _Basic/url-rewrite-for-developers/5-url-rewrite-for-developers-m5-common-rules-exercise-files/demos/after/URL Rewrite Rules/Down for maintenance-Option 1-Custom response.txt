@@ -1,0 +1,11 @@
+        <rewrite>
+            <rules>
+                <rule name="Down for maintenance page" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{REMOTE_ADDR}" pattern="^10\.10\.10\.10$" negate="true" />
+                    </conditions>
+                    <action type="CustomResponse" statusCode="503" statusReason="Down for maintenance" statusDescription="Please come back shortly to see our new site!" />
+                </rule>
+            </rules>
+        </rewrite>

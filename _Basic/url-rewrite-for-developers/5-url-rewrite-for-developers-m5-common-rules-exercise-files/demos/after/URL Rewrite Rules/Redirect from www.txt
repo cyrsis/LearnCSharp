@@ -1,0 +1,11 @@
+        <rewrite>
+            <rules>
+                <rule name="Redirect to www" stopProcessing="true">
+                    <match url="(.*)" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^www\.([^/]+\.[^/]+)$" />
+                    </conditions>
+                    <action type="Redirect" url="http://{C:1}/{R:1}" />
+                </rule>
+            </rules>
+        </rewrite>

@@ -1,0 +1,12 @@
+        <rewrite>
+            <rules>
+                <rule name="Subdomain rewrite" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^www\.[^/]+\.[^/]+$" negate="true" />
+                        <add input="{HTTP_HOST}" pattern="^([^/]+)\.([^/]+\.[^/]+)$" />
+                    </conditions>
+                    <action type="Rewrite" url="/{C:1}/{R:0}" />
+                </rule>
+            </rules>
+        </rewrite>

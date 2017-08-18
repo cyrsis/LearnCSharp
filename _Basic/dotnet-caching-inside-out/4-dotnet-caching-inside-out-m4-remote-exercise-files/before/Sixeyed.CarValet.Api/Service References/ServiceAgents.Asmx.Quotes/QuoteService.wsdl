@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetQuotes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetQuotesRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetQuotesRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCodes" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetQuotesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQuotesResult" type="tns:GetQuotesResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetQuotesResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Quotes" type="tns:ArrayOfQuote" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQuote">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Quote" nillable="true" type="tns:Quote" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Quote">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Product" type="tns:Product" />
+          <s:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfProductOption" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Product">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProductOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductOption" nillable="true" type="tns:ProductOption" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetQuotesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQuotes" />
+  </wsdl:message>
+  <wsdl:message name="GetQuotesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQuotesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="QuoteServiceSoap">
+    <wsdl:operation name="GetQuotes">
+      <wsdl:input message="tns:GetQuotesSoapIn" />
+      <wsdl:output message="tns:GetQuotesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QuoteServiceSoap" type="tns:QuoteServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetQuotes">
+      <soap:operation soapAction="http://tempuri.org/GetQuotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QuoteServiceSoap12" type="tns:QuoteServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetQuotes">
+      <soap12:operation soapAction="http://tempuri.org/GetQuotes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuoteService">
+    <wsdl:port name="QuoteServiceSoap" binding="tns:QuoteServiceSoap">
+      <soap:address location="http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QuoteServiceSoap12" binding="tns:QuoteServiceSoap12">
+      <soap12:address location="http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,17 @@
+        <rewrite>
+            <rules>
+                <rule name="Redirect to www.localtest.me" stopProcessing="true">
+                    <match url="(.*)" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^www\.localtest\.me$" negate="true" />
+                    </conditions>
+                    <action type="Redirect" url="{Protocol:{HTTPS}}://www.localtest.me/{R:1}" />
+                </rule>
+            </rules>
+            <rewriteMaps>
+                <rewriteMap name="Protocol">
+                    <add key="on" value="https" />
+                    <add key="off" value="http" />
+                </rewriteMap>
+            </rewriteMaps>
+        </rewrite>

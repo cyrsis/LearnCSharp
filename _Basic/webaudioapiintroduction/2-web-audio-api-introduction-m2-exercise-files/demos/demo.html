@@ -1,0 +1,51 @@
+<script>
+
+"use strict"
+function audioContextCheck(){
+  if (typeof AudioContext !== "undefined") {
+    return new AudioContext();
+  }
+  else if (typeof webkitAudioContext !== "undefined") {
+    return new webkitAudioContext();
+  }
+  else if (typeof mozAudioContext !== "undefined") {
+    return new mozAudioContext();
+  }
+  else {
+    throw new Error('AudioContext not supported');
+  }
+}
+ 
+
+var audioContext = audioContextCheck();
+
+
+var osc = audioContext.createOscillator();
+var gainOsc = audioContext.createGain();
+var filter = audioContext.createBiquadFilter();
+
+gainOsc.gain.value = 0.1;
+osc.type = "sawtooth";     
+osc.frequency.value = 300;
+osc.detune.value = 0;
+
+/*BEGIN filter setting */
+
+filter.type = "bandpass";
+
+filter.frequency.value = 400;
+
+filter.Q.value = 5;
+
+
+/*END filter settings */
+
+
+osc.connect(gainOsc);
+gainOsc.connect(filter);
+filter.connect(audioContext.destination)
+osc.start(audioContext.currentTime);
+
+
+
+</script>

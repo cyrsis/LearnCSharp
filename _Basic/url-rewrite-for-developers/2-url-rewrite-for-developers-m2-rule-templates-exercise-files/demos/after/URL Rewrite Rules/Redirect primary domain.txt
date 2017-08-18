@@ -1,0 +1,12 @@
+        <rewrite>
+            <rules>
+                <rule name="Redirect primary domain" stopProcessing="true">
+                    <match url="^default\.aspx$" />
+                    <conditions>
+                        <add input="{REQUEST_METHOD}" pattern="^POSTS$" negate="true" />
+                        <add input="{QUERY_STRING}" pattern="^c=([^=&amp;]+)&amp;p=([^=&amp;]+)$" />
+                    </conditions>
+                    <action type="Redirect" url="{C:1}/{C:2}" appendQueryString="false" />
+                </rule>
+            </rules>
+        </rewrite>

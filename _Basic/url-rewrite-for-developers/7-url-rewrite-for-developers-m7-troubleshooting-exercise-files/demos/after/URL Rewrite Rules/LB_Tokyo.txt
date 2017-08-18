@@ -1,0 +1,10 @@
+                <rule name="LB_Tokyo" enabled="false" patternSyntax="Wildcard">
+                    <match url="*" />
+                    <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+                        <add input="{HTTP_HOST}" pattern="tokyo.localtest.me" />
+                    </conditions>
+                    <serverVariables>
+                        <set name="HTTP_HOST" value="internal.localtest.me" />
+                    </serverVariables>
+                    <action type="Rewrite" url="http://Tokyo Webfarm/{R:0}" />
+                </rule>

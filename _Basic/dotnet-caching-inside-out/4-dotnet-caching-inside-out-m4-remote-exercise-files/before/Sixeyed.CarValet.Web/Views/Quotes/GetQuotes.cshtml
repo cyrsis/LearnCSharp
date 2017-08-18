@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "GetQuotes";
+}
+
+<h1>Get a Quote</h1>
+
+<div id="cms" class="cmsBanner">
+    @Html.Raw(Sixeyed.CarValet.Web.ApiClient.ContentClient.GetItems("GETQUOTES").First().Value)
+</div>
+
+<div id="lookup">
+    @Html.Partial("VehicleLookup")
+</div>

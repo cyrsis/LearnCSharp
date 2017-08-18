@@ -1,0 +1,1 @@
+The HelloWebForms projects in both Before and After use a number of packages that have been removed from the zip for space reasons. The Visual Studio project settings have been set to replace these missing packages when you build the project. If you are having trouble designing the UI, try  building the project to restore the packages.

@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE start
+[
+<!ENTITY b SYSTEM "../bdir/b.xml">
+<!ENTITY c SYSTEM "c.xml">
+<!ENTITY d SYSTEM "../bdir/ddir/d.xml">
+<!ENTITY company "<org>AT&#38;#38;T</org>">
+<!ENTITY % p SYSTEM "p.dtd"> %p;
+]>
+<start>
+ aaa
+ &b;&company;
+ &c;
+</start>

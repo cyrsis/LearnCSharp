@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8F85C68-8B50-4615-A5C1-63B05554EC7D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RepositoryReflector</RootNamespace>
+    <AssemblyName>RepositoryReflector</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenericRepository.CSV\GenericRepository.CSV.csproj">
+      <Project>{3609bc4d-29fa-4603-92a4-068e6c083243}</Project>
+      <Name>GenericRepository.CSV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericRepository.Interface\GenericRepository.Interface.csproj">
+      <Project>{6bf2ac01-227d-402e-9be9-53fd3fefcb9e}</Project>
+      <Name>GenericRepository.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericRepository.Service\GenericRepository.Service.csproj">
+      <Project>{065d4430-f437-4262-ba80-ac3a0cf100f8}</Project>
+      <Name>GenericRepository.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericRepository.SQL\GenericRepository.SQL.csproj">
+      <Project>{14e9ac48-3361-4ab6-89a6-b40afbdd9d11}</Project>
+      <Name>GenericRepository.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonRepository.CSV\PersonRepository.CSV.csproj">
+      <Project>{22d242eb-8113-49e3-8cc9-03a41e3b185e}</Project>
+      <Name>PersonRepository.CSV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonRepository.Interface\PersonRepository.Interface.csproj">
+      <Project>{7740bf98-ccc7-4a90-8147-c982aef8c47a}</Project>
+      <Name>PersonRepository.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonRepository.Service\PersonRepository.Service.csproj">
+      <Project>{8eba64e3-198d-4456-b9bf-d7ef9bd2cbce}</Project>
+      <Name>PersonRepository.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonRepository.SQL\PersonRepository.SQL.csproj">
+      <Project>{003702d8-e922-4539-80d4-15aab22ff29d}</Project>
+      <Name>PersonRepository.SQL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

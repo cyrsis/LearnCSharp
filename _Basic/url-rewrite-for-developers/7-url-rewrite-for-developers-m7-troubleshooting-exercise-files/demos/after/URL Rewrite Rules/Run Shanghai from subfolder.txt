@@ -1,0 +1,7 @@
+                <rule name="Run Shanghai from subfolder" enabled="true" patternSyntax="Wildcard">
+                    <match url="*" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="shanghai.localtest.me" />
+                    </conditions>
+                    <action type="Rewrite" url="/shanghai/{R:0}" />
+                </rule>

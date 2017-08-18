@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PricingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PricingModelStoreContainer">
+    <EntitySet Name="PricingFactorTypes" EntityType="PricingModel.Store.PricingFactorTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PricingFactors" EntityType="PricingModel.Store.PricingFactors" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="PricingFactorTypePricingFactor" Association="PricingModel.Store.PricingFactorTypePricingFactor">
+      <End Role="PricingFactorType" EntitySet="PricingFactorTypes" />
+      <End Role="PricingFactor" EntitySet="PricingFactors" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="PricingFactorTypes">
+    <Key>
+      <PropertyRef Name="PricingFactorTypeCode" />
+    </Key>
+    <Property Name="PricingFactorTypeCode" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PricingFactors">
+    <Key>
+      <PropertyRef Name="PricingFactorId" />
+    </Key>
+    <Property Name="PricingFactorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppliesTo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Factor" Type="float" Nullable="false" />
+    <Property Name="PricingFactorType_PricingFactorTypeCode" Type="nvarchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <Association Name="PricingFactorTypePricingFactor">
+    <End Role="PricingFactorType" Type="PricingModel.Store.PricingFactorTypes" Multiplicity="1" />
+    <End Role="PricingFactor" Type="PricingModel.Store.PricingFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PricingFactorType">
+        <PropertyRef Name="PricingFactorTypeCode" />
+      </Principal>
+      <Dependent Role="PricingFactor">
+        <PropertyRef Name="PricingFactorType_PricingFactorTypeCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="PricingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="PricingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PricingFactorTypes" EntityType="PricingModel.PricingFactorType" />
+          <EntitySet Name="PricingFactors" EntityType="PricingModel.PricingFactor" />
+          <AssociationSet Name="PricingFactorTypePricingFactor" Association="PricingModel.PricingFactorTypePricingFactor">
+            <End Role="PricingFactorType" EntitySet="PricingFactorTypes" />
+            <End Role="PricingFactor" EntitySet="PricingFactors" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="PricingFactorType">
+          <Key>
+            <PropertyRef Name="PricingFactorTypeCode" />
+          </Key>
+          <Property Type="String" Name="PricingFactorTypeCode" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="5" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <NavigationProperty Name="PricingFactors" Relationship="PricingModel.PricingFactorTypePricingFactor" FromRole="PricingFactorType" ToRole="PricingFactor" />
+        </EntityType>
+        <EntityType Name="PricingFactor">
+          <Key>
+            <PropertyRef Name="PricingFactorId" />
+          </Key>
+          <Property Type="Int32" Name="PricingFactorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="PricingFactorType" Relationship="PricingModel.PricingFactorTypePricingFactor" FromRole="PricingFactor" ToRole="PricingFactorType" />
+          <Property Type="String" Name="AppliesTo" Nullable="false" />
+          <Property Type="Double" Name="Factor" Nullable="false" />
+        </EntityType>
+        <Association Name="PricingFactorTypePricingFactor">
+          <End Type="PricingModel.PricingFactorType" Role="PricingFactorType" Multiplicity="1" />
+          <End Type="PricingModel.PricingFactor" Role="PricingFactor" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PricingModelStoreContainer" CdmEntityContainer="PricingEntities">
+    <EntitySetMapping Name="PricingFactorTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(PricingModel.PricingFactorType)">
+        <MappingFragment StoreEntitySet="PricingFactorTypes">
+          <ScalarProperty Name="PricingFactorTypeCode" ColumnName="PricingFactorTypeCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PricingFactors">
+      <EntityTypeMapping TypeName="IsTypeOf(PricingModel.PricingFactor)">
+        <MappingFragment StoreEntitySet="PricingFactors">
+          <ScalarProperty Name="PricingFactorId" ColumnName="PricingFactorId" />
+          <ScalarProperty Name="AppliesTo" ColumnName="AppliesTo" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PricingFactorTypePricingFactor" TypeName="PricingModel.PricingFactorTypePricingFactor" StoreEntitySet="PricingFactors">
+      <EndProperty Name="PricingFactorType">
+        <ScalarProperty Name="PricingFactorTypeCode" ColumnName="PricingFactorType_PricingFactorTypeCode" />
+      </EndProperty>
+      <EndProperty Name="PricingFactor">
+        <ScalarProperty Name="PricingFactorId" ColumnName="PricingFactorId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="QuoteService" resourceRoot="" soapui-version="4.5.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QuoteServiceSoap12" type="wsdl" bindingName="{http://tempuri.org/}QuoteServiceSoap12" soapVersion="1_2" anonymous="optional" definition="http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/GetQuotes" name="GetQuotes" bindingOperationName="GetQuotes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetQuotes>
+         <tem:request>
+            <tem:VehicleId>1</tem:VehicleId>
+            <tem:PostalCode>TW18 3DZ</tem:PostalCode>
+            <tem:ProductCodes/>
+         </tem:request>
+      </tem:GetQuotes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/QuoteServiceSoap/GetQuotesRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QuoteServiceSoap" type="wsdl" bindingName="{http://tempuri.org/}QuoteServiceSoap" soapVersion="1_1" anonymous="optional" definition="http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx?wsdl"><con:part><con:url>http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetQuotes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetQuotesRequest"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetQuotesRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleId" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCodes" type="tns:ArrayOfString"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetQuotesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQuotesResult" type="tns:GetQuotesResponse"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetQuotesResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Quotes" type="tns:ArrayOfQuote"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQuote">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Quote" nillable="true" type="tns:Quote"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Quote">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleId" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Product" type="tns:Product"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfProductOption"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:decimal"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Product">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCode" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProductOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductOption" nillable="true" type="tns:ProductOption"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionCode" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionName" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetQuotesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQuotes"/>
+  </wsdl:message>
+  <wsdl:message name="GetQuotesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQuotesResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="QuoteServiceSoap">
+    <wsdl:operation name="GetQuotes">
+      <wsdl:input message="tns:GetQuotesSoapIn"/>
+      <wsdl:output message="tns:GetQuotesSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QuoteServiceSoap" type="tns:QuoteServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetQuotes">
+      <soap:operation soapAction="http://tempuri.org/GetQuotes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QuoteServiceSoap12" type="tns:QuoteServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetQuotes">
+      <soap12:operation soapAction="http://tempuri.org/GetQuotes" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuoteService">
+    <wsdl:port name="QuoteServiceSoap" binding="tns:QuoteServiceSoap">
+      <soap:address location="http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="QuoteServiceSoap12" binding="tns:QuoteServiceSoap12">
+      <soap12:address location="http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/GetQuotes" name="GetQuotes" bindingOperationName="GetQuotes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost/Sixeyed.CarValet.LegacyServices/QuoteService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetQuotes>
+         <tem:request>
+            <tem:VehicleId>1</tem:VehicleId>
+            <tem:PostalCode>EC2 1AD</tem:PostalCode>
+            <tem:ProductCodes/>
+         </tem:request>
+      </tem:GetQuotes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetQuotes"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

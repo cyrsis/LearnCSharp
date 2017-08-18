@@ -1,0 +1,13 @@
+        <rewrite>
+            <rules>
+                <clear />
+                <rule name="Prevent image hotlinking" enabled="true">
+                    <match url="^.*\.(jpg|gif|png)" />
+                    <conditions>
+                        <add input="{HTTP_REFERER}" pattern="^$" negate="true" />
+                        <add input="{HTTP_REFERER}" pattern="^http(s)?://(www\.)?localtest\.me.*" negate="true" />
+                    </conditions>
+                    <action type="Rewrite" url="/content/img/nohotlinking.jpg" />
+                </rule>
+            </rules>
+        </rewrite>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="dataCache" type="Microsoft.ApplicationServer.Caching.DataCacheSection, Microsoft.ApplicationServer.Caching.Core" />
+  </configSections>
+  <dataCache size="Small">
+    <caches>
+      <cache consistency="StrongConsistency" name="default" minSecondaries="0">
+        <policy>
+          <eviction type="Lru" />
+          <expiration defaultTTL="10" isExpirable="true" />
+        </policy>
+      </cache>
+      <cache consistency="StrongConsistency" name="Sixeyed-Core-Cache"
+        minSecondaries="0">
+        <policy>
+          <eviction type="Lru" />
+          <expiration defaultTTL="10" isExpirable="true" />
+        </policy>
+      </cache>
+    </caches>
+    <hosts>
+      <host replicationPort="22236" arbitrationPort="22235" clusterPort="22234"
+        hostId="1896155627" size="2047" leadHost="true" account="SC-PSOD-CACHING\Administrator"
+        cacheHostName="AppFabricCachingService" name="sc-psod-caching"
+        cachePort="22233" />
+    </hosts>
+    <advancedProperties>
+      <securityProperties>
+        <authorization>
+          <allow users="Administrator" />
+          <allow users="svc_CarValet" />
+        </authorization>
+      </securityProperties>
+    </advancedProperties>
+    <deploymentSettings>
+      <deploymentMode value="RoutingClient" />
+    </deploymentSettings>
+  </dataCache>
+</configuration>

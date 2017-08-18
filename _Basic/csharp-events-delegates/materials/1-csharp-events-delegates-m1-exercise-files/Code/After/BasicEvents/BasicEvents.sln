@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicWebEvents", "BasicWebEvents\BasicWebEvents.csproj", "{0B53AB55-38A7-4F8B-8B75-442B16F0AB9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicWindowsEvents", "BasicWindowsEvents\BasicWindowsEvents.csproj", "{A8F34E0C-91B9-475C-9899-B1BBB64E88FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B53AB55-38A7-4F8B-8B75-442B16F0AB9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B53AB55-38A7-4F8B-8B75-442B16F0AB9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B53AB55-38A7-4F8B-8B75-442B16F0AB9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B53AB55-38A7-4F8B-8B75-442B16F0AB9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F34E0C-91B9-475C-9899-B1BBB64E88FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F34E0C-91B9-475C-9899-B1BBB64E88FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F34E0C-91B9-475C-9899-B1BBB64E88FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F34E0C-91B9-475C-9899-B1BBB64E88FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

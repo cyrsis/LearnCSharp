@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JSONP Demo</title>
+    <link href="Content/Main.css" rel="stylesheet"/>
+    <script type="text/javascript" src="Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#go').click(function () {
+
+                var output = $('#output');
+                output.empty().append('<p>Loading...</p>');
+
+                $.ajax({
+                    url: $('#txtUrl').val(),
+                    cache: true,
+                    dataType: 'jsonp',
+                    jsonpCallback: 'cb',
+                    success: function (data) {
+                        output.empty().append('<p>Success: ' + data + '</p>');
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        output.empty().append('<p>Error: ' + textStatus + ', ' + errorThrown + '</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>JSONP Demo</h1>
+    </div>
+    <div class="main">
+        <label for="txtUrl">URL:</label>
+        <input id="txtUrl" type="text" style="width:700px" value="http://valetmymotor.api/"/>
+         <input type="button" id="go" value="Go" />
+         <div id="output"></div>
+    </div>
+</body>
+</html>

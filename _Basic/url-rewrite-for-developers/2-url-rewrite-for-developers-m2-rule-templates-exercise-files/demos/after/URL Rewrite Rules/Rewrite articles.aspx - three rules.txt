@@ -1,0 +1,31 @@
+        <rewrite>
+            <rules>
+                <rule name="Redirect articles.aspx - catch the leftovers" stopProcessing="true">
+                    <match url="^articles\.aspx$" />
+                    <conditions>
+                        <add input="{REQUEST_METHOD}" pattern="^POST$" negate="true" />
+                        <add input="{QUERY_STRING}" pattern="^([^=&amp;]+)=([^=&amp;]+)&amp;([^=&amp;]+)=([^=&amp;]+)$" />
+                    </conditions>
+                    <action type="Redirect" url="articles/{C:1}/{C:2}/{C:3}/{C:4}" appendQueryString="false" />
+                </rule>
+                <rule name="Rewrite articles.aspx" stopProcessing="true">
+                    <match url="^articles/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$" />
+                    <conditions>
+                        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+                        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+                    </conditions>
+                    <action type="Rewrite" url="articles.aspx?{R:1}={R:2}&amp;{R:3}={R:4}" />
+                </rule>
+            </rules>
+            <outboundRules>
+                <rule name="Rewrite HTML source to the new pattern" preCondition="ResponseIsHtml1">
+                    <match filterByTags="A, Form, Img" pattern="^(.*/)articles\.aspx\?id=([^=&amp;]+)&amp;(?:amp;)?city=([^=&amp;]+)$" />
+                    <action type="Rewrite" value="{R:1}articles/id/{R:2}/city/{R:3}/" />
+                </rule>
+                <preConditions>
+                    <preCondition name="ResponseIsHtml1">
+                        <add input="{RESPONSE_CONTENT_TYPE}" pattern="^text/html" />
+                    </preCondition>
+                </preConditions>
+            </outboundRules>
+        </rewrite>
