@@ -1,0 +1,7 @@
+Robocopy and a Few Examples
+https://social.technet.microsoft.com/wiki/contents/articles/1073.robocopy-and-a-few-examples.aspx
+
+
+Robocopy \\LABDB02\SQLBackups \\LABDB01\SQLBackups *.bak /R:3 /W:3 /Z /MT:32
+
+
