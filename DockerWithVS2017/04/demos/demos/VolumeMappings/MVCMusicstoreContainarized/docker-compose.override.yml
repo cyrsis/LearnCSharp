@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+  mvcmusicstore:
+    ports:
+      - "80"
+  
+  sql:
+    ports:
+      - "1433"
+networks:
+  default:
+    external:
+      name: nat
+

@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  mvcmusicstore:
+    image: mvcmusicstore:dev
+    build:
+      args:
+        source: ${DOCKER_BUILD_SOURCE}
+    volumes:
+      - .\MvcMusicStore:C:\inetpub\wwwroot
+      - ~\msvsmon:C:\msvsmon:ro
+    labels:
+      - "com.microsoft.visualstudio.targetoperatingsystem=windows"

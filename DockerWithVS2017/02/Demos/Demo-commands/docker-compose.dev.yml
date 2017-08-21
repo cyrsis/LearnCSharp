@@ -1,0 +1,18 @@
+version: "2.1"
+
+services:
+ web:
+  expose:
+   - "80"
+ db:
+  expose:
+   - "1433"
+  environment:
+    - "ACCEPT_EULA='Y'"
+  tty:
+    true
+
+networks:
+  default:
+    external:
+      name: "nat"

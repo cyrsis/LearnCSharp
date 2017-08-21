@@ -1,0 +1,5 @@
+*
+!aspnetdb.mdf
+!aspnetdb_log.ldf
+!obj\Docker\publish\*
+!obj\Docker\empty\
