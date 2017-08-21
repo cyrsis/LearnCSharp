@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  mvcmusicstore:
+    image: mvcmusicstore
+    build:
+      context: .\MvcMusicStore
+      dockerfile: Dockerfile
