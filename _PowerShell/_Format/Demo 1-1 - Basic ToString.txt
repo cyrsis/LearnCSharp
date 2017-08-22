@@ -1,0 +1,43 @@
+#
+#   Demo 1-1
+#   Basic use of ToString
+#
+#
+###
+#
+#    Look at ToString() on complex type 
+#
+#    First on a simple object
+$obj = new-object system.object
+$obj.ToString()
+#
+#
+#    Now on a file name
+$file = get-childitem c:\foo -filter *.ps1 | select -first 1
+$file.ToString()
+#
+#    And on a process
+(get-process *Power* | select -first 1).tostring()
+CLS
+#
+#    And now look at Tostring on a number and a date
+$i = 42
+$x = 42.42
+$d = Get-Date
+#
+#
+#    Tostring on Integer
+$i.tostring()
+$i
+#
+#
+#    Tostring on Real number
+#
+#
+$x.ToString()
+$x
+#
+#
+#    Tostring on Date
+$d.tostring()
+$d

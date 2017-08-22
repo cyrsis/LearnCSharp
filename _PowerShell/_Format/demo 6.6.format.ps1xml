@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>PshExt</Name>
+      <ViewSelectedBy>
+        <TypeName>System.IO.Fileinfo</TypeName>
+      </ViewSelectedBy>
+      <GroupBy><PropertyName>Extension</PropertyName></GroupBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>File Name</Label>
+            <Width>45</Width>
+            <Alignment>Left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Length</Label>
+            <Width>11</Width>
+            <Alignment>Right</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>FullName</PropertyName>
+                <Alignment>Left</Alignment>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>$_.length.tostring('#,##0')</ScriptBlock>
+                <Alignment>Right</Alignment>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

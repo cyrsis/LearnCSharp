@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Demo2.format.ps1xml  -->
+<Configuration>
+  <DefaultSettings> 
+     <PropertyCountForTable>3</PropertyCountForTable>
+     <WrapTables/>
+  </DefaultSettings>
+  <SelectionSets>   </SelectionSets>
+  <Controls>        </Controls>
+  <ViewDefinitions> </ViewDefinitions>
+</Configuration>
+

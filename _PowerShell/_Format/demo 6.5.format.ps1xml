@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>CPUCost</Name>
+      <ViewSelectedBy>
+        <TypeName>System.Diagnostics.Process</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Process Name</Label>
+            <Width>15</Width>
+            <Alignment>Right</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Machine Name</Label>
+            <Width>15</Width>
+            <Alignment>Center</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>CPU Cost</Label>
+            <Width>10</Width>
+            <Alignment>Right</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+                <Alignment>Left</Alignment>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>MachineName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>(($_.cpu * 10)+4).tostring("C2")</ScriptBlock>
+                <Alignment>Right</Alignment>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

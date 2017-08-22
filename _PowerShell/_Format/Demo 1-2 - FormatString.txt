@@ -1,0 +1,52 @@
+#
+#   Demo 1-2
+#   Using Format Strings
+#
+#
+###
+#
+#
+#
+#    Currency using default locale
+$a=42.42
+$a.tostring("C")
+#
+#    Decimal (integral only!)
+$i=42
+$i.tostring("D")
+#
+#    Note: D is Not supported on decimal numbers
+$j=42.42
+$j.tostring("D")
+#
+#    Exponential Format
+$x = 1234567890
+$x.tostring("E")
+#
+#    Fixed Point
+#    Note default 2 digits to the right of decimal point!
+$x = 12345.12345
+$x.tostring("F")
+#    Look at ToString() with 'p'
+$i=.42
+$i.tostring("p")
+#
+#    Custom Numeric Format Strings
+#
+$value = .4242
+$value.ToString("% #0.00")
+#
+#
+#    Different format strigns for +/-/0
+$v1 = 1; $v2 = -1; $v3 = 0
+$v1.tostring("#0.0#;(#0.0#);-\0-")
+#
+#
+$v2.tostring("#0.0#;(#0.0#);-\0-")
+#
+$v3.tostring("#0.0#;(#0.0#);-\0-")
+#
+#
+# And something totally different
+# Per Mille - part per thousand - like percent only smaller!
+(.0042).tostring("####.##‰")

@@ -1,0 +1,29 @@
+#
+#   Demo 1-3
+#   Using NumericFormatInfo Objects
+#
+#
+###
+#
+#
+#
+#    Get default culture
+$c = get-culture
+$c | gm
+#
+#    Get default culture's numberformat
+$nf = $c.NumberFormat
+$nf | gm
+#
+#
+#    Format number in default culture currency
+(4242.4242).tostring("C")
+#
+#
+#    Change number of currency digits and display again
+$nf.CurrencyDecimalDigits = 3
+(4242.4242).tostring("C",$nf)
+#    Change the currency to 'Zog'
+$nf.CurrencySymbol = "Zog "
+(4242.4242).tostring("C",$nf)
+#
