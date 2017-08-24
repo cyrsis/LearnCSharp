@@ -1,0 +1,38 @@
+﻿<div class="row">
+    <div class="col s12 m6">
+        <form>
+            <div class="input-field col s12">
+                <input id="name" type="text" class="validate" data-bind="value: bucketName">
+                <label for="name">Name</label>
+            </div>
+            <button class="btn lighten-2 blue" data-bind="click: createBucket, enable: hasBucketName">Create bucket</button>
+        </form>
+    </div>
+    <div class="col s12 m6">
+        <form>
+            <div class="input-field col s12 m6">
+                <input id="key" type="text" class="validate" data-bind="value: itemKey">
+                <label for="key">Key</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="value" type="text" class="validate" data-bind="value: itemValue">
+                <label for="value">Value</label>
+            </div>
+            <button class="btn lighten-2 blue" data-bind="click: createItem, enable: bucketSelected">Create item</button>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 m6">
+        <h5>Buckets</h5>
+        <div class="collection" data-bind="foreach: buckets">
+            <a href="#!" class="collection-item" data-bind="text: $data, click: $parent.getBucket"></a>
+        </div>
+    </div>
+    <div class="col s12 m6">
+        <h5>Items <span data-bind="text: bucket().name"></span></h5>
+        <div class="collection" data-bind="foreach: bucket().items">
+            <a href="#!" class="collection-item" data-bind="text: $data, click: $parent.getItem">"></a>
+        </div>
+    </div>
+</div>
