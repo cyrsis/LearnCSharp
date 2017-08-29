@@ -1,0 +1,45 @@
+﻿<Window x:Class="CoursewareApp.AutoSize"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="AutoSize"
+				Height="300"
+				Width="300">
+	<Canvas>
+
+		<TextBlock Text='A short sentence.'
+							 Canvas.Left='20'
+							 Canvas.Top='27'
+							 Width='120' />
+		<TextBlock Text='The quick onyx goblin jumps over the lazy dwarf.'
+							 Width='120'
+							 Canvas.Left='20'
+							 Canvas.Top='59' />
+
+		<Button Content='A short action'
+						Width='120'
+						Height='25'
+						Canvas.Left='20'
+						Canvas.Top='108' />
+		<Button Canvas.Left='20'
+						Canvas.Top='150'
+						Width='120'
+						Height='25'>
+			<StackPanel Orientation='Horizontal'
+									HorizontalAlignment='Left'>
+
+				<Image HorizontalAlignment='Left'
+							 Stretch='None'
+							 Source='TravelLogo.jpg' />
+				<TextBlock Text='Global Travel Assistance'
+									 VerticalAlignment='Center'
+									 Margin='7,0' />
+
+			</StackPanel>
+		</Button>
+
+	</Canvas>
+</Window>

@@ -1,0 +1,13 @@
+﻿UniformGrid
+
+Divide region into columns and rows
+Each grid cell is the same size
+Children placed automatically within next cell
+
+Children do not overlap
+
+Useful properties: Rows, Columns
+
+Useful property: FirstColumn
+  Indicates where the first element appears in UniformGrid
+  Skip cells at start of the grid

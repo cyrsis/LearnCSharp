@@ -1,0 +1,17 @@
+﻿StackPanel
+
+Arranges child elements in one column or one row
+
+Useful property:  Orientation
+
+In Vertical orientation
+  Each child is place below the previous element
+  Sized to the full width of the StackPanel
+  Sized to the minimum necessary height
+
+In Horizontal orientation
+  Each child is place to the right of the previous element
+  Sized to the full height of the StackPanel
+  Sized to the minimum necessary width
+
+Children do not overlap

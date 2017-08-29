@@ -1,0 +1,46 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:demo="clr-namespace:DemoLib;assembly=DemoLib"
+        xmlns:panels="clr-namespace:CoursewareApp.Panels"
+        xmlns:local="clr-namespace:CoursewareApp"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="600"
+        Width="525"
+        WindowState="Maximized"
+        FontSize='24'>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height='56*' />
+      <RowDefinition Height='513*' />
+    </Grid.RowDefinitions>
+    <StackPanel>
+      <Button Content='Get Vegetable' Click='Button_Click' />
+
+      <TextBlock x:Name='results' />
+    </StackPanel>
+    <ListBox x:Name='VegetableListBox'
+             Grid.Row='1'>
+      <TextBlock Text='Asparagus' />
+      <TextBlock Text="Lettuce" />
+      <TextBlock Text="Tomato" />
+      <TextBlock Text="Carrot" />
+      <TextBlock Text="Cabbage" />
+      <TextBlock Text="Cucumber" />
+      <TextBlock Text="Radish" />
+      <TextBlock Text="Onion" />
+      <TextBlock Text="Pepper" />
+      <TextBlock Text="Potato" />
+      <TextBlock Text="Squash" />
+
+      <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+          <panels:RadialPanel Radius='120' ItemOrientation='Rotated'/>
+        </ItemsPanelTemplate>
+      </ListBox.ItemsPanel>
+    </ListBox>
+  </Grid>
+</Window>

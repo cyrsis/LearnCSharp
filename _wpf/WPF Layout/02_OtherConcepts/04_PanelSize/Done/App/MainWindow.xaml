@@ -1,0 +1,43 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:demo="clr-namespace:DemoLib;assembly=DemoLib"
+        xmlns:local="clr-namespace:CoursewareApp"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="600"
+        Width="525">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height='1*' />
+      <RowDefinition Height='1*' />
+      <RowDefinition Height='1*' />
+    </Grid.RowDefinitions>
+    <Grid Background='LightGoldenrodYellow'
+            Grid.Row='0'>
+      <demo:LetterBox Letter='A'
+                      Width='Auto' />
+
+    </Grid>
+
+    <Grid Margin='0,20'
+            Background='LightGoldenrodYellow'
+            Grid.Row='1'>
+      <demo:LetterBox Letter='B'
+                      Width='300' />
+    </Grid>
+
+    <Grid Width='165'
+            HorizontalAlignment='Left'
+            Margin='0,20'
+            Background='LightGoldenrodYellow'
+            Grid.Row='2'>
+      <demo:LetterBox Letter='C'
+                      Width='300' />
+      <!--<Button Content='Hello'
+              Width='180' />-->
+    </Grid>
+  </Grid>
+</Window>

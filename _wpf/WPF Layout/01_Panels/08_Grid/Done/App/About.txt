@@ -1,0 +1,15 @@
+﻿Grid
+
+Is a flexible and complex panel.
+Is NOT a data-grid, is a Layout grid.
+
+Specify # of rows and columns.
+Specify size of rows and columns.
+
+
+Each UIElement should
+  Specify row and column location.
+  Whether to span rows or columns.
+
+Each cell can contain many children.
+Children can overlap in cell or across cells.

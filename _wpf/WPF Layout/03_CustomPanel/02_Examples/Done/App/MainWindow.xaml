@@ -1,0 +1,175 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:demo="clr-namespace:DemoLib;assembly=DemoLib"
+				xmlns:panels="clr-namespace:CoursewareApp.Panels"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="MainWindow"
+				Height="600"
+				Width="525"
+				WindowState="Maximized">
+	<TabControl>
+		<TabItem Header="Angle">
+			<panels:AnglePanel HorizontalAlignment="Left"
+												 VerticalAlignment="Top">
+				<demo:LetterBox Letter="A" />
+				<demo:LetterBox Letter="B" />
+				<demo:LetterBox Letter="C" />
+				<demo:LetterBox Letter="D" />
+
+				<demo:LetterBox Letter="E" />
+				<demo:LetterBox Letter="F" />
+
+			</panels:AnglePanel>
+		</TabItem>
+		<TabItem Header="Diagonal"
+						 HorizontalAlignment="Right"
+						 VerticalAlignment="Top">
+
+			<panels:DiamondStackPanel>
+				<demo:LetterBox Letter="A" />
+				<demo:LetterBox Letter="B" />
+				<demo:LetterBox Letter="C" />
+				<demo:LetterBox Letter="D" />
+
+				<demo:LetterBox Letter="E" />
+				<demo:LetterBox Letter="F" />
+
+			</panels:DiamondStackPanel>
+
+		</TabItem>
+		<TabItem Header="Radial">
+			<panels:RadialPanel  Radius="70"
+													 ItemOrientation="Upright">
+				<demo:LetterBox Letter="A" />
+				<demo:LetterBox Letter="B" />
+				<demo:LetterBox Letter="C" />
+				<demo:LetterBox Letter="D" />
+
+				<demo:LetterBox Letter="E" />
+				<demo:LetterBox Letter="F" />
+
+			</panels:RadialPanel>
+		</TabItem>
+		<TabItem Header="Radial 2">
+
+			<panels:RadialPanel  Radius="110"
+													 ItemOrientation="Rotated"
+													 TextElement.FontSize="30">
+				<TextBlock Text="Lettuce" />
+				<TextBlock Text="Tomato" />
+				<TextBlock Text="Carrot" />
+				<TextBlock Text="Cabbage" />
+				<TextBlock Text="Cucumber" />
+				<TextBlock Text="Radish" />
+				<TextBlock Text="Onion" />
+				<TextBlock Text="Pepper" />
+				<TextBlock Text="Potatoe" />
+				<TextBlock Text="Squash" />
+			</panels:RadialPanel>
+		</TabItem>
+
+		<TabItem Header="FishEye">
+			<panels:LensPanel>
+				<demo:LetterBox Letter="A"
+												Width="120"
+												Height="240" />
+				<demo:LetterBox Letter="B" />
+				<demo:LetterBox Letter="C" />
+				<demo:LetterBox Letter="D" />
+				<demo:LetterBox Letter="E" />
+				<demo:LetterBox Letter="F" />
+				<demo:LetterBox Letter="G" />
+				<demo:LetterBox Letter="H" />
+				<demo:LetterBox Letter="J" />
+				<demo:LetterBox Letter="K" />
+
+				<demo:LetterBox Letter="L" />
+				<demo:LetterBox Letter="M" />
+				<demo:LetterBox Letter="A" />
+				<demo:LetterBox Letter="B" />
+				<demo:LetterBox Letter="C" />
+				<demo:LetterBox Letter="D" />
+				<demo:LetterBox Letter="E" />
+				<demo:LetterBox Letter="F" />
+				<demo:LetterBox Letter="G" />
+				<demo:LetterBox Letter="H" />
+				<demo:LetterBox Letter="J" />
+				<demo:LetterBox Letter="K" />
+
+				<demo:LetterBox Letter="L" />
+				<demo:LetterBox Letter="M" />
+				<demo:LetterBox Letter="A" />
+				<demo:LetterBox Letter="B" />
+				<demo:LetterBox Letter="C" />
+				<demo:LetterBox Letter="D" />
+				<demo:LetterBox Letter="E" />
+				<demo:LetterBox Letter="F" />
+				<demo:LetterBox Letter="G" />
+				<demo:LetterBox Letter="H" />
+				<demo:LetterBox Letter="J" />
+				<demo:LetterBox Letter="K" />
+
+				<demo:LetterBox Letter="L" />
+				<demo:LetterBox Letter="M" />
+
+			</panels:LensPanel>
+
+		</TabItem>
+		<TabItem Header="FishEye 2">
+			<TabItem.Resources>
+				<Style TargetType='Image'>
+					<Setter Property='Stretch'
+									Value='UniformToFill' />
+					<Setter Property='Width'
+									Value='180' />
+					<Setter Property='Height'
+									Value='120' />
+				</Style>
+			</TabItem.Resources>
+			<panels:LensPanel>
+				<Image Source="Images/Flower01.jpg" />
+				<Image Source="Images/Flower02.jpg" />
+				<Image Source="Images/Flower03.jpg" />
+				<Image Source="Images/Flower04.jpg" />
+				<Image Source="Images/Flower05.jpg" />
+				<Image Source="Images/Flower01.jpg" />
+				<Image Source="Images/Flower02.jpg" />
+				<Image Source="Images/Flower03.jpg" />
+				<Image Source="Images/Flower04.jpg" />
+				<Image Source="Images/Flower05.jpg" />
+				<Image Source="Images/Flower01.jpg" />
+				<Image Source="Images/Flower02.jpg" />
+				<Image Source="Images/Flower03.jpg" />
+				<Image Source="Images/Flower04.jpg" />
+				<Image Source="Images/Flower05.jpg" />
+				<Image Source="Images/Flower01.jpg" />
+				<Image Source="Images/Flower02.jpg" />
+				<Image Source="Images/Flower03.jpg" />
+				<Image Source="Images/Flower04.jpg" />
+				<Image Source="Images/Flower05.jpg" />
+				<Image Source="Images/Flower01.jpg" />
+				<Image Source="Images/Flower02.jpg" />
+				<Image Source="Images/Flower03.jpg" />
+				<Image Source="Images/Flower04.jpg" />
+				<Image Source="Images/Flower05.jpg" />
+				<Image Source="Images/Flower01.jpg" />
+				<Image Source="Images/Flower02.jpg" />
+				<Image Source="Images/Flower03.jpg" />
+				<Image Source="Images/Flower04.jpg" />
+				<Image Source="Images/Flower05.jpg" />
+				<Image Source="Images/Flower03.jpg" />
+				<Image Source="Images/Flower04.jpg" />
+			</panels:LensPanel>
+		</TabItem>
+		<TabItem Header="FishEye 3" >
+			<panels:LensPanel x:Name='fishEyePanel01'
+												Background='Black'>
+				
+			</panels:LensPanel>
+			</TabItem>
+	</TabControl>
+</Window>

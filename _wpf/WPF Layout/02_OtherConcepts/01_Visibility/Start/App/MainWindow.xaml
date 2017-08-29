@@ -1,0 +1,56 @@
+﻿<Window x:Class="UseVisibility.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UseVisibility"
+        xmlns:demo="clr-namespace:DemoLib;assembly=DemoLib"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="600"
+        Width="525"
+        FontSize='24'>
+  <Grid Margin='20'>
+    <Grid.RowDefinitions>
+      <RowDefinition Height='6*' />
+      <RowDefinition Height='4*' />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width='1*' />
+      <ColumnDefinition Width='1*' />
+    </Grid.ColumnDefinitions>
+    <StackPanel>
+
+      <demo:LetterBox Letter="A" />
+      <demo:LetterBox Letter="B" />
+      <demo:LetterBox Letter="C"
+                      x:Name='ChangeLetterBox1'
+                      Visibility='Visible' />
+      <demo:LetterBox Letter="D" />
+
+    </StackPanel>
+    <StackPanel Grid.Column='1'>
+      <Button Content='Visible'
+              x:Name='VisibleButton'
+              Click='VisibleButton_Click' />
+      <Button Content='Hidden'
+              x:Name='HiddenButton'
+              Click='HiddenButton_Click' />
+      <Button Content='Collapsed'
+              x:Name='CollapsedButton'
+              Click='CollapsedButton_Click' />
+    </StackPanel>
+
+    <WrapPanel Grid.Row='1'
+               Grid.ColumnSpan='2'
+               Margin='0'
+               VerticalAlignment='Center'>
+      <demo:LetterBox Letter="A" />
+      <demo:LetterBox Letter="B" />
+      <demo:LetterBox Letter="C"
+                      x:Name='ChangeLetterBox2'
+                      Visibility='Visible' />
+      <demo:LetterBox Letter="D" />
+    </WrapPanel>
+  </Grid>
+</Window> 

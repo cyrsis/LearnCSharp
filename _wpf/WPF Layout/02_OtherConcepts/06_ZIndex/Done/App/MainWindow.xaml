@@ -1,0 +1,27 @@
+﻿<Window x:Class="CoursewareApp.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:demo="clr-namespace:DemoLib;assembly=DemoLib"
+				xmlns:local="clr-namespace:CoursewareApp"
+				mc:Ignorable="d"
+				Title="MainWindow"
+				Height="600"
+				Width="525">
+	<Canvas>
+		
+	
+		<demo:LetterBox Letter="A"
+										Canvas.Left='166'
+										Canvas.Top='50'
+										Height='120'
+										Width='240' 
+                    Panel.ZIndex='4'
+                    />
+    <demo:LetterBox Letter="D"
+                    Height='120'
+                    Width='240'
+                    Panel.ZIndex='3' />
+  </Canvas>
+</Window>

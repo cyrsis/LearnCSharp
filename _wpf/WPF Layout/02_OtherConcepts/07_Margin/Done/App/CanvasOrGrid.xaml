@@ -1,0 +1,19 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoursewareApp"
+        xmlns:DemoLib='clr-namespace:DemoLib;assembly=DemoLib'
+        x:Class="CoursewareApp.CanvasOrGrid"
+        mc:Ignorable="d"
+        Title="CanvasOrGrid"
+        Height="300"
+        Width="300">
+  <Grid>
+
+    <DemoLib:LetterBox Canvas.Left='53'
+                       Canvas.Top='49' Width='100' Height='100'
+                       Margin='52,48,140,121' />
+
+  </Grid>
+</Window>

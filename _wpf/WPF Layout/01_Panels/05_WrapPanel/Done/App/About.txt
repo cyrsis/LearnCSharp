@@ -1,0 +1,22 @@
+﻿WrapPanel
+
+Arranges child elements in sequential position from left to right, or top to bottom.
+
+Useful property:  Orientation
+
+In Horizontal orientation
+  Each child is placed to the right of the previous element.
+  When the row is full, another row is created for the next child.
+  Rows are filled left to right.
+  
+
+In Vertical orientation
+  Each child is placed below the previous element.
+  When the column is full, another column is created for the next child.
+  Columns are filled top to bottom.
+
+Useful properties:  ItemWidth, ItemHeight
+By default, child elements are sized to their content.
+Use ItemWidth, ItemHeight to apply uniform size to all children 
+
+Children do not overlap

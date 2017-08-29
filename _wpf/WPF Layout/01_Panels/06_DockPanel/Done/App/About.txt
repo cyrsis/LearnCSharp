@@ -1,0 +1,20 @@
+﻿DockPanel
+
+Dock a child element to the specified side.
+  (Top, Right, Bottom, Left)
+
+Useful Attached property:  Dock
+
+Top, Bottom
+  Sized to the full width of the DockPanel (minus size of previously docked elements)
+  Sized to the minimum necessary height
+ 
+Left, Right 
+   Sized to the full height of the DockPanel (minus size of previously docked elements)
+   Sized to the minimum necessary width
+
+
+Useful property:  LastChildFill
+ Indicates whether last element fills remaining space.
+
+Children do not overlap

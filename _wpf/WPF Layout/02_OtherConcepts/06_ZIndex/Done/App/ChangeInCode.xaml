@@ -1,0 +1,29 @@
+﻿<Window x:Class="CoursewareApp.ChangeInCode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoursewareApp"
+				xmlns:demo="clr-namespace:DemoLib;assembly=DemoLib"
+				mc:Ignorable="d"
+				Title="ChangeInCode"
+				Height="600"
+				Width="525">
+	<Canvas>
+
+		<demo:LetterBox x:Name='LetterBoxA'
+										Letter="A"
+										Canvas.Left='166'
+										Canvas.Top='50'
+										Height='120'
+										Width='240'
+										MouseUp='LetterBoxA_MouseUp' />
+
+		<demo:LetterBox x:Name='LetterBoxD'
+										Letter="D"
+										Height='120'
+										Width='240'
+										MouseUp='LetterBoxD_MouseUp' />
+		
+	</Canvas>
+</Window>
